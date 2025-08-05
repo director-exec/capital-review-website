@@ -37,7 +37,7 @@ export default function Header() {
             <div className="logo">
               <Link href="/">
                 <Image 
-                  src="/LOGO/thread-viewer-1.png"
+                  src="/LOGO/logo1.png"
                   alt="Diversified Adjustment Service, Inc." 
                   width={600} 
                   height={150}
@@ -51,7 +51,7 @@ export default function Header() {
               {/* Top Right: Contact Info + Payment Button */}
               <div className="header-top-right">
                 <div className="contact-info">
-                  Need Help? Call us at 833-381-4416
+                  Need Help? Call us at 1.800.279.3733
                 </div>
                 <Link href="/consumer-tools/make-a-payment" className="payment-button">
                   <i className="fas fa-dollar-sign"></i>
@@ -116,7 +116,7 @@ export default function Header() {
             <div className="logo">
               <Link href="/">
                 <Image 
-                  src="/LOGO/thread-viewer-1.png"
+                  src="/LOGO/Borderless.png"
                   alt="Diversified Adjustment Service, Inc." 
                   width={350} 
                   height={75}
