@@ -10,7 +10,9 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
+      // Get the header height and add some buffer
+      const headerHeight = 200; // Approximate height of normal header
+      setIsScrolled(window.scrollY > headerHeight);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -27,17 +29,18 @@ export default function Header() {
 
   return (
     <>
-      <header className={isScrolled ? 'scrolled' : ''}>
+      {/* Normal Header - Always visible */}
+      <header className="normal-header">
         <div className="container">
           <div className="header-content">
             {/* Logo */}
             <div className="logo">
               <Link href="/">
                 <Image 
-                  src="/LOGO/Borderless.png" 
+                  src="/LOGO/logo1.png"
                   alt="Diversified Adjustment Service, Inc." 
-                  width={350} 
-                  height={75}
+                  width={600} 
+                  height={150}
                   priority
                 />
               </Link>
@@ -50,7 +53,7 @@ export default function Header() {
                 <div className="contact-info">
                   Need Help? Call us at 1.800.279.3733
                 </div>
-                <Link href="/consumer-tools/payment" className="payment-button">
+                <Link href="/consumer-tools/make-a-payment" className="payment-button">
                   <i className="fas fa-dollar-sign"></i>
                   Make A Payment
                 </Link>
@@ -100,6 +103,72 @@ export default function Header() {
                   <i className="fas fa-bars"></i>
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Compact Header - Appears after scroll */}
+      <header className={`compact-header ${isScrolled ? 'show' : ''}`}>
+        <div className="container">
+          <div className="header-content">
+            {/* Logo */}
+            <div className="logo">
+              <Link href="/">
+                <Image 
+                  src="/LOGO/Borderless.png"
+                  alt="Diversified Adjustment Service, Inc." 
+                  width={350} 
+                  height={75}
+                  priority
+                />
+              </Link>
+            </div>
+            
+            {/* Right Side Container */}
+            <div className="header-right">
+              {/* Navigation Only */}
+              <nav className="hidden lg:flex">
+                <ul className="nav-menu">
+                  <li className="nav-item">
+                    <Link href="/about">About</Link>
+                    <div className="dropdown-menu">
+                      <Link href="/about/security">Security</Link>
+                      <Link href="/about/compliance">Compliance</Link>
+                      <Link href="/about/industries-we-serve">Industries We Serve</Link>
+                      <Link href="/about/community-involvement">Community Involvement</Link>
+                    </div>
+                  </li>
+                  <li className="nav-item">
+                    <Link href="/consumer-tools">Consumer Tools</Link>
+                    <div className="dropdown-menu">
+                      <Link href="/consumer-tools/request-account-validation">Request Account Validation</Link>
+                      <Link href="/consumer-tools/bankruptcy-notification">Bankruptcy Notification</Link>
+                      <Link href="/consumer-tools/fraud-identity-theft">Fraud & Identity Theft</Link>
+                      <Link href="/consumer-tools/remove-my-number">Remove My Number</Link>
+                      <Link href="/consumer-tools/submit-compliment-complaint">Submit a Compliment or Complaint</Link>
+                    </div>
+                  </li>
+                  <li className="nav-item">
+                    <Link href="/solutions">Solutions</Link>
+                    <div className="dropdown-menu">
+                      <Link href="/solutions/pre-charge-off-collections">Pre-Charge Off Collections</Link>
+                      <Link href="/solutions/post-charge-off-collections">Post Charge-Off Collections</Link>
+                      <Link href="/solutions/secondary-tertiary-collections">Secondary & Tertiary Collections</Link>
+                      <Link href="/solutions/credit-bureau-reporting">Credit Bureau Reporting</Link>
+                      <Link href="/solutions/skip-tracing">Skip Tracing</Link>
+                      <Link href="/solutions/network-of-attorneys">Network of Attorneys</Link>
+                      <Link href="/solutions/warehousing-management">Warehousing Management</Link>
+                    </div>
+                  </li>
+                  <li><Link href="/contact">Contact Us</Link></li>
+                </ul>
+              </nav>
+
+              {/* Mobile Menu Button */}
+              <button className="mobile-menu-btn lg:hidden" onClick={toggleMobileMenu}>
+                <i className="fas fa-bars"></i>
+              </button>
             </div>
           </div>
         </div>
