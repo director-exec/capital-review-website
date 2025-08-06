@@ -46,12 +46,12 @@ export default function Header() {
               </Link>
             </div>
             
-            {/* Right Side Container */}
-            <div className="header-right">
+            {/* Desktop Navigation - Hidden on mobile */}
+            <div className="header-right hidden lg:flex">
               {/* Top Right: Contact Info + Payment Button */}
               <div className="header-top-right">
                 <div className="contact-info">
-                  Need Help? Call us at 1.800.279.3733
+                  Need Help? Call us at 833-381-4416
                 </div>
                 <Link href="/consumer-tools/make-a-payment" className="payment-button">
                   <i className="fas fa-dollar-sign"></i>
@@ -61,7 +61,7 @@ export default function Header() {
               
               {/* Bottom Right: Navigation */}
               <div className="header-bottom-right">
-                <nav className="hidden lg:flex">
+                <nav>
                   <ul className="nav-menu">
                     <li className="nav-item">
                       <Link href="/about">About</Link>
@@ -97,13 +97,13 @@ export default function Header() {
                     <li><Link href="/contact">Contact Us</Link></li>
                   </ul>
                 </nav>
-
-                {/* Mobile Menu Button */}
-                <button className="mobile-menu-btn lg:hidden" onClick={toggleMobileMenu}>
-                  <i className="fas fa-bars"></i>
-                </button>
               </div>
             </div>
+
+            {/* Mobile Menu Button - Always visible on mobile */}
+            <button className="mobile-menu-btn lg:hidden" onClick={toggleMobileMenu}>
+              <i className="fas fa-bars"></i>
+            </button>
           </div>
         </div>
       </header>
@@ -125,10 +125,10 @@ export default function Header() {
               </Link>
             </div>
             
-            {/* Right Side Container */}
-            <div className="header-right">
+            {/* Desktop Navigation - Hidden on mobile */}
+            <div className="header-right hidden lg:flex">
               {/* Navigation Only */}
-              <nav className="hidden lg:flex">
+              <nav>
                 <ul className="nav-menu">
                   <li className="nav-item">
                     <Link href="/about">About</Link>
@@ -164,18 +164,30 @@ export default function Header() {
                   <li><Link href="/contact">Contact Us</Link></li>
                 </ul>
               </nav>
-
-              {/* Mobile Menu Button */}
-              <button className="mobile-menu-btn lg:hidden" onClick={toggleMobileMenu}>
-                <i className="fas fa-bars"></i>
-              </button>
             </div>
+
+            {/* Mobile Menu Button - Always visible on mobile */}
+            <button className="mobile-menu-btn lg:hidden" onClick={toggleMobileMenu}>
+              <i className="fas fa-bars"></i>
+            </button>
           </div>
         </div>
       </header>
 
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'show' : ''}`} id="mobileMenu">
+        {/* Mobile Contact Info */}
+        <div className="mobile-menu-section mobile-contact-info">
+          <div className="mobile-contact-item">
+            <i className="fas fa-phone"></i>
+            <span>833-381-4416</span>
+          </div>
+          <Link href="/consumer-tools/make-a-payment" className="mobile-payment-btn" onClick={closeMobileMenu}>
+            <i className="fas fa-dollar-sign"></i>
+            Make A Payment
+          </Link>
+        </div>
+        
         <div className="mobile-menu-section">
           <h4>About</h4>
           <div className="mobile-menu-links">
