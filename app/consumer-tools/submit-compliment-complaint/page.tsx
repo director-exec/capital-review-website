@@ -5,9 +5,90 @@ import Link from 'next/link'
 
 export default function SubmitComplimentComplaintPage() {
   const [showModal, setShowModal] = useState(true)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState('')
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    accountNumber: '',
+    creditor: '',
+    address: '',
+    city: '',
+    state: '',
+    zipCode: '',
+    phoneNumber: '',
+    phoneType: 'Mobile',
+    email: '',
+    feedbackType: 'compliment',
+    subject: '',
+    message: '',
+    consent: false
+  })
 
   const closeModal = () => {
+    console.log('closeModal called')
     setShowModal(false)
+    console.log('showModal set to false')
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value, type } = e.target
+    if (type === 'checkbox') {
+      const checked = (e.target as HTMLInputElement).checked
+      setFormData(prev => ({ ...prev, [name]: checked }))
+    } else {
+      setFormData(prev => ({ ...prev, [name]: value }))
+    }
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitMessage('')
+
+    try {
+      const response = await fetch('/api/submit-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          formType: 'compliment-complaint',
+          formData: formData
+        }),
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        setSubmitMessage('Thank you for your feedback. We appreciate you taking the time to share your experience with us.')
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          accountNumber: '',
+          creditor: '',
+          address: '',
+          city: '',
+          state: '',
+          zipCode: '',
+          phoneNumber: '',
+          phoneType: 'Mobile',
+          email: '',
+          feedbackType: 'compliment',
+          subject: '',
+          message: '',
+          consent: false
+        })
+      } else {
+        setSubmitMessage('There was an error submitting your feedback. Please try again or contact us directly.')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmitMessage('There was an error submitting your feedback. Please try again or contact us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const feedbackSections = [
@@ -21,7 +102,7 @@ export default function SubmitComplimentComplaintPage() {
     },
     {
       id: 'account-information',
-      title: 'Step 1: Account Information',
+      title: 'Account Information',
       description: 'Please provide your Elite Account Number (8 digits, found on your statement), creditor name, first and last name, and complete mailing address including street, city, state, and zip code. This helps us locate your account quickly.',
       image: 'https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800',
       background: 'grey',
@@ -29,7 +110,7 @@ export default function SubmitComplimentComplaintPage() {
     },
     {
       id: 'contact-method',
-      title: 'Step 2: Preferred Contact Method',
+      title: 'Preferred Contact Method',
       description: 'Let us know the best way to reach you if we need to follow up. You can provide a phone number (mobile, home, or work) and/or email address. This ensures we can respond to your feedback promptly.',
       image: '/Pages/Calculator_Writing_Pro.jpeg',
       background: 'white',
@@ -37,7 +118,7 @@ export default function SubmitComplimentComplaintPage() {
     },
     {
       id: 'experience-details',
-      title: 'Step 3: Tell Us About Your Experience',
+      title: 'Tell Us About Your Experience',
       description: 'Please describe your compliment or complaint in detail. You may also upload relevant documents or screenshots if applicable. The more specific you can be, the better we can address your feedback.',
       image: '/Pages/Writing_Signing_Doc_Meeting.jpeg',
       background: 'grey',
@@ -139,66 +220,205 @@ export default function SubmitComplimentComplaintPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Feedback Form</h2>
-            <div className="bg-white rounded-lg shadow-lg p-8">
+            <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8">
               <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                    <input type="text" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name <span className="text-red-500">*</span></label>
+                    <input 
+                      type="text" 
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                    <input type="text" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name <span className="text-red-500">*</span></label>
+                    <input 
+                      type="text" 
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Elite Account Number (8 digits)</label>
-                  <input type="text" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  <input 
+                    type="text" 
+                    name="accountNumber"
+                    value={formData.accountNumber}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Creditor Name</label>
-                  <input type="text" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  <input 
+                    type="text" 
+                    name="creditor"
+                    value={formData.creditor}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Mailing Address</label>
-                  <input type="text" placeholder="Street Address" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2" />
+                  <input 
+                    type="text" 
+                    name="address"
+                    value={formData.address}
+                    onChange={handleInputChange}
+                    placeholder="Street Address" 
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2" 
+                  />
                   <div className="grid grid-cols-2 gap-2">
-                    <input type="text" placeholder="City" className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                    <input type="text" placeholder="State" className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    <input 
+                      type="text" 
+                      name="city"
+                      value={formData.city}
+                      onChange={handleInputChange}
+                      placeholder="City" 
+                      className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                    />
+                    <input 
+                      type="text" 
+                      name="state"
+                      value={formData.state}
+                      onChange={handleInputChange}
+                      placeholder="State" 
+                      className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                    />
                   </div>
-                  <input type="text" placeholder="ZIP Code" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2" />
+                  <input 
+                    type="text" 
+                    name="zipCode"
+                    value={formData.zipCode}
+                    onChange={handleInputChange}
+                    placeholder="ZIP Code" 
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2" 
+                  />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number (optional)</label>
-                    <input type="tel" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                    <select className="w-full mt-2 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                      <option>Mobile</option>
-                      <option>Home</option>
-                      <option>Work</option>
+                    <input 
+                      type="tel" 
+                      name="phoneNumber"
+                      value={formData.phoneNumber}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                    />
+                    <select 
+                      name="phoneType"
+                      value={formData.phoneType}
+                      onChange={handleInputChange}
+                      className="w-full mt-2 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                      <option value="Mobile">Mobile</option>
+                      <option value="Home">Home</option>
+                      <option value="Work">Work</option>
                     </select>
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Email Address (optional)</label>
-                    <input type="email" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    <input 
+                      type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                    />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Your Feedback</label>
-                  <textarea rows={6} placeholder="Please describe your compliment or complaint in detail..." className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Feedback Type <span className="text-red-500">*</span></label>
+                  <div className="space-y-2">
+                    <label className="flex items-center">
+                      <input 
+                        type="radio" 
+                        name="feedbackType" 
+                        value="compliment"
+                        checked={formData.feedbackType === 'compliment'}
+                        onChange={handleInputChange}
+                        className="mr-2" 
+                        required
+                      />
+                      <span>Compliment</span>
+                    </label>
+                    <label className="flex items-center">
+                      <input 
+                        type="radio" 
+                        name="feedbackType" 
+                        value="complaint"
+                        checked={formData.feedbackType === 'complaint'}
+                        onChange={handleInputChange}
+                        className="mr-2" 
+                        required
+                      />
+                      <span>Complaint</span>
+                    </label>
+                  </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Upload Documents (optional)</label>
-                  <input type="file" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Subject <span className="text-red-500">*</span></label>
+                  <input 
+                    type="text" 
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
                 </div>
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-sm text-gray-600">(CAPTCHA here)</p>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Your Feedback <span className="text-red-500">*</span></label>
+                  <textarea 
+                    rows={6} 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    placeholder="Please describe your compliment or complaint in detail..." 
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                  ></textarea>
                 </div>
-                <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition-colors font-semibold">
-                  Submit Feedback
+                <div className="flex items-start space-x-3">
+                  <input
+                    type="checkbox"
+                    name="consent"
+                    checked={formData.consent}
+                    onChange={handleInputChange}
+                    className="mt-1 h-4 w-4 text-blue-900 focus:ring-blue-500 border-gray-300 rounded"
+                    required
+                  />
+                  <label className="text-sm text-gray-700">
+                    I confirm that the information provided above is accurate and complete. I understand that this feedback will be reviewed by our team.
+                  </label>
+                </div>
+                <button 
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition-colors font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? 'Submitting...' : 'Submit Feedback'}
                 </button>
+                
+                {submitMessage && (
+                  <div className={`mt-4 p-4 rounded-md ${
+                    submitMessage.includes('error') 
+                      ? 'bg-red-100 text-red-700 border border-red-300' 
+                      : 'bg-blue-900 text-white border border-blue-800'
+                  }`}>
+                    {submitMessage}
+                  </div>
+                )}
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
@@ -250,8 +470,15 @@ export default function SubmitComplimentComplaintPage() {
 
       {/* Pop-up Modal */}
       {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 p-6">
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center" 
+          style={{ zIndex: 9999 }}
+          onClick={closeModal}
+        >
+          <div 
+            className="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="text-center">
               <h3 className="text-xl font-bold text-blue-900 mb-4">IMPORTANT</h3>
               <p className="text-sm text-gray-700 mb-4">

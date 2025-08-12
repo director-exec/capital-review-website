@@ -5,9 +5,76 @@ import Link from 'next/link'
 
 export default function RemoveMyNumberPage() {
   const [showModal, setShowModal] = useState(true)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState('')
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    phoneNumberToRemove: '',
+    preference: '',
+    preferredContactNumber: '',
+    comments: '',
+    consent: false
+  })
 
   const closeModal = () => {
+    console.log('closeModal called')
     setShowModal(false)
+    console.log('showModal set to false')
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value, type } = e.target
+    if (type === 'checkbox') {
+      const checked = (e.target as HTMLInputElement).checked
+      setFormData(prev => ({ ...prev, [name]: checked }))
+    } else if (type === 'radio') {
+      setFormData(prev => ({ ...prev, [name]: value }))
+    } else {
+      setFormData(prev => ({ ...prev, [name]: value }))
+    }
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitMessage('')
+
+    try {
+      const response = await fetch('/api/submit-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          formType: 'remove-number',
+          formData: formData
+        }),
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        setSubmitMessage('Thank you for your request. Your contact preferences will be updated within 5 business days.')
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          phoneNumberToRemove: '',
+          preference: '',
+          preferredContactNumber: '',
+          comments: '',
+          consent: false
+        })
+      } else {
+        setSubmitMessage('There was an error submitting your request. Please try again or contact us directly.')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmitMessage('There was an error submitting your request. Please try again or contact us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const removeNumberSections = [
@@ -122,52 +189,125 @@ export default function RemoveMyNumberPage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Contact Preference Form</h2>
-            <div className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-3xl font-bold mb-8 text-center text-blue-900">Contact Preference Form</h2>
+            <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8">
               <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                    <input type="text" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name <span className="text-blue-900">*</span></label>
+                    <input 
+                      type="text" 
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                    <input type="text" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name <span className="text-blue-900">*</span></label>
+                    <input 
+                      type="text" 
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">The Number We Are Currently Calling (required)</label>
-                  <input type="tel" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  <label className="block text-sm font-medium text-gray-700 mb-2">The Number We Are Currently Calling <span className="text-blue-900">*</span></label>
+                  <input 
+                    type="tel" 
+                    name="phoneNumberToRemove"
+                    value={formData.phoneNumberToRemove}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Select One:</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Select One: <span className="text-blue-900">*</span></label>
                   <div className="space-y-2">
                     <label className="flex items-center">
-                      <input type="radio" name="preference" className="mr-2" />
+                      <input 
+                        type="radio" 
+                        name="preference" 
+                        value="remove"
+                        checked={formData.preference === 'remove'}
+                        onChange={handleInputChange}
+                        className="mr-2" 
+                        required
+                      />
                       <span>The number is incorrect — please remove it</span>
                     </label>
                     <label className="flex items-center">
-                      <input type="radio" name="preference" className="mr-2" />
+                      <input 
+                        type="radio" 
+                        name="preference" 
+                        value="different"
+                        checked={formData.preference === 'different'}
+                        onChange={handleInputChange}
+                        className="mr-2" 
+                        required
+                      />
                       <span>The number is correct, but I prefer to be reached at a different number</span>
                     </label>
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Contact Number (if different)</label>
-                  <input type="tel" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  <input 
+                    type="tel" 
+                    name="preferredContactNumber"
+                    value={formData.preferredContactNumber}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Comments or Additional Notes (optional)</label>
-                  <textarea rows={4} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                  <textarea 
+                    rows={4} 
+                    name="comments"
+                    value={formData.comments}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  ></textarea>
                 </div>
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-sm text-gray-600">(CAPTCHA field here)</p>
+                <div className="flex items-start space-x-3">
+                  <input
+                    type="checkbox"
+                    name="consent"
+                    checked={formData.consent}
+                    onChange={handleInputChange}
+                    className="mt-1 h-4 w-4 text-blue-900 focus:ring-blue-500 border-gray-300 rounded"
+                    required
+                  />
+                  <label className="text-sm text-gray-700">
+                    I confirm that the information provided above is accurate and complete. I understand that this request will be processed within 5 business days.
+                  </label>
                 </div>
-                <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition-colors font-semibold">
-                  Submit Request
+                <button 
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-blue-900 text-white py-3 px-6 rounded-md hover:bg-blue-800 transition-colors font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? 'Submitting...' : 'Submit Request'}
                 </button>
+                
+                {submitMessage && (
+                  <div className={`mt-4 p-4 rounded-md ${
+                    submitMessage.includes('error') 
+                      ? 'bg-red-100 text-red-700 border border-red-300' 
+                      : 'bg-blue-900 text-white border border-blue-800'
+                  }`}>
+                    {submitMessage}
+                  </div>
+                )}
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
@@ -205,8 +345,15 @@ export default function RemoveMyNumberPage() {
 
       {/* Pop-up Modal */}
       {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 p-6">
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center" 
+          style={{ zIndex: 9999 }}
+          onClick={closeModal}
+        >
+          <div 
+            className="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="text-center">
               <h3 className="text-xl font-bold text-blue-900 mb-4">IMPORTANT</h3>
               <p className="text-sm text-gray-700 mb-4">
