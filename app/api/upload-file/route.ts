@@ -25,14 +25,13 @@ export async function POST(request: NextRequest) {
     })
 
     console.log('File uploaded successfully to Vercel Blob:', {
-      url: blob.url,
-      uploadedAt: blob.uploadedAt
+      url: blob.url
     })
 
     return NextResponse.json({
       url: blob.url,
       size: file.size,
-      uploadedAt: blob.uploadedAt
+      uploadedAt: new Date().toISOString()
     })
   } catch (error) {
     console.error('Error uploading file:', error)

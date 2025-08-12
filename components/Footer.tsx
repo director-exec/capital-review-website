@@ -18,7 +18,9 @@ export default function Footer() {
                 <h3>Mailing Address</h3>
                 <p>
                   Elite Portfolio Management<br />
-                  2200 N Frazier St. STE 120 Box 142 Conroe TX, 77301<br />
+                  2200 N Frazier St.<br />
+                  STE 120 Box 142<br />
+                  Conroe TX, 77301<br />
                   833-381-4416<br />
                   info@eliteportfoliomgmt.com
                 </p>

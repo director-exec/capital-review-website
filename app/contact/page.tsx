@@ -11,7 +11,7 @@ export default function ContactPage() {
       id: 'receivables-help',
       title: 'Need Help With Receivables?',
       description: 'Looking to improve collections or streamline your accounts receivable process? Contact our solutions team to learn how we help clients maximize recovery while protecting their brand.',
-      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/4792288/pexels-photo-4792288.jpeg?_gl=1*17w92mj*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MzA3MjckbzIkZzEkdDE3NTQ5MzA3NTQkajMzJGwwJGgw',
       email: 'compliance@eliteportfoliomgmt.com'
     },
     {
@@ -77,29 +77,48 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {contactCards.map((card) => (
-                <div key={card.id} className="bg-white rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                  <div className="relative h-48">
-                    <div 
-                      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                      style={{ backgroundImage: `url(${card.image})` }}
-                    ></div>
-                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h3 className="text-xl font-bold text-white text-center px-4">{card.title}</h3>
+              {contactCards.map((card) => {
+                const isAccountResolution = card.id === 'account-resolution';
+                const isReceivablesHelp = card.id === 'receivables-help';
+                const isClickable = isAccountResolution || isReceivablesHelp;
+                const CardContent = (
+                  <div className={`bg-white rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden ${isClickable ? 'cursor-pointer hover:scale-105 transition-transform duration-300' : ''}`}>
+                    <div className="relative h-48">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                        style={{ backgroundImage: `url(${card.image})` }}
+                      ></div>
+                      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <h3 className="text-xl font-bold text-white text-center px-4">{card.title}</h3>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <div className="text-gray-700 leading-relaxed mb-4">
+                        {card.description}
+                      </div>
+                      <div className="mt-4">
+                        <p className="text-sm font-semibold text-blue-600">Email: {card.email}</p>
+                        <p className="text-sm text-gray-600">Phone: 833-381-4416</p>
+                      </div>
                     </div>
                   </div>
-                  <div className="p-6">
-                    <div className="text-gray-700 leading-relaxed mb-4">
-                      {card.description}
-                    </div>
-                    <div className="mt-4">
-                      <p className="text-sm font-semibold text-blue-600">Email: {card.email}</p>
-                      <p className="text-sm text-gray-600">Phone: 833-381-4416</p>
-                    </div>
+                );
+
+                return isClickable ? (
+                  <a 
+                    key={card.id} 
+                    href={isAccountResolution ? "/consumer-tools/request-account-validation" : "/solutions"}
+                    className="block no-underline"
+                  >
+                    {CardContent}
+                  </a>
+                ) : (
+                  <div key={card.id}>
+                    {CardContent}
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
@@ -113,12 +132,14 @@ export default function ContactPage() {
           <h3 className="text-2xl font-bold mb-6 text-white">
             Ready to get started?
           </h3>
-          <a href="tel:833-381-4416" className="btn bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block mr-4" style={{ color: '#414757' }}>
-            Call Us Today!
-          </a>
-          <a href="mailto:info@eliteportfoliomgmt.com" className="btn bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block" style={{ color: '#414757' }}>
-            Email Us
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:833-381-4416" className="btn bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block" style={{ color: '#414757' }}>
+              Call Us Today!
+            </a>
+            <a href="mailto:info@eliteportfoliomgmt.com" className="btn bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block" style={{ color: '#414757' }}>
+              Email Us
+            </a>
+          </div>
         </div>
       </section>
     </>
