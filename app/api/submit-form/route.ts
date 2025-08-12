@@ -30,7 +30,7 @@ const emailTemplates = {
   },
   'bankruptcy-notification': {
     subject: 'Bankruptcy Notification - Elite Portfolio Management',
-    to: 'jafiliko@gmail.com',
+    to: 'info@eliteportfoliomgmt.com',
     template: (data: any) => `
       <h2>Bankruptcy Notification</h2>
       <p><strong>Account Number:</strong> ${data.accountNumber}</p>
