@@ -3,11 +3,11 @@
 ## Overview
 All consumer tools forms now send emails to the appropriate inboxes when submitted:
 
-- **Request Account Validation** → `validation@eliteportfoliomgmt.com`
-- **Bankruptcy Notification** → `info@eliteportfoliomgmt.com`
-- **Remove My Number** → `compliance@eliteportfoliomgmt.com`
-- **Submit Compliment/Complaint** → `info@eliteportfoliomgmt.com`
-- **Dispute My Account** → `compliance@eliteportfoliomgmt.com`
+- **Request Account Validation** → `validation@eliteportmgmt.com`
+- **Bankruptcy Notification** → `info@eliteportmgmt.com`
+- **Remove My Number** → `compliance@eliteportmgmt.com`
+- **Submit Compliment/Complaint** → `info@eliteportmgmt.com`
+- **Dispute My Account** → `compliance@eliteportmgmt.com`
 
 ## Setup Instructions
 

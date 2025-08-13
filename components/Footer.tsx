@@ -22,7 +22,7 @@ export default function Footer() {
                   STE 120 Box 142<br />
                   Conroe TX, 77301<br />
                   833-381-4416<br />
-                  info@eliteportfoliomgmt.com
+                  info@eliteportmgmt.com
                 </p>
               </div>
             </div>

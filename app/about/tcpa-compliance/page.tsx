@@ -139,7 +139,7 @@ export default function TCPACompliancePage() {
                   </div>
                   <div>
                     <p className="font-semibold text-blue-600">Email</p>
-                    <p>compliance@eliteportfoliomgmt.com</p>
+                    <p>compliance@eliteportmgmt.com</p>
                   </div>
                 </div>
                 <p className="text-sm text-gray-600 mt-6">

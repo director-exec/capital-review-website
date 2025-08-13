@@ -4,7 +4,8 @@ export default function CreditBureauReportingPage() {
       id: 'bureau-integration',
       title: 'Your Gateway to the Bureaus',
       description: 'Elite Portfolio Management\'s network, is fully integrated with the nation\'s three major credit bureaus, Experian, Equifax, and TransUnion. Our secure systems and reporting protocols ensure that authorized accounts are updated accurately, flagged appropriately, and tracked in real time.',
-      image: '/Pages/Calculator_Writing_Pro.jpeg',
+      image: 'https://media.istockphoto.com/id/989117546/photo/business-people-meeting-negotiating-a-contract-between-two-colleagues.jpg?b=1&s=612x612&w=0&k=20&c=Ir_c9w7uD2bD76E_6GSGF7N1hpPJexsDGbhgQwDWB3s=',
+      
       background: 'grey',
       imageLeft: true
     },
@@ -12,7 +13,7 @@ export default function CreditBureauReportingPage() {
       id: 'compliance-benefits',
       title: 'Stay Compliant & Save Time',
       description: 'We handle all bureau submissions on your behalf — no extra systems or staffing required. We ensure all reporting is accurate, up to date, and reflects the current account status (including disputes), in accordance with FCRA. No software costs, no integration burdens — we manage the full reporting process.',
-      image: 'https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/Pages/Calculator_Writing_Pro.jpeg',
       background: 'white',
       imageLeft: false
     },
@@ -32,7 +33,7 @@ export default function CreditBureauReportingPage() {
       <section className="hero-banner relative h-96 flex items-center justify-center">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(https://images.pexels.com/photos/6077797/pexels-photo-6077797.jpeg?auto=compress&cs=tinysrgb&w=1200)' }}
+          style={{ backgroundImage: 'url(https://images.pexels.com/photos/9068372/pexels-photo-9068372.jpeg?_gl=1*269x10*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MjU3MjAkbzEkZzEkdDE3NTQ5MjYwNzckajUxJGwwJGgw)' }}
         ></div>
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 text-center text-white">

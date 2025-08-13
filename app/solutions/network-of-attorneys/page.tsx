@@ -12,7 +12,7 @@ export default function NetworkOfAttorneysPage() {
       id: 'client-directed-strategy',
       title: 'Client-Directed Legal Strategy',
       description: 'No lawsuit is initiated and no settlement is accepted without your explicit approval. The attorney represents you, and we manage the communication, documentation, and execution on your behalf. Before recommending litigation, Elite Portfolio conducts a collectability review including asset investigation, employment verification, and compliance checklists.',
-      image: 'https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/6077587/pexels-photo-6077587.jpeg?_gl=1*1votr6i*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTUwODU0NDYkbzUkZzEkdDE3NTUwODU0NDckajU5JGwwJGgw',
       background: 'white',
       imageLeft: false
     },

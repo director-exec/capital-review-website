@@ -5,7 +5,7 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="hero">
-        <div className="container">
+        <div className="container text-center">
           <h1>Precision Meets Resolution</h1>
           <p className="description">
             <strong>A Digital Approach to Strategic Outcomes</strong>
@@ -139,9 +139,9 @@ export default function Home() {
                 <i className="fas fa-phone"></i>
                 833-381-4416
               </a>
-              <a href="mailto:info@eliteportfoliomgmt.com" className="btn btn-outline">
+              <a href="mailto:info@eliteportmgmt.com" className="btn btn-outline">
                 <i className="fas fa-envelope"></i>
-                info@eliteportfoliomgmt.com
+                info@eliteportmgmt.com
               </a>
             </div>
 

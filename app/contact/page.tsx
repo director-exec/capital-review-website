@@ -5,28 +5,28 @@ export default function ContactPage() {
       title: 'Trying to Resolve an Account?',
       description: 'If you\'ve received a communication from Elite Portfolio Management and want to discuss your account or make a payment, our team is here to assist you.',
       image: '/Pages/Calculator_Writing_Pro.jpeg',
-      email: 'validation@eliteportfoliomgmt.com'
+      email: 'validation@eliteportmgmt.com'
     },
     {
       id: 'receivables-help',
       title: 'Need Help With Receivables?',
       description: 'Looking to improve collections or streamline your accounts receivable process? Contact our solutions team to learn how we help clients maximize recovery while protecting their brand.',
       image: 'https://images.pexels.com/photos/4792288/pexels-photo-4792288.jpeg?_gl=1*17w92mj*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MzA3MjckbzIkZzEkdDE3NTQ5MzA3NTQkajMzJGwwJGgw',
-      email: 'compliance@eliteportfoliomgmt.com'
+      email: 'compliance@eliteportmgmt.com'
     },
     {
       id: 'client-support',
       title: 'Already a Client?',
       description: 'If you\'re a current client and need support, reporting access, or a service update, we\'re always here for you.',
       image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop',
-      email: 'info@eliteportfoliomgmt.com'
+      email: 'info@eliteportmgmt.com'
     },
     {
       id: 'hr-verification',
       title: 'Employment Verification or HR Questions?',
       description: 'Need to verify employment, check holiday hours, or inquire about benefits?',
       image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
-      email: 'info@eliteportfoliomgmt.com'
+      email: 'info@eliteportmgmt.com'
     }
   ]
 
@@ -62,10 +62,10 @@ export default function ContactPage() {
                 Call Us: 833-381-4416
               </a>
               <a 
-                href="mailto:info@eliteportfoliomgmt.com" 
+                href="mailto:info@eliteportmgmt.com" 
                 className="bg-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-700 transition-colors inline-block"
               >
-                Email Us: info@eliteportfoliomgmt.com
+                Email Us: info@eliteportmgmt.com
               </a>
             </div>
           </div>
@@ -136,7 +136,7 @@ export default function ContactPage() {
             <a href="tel:833-381-4416" className="btn bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block" style={{ color: '#414757' }}>
               Call Us Today!
             </a>
-            <a href="mailto:info@eliteportfoliomgmt.com" className="btn bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block" style={{ color: '#414757' }}>
+            <a href="mailto:info@eliteportmgmt.com" className="btn bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block" style={{ color: '#414757' }}>
               Email Us
             </a>
           </div>

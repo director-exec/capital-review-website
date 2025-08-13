@@ -167,7 +167,7 @@ export default function FraudIdentityTheftPage() {
                 <p>2200 N Frazier St. STE 120 Box 142 Conroe TX, 77301</p>
                 <p className="text-xl font-semibold text-blue-900">833-381-4416</p>
                 <p className="mt-4">
-                  <strong>Compliance Email:</strong> compliance@eliteportfoliomgmt.com
+                  <strong>Compliance Email:</strong> compliance@eliteportmgmt.com
                 </p>
               </div>
             </div>

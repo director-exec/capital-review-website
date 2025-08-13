@@ -23,7 +23,7 @@ export default function RequestAccountValidationPage() {
     {
       id: 'email-delivery',
       title: 'Important Notice Regarding Email Delivery',
-      description: 'Your account validation or account details will be sent via standard (unencrypted) email. While convenient, this method may not offer the same level of security as postal mail. By submitting this form, you acknowledge and accept delivery in this format. To avoid delivery issues, we recommend adding our email address — support@eliteportfoliomgmt.com — to your safe sender list.',
+      description: 'Your account validation or account details will be sent via standard (unencrypted) email. While convenient, this method may not offer the same level of security as postal mail. By submitting this form, you acknowledge and accept delivery in this format. To avoid delivery issues, we recommend adding our email address — support@eliteportmgmt.com — to your safe sender list.',
       image: 'https://images.pexels.com/photos/9068372/pexels-photo-9068372.jpeg?_gl=1*269x10*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MjU3MjAkbzEkZzEkdDE3NTQ5MjYwNzckajUxJGwwJGgw',
       background: 'grey',
       imageLeft: true
@@ -478,7 +478,7 @@ export default function RequestAccountValidationPage() {
                 <p>2200 N Frazier St. STE 120 Box 142 Conroe TX, 77301</p>
                 <p>Phone: 833-381-4416</p>
                 <p className="mt-4">
-                  <strong>Validation Email:</strong> validation@eliteportfoliomgmt.com
+                  <strong>Validation Email:</strong> validation@eliteportmgmt.com
                 </p>
               </div>
             </div>

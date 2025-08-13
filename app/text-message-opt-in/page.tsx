@@ -6,7 +6,7 @@ export default function TextMessageOptInPage() {
       id: 'timely-notifications',
       title: 'Get Timely Notifications',
       description: 'Receive important updates about billing and upcoming payments directly to your phone. Stay informed about your account status and never miss a payment deadline with our convenient text message alerts.',
-      image: '/Pages/Writing_Signing_Doc_Meeting.jpeg',
+      image: 'https://images.pexels.com/photos/768474/pexels-photo-768474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       background: 'white',
       imageLeft: false
     },
@@ -22,7 +22,7 @@ export default function TextMessageOptInPage() {
       id: 'avoid-late-payments',
       title: 'Avoid Late Payments',
       description: 'Receive helpful due-date alerts and payment reminders to help you stay on top of your financial obligations. Our proactive messaging system helps you maintain good payment history and avoid late fees.',
-      image: 'https://images.pexels.com/photos/6077797/pexels-photo-6077797.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/6077587/pexels-photo-6077587.jpeg?_gl=1*1votr6i*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTUwODU0NDYkbzUkZzEkdDE3NTUwODU0NDckajU5JGwwJGgw',
       background: 'white',
       imageLeft: false
     },
@@ -42,7 +42,7 @@ export default function TextMessageOptInPage() {
       <section className="hero-banner relative h-96 flex items-center justify-center">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(https://images.pexels.com/photos/8730374/pexels-photo-8730374.jpeg?auto=compress&cs=tinysrgb&w=1200)' }}
+          style={{ backgroundImage: 'url(https://images.pexels.com/photos/768474/pexels-photo-768474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)' }}
         ></div>
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 text-center text-white">

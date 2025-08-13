@@ -319,7 +319,7 @@ export default function DisputeMyAccountPage() {
             <p>2200 N Frazier St. STE 120 Box 142 Conroe TX, 77301</p>
             <p>833-381-4416</p>
             <p className="mt-2">
-              <strong>Validation Email:</strong> validation@eliteportfoliomgmt.com
+              <strong>Validation Email:</strong> validation@eliteportmgmt.com
             </p>
           </div>
 

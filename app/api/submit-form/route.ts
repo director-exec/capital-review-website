@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
 const emailTemplates = {
   'account-validation': {
     subject: 'Account Validation Request - Elite Portfolio Management',
-    to: 'validation@eliteportfoliomgmt.com',
+    to: 'validation@eliteportmgmt.com',
     template: (data: any) => `
       <h2>Account Validation Request</h2>
       <p><strong>Account Number:</strong> ${data.accountNumber}</p>
@@ -30,7 +30,7 @@ const emailTemplates = {
   },
   'bankruptcy-notification': {
     subject: 'Bankruptcy Notification - Elite Portfolio Management',
-    to: 'info@eliteportfoliomgmt.com',
+    to: 'info@eliteportmgmt.com',
     template: (data: any) => `
       <h2>Bankruptcy Notification</h2>
       <p><strong>Account Number:</strong> ${data.accountNumber}</p>
@@ -53,7 +53,7 @@ const emailTemplates = {
   },
   'remove-number': {
     subject: 'Remove My Number Request - Elite Portfolio Management',
-    to: 'compliance@eliteportfoliomgmt.com',
+    to: 'compliance@eliteportmgmt.com',
     template: (data: any) => `
       <h2>Remove My Number Request</h2>
       <p><strong>Account Number:</strong> ${data.accountNumber}</p>
@@ -69,7 +69,7 @@ const emailTemplates = {
   },
   'compliment-complaint': {
     subject: 'Feedback Submission - Elite Portfolio Management',
-    to: 'info@eliteportfoliomgmt.com',
+    to: 'info@eliteportmgmt.com',
     template: (data: any) => `
       <h2>Feedback Submission</h2>
       <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
@@ -87,7 +87,7 @@ const emailTemplates = {
   },
   'dispute-account': {
     subject: 'Account Dispute - Elite Portfolio Management',
-    to: 'compliance@eliteportfoliomgmt.com',
+    to: 'compliance@eliteportmgmt.com',
     template: (data: any) => `
       <h2>Account Dispute</h2>
       <p><strong>Account Number:</strong> ${data.accountNumber}</p>

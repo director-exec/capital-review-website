@@ -434,7 +434,7 @@ export default function SubmitComplimentComplaintPage() {
                 <p>2200 N Frazier St. STE 120 Box 142 Conroe TX, 77301</p>
                 <p className="text-xl font-semibold text-blue-900">833-381-4416</p>
                 <p className="mt-4">
-                  <strong>General Email:</strong> info@eliteportfoliomgmt.com
+                  <strong>General Email:</strong> info@eliteportmgmt.com
                 </p>
               </div>
             </div>

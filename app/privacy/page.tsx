@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
       id: 'your-rights',
       title: 'Your Rights',
       description: 'Individuals have the right to access, update, or request the deletion of their personal information. To exercise these rights or for any questions regarding this Privacy Policy, please contact us using the information provided.',
-      image: 'https://images.pexels.com/photos/6077797/pexels-photo-6077797.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/6077587/pexels-photo-6077587.jpeg?_gl=1*1votr6i*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTUwODU0NDYkbzUkZzEkdDE3NTUwODU0NDckajU5JGwwJGgw',
       background: 'white',
       imageLeft: false
     }
@@ -145,7 +145,7 @@ export default function PrivacyPolicyPage() {
                 <p className="font-semibold">Elite Portfolio Management LLC</p>
                 <p className="text-xl font-semibold text-blue-600">833-381-4416</p>
                 <p className="mt-4">
-                  <strong>Email:</strong> info@eliteportfoliomgmt.com
+                  <strong>Email:</strong> info@eliteportmgmt.com
                 </p>
               </div>
             </div>

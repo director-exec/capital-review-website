@@ -6,7 +6,7 @@ export default function TermsAndConditionsPage() {
       id: 'acceptance-of-terms',
       title: 'Acceptance of Terms',
       description: 'By accessing and using the Website, you acknowledge and agree to abide by these Terms and Conditions and all applicable laws and regulations. If you do not agree to any of these terms, please do not use the Website.',
-      image: 'https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/6077587/pexels-photo-6077587.jpeg?_gl=1*1votr6i*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTUwODU0NDYkbzUkZzEkdDE3NTUwODU0NDckajU5JGwwJGgw',
       background: 'white',
       imageLeft: false
     },
@@ -30,7 +30,7 @@ export default function TermsAndConditionsPage() {
       id: 'intellectual-property',
       title: 'Intellectual Property',
       description: 'All content on the Website, including text, graphics, logos, and software, is the property of Elite Portfolio Management LLC and is protected by copyright laws. You may not use, reproduce, or distribute any content without our express written permission.',
-      image: 'https://images.pexels.com/photos/6077797/pexels-photo-6077797.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/6077587/pexels-photo-6077587.jpeg?_gl=1*1votr6i*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTUwODU0NDYkbzUkZzEkdDE3NTUwODU0NDckajU5JGwwJGgw',
       background: 'grey',
       imageLeft: true
     },
@@ -164,7 +164,7 @@ export default function TermsAndConditionsPage() {
                 <p className="font-semibold">Elite Portfolio Management LLC</p>
                 <p className="text-xl font-semibold text-blue-900">833-381-4416</p>
                 <p className="mt-4">
-                  <strong>Email:</strong> info@eliteportfoliomgmt.com
+                  <strong>Email:</strong> info@eliteportmgmt.com
                 </p>
               </div>
             </div>
