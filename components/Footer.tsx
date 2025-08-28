@@ -47,7 +47,7 @@ export default function Footer() {
                 <ul>
                   <li><a href="https://portal.eliteportfoliomgmt.com/" target="_blank" rel="noopener noreferrer">Make a Payment</a></li>
                   <li><Link href="/consumer-tools">Consumer Tools</Link></li>
-                  <li><Link href="/client-login">Client Login</Link></li>
+                  <li><a href="https://portal.eliteportfoliomgmt.com/" target="_blank" rel="noopener noreferrer">Client Login</a></li>
                   <li><Link href="/solutions">Solutions</Link></li>
                   <li><Link href="/text-message-opt-in">Text Message Opt-in</Link></li>
                 </ul>
