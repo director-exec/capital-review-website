@@ -73,7 +73,7 @@ export default function TermsAndConditionsPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Understanding Our Terms</h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Welcome to the website of Elite Portfolio Management LLC. By accessing and using eliteportfoliomanagement.com, 
+              Welcome to the website of Elite Portfolio Management LLC. By accessing and using eliteportfoliomgmt.com, 
               you agree to comply with and be bound by these Terms and Conditions. Please read them carefully to understand 
               your rights and obligations.
             </p>

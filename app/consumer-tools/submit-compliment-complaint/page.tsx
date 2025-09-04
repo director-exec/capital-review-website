@@ -103,7 +103,7 @@ export default function SubmitComplimentComplaintPage() {
     {
       id: 'account-information',
       title: 'Account Information',
-      description: 'Please provide your Elite Account Number (8 digits, found on your statement), creditor name, first and last name, and complete mailing address including street, city, state, and zip code. This helps us locate your account quickly.',
+      description: 'Please provide your Elite Account Number creditor name, first and last name, and complete mailing address including street, city, state, and zip code. This helps us locate your account quickly.',
       image: 'https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800',
       background: 'grey',
       imageLeft: true
@@ -247,7 +247,7 @@ export default function SubmitComplimentComplaintPage() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Elite Account Number (8 digits)</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Elite Account Number</label>
                   <input 
                     type="text" 
                     name="accountNumber"

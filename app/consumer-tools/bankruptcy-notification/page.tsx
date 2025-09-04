@@ -40,7 +40,7 @@ export default function BankruptcyNotificationPage() {
     {
       id: 'account-information',
       title: 'General Account Information',
-      description: 'Please provide the following details as shown on your Elite statement: Elite Account Number (8 digits), Creditor Name, First and Last Name, and Full Mailing Address (Street, City, State, Zip). This information helps us identify your account and ensure proper handling.',
+      description: 'Please provide the following details as shown on your Elite statement: Elite Account Number, Creditor Name, First and Last Name, and Full Mailing Address (Street, City, State, Zip). This information helps us identify your account and ensure proper handling.',
       image: '/Pages/Calculator_Writing_Pro.jpeg',
       background: 'grey',
       imageLeft: true
