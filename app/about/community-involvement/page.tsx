@@ -19,7 +19,7 @@ export default function CommunityInvolvementPage() {
     {
       id: 'elite-standard',
       title: 'Elite Portfolio Isn\'t Just a Name — It\'s Our Standard',
-      description: 'Elite Portfolio isn\'t just a name — it\'s a standard we uphold in everything we do, including how we serve our communities. We believe that true success is measured not just by business performance, but by the positive impact we have on the world around us. Through our community involvement, we strive to create lasting change and build stronger, more resilient communities.',
+      description: 'Elite Portfolio isn\'t just a name — it\'s a standard we uphold in everything we do; including how we serve our communities. We believe that true success is measured not just by business performance, but by the positive impact we have on the world around us. Through our community involvement, we strive to create lasting change and build stronger, more resilient communities.',
       image: '/Pages/Board_Meeting_Consult_Building.jpeg',
       background: 'white',
       imageLeft: false
