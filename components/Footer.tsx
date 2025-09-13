@@ -27,7 +27,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '40px' }}>
+            <div className="footer-bottom-row" style={{ display: 'flex', alignItems: 'flex-start', gap: '40px' }}>
               <div className="footer-section follow-us-section">
                 <h3>Follow Us</h3>
                 <div className="social-links" style={{ marginTop: '0 !important', paddingBottom: '0 !important' }}>
@@ -39,10 +39,15 @@ export default function Footer() {
                   </a>
                 </div>
               </div>
-              <div className="bbb-logo" style={{ marginTop: '2rem' }}>
+              <div className="footer-section" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
                 <img 
                   src="/LOGO/BBBLogo.png" 
                   alt="Better Business Bureau" 
+                  style={{ height: '120px', width: 'auto' }}
+                />
+                <img 
+                  src="/LOGO/EC_BADGE.png" 
+                  alt="EC Badge" 
                   style={{ height: '120px', width: 'auto' }}
                 />
               </div>
