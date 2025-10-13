@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:developers.tidio.com)",
+      "WebFetch(domain:help.tidio.com)",
+      "WebFetch(domain:www.tidio.com)",
+      "WebSearch"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

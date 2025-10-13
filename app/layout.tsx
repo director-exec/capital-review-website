@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -33,6 +34,14 @@ export default function RootLayout({
         </main>
         <Footer />
         <Analytics />
+        
+        {/* Tidio Chat Widget */}
+        {process.env.NEXT_PUBLIC_TIDIO_PUBLIC_KEY && (
+          <Script 
+            src={`//code.tidio.co/${process.env.NEXT_PUBLIC_TIDIO_PUBLIC_KEY}.js`}
+            strategy="lazyOnload"
+          />
+        )}
       </body>
     </html>
   )
