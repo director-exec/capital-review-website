@@ -1,6 +1,6 @@
-# Elite Portfolio Management - Modern Finance Website
+# Capital Review Management - Modern Finance Website
 
-A modern, responsive website for Elite Portfolio Management built with Next.js 14, TypeScript, Tailwind CSS, and Radix UI components.
+A modern, responsive website for Capital Review Management built with Next.js 14, TypeScript, Tailwind CSS, and Radix UI components.
 
 ## 🚀 Features
 
@@ -171,7 +171,7 @@ elite: {
 
 ## 📄 License
 
-This project is proprietary to Elite Portfolio Management.
+This project is proprietary to Capital Review Management.
 
 ## 🤝 Support
 
@@ -179,4 +179,4 @@ For questions or support, contact the development team.
 
 ---
 
-**Built with ❤️ for Elite Portfolio Management** 
+**Built with ❤️ for Capital Review Management** 

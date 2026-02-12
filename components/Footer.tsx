@@ -17,12 +17,12 @@ export default function Footer() {
               <div className="footer-section">
                 <h3>Mailing Address</h3>
                 <p>
-                  Elite Portfolio Management<br />
-                  2200 N Frazier St.<br />
-                  STE 120 Box 142<br />
-                  Conroe TX, 77301<br />
-                  833-381-4416<br />
-                  info@eliteportmgmt.com
+                  Capital Review Management<br />
+                  2200 North Frazier<br />
+                  Suite 120 Box 142<br />
+                  Conroe, TX 77301<br />
+                  866-766-2692<br />
+                  info@capitalreviewmgt.com
                 </p>
               </div>
             </div>
@@ -31,25 +31,16 @@ export default function Footer() {
               <div className="footer-section follow-us-section">
                 <h3>Follow Us</h3>
                 <div className="social-links" style={{ marginTop: '0 !important', paddingBottom: '0 !important' }}>
-                  <a href="#linkedin" aria-label="LinkedIn">
+                  <a href="#" aria-label="LinkedIn">
                     <i className="fab fa-linkedin"></i>
                   </a>
-                  <a href="#instagram" aria-label="Instagram">
+                  <a href="#" aria-label="Instagram">
                     <i className="fab fa-instagram"></i>
                   </a>
                 </div>
               </div>
-              <div className="footer-section" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                <img 
-                  src="/LOGO/BBBLogo.png" 
-                  alt="Better Business Bureau" 
-                  style={{ height: '120px', width: 'auto' }}
-                />
-                <img 
-                  src="/LOGO/EC_BADGE.png" 
-                  alt="EC Badge" 
-                  style={{ height: '120px', width: 'auto' }}
-                />
+              <div className="footer-section">
+                <p style={{ fontSize: '0.9rem', color: '#8892a4' }}>NMLS # Pending</p>
               </div>
             </div>
           </div>
@@ -59,9 +50,9 @@ export default function Footer() {
             <div className="resources-grid">
               <div className="resources-column">
                 <ul>
-                  <li><a href="https://portal.eliteportfoliomgmt.com/" target="_blank" rel="noopener noreferrer">Make a Payment</a></li>
+                  <li><a href="#">Make a Payment</a></li>
                   <li><Link href="/consumer-tools">Consumer Tools</Link></li>
-                  <li><a href="https://portal.eliteportfoliomgmt.com/" target="_blank" rel="noopener noreferrer">Client Login</a></li>
+                  <li><a href="#">Client Login</a></li>
                   <li><Link href="/solutions">Solutions</Link></li>
                   <li><Link href="/text-message-opt-in">Text Message Opt-in</Link></li>
                 </ul>
@@ -79,9 +70,9 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2025 Elite Portfolio Management. All rights reserved.</p>
+          <p>&copy; 2026 Capital Review Management. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
-} 
+}

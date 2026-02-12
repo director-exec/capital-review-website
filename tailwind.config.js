@@ -50,13 +50,12 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom Elite Portfolio colors
-        elite: {
-          primary: "#1a365d",
-          secondary: "#2d5aa0",
-          accent: "#38a169",
-          gold: "#f59e0b",
-          silver: "#94a3b8",
+        capital: {
+          primary: "#0a0f1c",
+          secondary: "#4a7fb5",
+          accent: "#c9a84c",
+          dark: "#111827",
+          light: "#b0b8c8",
         },
       },
       borderRadius: {
@@ -96,4 +95,4 @@ module.exports = {
     },
   },
   plugins: [],
-} 
+}

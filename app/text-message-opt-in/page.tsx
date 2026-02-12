@@ -4,34 +4,34 @@ export default function TextMessageOptInPage() {
   const optInSections = [
     {
       id: 'timely-notifications',
-      title: 'Get Timely Notifications',
-      description: 'Receive important updates about billing and upcoming payments directly to your phone. Stay informed about your account status and never miss a payment deadline with our convenient text message alerts.',
+      title: 'Receive Prompt Alerts',
+      description: 'Get critical updates regarding billing and forthcoming payments sent straight to your mobile device. Keep track of your account standing and avoid missing any payment due dates with our practical text notification service.',
       image: 'https://images.pexels.com/photos/768474/pexels-photo-768474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      background: 'white',
+      background: 'dark',
       imageLeft: false
     },
     {
       id: 'real-time-updates',
-      title: 'Stay Updated in Real Time',
-      description: 'Get instant notifications about your account status changes, payment confirmations, and important account updates. Our text messaging service ensures you\'re always in the know about your financial obligations.',
+      title: 'Instant Account Notifications',
+      description: 'Receive immediate alerts about changes to your account status, payment confirmations, and essential account developments. Our text notification service guarantees you are always aware of your financial standing.',
       image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800',
-      background: 'grey',
+      background: 'darker',
       imageLeft: true
     },
     {
       id: 'avoid-late-payments',
-      title: 'Avoid Late Payments',
-      description: 'Receive helpful due-date alerts and payment reminders to help you stay on top of your financial obligations. Our proactive messaging system helps you maintain good payment history and avoid late fees.',
+      title: 'Prevent Missed Deadlines',
+      description: 'Get useful due-date notifications and payment reminders to help you stay current on your financial commitments. Our proactive alert system supports you in maintaining a positive payment track record and steering clear of penalty charges.',
       image: 'https://images.pexels.com/photos/6077587/pexels-photo-6077587.jpeg?_gl=1*1votr6i*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTUwODU0NDYkbzUkZzEkdDE3NTUwODU0NDckajU5JGwwJGgw',
-      background: 'white',
+      background: 'dark',
       imageLeft: false
     },
     {
       id: 'exclusive-offers',
-      title: 'Access Exclusive Offers',
-      description: 'Receive notifications about exclusive offers and flexible payment options to better manage your account. Take advantage of special programs and payment arrangements designed to help you succeed.',
+      title: 'Unlock Special Opportunities',
+      description: 'Get notified about special promotions and adaptable payment alternatives to better handle your account. Take advantage of unique programs and payment plans crafted to support your financial success.',
       image: 'https://images.pexels.com/photos/8112172/pexels-photo-8112172.jpeg?auto=compress&cs=tinysrgb&w=800',
-      background: 'grey',
+      background: 'darker',
       imageLeft: true
     }
   ]
@@ -40,26 +40,26 @@ export default function TextMessageOptInPage() {
     <>
       {/* Hero Banner Section */}
       <section className="hero-banner relative h-96 flex items-center justify-center">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(https://images.pexels.com/photos/768474/pexels-photo-768474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)' }}
         ></div>
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
         <div className="relative z-10 text-center text-white">
           <h1 className="text-5xl font-bold mb-4">Text Message Opt-in</h1>
-          <p className="text-xl">Stay Informed with Important Account Updates & Payment Reminders!</p>
+          <p className="text-xl">Keep Informed with Key Account Updates & Payment Notifications!</p>
         </div>
       </section>
 
       {/* Main Content Introduction */}
-      <section className="main-intro py-16 bg-gray-50">
+      <section className="main-intro py-16 bg-[#111827]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Stay in Control of Your Finances</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Opt in today to receive essential updates and payment reminders, ensuring you never miss a deadline. 
-              Our convenient text messaging service provides hassle-free updates to help you manage your account 
-              effectively and maintain good payment history.
+            <h2 className="text-3xl font-bold mb-6 text-white">Take Charge of Your Financial Obligations</h2>
+            <p className="text-lg text-[#b0b8c8] leading-relaxed">
+              Sign up now to receive vital updates and payment notifications, making sure you never miss a due date.
+              Our straightforward text messaging service delivers effortless updates to help you oversee your account
+              effectively and preserve a strong payment history.
             </p>
           </div>
         </div>
@@ -67,22 +67,22 @@ export default function TextMessageOptInPage() {
 
       {/* Opt-in Sections */}
       {optInSections.map((section, index) => (
-        <section key={section.id} className={`py-16 ${section.background === 'grey' ? 'bg-gray-50' : 'bg-white'}`}>
+        <section key={section.id} className={`py-16 ${section.background === 'darker' ? 'bg-[#111827]' : 'bg-[#0a0f1c]'}`}>
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {section.imageLeft ? (
                   <>
                     <div className="order-1">
-                      <img 
-                        src={section.image} 
+                      <img
+                        src={section.image}
                         alt={section.title}
                         className="w-full h-80 object-cover rounded-lg shadow-lg"
                       />
                     </div>
                     <div className="order-2">
-                      <h2 className="text-3xl font-bold mb-6 text-gray-900">{section.title}</h2>
-                      <div className="text-lg text-gray-700 leading-relaxed">
+                      <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
+                      <div className="text-lg text-[#b0b8c8] leading-relaxed">
                         {section.description}
                       </div>
                     </div>
@@ -90,14 +90,14 @@ export default function TextMessageOptInPage() {
                 ) : (
                   <>
                     <div className="order-2 lg:order-1">
-                      <h2 className="text-3xl font-bold mb-6 text-gray-900">{section.title}</h2>
-                      <div className="text-lg text-gray-700 leading-relaxed">
+                      <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
+                      <div className="text-lg text-[#b0b8c8] leading-relaxed">
                         {section.description}
                       </div>
                     </div>
                     <div className="order-1 lg:order-2">
-                      <img 
-                        src={section.image} 
+                      <img
+                        src={section.image}
                         alt={section.title}
                         className="w-full h-80 object-cover rounded-lg shadow-lg"
                       />
@@ -111,20 +111,20 @@ export default function TextMessageOptInPage() {
       ))}
 
       {/* Opt-in Form Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#111827]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Ready to Get Started?</h2>
-            <div className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-3xl font-bold mb-8 text-center text-white">Prepared to Begin?</h2>
+            <div className="bg-[#0a0f1c] rounded-lg shadow-lg p-8">
               <div className="text-center mb-8">
-                <p className="text-lg text-gray-700">
-                  Enter your information below to opt in to text message notifications
+                <p className="text-lg text-[#b0b8c8]">
+                  Provide your details below to enroll in text message notifications
                 </p>
               </div>
 
               <form className="max-w-md mx-auto space-y-6">
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="phone" className="block text-sm font-medium text-[#b0b8c8] mb-2">
                     Phone Number *
                   </label>
                   <input
@@ -132,13 +132,13 @@ export default function TextMessageOptInPage() {
                     id="phone"
                     name="phone"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-4 py-3 bg-[#111827] text-white border border-[#1e293b] rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     placeholder="(555) 123-4567"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-[#b0b8c8] mb-2">
                     Full Name *
                   </label>
                   <input
@@ -146,21 +146,21 @@ export default function TextMessageOptInPage() {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    placeholder="John Doe"
+                    className="w-full px-4 py-3 bg-[#111827] text-white border border-[#1e293b] rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Jane Smith"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-[#b0b8c8] mb-2">
                     Email Address
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    placeholder="john.doe@example.com"
+                    className="w-full px-4 py-3 bg-[#111827] text-white border border-[#1e293b] rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="jane.smith@example.com"
                   />
                 </div>
 
@@ -170,18 +170,18 @@ export default function TextMessageOptInPage() {
                     id="consent"
                     name="consent"
                     required
-                    className="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    className="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-[#1e293b] rounded"
                   />
-                  <label htmlFor="consent" className="ml-2 block text-sm text-gray-700">
-                    I consent to receive text messages from Elite Portfolio Management LLC. I understand that message and data rates may apply. I can opt out at any time by replying STOP.
+                  <label htmlFor="consent" className="ml-2 block text-sm text-[#b0b8c8]">
+                    I authorize Capital Review Management LLC to send me text messages. I acknowledge that standard message and data charges may apply. I may unsubscribe at any point by responding STOP.
                   </label>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                  className="w-full bg-[#c9a84c] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#b8973d] transition-colors duration-200 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  OPT IN NOW
+                  ENROLL NOW
                 </button>
               </form>
             </div>
@@ -190,29 +190,29 @@ export default function TextMessageOptInPage() {
       </section>
 
       {/* Important Information Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#0a0f1c]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center text-gray-900">Important Information</h2>
-            <div className="bg-gray-50 rounded-lg shadow-lg p-8">
+            <h2 className="text-3xl font-bold mb-6 text-center text-white">Key Details</h2>
+            <div className="bg-[#111827] rounded-lg shadow-lg p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Message Details</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>• Standard message and data rates may apply</li>
-                    <li>• You can opt out at any time by replying STOP</li>
-                    <li>• For help, reply HELP to any message</li>
-                    <li>• Message frequency varies based on account activity</li>
+                  <h3 className="text-xl font-semibold text-white mb-4">Messaging Details</h3>
+                  <ul className="space-y-2 text-[#b0b8c8]">
+                    <li>&#8226; Standard message and data fees may be incurred</li>
+                    <li>&#8226; You may unsubscribe at any point by replying STOP</li>
+                    <li>&#8226; For assistance, reply HELP to any message</li>
+                    <li>&#8226; Message frequency differs depending on account activity</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Legal Information</h3>
-                  <p className="text-gray-700 mb-4">
-                    By opting in, you agree to our Terms and Conditions and Privacy Policy.
+                  <h3 className="text-xl font-semibold text-white mb-4">Legal Details</h3>
+                  <p className="text-[#b0b8c8] mb-4">
+                    By enrolling, you consent to our Terms and Conditions and Privacy Policy.
                   </p>
                   <div className="space-y-2">
-                    <Link href="/terms" className="block text-blue-600 hover:text-blue-800 underline">Terms and Conditions</Link>
-                    <Link href="/privacy" className="block text-blue-600 hover:text-blue-800 underline">Privacy Policy</Link>
+                    <Link href="/terms" className="block text-[#c9a84c] hover:text-[#b8973d] underline">Terms and Conditions</Link>
+                    <Link href="/privacy" className="block text-[#c9a84c] hover:text-[#b8973d] underline">Privacy Policy</Link>
                   </div>
                 </div>
               </div>

@@ -61,7 +61,7 @@ export default function SubmitComplimentComplaintPage() {
       const result = await response.json()
 
       if (response.ok) {
-        setSubmitMessage('Thank you for your feedback. We appreciate you taking the time to share your experience with us.')
+        setSubmitMessage('We value your input. Thank you for dedicating time to share your thoughts with our team.')
         // Reset form
         setFormData({
           firstName: '',
@@ -81,11 +81,11 @@ export default function SubmitComplimentComplaintPage() {
           consent: false
         })
       } else {
-        setSubmitMessage('There was an error submitting your feedback. Please try again or contact us directly.')
+        setSubmitMessage('An issue occurred while sending your response. Please retry or contact us directly.')
       }
     } catch (error) {
       console.error('Error submitting form:', error)
-      setSubmitMessage('There was an error submitting your feedback. Please try again or contact us directly.')
+      setSubmitMessage('An issue occurred while sending your response. Please retry or contact us directly.')
     } finally {
       setIsSubmitting(false)
     }
@@ -94,48 +94,48 @@ export default function SubmitComplimentComplaintPage() {
   const feedbackSections = [
     {
       id: 'important-note',
-      title: 'Important Note',
-      description: 'Please complete the form below to tell us what went well — or where we can improve. If you\'re looking to dispute an account, please use our Dispute My Account form instead. We value your feedback and use it to improve our services.',
+      title: 'Key Information',
+      description: 'Kindly use the form below to let us know what impressed you — or where we could do better. If you wish to challenge an account, please navigate to our Dispute My Account page instead. We genuinely appreciate your input and rely on it to enhance our offerings.',
       image: 'https://images.pexels.com/photos/33332413/pexels-photo-33332413.jpeg',
       background: 'white',
       imageLeft: false
     },
     {
       id: 'account-information',
-      title: 'Account Information',
-      description: 'Please provide your Elite Account Number creditor name, first and last name, and complete mailing address including street, city, state, and zip code. This helps us locate your account quickly.',
+      title: 'Account Details',
+      description: 'Please supply your Account Number, creditor name, given and family name, and full mailing address including street, city, state, and postal code. This enables us to pull up your records swiftly.',
       image: 'https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800',
       background: 'grey',
       imageLeft: true
     },
     {
       id: 'contact-method',
-      title: 'Preferred Contact Method',
-      description: 'Let us know the best way to reach you if we need to follow up. You can provide a phone number (mobile, home, or work) and/or email address. This ensures we can respond to your feedback promptly.',
+      title: 'How Should We Reach You?',
+      description: 'Share your ideal method of communication for any necessary follow-up. You may include a phone number (cell, residential, or office) and/or an email address. This guarantees we can reply to your input in a timely manner.',
       image: '/Pages/Calculator_Writing_Pro.jpeg',
       background: 'white',
       imageLeft: false
     },
     {
       id: 'experience-details',
-      title: 'Tell Us About Your Experience',
-      description: 'Please describe your compliment or complaint in detail. You may also upload relevant documents or screenshots if applicable. The more specific you can be, the better we can address your feedback.',
+      title: 'Describe Your Interaction',
+      description: 'Please outline your praise or grievance thoroughly. You are also welcome to attach pertinent documents or screenshots if relevant. The more precise your account, the more effectively we can respond to your observations.',
       image: '/Pages/Writing_Signing_Doc_Meeting.jpeg',
       background: 'grey',
       imageLeft: true
     },
     {
       id: 'take-feedback-seriously',
-      title: 'We Take Feedback Seriously',
-      description: 'Every compliment and complaint is reviewed by our internal compliance and service quality teams to ensure we\'re meeting our professional standards and your expectations. Thank you for helping us serve you better.',
+      title: 'Your Voice Drives Our Standards',
+      description: 'Each piece of praise and every concern is examined by our internal compliance and service excellence departments to confirm we are upholding our professional benchmarks and fulfilling your expectations. We appreciate your role in helping us deliver superior service.',
       image: '/Pages/Stamp_Doc.jpeg',
       background: 'white',
       imageLeft: false
     },
     {
       id: 'what-happens-next',
-      title: 'What Happens Next?',
-      description: 'Your feedback will be reviewed within 2 business days. If you provided contact information, we may reach out for additional details. Complaints are escalated to our compliance team for thorough investigation, and you\'ll receive a response within 10 business days.',
+      title: 'What Comes After Submission?',
+      description: 'Your input will be assessed within 2 working days. If you included contact details, we may follow up for further clarification. Grievances are forwarded to our compliance division for a comprehensive review, and you will hear back within 10 business days.',
       image: 'https://images.unsplash.com/photo-1565728744382-61accd4aa148?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       background: 'grey',
       imageLeft: true
@@ -146,25 +146,25 @@ export default function SubmitComplimentComplaintPage() {
     <>
       {/* Hero Banner Section */}
       <section className="hero-banner relative h-96 flex items-center justify-center">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1565728744382-61accd4aa148?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}
         ></div>
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
         <div className="relative z-10 text-center text-white">
-          <h1 className="text-5xl font-bold mb-4">Submit a Compliment or Complaint</h1>
-          <p className="text-xl">Your Feedback Matters</p>
+          <h1 className="text-5xl font-bold mb-4">Share a Compliment or Concern</h1>
+          <p className="text-xl">Your Perspective Is Valued</p>
         </div>
       </section>
 
       {/* Main Content Introduction */}
-      <section className="main-intro py-16 bg-gray-50">
+      <section className="main-intro py-16 bg-[#111827]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Help Us Serve You Better</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              At Elite Portfolio Management, every interaction counts. Whether you had a great experience or want to share a concern, 
-              we want to hear from you. Your feedback helps us improve our services and maintain the highest standards.
+            <h2 className="text-3xl font-bold mb-6 text-white">Assist Us in Delivering Better Service</h2>
+            <p className="text-lg text-[#b0b8c8] leading-relaxed">
+              At Capital Review Management, each conversation matters. Whether your experience was outstanding or you have a concern to raise,
+              we are eager to listen. Your observations guide us in refining our processes and sustaining the highest quality standards.
             </p>
           </div>
         </div>
@@ -172,22 +172,22 @@ export default function SubmitComplimentComplaintPage() {
 
       {/* Feedback Sections */}
       {feedbackSections.map((section, index) => (
-        <section key={section.id} className={`py-16 ${section.background === 'grey' ? 'bg-gray-50' : 'bg-white'}`}>
+        <section key={section.id} className={`py-16 ${section.background === 'grey' ? 'bg-[#111827]' : 'bg-[#0a0f1c]'}`}>
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {section.imageLeft ? (
                   <>
                     <div className="order-1">
-                      <img 
-                        src={section.image} 
+                      <img
+                        src={section.image}
                         alt={section.title}
                         className="w-full h-80 object-cover rounded-lg shadow-lg"
                       />
                     </div>
                     <div className="order-2">
-                      <h2 className="text-3xl font-bold mb-6 text-gray-900">{section.title}</h2>
-                      <div className="text-lg text-gray-700 leading-relaxed">
+                      <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
+                      <div className="text-lg text-[#b0b8c8] leading-relaxed">
                         {section.description}
                       </div>
                     </div>
@@ -195,14 +195,14 @@ export default function SubmitComplimentComplaintPage() {
                 ) : (
                   <>
                     <div className="order-2 lg:order-1">
-                      <h2 className="text-3xl font-bold mb-6 text-gray-900">{section.title}</h2>
-                      <div className="text-lg text-gray-700 leading-relaxed">
+                      <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
+                      <div className="text-lg text-[#b0b8c8] leading-relaxed">
                         {section.description}
                       </div>
                     </div>
                     <div className="order-1 lg:order-2">
-                      <img 
-                        src={section.image} 
+                      <img
+                        src={section.image}
                         alt={section.title}
                         className="w-full h-80 object-cover rounded-lg shadow-lg"
                       />
@@ -216,108 +216,108 @@ export default function SubmitComplimentComplaintPage() {
       ))}
 
       {/* Form Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#111827]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Feedback Form</h2>
-            <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-3xl font-bold mb-8 text-center text-white">Response Submission Form</h2>
+            <form onSubmit={handleSubmit} className="bg-[#0a0f1c] rounded-lg shadow-lg p-8">
               <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name <span className="text-red-500">*</span></label>
-                    <input 
-                      type="text" 
+                    <label className="block text-sm font-medium text-[#b0b8c8] mb-2">First Name <span className="text-red-500">*</span></label>
+                    <input
+                      type="text"
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       required
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name <span className="text-red-500">*</span></label>
-                    <input 
-                      type="text" 
+                    <label className="block text-sm font-medium text-[#b0b8c8] mb-2">Last Name <span className="text-red-500">*</span></label>
+                    <input
+                      type="text"
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       required
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Elite Account Number</label>
-                  <input 
-                    type="text" 
+                  <label className="block text-sm font-medium text-[#b0b8c8] mb-2">Account Number</label>
+                  <input
+                    type="text"
                     name="accountNumber"
                     value={formData.accountNumber}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Creditor Name</label>
-                  <input 
-                    type="text" 
+                  <label className="block text-sm font-medium text-[#b0b8c8] mb-2">Creditor Name</label>
+                  <input
+                    type="text"
                     name="creditor"
                     value={formData.creditor}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Mailing Address</label>
-                  <input 
-                    type="text" 
+                  <label className="block text-sm font-medium text-[#b0b8c8] mb-2">Mailing Address</label>
+                  <input
+                    type="text"
                     name="address"
                     value={formData.address}
                     onChange={handleInputChange}
-                    placeholder="Street Address" 
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2" 
+                    placeholder="Street Address"
+                    className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2"
                   />
                   <div className="grid grid-cols-2 gap-2">
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       name="city"
                       value={formData.city}
                       onChange={handleInputChange}
-                      placeholder="City" 
-                      className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                      placeholder="City"
+                      className="px-3 py-2 bg-[#111827] text-white border border-[#1e293b] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       name="state"
                       value={formData.state}
                       onChange={handleInputChange}
-                      placeholder="State" 
-                      className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                      placeholder="State"
+                      className="px-3 py-2 bg-[#111827] text-white border border-[#1e293b] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     name="zipCode"
                     value={formData.zipCode}
                     onChange={handleInputChange}
-                    placeholder="ZIP Code" 
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2" 
+                    placeholder="ZIP Code"
+                    className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2"
                   />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number (optional)</label>
-                    <input 
-                      type="tel" 
+                    <label className="block text-sm font-medium text-[#b0b8c8] mb-2">Phone Number (optional)</label>
+                    <input
+                      type="tel"
                       name="phoneNumber"
                       value={formData.phoneNumber}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                      className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
-                    <select 
+                    <select
                       name="phoneType"
                       value={formData.phoneType}
                       onChange={handleInputChange}
-                      className="w-full mt-2 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full mt-2 px-3 py-2 bg-[#111827] text-white border border-[#1e293b] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
                       <option value="Mobile">Mobile</option>
                       <option value="Home">Home</option>
@@ -325,39 +325,39 @@ export default function SubmitComplimentComplaintPage() {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Email Address (optional)</label>
-                    <input 
-                      type="email" 
+                    <label className="block text-sm font-medium text-[#b0b8c8] mb-2">Email Address (optional)</label>
+                    <input
+                      type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                      className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Feedback Type <span className="text-red-500">*</span></label>
+                  <label className="block text-sm font-medium text-[#b0b8c8] mb-2">Nature of Response <span className="text-red-500">*</span></label>
                   <div className="space-y-2">
-                    <label className="flex items-center">
-                      <input 
-                        type="radio" 
-                        name="feedbackType" 
+                    <label className="flex items-center text-[#b0b8c8]">
+                      <input
+                        type="radio"
+                        name="feedbackType"
                         value="compliment"
                         checked={formData.feedbackType === 'compliment'}
                         onChange={handleInputChange}
-                        className="mr-2" 
+                        className="mr-2"
                         required
                       />
                       <span>Compliment</span>
                     </label>
-                    <label className="flex items-center">
-                      <input 
-                        type="radio" 
-                        name="feedbackType" 
+                    <label className="flex items-center text-[#b0b8c8]">
+                      <input
+                        type="radio"
+                        name="feedbackType"
                         value="complaint"
                         checked={formData.feedbackType === 'complaint'}
                         onChange={handleInputChange}
-                        className="mr-2" 
+                        className="mr-2"
                         required
                       />
                       <span>Complaint</span>
@@ -365,25 +365,25 @@ export default function SubmitComplimentComplaintPage() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Subject <span className="text-red-500">*</span></label>
-                  <input 
-                    type="text" 
+                  <label className="block text-sm font-medium text-[#b0b8c8] mb-2">Subject <span className="text-red-500">*</span></label>
+                  <input
+                    type="text"
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Your Feedback <span className="text-red-500">*</span></label>
-                  <textarea 
-                    rows={6} 
+                  <label className="block text-sm font-medium text-[#b0b8c8] mb-2">Your Comments <span className="text-red-500">*</span></label>
+                  <textarea
+                    rows={6}
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Please describe your compliment or complaint in detail..." 
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Please elaborate on your compliment or concern in detail..."
+                    className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   ></textarea>
                 </div>
@@ -393,26 +393,26 @@ export default function SubmitComplimentComplaintPage() {
                     name="consent"
                     checked={formData.consent}
                     onChange={handleInputChange}
-                    className="mt-1 h-4 w-4 text-blue-900 focus:ring-blue-500 border-gray-300 rounded"
+                    className="mt-1 h-4 w-4 text-[#4a7fb5] focus:ring-blue-500 border-[#1e293b] rounded"
                     required
                   />
-                  <label className="text-sm text-gray-700">
-                    I confirm that the information provided above is accurate and complete. I understand that this feedback will be reviewed by our team.
+                  <label className="text-sm text-[#b0b8c8]">
+                    I verify that all details entered above are truthful and complete. I acknowledge that this submission will be examined by our staff.
                   </label>
                 </div>
-                <button 
+                <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition-colors font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-[#4a7fb5] text-white py-3 px-6 rounded-md hover:bg-[#3a6fa5] transition-colors font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? 'Submitting...' : 'Submit Feedback'}
+                  {isSubmitting ? 'Submitting...' : 'Send Response'}
                 </button>
-                
+
                 {submitMessage && (
                   <div className={`mt-4 p-4 rounded-md ${
-                    submitMessage.includes('error') 
-                      ? 'bg-red-100 text-red-700 border border-red-300' 
-                      : 'bg-blue-900 text-white border border-blue-800'
+                    submitMessage.includes('issue')
+                      ? 'bg-red-900 text-red-200 border border-red-700'
+                      : 'bg-[#4a7fb5] text-white border border-[#3a6fa5]'
                   }`}>
                     {submitMessage}
                   </div>
@@ -424,17 +424,17 @@ export default function SubmitComplimentComplaintPage() {
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#0a0f1c]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">Contact Information</h2>
-            <div className="bg-gray-50 rounded-lg shadow-lg p-8">
-              <div className="text-lg text-gray-700 space-y-4">
-                <p className="font-semibold">Elite Portfolio Management</p>
-                <p>2200 N Frazier St. STE 120 Box 142 Conroe TX, 77301</p>
-                <p className="text-xl font-semibold text-blue-900">833-381-4416</p>
+            <h2 className="text-3xl font-bold mb-6 text-white">How to Reach Us</h2>
+            <div className="bg-[#111827] rounded-lg shadow-lg p-8">
+              <div className="text-lg text-[#b0b8c8] space-y-4">
+                <p className="font-semibold text-white">Capital Review Management</p>
+                <p>2200 North Frazier Suite 120 Box 142, Conroe, TX 77301</p>
+                <p className="text-xl font-semibold text-[#4a7fb5]">866-766-2692</p>
                 <p className="mt-4">
-                  <strong>General Email:</strong> info@eliteportmgmt.com
+                  <strong>General Email:</strong> info@capitalreviewmgt.com
                 </p>
               </div>
             </div>
@@ -443,13 +443,13 @@ export default function SubmitComplimentComplaintPage() {
       </section>
 
       {/* Legal Notice Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#111827]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900 text-center">Legal Notice</h2>
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <p className="text-lg text-gray-700 leading-relaxed text-center">
-                This is an attempt to collect a debt. Any information obtained will be used for that purpose. This communication is from a debt collector.
+            <h2 className="text-3xl font-bold mb-6 text-white text-center">Regulatory Disclosure</h2>
+            <div className="bg-[#0a0f1c] rounded-lg shadow-lg p-8">
+              <p className="text-lg text-[#b0b8c8] leading-relaxed text-center">
+                This correspondence constitutes an effort to recover a debt. All details gathered will serve that objective. This message originates from a debt collection agency.
               </p>
             </div>
           </div>
@@ -457,39 +457,39 @@ export default function SubmitComplimentComplaintPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="cta text-center py-24" style={{ backgroundColor: '#414757' }}>
+      <section className="cta text-center py-24" style={{ backgroundColor: '#1a1f2e' }}>
         <div className="container mx-auto px-4">
           <h3 className="text-2xl font-bold mb-6 text-white">
-            Have additional questions or need immediate assistance?
+            Have further inquiries or require prompt support?
           </h3>
-          <Link href="/contact" className="btn bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" style={{ color: '#414757' }}>
-            Contact Us Today!
+          <Link href="/contact" className="btn bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" style={{ color: '#1a1f2e' }}>
+            Get in Touch Now!
           </Link>
         </div>
       </section>
 
       {/* Pop-up Modal */}
       {showModal && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center" 
+        <div
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center"
           style={{ zIndex: 9999 }}
           onClick={closeModal}
         >
-          <div 
-            className="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 p-6"
+          <div
+            className="bg-[#1a1f2e] rounded-lg shadow-xl max-w-md w-full mx-4 p-6"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="text-center">
-              <h3 className="text-xl font-bold text-blue-900 mb-4">IMPORTANT</h3>
-              <p className="text-sm text-gray-700 mb-4">
-                This is an attempt to collect a debt. Any information will be used for that purpose. This communication is from a debt collector.
+              <h3 className="text-xl font-bold text-[#4a7fb5] mb-4">NOTICE</h3>
+              <p className="text-sm text-[#b0b8c8] mb-4">
+                This correspondence constitutes an effort to recover a debt. All details gathered will serve that objective. This message originates from a debt collection agency.
               </p>
-              <p className="text-sm text-gray-700 mb-6">
-                Calls to and from this company may be monitored and/or recorded.
+              <p className="text-sm text-[#b0b8c8] mb-6">
+                Phone conversations with this organization may be monitored and/or recorded.
               </p>
               <button
                 onClick={closeModal}
-                className="w-full bg-blue-900 text-white py-2 px-4 rounded-md hover:bg-blue-800 transition-colors duration-200"
+                className="w-full bg-[#4a7fb5] text-white py-2 px-4 rounded-md hover:bg-[#3a6fa5] transition-colors duration-200"
               >
                 I Accept
               </button>
@@ -499,4 +499,4 @@ export default function SubmitComplimentComplaintPage() {
       )}
     </>
   )
-} 
+}

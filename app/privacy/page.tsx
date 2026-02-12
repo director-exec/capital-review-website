@@ -4,50 +4,50 @@ export default function PrivacyPolicyPage() {
   const privacySections = [
     {
       id: 'information-collection',
-      title: 'Information We Collect',
-      description: 'We may collect various types of personal information including contact information (name, address, email, phone), financial information (payment history, bank details), debt information (account numbers, balances), identification information (government IDs), and communications records (phone calls, emails, correspondence).',
+      title: 'Data We Gather',
+      description: 'We may collect a range of personal data including contact details (name, mailing address, email, telephone number), financial data (payment records, banking information), debt-related data (account identifiers, outstanding amounts), identification documents (government-issued IDs), and communication logs (phone conversations, emails, written correspondence).',
       image: 'https://images.pexels.com/photos/4792288/pexels-photo-4792288.jpeg?_gl=1*17w92mj*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MzA3MjckbzIkZzEkdDE3NTQ5MzA3NTQkajMzJGwwJGgw',
-      background: 'white',
+      background: 'dark',
       imageLeft: false
     },
     {
       id: 'information-usage',
-      title: 'Information Usage and Disclosure',
-      description: 'We do not sell personal information to third parties. However, we may share information for business operations with affiliates and service providers, during business transfers such as mergers or sales, and for legal compliance as required by law, regulation, or legal process.',
+      title: 'How We Use and Share Data',
+      description: 'We never sell personal data to outside parties. That said, we may disclose information for operational needs with affiliated entities and service vendors, in the course of corporate transactions such as acquisitions or divestitures, and for regulatory compliance as mandated by statute, regulation, or judicial proceedings.',
       image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      background: 'grey',
+      background: 'darker',
       imageLeft: true
     },
     {
       id: 'data-security',
-      title: 'Data Security',
-      description: 'We employ technical and organizational measures to safeguard the confidentiality, integrity, and security of personal information. However, no method of transmission or storage is entirely secure, and we cannot guarantee absolute data security.',
+      title: 'Information Protection',
+      description: 'We implement technical and procedural safeguards to maintain the confidentiality, accuracy, and security of personal data. Nevertheless, no transmission or storage method is completely impervious, and we cannot provide an absolute guarantee of data protection.',
       image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800',
-      background: 'white',
+      background: 'dark',
       imageLeft: false
     },
     {
       id: 'text-messaging',
-      title: 'Text Messaging Privacy',
-      description: 'We do not share, transfer, or sell mobile numbers, text messaging opt-in data, or consent information to third parties. For more details on text communications, please refer to our Terms and Conditions page.',
+      title: 'SMS Communication Privacy',
+      description: 'We do not distribute, transfer, or commercialize mobile phone numbers, text messaging enrollment data, or authorization details to outside parties. For additional information regarding text-based communications, please consult our Terms and Conditions page.',
       image: 'https://images.pexels.com/photos/2312369/pexels-photo-2312369.jpeg?_gl=1*kss10t*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5NDQ2NDckbzQkZzEkdDE3NTQ5NDQ2NTYkajUxJGwwJGgw',
-      background: 'grey',
+      background: 'darker',
       imageLeft: true
     },
     {
       id: 'your-rights',
-      title: 'Your Rights',
-      description: 'Individuals have the right to access, update, or request the deletion of their personal information. To exercise these rights or for any questions regarding this Privacy Policy, please contact us using the information provided.',
+      title: 'Your Entitlements',
+      description: 'You have the right to view, correct, or request removal of your personal data. To exercise these entitlements or for any questions about this Privacy Policy, please reach out to us through the contact details provided below.',
       image: 'https://images.pexels.com/photos/6077587/pexels-photo-6077587.jpeg?_gl=1*1votr6i*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTUwODU0NDYkbzUkZzEkdDE3NTUwODU0NDckajU5JGwwJGgw',
-      background: 'white',
+      background: 'dark',
       imageLeft: false
     },
     {
       id: 'california-privacy-rights',
-      title: 'California Privacy Rights (CCPA)',
-      description: 'If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA). You have the right to: (1) Know what personal information we collect, use, disclose, and sell; (2) Request deletion of your personal information; (3) Opt-out of the sale of your personal information (we do not sell personal information); (4) Non-discrimination for exercising your privacy rights; and (5) Access your personal information in a portable format. To exercise any of these California privacy rights, please contact us using the information provided in the Contact Us section. We will respond to your request within the timeframes required by California law.',
+      title: 'California Consumer Privacy Protections (CCPA)',
+      description: 'If you reside in California, you are granted supplementary rights under the California Consumer Privacy Act (CCPA). These include the right to: (1) Be informed about what personal data we gather, utilize, share, and sell; (2) Ask for the erasure of your personal data; (3) Decline the sale of your personal data (we do not engage in selling personal data); (4) Be free from retaliation for exercising your privacy entitlements; and (5) Obtain your personal data in a transferable format. To invoke any of these California privacy protections, please reach out using the contact details listed in the Contact Us section below. We will address your inquiry within the deadlines prescribed by California statute.',
       image: '/Pages/Legal_Doc_Med.jpeg',
-      background: 'grey',
+      background: 'darker',
       imageLeft: true
     }
   ]
@@ -56,26 +56,26 @@ export default function PrivacyPolicyPage() {
     <>
       {/* Hero Banner Section */}
       <section className="hero-banner relative h-96 flex items-center justify-center">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(https://images.pexels.com/photos/4792288/pexels-photo-4792288.jpeg?_gl=1*17w92mj*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MzA3MjckbzIkZzEkdDE3NTQ5MzA3NTQkajMzJGwwJGgw)' }}
         ></div>
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
         <div className="relative z-10 text-center text-white">
           <h1 className="text-5xl font-bold mb-4">Privacy Policy</h1>
-          <p className="text-xl">Protecting Your Personal Information</p>
+          <p className="text-xl">Safeguarding Your Personal Data</p>
         </div>
       </section>
 
       {/* Main Content Introduction */}
-      <section className="main-intro py-16 bg-gray-50">
+      <section className="main-intro py-16 bg-[#111827]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Your Privacy Matters to Us</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Elite Portfolio Management LLC is committed to safeguarding the privacy and confidentiality of personal information. 
-              This Privacy Policy outlines how we collect, use, disclose, and protect individuals' personal information 
-              in connection with our account recovery services.
+            <h2 className="text-3xl font-bold mb-6 text-white">We Take Your Privacy Seriously</h2>
+            <p className="text-lg text-[#b0b8c8] leading-relaxed">
+              Capital Review Management LLC is dedicated to protecting the privacy and confidentiality of personal data.
+              This Privacy Policy describes how we gather, utilize, share, and secure individuals' personal information
+              in relation to our account recovery operations.
             </p>
           </div>
         </div>
@@ -83,22 +83,22 @@ export default function PrivacyPolicyPage() {
 
       {/* Privacy Sections */}
       {privacySections.map((section, index) => (
-        <section key={section.id} className={`py-16 ${section.background === 'grey' ? 'bg-gray-50' : 'bg-white'}`}>
+        <section key={section.id} className={`py-16 ${section.background === 'darker' ? 'bg-[#111827]' : 'bg-[#0a0f1c]'}`}>
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {section.imageLeft ? (
                   <>
                     <div className="order-1">
-                      <img 
-                        src={section.image} 
+                      <img
+                        src={section.image}
                         alt={section.title}
                         className="w-full h-80 object-cover rounded-lg shadow-lg"
                       />
                     </div>
                     <div className="order-2">
-                      <h2 className="text-3xl font-bold mb-6 text-gray-900">{section.title}</h2>
-                      <div className="text-lg text-gray-700 leading-relaxed">
+                      <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
+                      <div className="text-lg text-[#b0b8c8] leading-relaxed">
                         {section.description}
                       </div>
                     </div>
@@ -106,14 +106,14 @@ export default function PrivacyPolicyPage() {
                 ) : (
                   <>
                     <div className="order-2 lg:order-1">
-                      <h2 className="text-3xl font-bold mb-6 text-gray-900">{section.title}</h2>
-                      <div className="text-lg text-gray-700 leading-relaxed">
+                      <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
+                      <div className="text-lg text-[#b0b8c8] leading-relaxed">
                         {section.description}
                       </div>
                     </div>
                     <div className="order-1 lg:order-2">
-                      <img 
-                        src={section.image} 
+                      <img
+                        src={section.image}
                         alt={section.title}
                         className="w-full h-80 object-cover rounded-lg shadow-lg"
                       />
@@ -127,33 +127,33 @@ export default function PrivacyPolicyPage() {
       ))}
 
       {/* Changes to Policy Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#111827]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">Changes to This Policy</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              We may update this Privacy Policy at any time. Any material changes will be communicated through our website 
-              or other appropriate channels. We encourage you to review this policy periodically to stay informed about 
-              how we protect your information.
+            <h2 className="text-3xl font-bold mb-6 text-white">Revisions to This Policy</h2>
+            <p className="text-lg text-[#b0b8c8] leading-relaxed">
+              We may revise this Privacy Policy at any point. Significant modifications will be communicated via our website
+              or through other suitable channels. We recommend reviewing this policy on a regular basis to remain informed about
+              how we safeguard your data.
             </p>
           </div>
         </div>
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#0a0f1c]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">Contact Us</h2>
-            <div className="bg-gray-50 rounded-lg shadow-lg p-8">
-              <p className="text-lg text-gray-700 mb-6">
-                For any questions or concerns regarding this Privacy Policy, please contact us at:
+            <h2 className="text-3xl font-bold mb-6 text-white">Get in Touch</h2>
+            <div className="bg-[#111827] rounded-lg shadow-lg p-8">
+              <p className="text-lg text-[#b0b8c8] mb-6">
+                For any inquiries or concerns about this Privacy Policy, please contact us at:
               </p>
-              <div className="text-lg text-gray-700 space-y-4">
-                <p className="font-semibold">Elite Portfolio Management LLC</p>
-                <p className="text-xl font-semibold text-blue-600">833-381-4416</p>
+              <div className="text-lg text-[#b0b8c8] space-y-4">
+                <p className="font-semibold text-white">Capital Review Management LLC</p>
+                <p className="text-xl font-semibold text-[#c9a84c]">866-766-2692</p>
                 <p className="mt-4">
-                  <strong>Email:</strong> info@eliteportmgmt.com
+                  <strong className="text-white">Email:</strong> info@capitalreviewmgt.com
                 </p>
               </div>
             </div>
@@ -162,11 +162,11 @@ export default function PrivacyPolicyPage() {
       </section>
 
       {/* Copyright Section */}
-      <section className="py-8 bg-gray-50">
+      <section className="py-8 bg-[#111827]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-gray-600">
-              Copyright © 2025 Elite Portfolio Management – All Rights Reserved.
+            <p className="text-[#8892a4]">
+              Copyright &copy; 2026 Capital Review Management – All Rights Reserved.
             </p>
           </div>
         </div>

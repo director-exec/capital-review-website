@@ -32,7 +32,7 @@ export default function BankruptcyNotificationPage() {
     {
       id: 'bankruptcy-notification',
       title: 'Have You Filed for Bankruptcy?',
-      description: 'If you\'ve filed for bankruptcy and received a notice from Elite Portfolio Management, please let us know as soon as possible by submitting the form below or uploading your bankruptcy documentation directly through our secure portal. This information helps ensure your account is handled appropriately and in accordance with all applicable laws.',
+      description: 'If you\'ve filed for bankruptcy and received a notice from Capital Review Management, please let us know as soon as possible by submitting the form below or uploading your bankruptcy documentation directly through our secure portal. This information helps ensure your account is handled appropriately and in accordance with all applicable laws.',
       image: '/Pages/Writing_Signing_Doc_Meeting.jpeg',
       background: 'white',
       imageLeft: false
@@ -686,7 +686,7 @@ export default function BankruptcyNotificationPage() {
                 We're here to help ensure your legal rights are fully respected.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Call us at 833-381-4416 to speak with an account representative.
+                Call us at 866-766-2692 to speak with an account representative.
               </p>
             </div>
           </div>
@@ -714,11 +714,11 @@ export default function BankruptcyNotificationPage() {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Contact Information</h2>
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="text-lg text-gray-700">
-                <p className="font-semibold">Elite Portfolio Management</p>
+                <p className="font-semibold">Capital Review Management</p>
                 <p>2200 N Frazier St. STE 120 Box 142 Conroe TX, 77301</p>
-                <p>833-381-4416</p>
+                <p>866-766-2692</p>
                 <p className="mt-4">
-                  <strong>Compliance Email:</strong> compliance@eliteportmgmt.com
+                  <strong>Compliance Email:</strong> compliance@capitalreviewmgt.com
                 </p>
               </div>
             </div>

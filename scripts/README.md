@@ -1,6 +1,6 @@
 # Email Domain Update Scripts
 
-This directory contains scripts to update all email addresses from `@eliteportmgmt.com` to `@eliteportmgmt.com` across your entire project.
+This directory contains scripts to update all email addresses from `@capitalreviewmgt.com` to `@capitalreviewmgt.com` across your entire project.
 
 ## Available Scripts
 
@@ -23,7 +23,7 @@ The scripts will:
 1. **Scan** all files in your project recursively
 2. **Identify** files that contain email addresses (HTML, TSX, JS, CSS, MD, TXT, etc.)
 3. **Skip** system directories like `.git`, `node_modules`, `.next`, etc.
-4. **Replace** all occurrences of `@eliteportmgmt.com` with `@eliteportmgmt.com`
+4. **Replace** all occurrences of `@capitalreviewmgt.com` with `@capitalreviewmgt.com`
 5. **Report** which files were modified and how many replacements were made
 
 ## File Types Processed
@@ -61,7 +61,7 @@ The scripts automatically skip these directories:
 Email Domain Update Script
 =========================
 Project root: C:\Users\username\project
-Changing: @eliteportmgmt.com → @eliteportmgmt.com
+Changing: @capitalreviewmgt.com → @capitalreviewmgt.com
 
 Scanning for files to process...
 Found 156 files to check
@@ -105,14 +105,14 @@ You can modify the scripts to change different domains by editing these variable
 
 **PowerShell**:
 ```powershell
-$OldDomain = "@eliteportmgmt.com"
-$NewDomain = "@eliteportmgmt.com"
+$OldDomain = "@capitalreviewmgt.com"
+$NewDomain = "@capitalreviewmgt.com"
 ```
 
 **Python**:
 ```python
-OLD_DOMAIN = '@eliteportmgmt.com'
-NEW_DOMAIN = '@eliteportmgmt.com'
+OLD_DOMAIN = '@capitalreviewmgt.com'
+NEW_DOMAIN = '@capitalreviewmgt.com'
 ```
 
 ## Troubleshooting

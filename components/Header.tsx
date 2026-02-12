@@ -10,32 +10,22 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Get the header height and add some buffer
-      const headerHeight = 200; // Approximate height of normal header
+      const headerHeight = 200;
       setIsScrolled(window.scrollY > headerHeight);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Cleanup body class when component unmounts
   useEffect(() => {
-    return () => {
-      document.body.classList.remove('mobile-menu-open');
-    };
+    return () => { document.body.classList.remove('mobile-menu-open'); };
   }, []);
 
   const toggleMobileMenu = () => {
     const newState = !isMobileMenuOpen;
     setIsMobileMenuOpen(newState);
-    
-    // Prevent body scroll when mobile menu is open
-    if (newState) {
-      document.body.classList.add('mobile-menu-open');
-    } else {
-      document.body.classList.remove('mobile-menu-open');
-    }
+    if (newState) { document.body.classList.add('mobile-menu-open'); }
+    else { document.body.classList.remove('mobile-menu-open'); }
   };
 
   const closeMobileMenu = () => {
@@ -45,36 +35,19 @@ export default function Header() {
 
   return (
     <>
-      {/* Normal Header - Always visible */}
       <header className="normal-header">
         <div className="container">
           <div className="header-content">
-            {/* Logo */}
             <div className="logo">
               <Link href="/">
-                <Image 
-                  src="/LOGO/UpdatedLogoFull.svg"
-                  alt="Diversified Adjustment Service, Inc." 
-                  width={600} 
-                  height={150}
-                  priority
-                />
+                <img src="/logo.avif" alt="Capital Review Management" style={{ height: '65px', width: 'auto' }} />
               </Link>
             </div>
-            
-            {/* Desktop Navigation - Hidden on mobile */}
             <div className="header-right hidden mobile:flex">
-              {/* Top Right: Contact Info + Payment Button */}
               <div className="header-top-right">
-                <div className="contact-info">
-                  Need Help? Call us at 833-381-4416
-                </div>
-                <a href="https://portal.eliteportfoliomgmt.com/" className="payment-button" target="_blank" rel="noopener noreferrer">
-                  Make A Payment
-                </a>
+                <div className="contact-info">Need Help? Call us at 866-766-2692</div>
+                <a href="#" className="payment-button">Make A Payment</a>
               </div>
-              
-              {/* Bottom Right: Navigation */}
               <div className="header-bottom-right">
                 <nav>
                   <ul className="nav-menu">
@@ -101,8 +74,8 @@ export default function Header() {
                     <li className="nav-item">
                       <Link href="/solutions">Solutions</Link>
                       <div className="dropdown-menu">
-                                              <Link href="/solutions/pre-charge-off-collections">Pre Charge-Off Collections</Link>
-                      <Link href="/solutions/post-charge-off-collections">Post Charge-Off Collections</Link>
+                        <Link href="/solutions/pre-charge-off-collections">Pre Charge-Off Collections</Link>
+                        <Link href="/solutions/post-charge-off-collections">Post Charge-Off Collections</Link>
                         <Link href="/solutions/secondary-tertiary-collections">Secondary & Tertiary Collections</Link>
                         <Link href="/solutions/credit-bureau-reporting">Credit Bureau Reporting</Link>
                         <Link href="/solutions/network-of-attorneys">Network of Attorneys</Link>
@@ -114,8 +87,6 @@ export default function Header() {
                 </nav>
               </div>
             </div>
-
-            {/* Mobile Menu Button - Always visible on mobile */}
             <button className="mobile-menu-btn mobile:hidden" onClick={toggleMobileMenu}>
               <i className="fas fa-bars"></i>
             </button>
@@ -123,26 +94,15 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Compact Header - Appears after scroll */}
       <header className={`compact-header ${isScrolled ? 'show' : ''}`}>
         <div className="container">
           <div className="header-content">
-            {/* Logo */}
             <div className="logo">
               <Link href="/">
-                <Image 
-                  src="/LOGO/UpdatedLogoMini.svg"
-                  alt="Diversified Adjustment Service, Inc." 
-                  width={350} 
-                  height={75}
-                  priority
-                />
+                <img src="/logo.avif" alt="Capital Review Management" style={{ height: '35px', width: 'auto' }} />
               </Link>
             </div>
-            
-            {/* Desktop Navigation - Hidden on mobile */}
             <div className="header-right hidden mobile:flex">
-              {/* Navigation Only */}
               <nav>
                 <ul className="nav-menu">
                   <li className="nav-item">
@@ -180,8 +140,6 @@ export default function Header() {
                 </ul>
               </nav>
             </div>
-
-            {/* Mobile Menu Button - Always visible on mobile */}
             <button className="mobile-menu-btn mobile:hidden" onClick={toggleMobileMenu}>
               <i className="fas fa-bars"></i>
             </button>
@@ -189,22 +147,13 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile Menu */}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'show' : ''}`} id="mobileMenu">
-        {/* Mobile Contact Info */}
         <div className="mobile-menu-section mobile-contact-info">
-          <a href="tel:833-381-4416" className="mobile-call-btn">
-            Call Us
-          </a>
-          <a href="https://portal.eliteportfoliomgmt.com/" className="mobile-payment-btn" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
-            Make A Payment
-          </a>
+          <a href="tel:866-766-2692" className="mobile-call-btn">Call Us</a>
+          <a href="#" className="mobile-payment-btn" onClick={closeMobileMenu}>Make A Payment</a>
         </div>
-        
         <div className="mobile-menu-section">
-          <Link href="/about" onClick={closeMobileMenu}>
-            <h4>About</h4>
-          </Link>
+          <Link href="/about" onClick={closeMobileMenu}><h4>About</h4></Link>
           <div className="mobile-menu-links">
             <Link href="/about/security" onClick={closeMobileMenu}>Security</Link>
             <Link href="/about/compliance" onClick={closeMobileMenu}>Compliance</Link>
@@ -214,9 +163,7 @@ export default function Header() {
           </div>
         </div>
         <div className="mobile-menu-section">
-          <Link href="/consumer-tools" onClick={closeMobileMenu}>
-            <h4>Consumer Tools</h4>
-          </Link>
+          <Link href="/consumer-tools" onClick={closeMobileMenu}><h4>Consumer Tools</h4></Link>
           <div className="mobile-menu-links">
             <Link href="/consumer-tools/request-account-validation" onClick={closeMobileMenu}>Request Account Validation</Link>
             <Link href="/consumer-tools/bankruptcy-notification" onClick={closeMobileMenu}>Bankruptcy Notification</Link>
@@ -226,9 +173,7 @@ export default function Header() {
           </div>
         </div>
         <div className="mobile-menu-section">
-          <Link href="/solutions" onClick={closeMobileMenu}>
-            <h4>Solutions</h4>
-          </Link>
+          <Link href="/solutions" onClick={closeMobileMenu}><h4>Solutions</h4></Link>
           <div className="mobile-menu-links">
             <Link href="/solutions/pre-charge-off-collections" onClick={closeMobileMenu}>Pre Charge-Off Collections</Link>
             <Link href="/solutions/post-charge-off-collections" onClick={closeMobileMenu}>Post Charge-Off Collections</Link>
@@ -239,11 +184,9 @@ export default function Header() {
           </div>
         </div>
         <div className="mobile-menu-section">
-          <Link href="/contact" onClick={closeMobileMenu}>
-            <h4>Contact Us</h4>
-          </Link>
+          <Link href="/contact" onClick={closeMobileMenu}><h4>Contact Us</h4></Link>
         </div>
       </div>
     </>
   );
-} 
+}
