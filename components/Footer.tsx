@@ -15,10 +15,10 @@ export default function Footer() {
         <div className="footer-logo-block" style={{ justifyContent: 'flex-start' }}>
           <div className="footer-cr-logo" style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
             <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 6 H94 V94 H6 V60" stroke="currentColor" strokeWidth="7" strokeLinejoin="miter" strokeLinecap="square" fill="none"/>
-              <path d="M32 24 V76" stroke="currentColor" strokeWidth="6" strokeLinecap="square"/>
-              <path d="M32 24 H56 Q72 24 72 38 Q72 50 56 50 H32" stroke="currentColor" strokeWidth="6" strokeLinejoin="round" fill="none"/>
-              <path d="M52 50 L74 80" stroke="currentColor" strokeWidth="6" strokeLinecap="square"/>
+              <path d="M8 55 V8 H92 V92 H8" stroke="currentColor" strokeWidth="7" strokeLinejoin="miter" strokeLinecap="square" fill="none"/>
+              <path d="M50 50 L70 92" stroke="currentColor" strokeWidth="7" strokeLinecap="butt"/>
+              <path d="M28 20 V80" stroke="currentColor" strokeWidth="6" strokeLinecap="square"/>
+              <path d="M28 20 H54 Q70 20 70 36 Q70 50 54 50 H28" stroke="currentColor" strokeWidth="6" strokeLinejoin="round" fill="none"/>
             </svg>
             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.2' }}>
               <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 600, fontSize: '1.05rem', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.9)' }}>Capital Review Management</span>

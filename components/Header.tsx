@@ -52,14 +52,14 @@ export default function Header() {
             <div className="logo">
               <Link href="/" className="logo-link">
                 <svg className="logo-shield" width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Frame wraps from gap at bottom-left, around top/right/bottom */}
-                  <path d="M6 6 H94 V94 H6 V60" stroke="currentColor" strokeWidth="8" strokeLinejoin="miter" strokeLinecap="square" fill="none"/>
+                  {/* One continuous path: left wall stops at gap, then top/right/bottom frame merges into R's diagonal leg */}
+                  <path d="M8 55 V8 H92 V92 H8" stroke="currentColor" strokeWidth="8" strokeLinejoin="miter" strokeLinecap="square" fill="none"/>
+                  {/* R's leg: from junction at bowl down to the bottom frame line — same weight so it merges visually */}
+                  <path d="M50 50 L70 92" stroke="currentColor" strokeWidth="8" strokeLinecap="butt"/>
                   {/* R: vertical stem */}
-                  <path d="M32 24 V76" stroke="currentColor" strokeWidth="7" strokeLinecap="square"/>
+                  <path d="M28 20 V80" stroke="currentColor" strokeWidth="7" strokeLinecap="square"/>
                   {/* R: bowl */}
-                  <path d="M32 24 H56 Q72 24 72 38 Q72 50 56 50 H32" stroke="currentColor" strokeWidth="7" strokeLinejoin="round" fill="none"/>
-                  {/* R: diagonal leg extending toward bottom-right of frame */}
-                  <path d="M52 50 L74 80" stroke="currentColor" strokeWidth="7" strokeLinecap="square"/>
+                  <path d="M28 20 H54 Q70 20 70 36 Q70 50 54 50 H28" stroke="currentColor" strokeWidth="7" strokeLinejoin="round" fill="none"/>
                 </svg>
                 <div className="logo-text">
                   <span className="logo-wordmark">Capital Review Management</span>
@@ -137,10 +137,10 @@ export default function Header() {
             <div className="logo">
               <Link href="/" className="logo-link">
                 <svg className="logo-shield" width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 6 H94 V94 H6 V60" stroke="currentColor" strokeWidth="8" strokeLinejoin="miter" strokeLinecap="square" fill="none"/>
-                  <path d="M32 24 V76" stroke="currentColor" strokeWidth="7" strokeLinecap="square"/>
-                  <path d="M32 24 H56 Q72 24 72 38 Q72 50 56 50 H32" stroke="currentColor" strokeWidth="7" strokeLinejoin="round" fill="none"/>
-                  <path d="M52 50 L74 80" stroke="currentColor" strokeWidth="7" strokeLinecap="square"/>
+                  <path d="M8 55 V8 H92 V92 H8" stroke="currentColor" strokeWidth="8" strokeLinejoin="miter" strokeLinecap="square" fill="none"/>
+                  <path d="M50 50 L70 92" stroke="currentColor" strokeWidth="8" strokeLinecap="butt"/>
+                  <path d="M28 20 V80" stroke="currentColor" strokeWidth="7" strokeLinecap="square"/>
+                  <path d="M28 20 H54 Q70 20 70 36 Q70 50 54 50 H28" stroke="currentColor" strokeWidth="7" strokeLinejoin="round" fill="none"/>
                 </svg>
                 <span className="logo-wordmark">Capital Review Management</span>
               </Link>
