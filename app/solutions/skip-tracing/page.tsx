@@ -1,45 +1,45 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
 export default function SkipTracingPage() {
   const serviceSections = [
     {
       id: 'advanced-location-services',
-      title: 'Advanced Location Capabilities',
-      description: 'Our skip tracing uses cutting-edge technology and comprehensive data repositories to locate hard-to-find consumers. We employ advanced algorithms, public records analysis, and proprietary databases to track individuals who have moved, changed contact information, or are otherwise difficult to reach.',
-      image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800',
-      background: 'dark',
+      title: 'Advanced Location Services',
+      description: 'Our skip tracing services utilize cutting-edge technology and comprehensive databases to locate hard-to-find consumers. We employ sophisticated algorithms, public records searches, and proprietary databases to track down individuals who have moved, changed contact information, or are otherwise difficult to reach.',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'comprehensive-database-access',
-      title: 'Multi-Source Data Integration',
-      description: 'We access extensive databases including credit bureaus, public records, utility filings, and specialized skip tracing resources. Our team synthesizes multiple data sources to compile the most accurate and current contact details for each individual.',
-      image: 'https://images.pexels.com/photos/6077587/pexels-photo-6077587.jpeg?_gl=1*1votr6i*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTUwODU0NDYkbzUkZzEkdDE3NTUwODU0NDckajU5JGwwJGgw',
-      background: 'panel',
+      title: 'Comprehensive Database Access',
+      description: 'We have access to extensive databases including credit bureaus, public records, utility records, and proprietary skip tracing databases. Our team combines multiple data sources to create the most accurate and up-to-date contact information for each individual.',
+      image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800',
+      background: 'cream',
       imageLeft: true
     },
     {
       id: 'fcra-compliant-processes',
-      title: 'FCRA-Compliant Operations',
-      description: 'All skip tracing operations fully comply with the Fair Credit Reporting Act (FCRA) and applicable regulations. We maintain strict protocols protecting consumer privacy and data security while maximizing location effectiveness.',
-      image: 'https://images.pexels.com/photos/6077587/pexels-photo-6077587.jpeg?_gl=1*1votr6i*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTUwODU0NDYkbzUkZzEkdDE3NTUwODU0NDckajU5JGwwJGgw',
-      background: 'dark',
+      title: 'FCRA-Compliant Processes',
+      description: 'All our skip tracing activities are conducted in full compliance with the Fair Credit Reporting Act (FCRA) and other applicable regulations. We maintain strict protocols to ensure consumer privacy and data protection while maximizing our ability to locate individuals.',
+      image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'specialized-expertise',
       title: 'Specialized Expertise',
-      description: 'Our skip tracing team comprises experienced professionals who understand the unique challenges of locating individuals under varying circumstances. Whether handling name changes, address shifts, or complex family dynamics, we have the skill to overcome these obstacles.',
-      image: 'https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&w=800',
-      background: 'panel',
+      description: 'Our skip tracing team includes experienced professionals who understand the unique challenges of locating individuals in various circumstances. Whether dealing with name changes, address updates, or complex family situations, we have the expertise to navigate these challenges effectively.',
+      image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800',
+      background: 'cream',
       imageLeft: true
     },
     {
       id: 'proven-success-rates',
-      title: 'Proven Track Record',
-      description: 'Our skip tracing services consistently achieve high success rates locating individuals across diverse demographics and circumstances. We track performance metrics continuously and refine our processes to maintain and improve our effectiveness.',
-      image: 'https://images.pexels.com/photos/8112172/pexels-photo-8112172.jpeg?auto=compress&cs=tinysrgb&w=800',
-      background: 'dark',
+      title: 'Proven Success Rates',
+      description: 'Our skip tracing services consistently achieve high success rates in locating individuals across various demographics and circumstances. We track our performance metrics and continuously refine our processes to maintain and improve our success rates.',
+      image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800',
+      background: 'white',
       imageLeft: false
     }
   ]
@@ -48,7 +48,7 @@ export default function SkipTracingPage() {
     <>
       {/* Hero Banner Section */}
       <section className="subpage-hero">
-        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1200)' }}></div>
+        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800)' }}></div>
         <div className="subpage-hero-overlay"></div>
         <div className="subpage-hero-content">
           <h1>Skip Tracing Services</h1>
@@ -57,15 +57,16 @@ export default function SkipTracingPage() {
       </section>
 
       {/* Main Content Introduction */}
-      <section className="content-section info-panel">
+      <section className="subpage-section subpage-section-white">
         <div className="subpage-container">
           <div className="subpage-intro">
             <div className="subpage-intro-inner">
-              <h2>Locate the Unreachable</h2>
+              <h2>Locate the Unlocatable</h2>
               <p>
-                When standard contact methods fall short, our advanced skip tracing services help you locate elusive consumers.
-                We leverage cutting-edge technology, extensive data repositories, and skilled professionals to track down individuals
-                who have relocated, changed contact information, or are otherwise challenging to reach.
+                When traditional contact methods fail, our advanced skip tracing services can help you locate
+                hard-to-find consumers. We utilize cutting-edge technology, comprehensive databases, and
+                experienced professionals to track down individuals who have moved, changed contact information,
+                or are otherwise difficult to reach.
               </p>
             </div>
           </div>
@@ -74,7 +75,7 @@ export default function SkipTracingPage() {
 
       {/* Service Sections */}
       {serviceSections.map((section, index) => (
-        <section key={section.id} className={`content-section ${section.background === 'panel' ? 'info-panel' : ''}`}>
+        <section key={section.id} className={`subpage-section ${section.background === 'cream' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
           <div className="subpage-container">
             <div className="subpage-grid">
               {section.imageLeft ? (
@@ -116,14 +117,15 @@ export default function SkipTracingPage() {
       ))}
 
       {/* Summary Section */}
-      <section className="content-section info-panel">
+      <section className="subpage-section subpage-section-cream">
         <div className="subpage-container">
           <div className="subpage-intro">
             <div className="subpage-intro-inner">
-              <h2>When Conventional Contact Methods Fail</h2>
+              <h2>When Traditional Methods Fail</h2>
               <p>
-                Skip tracing often proves the critical factor in successful collections once standard outreach has been exhausted.
-                Our advanced location services help you re-establish contact with consumers and recover accounts that might otherwise be lost.
+                Skip tracing is often the key to successful collections when standard contact methods have been exhausted.
+                Our advanced location services can help you reconnect with consumers and potentially recover accounts
+                that would otherwise be lost.
               </p>
             </div>
           </div>
@@ -131,11 +133,11 @@ export default function SkipTracingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="cta-section">
+      <section className="subpage-cta">
         <div className="subpage-container">
-          <h3>Ready to track down elusive consumers with precision?</h3>
+          <h3>Ready to locate hard-to-find consumers?</h3>
           <Link href="/contact" className="subpage-btn">
-            Get In Touch Now
+            Contact Us Today
           </Link>
         </div>
       </section>

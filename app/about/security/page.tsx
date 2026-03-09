@@ -3,15 +3,15 @@ export default function SecurityPage() {
     {
       id: 'data-protection',
       title: 'Data Protection & Encryption',
-      description: 'At Capital Review Management, safeguarding data is embedded in our operations. We understand the critical importance of protecting both your information and your consumers\' data at every level. Our track record is impeccable—zero data breaches—and our infrastructure is built to meet and exceed today\'s most stringent security and compliance standards.',
-      image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg',
+      description: 'At Capital Review Management, safeguarding data isn\'t just a priority — it\'s embedded in our DNA. We understand the critical importance of protecting both your information and your customers\' data at every level. Our track record is spotless — zero data breaches — and our infrastructure is built to meet and exceed today\'s most stringent security and compliance standards.',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800',
       background: 'white',
       imageLeft: false
     },
     {
       id: 'security-protocols',
       title: 'Security Protocols & Infrastructure',
-      description: 'We implement continuously updated, transparent security measures that leverage the latest in encryption, secure storage, and controlled access systems. From responsible document disposal to fully secured digital and physical environments, every detail is carefully managed—including a comprehensive business continuity plan to ensure uninterrupted service under any circumstances.',
+      description: 'We implement continuously updated, transparent security protocols that leverage the latest in encryption, secure storage, and controlled access systems. From responsible document disposal to fully secured digital and physical environments, every detail is accounted for — including a comprehensive disaster recovery plan to ensure continuity under any circumstances.',
       image: '/Pages/Stamp_Doc.jpeg',
       background: 'grey',
       imageLeft: true
@@ -19,7 +19,7 @@ export default function SecurityPage() {
     {
       id: 'compliance-standards',
       title: 'Compliance & Regulatory Alignment',
-      description: 'No matter your industry, you can trust Capital Review to deliver recovery support with the highest level of data protection and regulatory compliance. Because in a digital-first world, security isn\'t optional—it\'s our obligation. We maintain rigorous adherence to all federal and state regulations while implementing industry best practices for data security.',
+      description: 'No matter your industry, you can trust Capital Review to deliver collections support with the highest level of data protection and regulatory alignment. Because in a digital-first world, security isn\'t an option — it\'s our obligation. We maintain rigorous compliance with all federal and state regulations while implementing industry best practices for data security.',
       image: '/Pages/Writing_Signing_Doc_Meeting.jpeg',
       background: 'white',
       imageLeft: false
@@ -28,6 +28,7 @@ export default function SecurityPage() {
 
   return (
     <>
+      {/* Hero Banner Section */}
       <section className="subpage-hero">
         <div
           className="subpage-hero-bg"
@@ -40,6 +41,7 @@ export default function SecurityPage() {
         </div>
       </section>
 
+      {/* Security Sections */}
       {securitySections.map((section, index) => (
         <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
           <div className="subpage-container">
@@ -82,6 +84,7 @@ export default function SecurityPage() {
         </section>
       ))}
 
+      {/* CTA Section */}
       <section className="subpage-cta">
         <div className="subpage-container">
           <h3>
@@ -94,4 +97,4 @@ export default function SecurityPage() {
       </section>
     </>
   )
-}
+} 

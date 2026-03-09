@@ -1,29 +1,27 @@
-import Link from 'next/link'
-
 export default function CreditBureauReportingPage() {
   const serviceSections = [
     {
       id: 'bureau-integration',
-      title: 'Integrated Bureau Connectivity',
-      description: 'Capital Review Management maintains direct integration with the three major credit bureaus: Experian, Equifax, and TransUnion. Our secure platforms and reporting workflows ensure that authorized accounts are updated accurately, flagged appropriately, and monitored in real-time.',
-      image: 'https://media.istockphoto.com/id/989117546/photo/business-people-meeting-negotiating-a-contract-between-two-colleagues.jpg?b=1&s=612x612&w=0&k=20&c=Ir_c9w7uD2bD76E_6GSGF7N1hpPJexsDGbhgQwDWB3s=',
-      background: 'panel',
+      title: 'Your Gateway to the Bureaus',
+      description: 'Capital Review Management\'s network is fully integrated with the nation\'s three major credit bureaus, Experian, Equifax, and TransUnion. Our secure systems and reporting protocols ensure that authorized accounts are updated accurately, flagged appropriately, and tracked in real time.',
+      image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800',
+      background: 'cream',
       imageLeft: true
     },
     {
       id: 'compliance-benefits',
-      title: 'Compliance & Resource Efficiency',
-      description: 'We handle all bureau submissions — no additional systems or staff needed. We ensure all reporting is accurate, current, and reflects live account status including disputed items, in full FCRA compliance. Zero software fees, zero integration complexity — we manage the entire reporting process.',
-      image: '/Pages/Calculator_Writing_Pro.jpeg',
-      background: 'dark',
+      title: 'Stay Compliant & Save Time',
+      description: 'We handle all bureau submissions on your behalf — no extra systems or staffing required. We ensure all reporting is accurate, up to date, and reflects the current account status (including disputes), in accordance with FCRA. No software costs, no integration burdens — we manage the full reporting process.',
+      image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'recovery-enhancement',
-      title: 'Enhanced Recovery Performance',
-      description: 'Strategically deployed credit reporting can increase repayment incentive without compromising consumer protections. Your team focuses on core operations while we handle reporting mechanics and compliance. Disputed accounts are properly flagged, and all information is transmitted securely and responsibly.',
-      image: '/Pages/Signing_Doc_Laptop_Air.png',
-      background: 'panel',
+      title: 'Improve Recovery Rates',
+      description: 'Credit reporting, when used strategically, can increase repayment motivation without compromising consumer rights. Your team focuses on core business while we handle the credit reporting logistics and compliance protocols. Disputed accounts are flagged appropriately, and all consumer data is transmitted securely and responsibly.',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800',
+      background: 'cream',
       imageLeft: true
     }
   ]
@@ -32,24 +30,23 @@ export default function CreditBureauReportingPage() {
     <>
       {/* Hero Banner Section */}
       <section className="subpage-hero">
-        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.pexels.com/photos/9068372/pexels-photo-9068372.jpeg?_gl=1*269x10*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MjU3MjAkbzEkZzEkdDE3NTQ5MjYwNzckajUxJGwwJGgw)' }}></div>
+        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800)' }}></div>
         <div className="subpage-hero-overlay"></div>
         <div className="subpage-hero-content">
           <h1>Credit Bureau Reporting</h1>
-          <p>Strengthen Your Collection Strategy</p>
         </div>
       </section>
 
       {/* Main Content Introduction */}
-      <section className="content-section info-panel">
+      <section className="subpage-section subpage-section-white">
         <div className="subpage-container">
           <div className="subpage-intro">
             <div className="subpage-intro-inner">
-              <h2>Strategic Bureau Reporting That Drives Results</h2>
+              <h2>Enhance Your Collection Strategy</h2>
               <p>
-                As part of our comprehensive recovery offering, Capital Review Management provides optional credit bureau reporting
-                to enhance your collection strategy at no additional cost. We report exclusively with your authorization, processing
-                every account in strict compliance with the Fair Credit Reporting Act (FCRA) and all applicable regulations.
+                As part of our full-service recovery solutions, Capital Review Management offers optional credit bureau reporting
+                to enhance your collection strategy — at no additional cost. We report only with your authorization, and we handle
+                every file with full adherence to the Fair Credit Reporting Act (FCRA) and all applicable regulations.
               </p>
             </div>
           </div>
@@ -58,7 +55,7 @@ export default function CreditBureauReportingPage() {
 
       {/* Service Sections */}
       {serviceSections.map((section, index) => (
-        <section key={section.id} className={`content-section ${section.background === 'panel' ? 'info-panel' : ''}`}>
+        <section key={section.id} className={`subpage-section ${section.background === 'cream' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
           <div className="subpage-container">
             <div className="subpage-grid">
               {section.imageLeft ? (
@@ -100,14 +97,14 @@ export default function CreditBureauReportingPage() {
       ))}
 
       {/* Summary Section */}
-      <section className="content-section info-panel">
+      <section className="subpage-section subpage-section-cream">
         <div className="subpage-container">
           <div className="subpage-intro">
             <div className="subpage-intro-inner">
-              <h2>Learn How Bureau Reporting Complements Your Strategy</h2>
+              <h2>Have questions about how credit reporting fits your strategy?</h2>
               <p>
-                Contact us at 866-766-2692 to speak with our compliance and recovery specialists. We ensure all reporting is accurate,
-                current, and accurately reflects live account status including disputes, in complete FCRA accordance.
+                Call 866-766-2692 to speak with our compliance and recovery team. We ensure all reporting is accurate,
+                up to date, and reflects the current account status (including disputes), in accordance with FCRA.
               </p>
             </div>
           </div>
@@ -115,12 +112,12 @@ export default function CreditBureauReportingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="cta-section">
+      <section className="subpage-cta">
         <div className="subpage-container">
-          <h3>Ready to strengthen your collection approach with bureau reporting?</h3>
-          <Link href="/contact" className="subpage-btn">
-            Get In Touch Now
-          </Link>
+          <h3>Ready to enhance your collection strategy?</h3>
+          <a href="/contact" className="subpage-btn">
+            Contact Us Today
+          </a>
         </div>
       </section>
     </>

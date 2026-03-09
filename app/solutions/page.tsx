@@ -5,65 +5,56 @@ export default function SolutionsPage() {
     {
       id: 'pre-collection',
       title: 'Pre Charge-Off Collections',
-      description: 'Proactive engagement strategies to prevent charge-offs and maximize recovery potential. Our forward-thinking methodology enables clients to preserve account relationships while optimizing collection success through strategic outreach and flexible repayment plans.',
-      image: 'https://images.pexels.com/photos/7433837/pexels-photo-7433837.jpeg',
+      description: 'Early intervention strategies to prevent charge-offs and maximize recovery potential. Our proactive approach helps clients maintain account relationships while maximizing recovery rates through strategic communication and payment arrangements.',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800',
       link: '/solutions/pre-charge-off-collections',
-      background: 'dark',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'post-charge-off',
       title: 'Post Charge-Off Collections',
-      description: 'Focused recovery programs for accounts that have been written off. We concentrate on reclaiming balances from charged-off accounts using proven analytical methods and disciplined collection strategies.',
-      image: '/Pages/Writing_Signing_Doc_Meeting.jpeg',
+      description: 'Recovery solutions for charged-off accounts with proven results. We specialize in recovering balances from accounts that have been written off using advanced strategic collection techniques.',
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800',
       link: '/solutions/post-charge-off-collections',
-      background: 'panel',
+      background: 'cream',
       imageLeft: true
     },
     {
       id: 'secondary-tertiary',
       title: 'Secondary & Tertiary Collections',
-      description: 'Advanced recovery services for challenging accounts requiring specialized tactics. Our experienced professionals manage accounts that have completed multiple collection cycles, deploying innovative techniques to locate and re-engage obligors.',
-      image: 'https://images.pexels.com/photos/9068372/pexels-photo-9068372.jpeg?_gl=1*269x10*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MjU3MjAkbzEkZzEkdDE3NTQ5MjYwNzckajUxJGwwJGgw',
+      description: 'Specialized recovery for difficult accounts requiring advanced strategies. Our experienced team handles accounts that have been through multiple collection attempts, using innovative approaches to locate and engage debtors.',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
       link: '/solutions/secondary-tertiary-collections',
-      background: 'dark',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'warehousing',
       title: 'Warehousing Management',
-      description: 'Strategic portfolio management and optimization to drive recovery performance. We deliver comprehensive portfolio analysis, segmentation, and hands-on oversight designed to maximize recovery potential while controlling operational costs.',
-      image: 'https://images.pexels.com/photos/4792288/pexels-photo-4792288.jpeg?_gl=1*17w92mj*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MzA3MjckbzIkZzEkdDE3NTQ5MzA3NTQkajMzJGwwJGgw',
+      description: 'Portfolio management and optimization for maximum recovery efficiency. We provide comprehensive portfolio analysis, segmentation, and strategic management to maximize your recovery potential while minimizing operational costs.',
+      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800',
       link: '/solutions/warehousing-management',
-      background: 'panel',
+      background: 'cream',
       imageLeft: true
     },
     {
       id: 'network-attorneys',
       title: 'Network of Attorneys',
-      description: 'Specialized legal collection services backed by experienced legal professionals. Our curated network of licensed attorneys provides legal recovery solutions across every jurisdiction we operate, ensuring compliance with local statutes and maximizing recovery via legal channels.',
-      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=800&auto=format&fit=crop',
+      description: 'Legal collection services with experienced legal professionals. Our network of licensed attorneys provides legal collection services across multiple jurisdictions, ensuring compliance with state-specific regulations and maximizing recovery through legal channels.',
+      image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800',
       link: '/solutions/network-of-attorneys',
-      background: 'dark',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'credit-bureau',
       title: 'Credit Bureau Reporting',
-      description: 'Integrated into our comprehensive recovery offering, Capital Review Management provides optional credit bureau reporting to strengthen your collection strategy. All accounts are processed with strict adherence to the Fair Credit Reporting Act (FCRA) and applicable regulations. Reporting initiates only with your express authorization.',
-      image: 'https://media.istockphoto.com/id/955988522/photo/business-signing-a-contract-buy-sell-house.jpg?b=1&s=612x612&w=0&k=20&c=EET9rlkAU1PTC_BWtJNfSWZfpvnCYLct0IkE4uZvb5k=',
+      description: 'As part of our full-service recovery solutions, Capital Review Management\'s network offers optional credit bureau reporting to enhance your collection strategy. We handle every file with full adherence to the Fair Credit Reporting Act (FCRA) and all applicable regulations. Our network will report only with your authorization.',
+      image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800',
       link: '/solutions/credit-bureau-reporting',
-      background: 'panel',
+      background: 'cream',
       imageLeft: true
-    },
-    {
-      id: 'skip-tracing',
-      title: 'Skip Tracing Services',
-      description: 'Advanced location services powered by next-generation technology and extensive data repositories. Our skip tracing capabilities help you locate and reconnect with consumers who have relocated, updated contact information, or are otherwise difficult to reach.',
-      image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800',
-      link: '/solutions/skip-tracing',
-      background: 'dark',
-      imageLeft: false
     }
   ]
 
@@ -71,24 +62,24 @@ export default function SolutionsPage() {
     <>
       {/* Hero Banner Section */}
       <section className="subpage-hero">
-        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200)' }}></div>
+        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800)' }}></div>
         <div className="subpage-hero-overlay"></div>
         <div className="subpage-hero-content">
-          <h1>Service Solutions</h1>
-          <p>Comprehensive recovery services engineered to optimize your returns while preserving your brand reputation.</p>
+          <h1>Business Solutions</h1>
+          <p>Comprehensive recovery solutions designed to maximize your returns while protecting your brand reputation.</p>
         </div>
       </section>
 
       {/* Main Content Introduction */}
-      <section className="content-section info-panel">
+      <section className="subpage-section subpage-section-white">
         <div className="subpage-container">
           <div className="subpage-intro">
             <div className="subpage-intro-inner">
-              <h2>Proven Recovery Programs That Deliver Results</h2>
+              <h2>Recovery Solutions That Work</h2>
               <p>
-                Capital Review Management delivers industry-tested recovery programs across every phase of the collection lifecycle.
-                Our integrated service portfolio combines advanced technology, deep regulatory expertise, and professional consumer engagement
-                to achieve superior outcomes while maintaining the highest standards of compliance and professionalism.
+                Capital Review Management delivers proven recovery solutions across all stages of the collection process.
+                Our comprehensive suite of services combines advanced technology, regulatory expertise, and human empathy
+                to achieve superior results while maintaining the highest standards of compliance and professionalism.
               </p>
             </div>
           </div>
@@ -97,7 +88,7 @@ export default function SolutionsPage() {
 
       {/* Service Sections */}
       {serviceSections.map((section, index) => (
-        <section key={section.id} className={`content-section ${section.background === 'panel' ? 'info-panel' : ''}`}>
+        <section key={section.id} className={`subpage-section ${section.background === 'cream' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
           <div className="subpage-container">
             <div className="subpage-grid">
               {section.imageLeft ? (
@@ -145,11 +136,11 @@ export default function SolutionsPage() {
       ))}
 
       {/* CTA Section */}
-      <section className="cta-section">
+      <section className="subpage-cta">
         <div className="subpage-container">
-          <h3>Partner with Capital Review Management for dependable solutions to your collection needs.</h3>
+          <h3>Contact Capital Review Management for a secure solution to your collection needs.</h3>
           <Link href="/contact" className="subpage-btn">
-            Get In Touch Now
+            Contact Us Today
           </Link>
         </div>
       </section>

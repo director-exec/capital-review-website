@@ -16,12 +16,13 @@ export default function Home() {
           <p className="description-secondary">
             We leverage modern platforms, secure infrastructure, and thoroughly trained professionals to ensure each interaction upholds the highest standards — while maximizing returns and minimizing reputational exposure for our clients.
           </p>
-          <div className="tagline-row">
-            <span className="tagline-item">Performance Driven Account Management</span>
-          </div>
           <div className="cta-buttons">
-            <Link href="/consumer-tools" className="btn btn-hero">For Consumers</Link>
-            <Link href="/solutions" className="btn btn-hero">For Businesses</Link>
+            <Link href="/consumer-tools" className="btn btn-hero">
+              For Consumers
+            </Link>
+            <Link href="/solutions" className="btn btn-hero">
+              For Businesses
+            </Link>
           </div>
         </div>
       </section>
@@ -31,25 +32,36 @@ export default function Home() {
         <div className="container">
           <div className="services-grid">
             <div className="service-card">
-              <div className="service-icon"><i className="fas fa-credit-card"></i></div>
+              <div className="service-icon">
+                <i className="fas fa-credit-card"></i>
+              </div>
               <h3>Make a Payment</h3>
-              <p>Resolve your account through our convenient and secure payment options.</p>
-              <a href="#" className="btn btn-primary">Make a Payment</a>
-              <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>Payment portal coming soon</p>
+              <p>Use one of our secure, convenient payment options to resolve your account.</p>
+              <Link href="/consumer-tools/make-a-payment" className="btn btn-primary">
+                Make a Payment
+              </Link>
             </div>
 
             <div className="service-card">
-              <div className="service-icon"><i className="fas fa-tools"></i></div>
+              <div className="service-icon">
+                <i className="fas fa-tools"></i>
+              </div>
               <h3>Consumer Tools</h3>
-              <p>Access self-service resources, submit inquiries, or get support at any point in the process.</p>
-              <Link href="/consumer-tools" className="btn btn-primary">View Consumer Tools</Link>
+              <p>Access helpful resources, submit requests, or get assistance every step of the way.</p>
+              <Link href="/consumer-tools" className="btn btn-primary">
+                View Consumer Tools
+              </Link>
             </div>
 
             <div className="service-card">
-              <div className="service-icon"><i className="fas fa-chart-line"></i></div>
+              <div className="service-icon">
+                <i className="fas fa-chart-line"></i>
+              </div>
               <h3>Business Solutions</h3>
-              <p>Strengthen your recovery outcomes while safeguarding your brand. Discover our comprehensive suite of services.</p>
-              <Link href="/solutions" className="btn btn-primary">Get Started</Link>
+              <p>Recover more while protecting your brand. Explore our full suite of recovery services.</p>
+              <Link href="/solutions" className="btn btn-primary">
+                Get Started
+              </Link>
             </div>
           </div>
         </div>
@@ -59,7 +71,7 @@ export default function Home() {
       <section className="compliance">
         <div className="container">
           <div className="compliance-content">
-            <h2>Compliance &amp; Regulatory Standards</h2>
+            <h2>Compliance & Certifications</h2>
             <p>
               Capital Review Management upholds all required state licenses and industry certifications. Our dedicated compliance team ensures complete alignment with applicable federal and state regulations.
             </p>
@@ -94,7 +106,7 @@ export default function Home() {
           <div className="about-container">
             <div className="about-image"></div>
             <div className="about-content">
-              <h2>About Capital Review Management</h2>
+              <h2>About Capital Review</h2>
               <p>
                 We operate with a compliance-first philosophy, treating every consumer interaction with professionalism and every client engagement as a lasting partnership. Our standards, technology, and track record distinguish us in the industry.
               </p>

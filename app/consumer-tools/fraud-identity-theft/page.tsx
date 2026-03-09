@@ -1,122 +1,215 @@
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 
 export default function FraudIdentityTheftPage() {
+  const [showModal, setShowModal] = useState(true)
+
+  const closeModal = () => {
+    console.log('closeModal called')
+    setShowModal(false)
+    console.log('showModal set to false')
+  }
+
+  const fraudSections = [
+    {
+      id: 'immediate-action',
+      title: 'Immediate Action Required',
+      description: 'If you believe your account has been impacted by fraud or identity theft, please contact Capital Review Management immediately so we can assist you in resolving the matter with urgency and care. Your privacy and security are our priority. Call us at 866-766-2692 for immediate assistance.',
+      image: '/Pages/Stamp_Doc.jpeg',
+      background: 'white',
+      imageLeft: false
+    },
+    {
+      id: 'ftc-reporting',
+      title: 'Report Identity Theft to the FTC',
+      description: 'You can also file a formal identity theft report with the Federal Trade Commission. Visit IdentityTheft.gov to create a comprehensive report that will help you resolve the issue with creditors, banks, and credit bureaus. This official report is often required by financial institutions and can help protect your rights.',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Seal_of_the_United_States_Federal_Trade_Commission.svg/1024px-Seal_of_the_United_States_Federal_Trade_Commission.svg.png',
+      background: 'grey',
+      imageLeft: true
+    },
+    {
+      id: 'police-report',
+      title: 'File a Police Report',
+      description: 'In cases of identity theft, it\'s important to file a police report with your local law enforcement agency. This creates an official record of the crime and may be required by creditors, banks, and credit bureaus. Bring your FTC Identity Theft Report, government-issued photo ID, proof of address, and any evidence of the identity theft.',
+      image: 'https://images.pexels.com/photos/4792288/pexels-photo-4792288.jpeg?_gl=1*17w92mj*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MzA3MjckbzIkZzEkdDE3NTQ5MzA3NTQkajMzJGwwJGgw',
+      background: 'white',
+      imageLeft: false
+    },
+    {
+      id: 'what-to-expect',
+      title: 'What to Expect',
+      description: 'When you report fraud or identity theft to us, you can expect immediate account review and security measures, assistance with documentation and reporting, guidance on protecting your identity going forward, and regular updates on the status of your case. We work quickly to resolve these issues and protect your financial security.',
+      image: 'https://images.pexels.com/photos/9068372/pexels-photo-9068372.jpeg?_gl=1*269x10*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MjU3MjAkbzEkZzEkdDE3NTQ5MjYwNzckajUxJGwwJGgw',
+      background: 'grey',
+      imageLeft: true
+    },
+    {
+      id: 'additional-resources',
+      title: 'Additional Resources',
+      description: 'We provide access to important resources including credit bureaus (Equifax, Experian, TransUnion) and federal agencies (FTC, Social Security Administration, IRS). These organizations can help you place fraud alerts, freeze your credit, and report identity theft to the appropriate authorities.',
+      image: '/Pages/Calculator_Writing_Pro.jpeg',
+      background: 'white',
+      imageLeft: false
+    }
+  ]
+
   return (
     <>
-      {/* Hero */}
+      {/* Hero Banner Section */}
       <section className="subpage-hero">
-        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(/Pages/Calculator_Writing_Pro.jpeg)' }}></div>
+        <div
+          className="subpage-hero-bg"
+          style={{ backgroundImage: 'url(/Pages/Stamp_Doc.jpeg)' }}
+        ></div>
         <div className="subpage-hero-overlay"></div>
         <div className="subpage-hero-content">
-          <h1>Fraud &amp; Identity Theft</h1>
-          <p>Report Suspected Fraud or Identity Theft</p>
+          <h1>Fraud & Identity Theft</h1>
+          <p>Suspect Fraud? We're Here to Help.</p>
         </div>
       </section>
 
-      {/* Intro */}
-      <section className="subpage-section subpage-section-dark">
+      {/* Main Content Introduction */}
+      <section className="subpage-intro">
+        <div className="subpage-intro-inner">
+          <h2>Protecting Your Identity and Financial Security</h2>
+          <p>
+            If you believe your account has been impacted by fraud or identity theft,
+            Capital Review Management is here to help you resolve the matter with urgency and care.
+            We take these situations seriously and will work quickly to protect your financial security.
+          </p>
+        </div>
+      </section>
+
+      {/* Fraud Sections */}
+      {fraudSections.map((section, index) => (
+        <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
+          <div className="subpage-container">
+            <div className="subpage-grid">
+              {section.imageLeft ? (
+                <>
+                  <div className="subpage-image-col">
+                    <img
+                      src={section.image}
+                      alt={section.title}
+                      className="subpage-image"
+                    />
+                  </div>
+                  <div className="subpage-text-col">
+                    <h2>{section.title}</h2>
+                    <p>{section.description}</p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="subpage-text-col">
+                    <h2>{section.title}</h2>
+                    <p>{section.description}</p>
+                  </div>
+                  <div className="subpage-image-col">
+                    <img
+                      src={section.image}
+                      alt={section.title}
+                      className="subpage-image"
+                    />
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+        </section>
+      ))}
+
+      {/* Resources Section */}
+      <section className="subpage-section subpage-section-cream">
         <div className="subpage-container">
-          <div className="subpage-grid">
-            <div className="subpage-text-col">
-              <h2>If You Suspect Fraud</h2>
-              <p>Capital Review Management takes fraud and identity theft seriously. If you believe an account has been placed with us as the result of fraud or identity theft, we encourage you to notify us immediately so we can take appropriate steps to investigate.</p>
-              <p>You may also contact the Federal Trade Commission (FTC) and the three major credit bureaus to place fraud alerts on your credit file.</p>
+          <h2>Important Resources</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="subpage-card">
+              <h3>Credit Bureaus</h3>
+              <div className="space-y-2">
+                <p><strong>Equifax:</strong> 1-800-525-6285</p>
+                <p><strong>Experian:</strong> 1-888-397-3742</p>
+                <p><strong>TransUnion:</strong> 1-800-680-7289</p>
+              </div>
             </div>
-            <div className="subpage-image-col">
-              <img src="/Pages/Calculator_Writing_Pro.jpeg" alt="Fraud reporting" className="subpage-image" />
+            <div className="subpage-card">
+              <h3>Federal Agencies</h3>
+              <div className="space-y-2">
+                <p><strong>FTC:</strong> 1-877-438-4338</p>
+                <p><strong>Social Security:</strong> 1-800-772-1213</p>
+                <p><strong>IRS:</strong> 1-800-908-4490</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Steps to Take */}
-      <section className="subpage-section subpage-section-dark-alt">
+      {/* Contact Information Section */}
+      <section className="subpage-section subpage-section-white">
         <div className="subpage-container">
-          <div className="subpage-intro-inner" style={{ marginBottom: '3rem' }}>
-            <h2>Steps to Take</h2>
-            <p>If you believe you are a victim of identity theft, we recommend taking the following steps immediately.</p>
-          </div>
-          <div className="process-steps">
-            <div className="process-step">
-              <div className="step-number">01</div>
-              <h3>File a Report with the FTC</h3>
-              <p>Visit IdentityTheft.gov or call 1-877-438-4338 to file an identity theft report with the Federal Trade Commission.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">02</div>
-              <h3>File a Police Report</h3>
-              <p>Contact your local law enforcement agency and file an official police report documenting the identity theft. Keep a copy for your records.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">03</div>
-              <h3>Place Fraud Alerts</h3>
-              <p>Contact any one of the three major credit bureaus to place a fraud alert on your credit file. That bureau will notify the other two.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">04</div>
-              <h3>Notify Capital Review Management</h3>
-              <p>Contact us at 866-766-2692 or email compliance@capitalreviewmgt.com with your account number and documentation of the fraud.</p>
-            </div>
+          <h2>Contact Information</h2>
+          <div className="text-center">
+            <p className="font-semibold">Capital Review Management</p>
+            <p>2200 North Frazier Suite 120 Box 142, Conroe, TX 77301</p>
+            <p className="text-xl font-semibold">866-766-2692</p>
+            <p className="mt-4">
+              <strong>Compliance Email:</strong> compliance@capitalreviewmgt.com
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Credit Bureau Contacts */}
-      <section className="subpage-section subpage-section-dark">
+      {/* Legal Disclosure Section */}
+      <section className="subpage-section subpage-section-cream">
         <div className="subpage-container">
-          <div className="subpage-intro-inner" style={{ marginBottom: '3rem' }}>
-            <h2>Credit Bureau Contact Information</h2>
-            <p>You can contact any of the three major credit bureaus to place a fraud alert or credit freeze on your file.</p>
-          </div>
-          <div className="subpage-cards">
-            <div className="subpage-card">
-              <h3>Equifax</h3>
-              <p>1-800-525-6285</p>
-              <p>equifax.com</p>
-            </div>
-            <div className="subpage-card">
-              <h3>Experian</h3>
-              <p>1-888-397-3742</p>
-              <p>experian.com</p>
-            </div>
-            <div className="subpage-card">
-              <h3>TransUnion</h3>
-              <p>1-800-680-7289</p>
-              <p>transunion.com</p>
-            </div>
-          </div>
+          <h2>Legal Disclosure</h2>
+          <p>
+            This is an attempt to collect a debt. Any information obtained will be used for that purpose. This communication is from a debt collector.
+          </p>
         </div>
       </section>
 
-      {/* Additional Resources */}
-      <section className="subpage-section subpage-section-dark-alt">
-        <div className="subpage-container">
-          <div className="subpage-intro-inner" style={{ marginBottom: '3rem' }}>
-            <h2>Additional Resources</h2>
-          </div>
-          <div className="subpage-cards" style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <div className="subpage-card">
-              <h3>Federal Trade Commission</h3>
-              <p>IdentityTheft.gov provides a personalized recovery plan based on your situation.</p>
-              <p>1-877-438-4338</p>
-            </div>
-            <div className="subpage-card">
-              <h3>Consumer Financial Protection Bureau</h3>
-              <p>The CFPB provides resources and tools to help consumers resolve financial disputes.</p>
-              <p>consumerfinance.gov</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
+      {/* CTA Section */}
       <section className="subpage-cta">
         <div className="subpage-container">
-          <h3>Ready to Report Fraud?</h3>
-          <p>Call us at 866-766-2692 or email compliance@capitalreviewmgt.com</p>
-          <Link href="/consumer-tools/dispute-my-account" className="subpage-btn">Submit a Dispute</Link>
+          <h3>Need immediate assistance with fraud or identity theft?</h3>
+          <Link href="/contact" className="subpage-btn">
+            Contact Us Today!
+          </Link>
         </div>
       </section>
+
+      {/* Pop-up Modal */}
+      {showModal && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+          style={{ zIndex: 9999 }}
+          onClick={closeModal}
+        >
+          <div
+            className="bg-white shadow-xl max-w-md w-full mx-4 p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="text-center">
+              <h3 className="text-xl font-bold mb-4">IMPORTANT</h3>
+              <p className="text-sm mb-4">
+                This is an attempt to collect a debt. Any information will be used for that purpose. This communication is from a debt collector.
+              </p>
+              <p className="text-sm mb-6">
+                Calls to and from this company may be monitored and/or recorded.
+              </p>
+              <button
+                onClick={closeModal}
+                className="w-full bg-navy text-white py-2 px-4 hover:bg-opacity-90 transition-colors duration-200"
+              >
+                I Accept
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
-}
+} 

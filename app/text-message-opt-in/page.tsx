@@ -1,7 +1,7 @@
 'use client'
 
-import Link from 'next/link'
 import { useState } from 'react'
+import Link from 'next/link'
 
 export default function TextMessageOptInPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -59,34 +59,34 @@ export default function TextMessageOptInPage() {
   const optInSections = [
     {
       id: 'timely-notifications',
-      title: 'Receive Prompt Alerts',
-      description: 'Get critical updates regarding billing and forthcoming payments sent straight to your mobile device. Keep track of your account standing and avoid missing any payment due dates with our practical text notification service.',
-      image: 'https://images.pexels.com/photos/768474/pexels-photo-768474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      background: 'dark',
+      title: 'Get Timely Notifications',
+      description: 'Receive important updates about billing and upcoming payments directly to your phone. Stay informed about your account status and never miss a payment deadline with our convenient text message alerts.',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'real-time-updates',
-      title: 'Instant Account Notifications',
-      description: 'Receive immediate alerts about changes to your account status, payment confirmations, and essential account developments. Our text notification service guarantees you are always aware of your financial standing.',
+      title: 'Stay Updated in Real Time',
+      description: 'Get instant notifications about your account status changes, payment confirmations, and important account updates. Our text messaging service ensures you\'re always in the know about your financial obligations.',
       image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800',
-      background: 'darker',
+      background: 'grey',
       imageLeft: true
     },
     {
       id: 'avoid-late-payments',
-      title: 'Prevent Missed Deadlines',
-      description: 'Get useful due-date notifications and payment reminders to help you stay current on your financial commitments. Our proactive alert system supports you in maintaining a positive payment track record and steering clear of penalty charges.',
+      title: 'Avoid Late Payments',
+      description: 'Receive helpful due-date alerts and payment reminders to help you stay on top of your financial obligations. Our proactive messaging system helps you maintain good payment history and avoid late fees.',
       image: 'https://images.pexels.com/photos/6077587/pexels-photo-6077587.jpeg?_gl=1*1votr6i*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTUwODU0NDYkbzUkZzEkdDE3NTUwODU0NDckajU5JGwwJGgw',
-      background: 'dark',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'exclusive-offers',
-      title: 'Unlock Special Opportunities',
-      description: 'Get notified about special promotions and adaptable payment alternatives to better handle your account. Take advantage of unique programs and payment plans crafted to support your financial success.',
+      title: 'Access Exclusive Offers',
+      description: 'Receive notifications about exclusive offers and flexible payment options to better manage your account. Take advantage of special programs and payment arrangements designed to help you succeed.',
       image: 'https://images.pexels.com/photos/8112172/pexels-photo-8112172.jpeg?auto=compress&cs=tinysrgb&w=800',
-      background: 'darker',
+      background: 'grey',
       imageLeft: true
     }
   ]
@@ -95,87 +95,90 @@ export default function TextMessageOptInPage() {
     <>
       {/* Hero Banner Section */}
       <section className="subpage-hero">
-        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.pexels.com/photos/768474/pexels-photo-768474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)' }}></div>
+        <div
+          className="subpage-hero-bg"
+          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800)' }}
+        ></div>
         <div className="subpage-hero-overlay"></div>
         <div className="subpage-hero-content">
           <h1>Text Message Opt-in</h1>
-          <p>Keep Informed with Key Account Updates & Payment Notifications!</p>
+          <p>Stay Informed with Important Account Updates & Payment Reminders!</p>
         </div>
       </section>
 
       {/* Main Content Introduction */}
-      <section className="content-section">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="section-header">Take Charge of Your Financial Obligations</h2>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
-              Sign up now to receive vital updates and payment notifications, making sure you never miss a due date.
-              Our straightforward text messaging service delivers effortless updates to help you oversee your account
-              effectively and preserve a strong payment history.
-            </p>
+      <section className="subpage-section subpage-section-cream">
+        <div className="subpage-container">
+          <div className="subpage-intro">
+            <div className="subpage-intro-inner">
+              <h2>Stay in Control of Your Finances</h2>
+              <p>
+                Opt in today to receive essential updates and payment reminders, ensuring you never miss a deadline.
+                Our convenient text messaging service provides hassle-free updates to help you manage your account
+                effectively and maintain good payment history.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Opt-in Sections */}
       {optInSections.map((section, index) => (
-        <section key={section.id} className="content-section">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div style={{ maxWidth: '72rem', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', alignItems: 'center' }}>
-                {section.imageLeft ? (
-                  <>
-                    <div>
-                      <img
-                        src={section.image}
-                        alt={section.title}
-                        style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
-                      />
-                    </div>
-                    <div>
-                      <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem', color: 'white' }}>{section.title}</h2>
-                      <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
-                        {section.description}
-                      </p>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div>
-                      <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem', color: 'white' }}>{section.title}</h2>
-                      <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
-                        {section.description}
-                      </p>
-                    </div>
-                    <div>
-                      <img
-                        src={section.image}
-                        alt={section.title}
-                        style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
-                      />
-                    </div>
-                  </>
-                )}
-              </div>
+        <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
+          <div className="subpage-container">
+            <div style={{ maxWidth: '72rem', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+              {section.imageLeft ? (
+                <>
+                  <div>
+                    <img
+                      src={section.image}
+                      alt={section.title}
+                      style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
+                    />
+                  </div>
+                  <div>
+                    <h2>{section.title}</h2>
+                    <p style={{ fontSize: '1.125rem', lineHeight: '1.75' }}>
+                      {section.description}
+                    </p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div>
+                    <h2>{section.title}</h2>
+                    <p style={{ fontSize: '1.125rem', lineHeight: '1.75' }}>
+                      {section.description}
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      src={section.image}
+                      alt={section.title}
+                      style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
+                    />
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </section>
       ))}
 
       {/* Opt-in Form Section */}
-      <section className="content-section">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="section-header" style={{ textAlign: 'center', marginBottom: '2rem' }}>Prepared to Begin?</h2>
-            <div className="form-container">
+      <section className="subpage-section subpage-section-cream">
+        <div className="subpage-container">
+          <div style={{ maxWidth: '56rem', margin: '0 auto' }}>
+            <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Ready to Get Started?</h2>
+            <div style={{ backgroundColor: 'white', borderRadius: '0px', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)', padding: '2rem' }}>
               <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                <p style={{ fontSize: '1.125rem', color: '#b0b8c8' }}>
-                  Provide your details below to enroll in text message notifications
+                <p style={{ fontSize: '1.125rem' }}>
+                  Enter your information below to opt in to text message notifications
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="form-grid" style={{ maxWidth: '28rem', margin: '0 auto' }}>
-                <div className="form-group">
+              <form onSubmit={handleSubmit} className="subpage-form" style={{ maxWidth: '28rem', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                <div>
                   <label htmlFor="phone">
                     Phone Number *
                   </label>
@@ -190,7 +193,7 @@ export default function TextMessageOptInPage() {
                   />
                 </div>
 
-                <div className="form-group">
+                <div>
                   <label htmlFor="name">
                     Full Name *
                   </label>
@@ -201,11 +204,11 @@ export default function TextMessageOptInPage() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    placeholder="Jane Smith"
+                    placeholder="John Doe"
                   />
                 </div>
 
-                <div className="form-group">
+                <div>
                   <label htmlFor="email">
                     Email Address
                   </label>
@@ -215,11 +218,11 @@ export default function TextMessageOptInPage() {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="jane.smith@example.com"
+                    placeholder="john.doe@example.com"
                   />
                 </div>
 
-                <div className="checkbox-group">
+                <div style={{ display: 'flex', alignItems: 'flex-start' }}>
                   <input
                     type="checkbox"
                     id="consent"
@@ -227,27 +230,34 @@ export default function TextMessageOptInPage() {
                     checked={formData.consent}
                     onChange={handleInputChange}
                     required
+                    style={{ marginTop: '0.25rem', height: '1rem', width: '1rem', color: '#1c2a3f' }}
                   />
-                  <label htmlFor="consent">
-                    I authorize Capital Review Management LLC to send me text messages. I acknowledge that standard message and data charges may apply. I may unsubscribe at any point by responding STOP.
+                  <label htmlFor="consent" style={{ marginLeft: '0.5rem', fontSize: '0.875rem' }}>
+                    I consent to receive text messages from Capital Review Management LLC. I understand that message and data rates may apply. I can opt out at any time by replying STOP.
                   </label>
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="form-submit"
+                  style={{
+                    width: '100%',
+                    padding: '0.75rem 1.5rem',
+                    marginTop: '0.5rem',
+                    opacity: isSubmitting ? 0.5 : 1,
+                    cursor: isSubmitting ? 'not-allowed' : 'pointer'
+                  }}
                 >
-                  {isSubmitting ? 'Submitting...' : 'ENROLL NOW'}
+                  {isSubmitting ? 'Submitting...' : 'OPT IN NOW'}
                 </button>
 
                 {submitMessage && (
                   <div style={{
                     marginTop: '1rem',
                     padding: '1rem',
-                    backgroundColor: submitMessage.includes('error') ? '#1a0f0f' : '#0f1a1a',
-                    color: submitMessage.includes('error') ? '#ef9a9a' : '#9aefef',
-                    border: `1px solid ${submitMessage.includes('error') ? '#742323' : '#237373'}`
+                    backgroundColor: submitMessage.includes('error') ? '#fee2e2' : '#dcfce7',
+                    color: submitMessage.includes('error') ? '#7f1d1d' : '#166534',
+                    border: `1px solid ${submitMessage.includes('error') ? '#fca5a5' : '#86efac'}`
                   }}>
                     {submitMessage}
                   </div>
@@ -259,30 +269,28 @@ export default function TextMessageOptInPage() {
       </section>
 
       {/* Important Information Section */}
-      <section className="content-section">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="section-header" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>Important Information</h2>
-            <div className="info-panel">
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
-                <div>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '1rem', color: 'white' }}>Message Details</h3>
-                  <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', color: '#b0b8c8' }}>
-                    <li>• Standard message and data rates may apply</li>
-                    <li>• You can opt out at any time by replying STOP</li>
-                    <li>• For help, reply HELP to any message</li>
-                    <li>• Message frequency varies based on account activity</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '1rem', color: 'white' }}>Legal Information</h3>
-                  <p style={{ marginBottom: '1rem', color: '#b0b8c8' }}>
-                    By enrolling, you consent to our Terms and Conditions and Privacy Policy.
-                  </p>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                    <Link href="/terms" style={{ color: '#c9a84c', textDecoration: 'underline', display: 'block' }}>Terms and Conditions</Link>
-                    <Link href="/privacy" style={{ color: '#c9a84c', textDecoration: 'underline', display: 'block' }}>Privacy Policy</Link>
-                  </div>
+      <section className="subpage-section subpage-section-white">
+        <div className="subpage-container">
+          <div style={{ maxWidth: '56rem', margin: '0 auto' }}>
+            <h2 style={{ textAlign: 'center', marginBottom: '1.5rem' }}>Important Information</h2>
+            <div style={{ backgroundColor: '#f8f6f2', borderRadius: '0px', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)', padding: '2rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
+              <div>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '1rem' }}>Message Details</h3>
+                <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                  <li>• Standard message and data rates may apply</li>
+                  <li>• You can opt out at any time by replying STOP</li>
+                  <li>• For help, reply HELP to any message</li>
+                  <li>• Message frequency varies based on account activity</li>
+                </ul>
+              </div>
+              <div>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '1rem' }}>Legal Information</h3>
+                <p style={{ marginBottom: '1rem' }}>
+                  By opting in, you agree to our Terms and Conditions and Privacy Policy.
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                  <Link href="/terms" style={{ color: '#1c2a3f', textDecoration: 'underline', display: 'block' }}>Terms and Conditions</Link>
+                  <Link href="/privacy" style={{ color: '#1c2a3f', textDecoration: 'underline', display: 'block' }}>Privacy Policy</Link>
                 </div>
               </div>
             </div>

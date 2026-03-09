@@ -1,27 +1,35 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 
 export default function RemoveMyNumberPage() {
+  const [showModal, setShowModal] = useState(true)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState('')
   const [formData, setFormData] = useState({
-    accountNumber: '',
     firstName: '',
     lastName: '',
-    phoneNumber: '',
-    email: '',
-    requestType: '',
-    alternateNumber: '',
+    phoneNumberToRemove: '',
+    preference: '',
+    preferredContactNumber: '',
     comments: '',
     consent: false
   })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitMessage, setSubmitMessage] = useState('')
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const closeModal = () => {
+    console.log('closeModal called')
+    setShowModal(false)
+    console.log('showModal set to false')
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target
     if (type === 'checkbox') {
       const checked = (e.target as HTMLInputElement).checked
       setFormData(prev => ({ ...prev, [name]: checked }))
+    } else if (type === 'radio') {
+      setFormData(prev => ({ ...prev, [name]: value }))
     } else {
       setFormData(prev => ({ ...prev, [name]: value }))
     }
@@ -31,152 +39,301 @@ export default function RemoveMyNumberPage() {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitMessage('')
+
     try {
       const response = await fetch('/api/submit-form', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ formType: 'remove-number', formData }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          formType: 'remove-number',
+          formData: formData
+        }),
       })
-      await response.json()
+
+      const result = await response.json()
+
       if (response.ok) {
-        setSubmitMessage('Your request has been received. We will update our records within 5 business days.')
+        setSubmitMessage('Thank you for your request. Your contact preferences will be updated within 5 business days.')
+        // Reset form
         setFormData({
-          accountNumber: '', firstName: '', lastName: '', phoneNumber: '',
-          email: '', requestType: '', alternateNumber: '', comments: '', consent: false
+          firstName: '',
+          lastName: '',
+          phoneNumberToRemove: '',
+          preference: '',
+          preferredContactNumber: '',
+          comments: '',
+          consent: false
         })
       } else {
         setSubmitMessage('There was an error submitting your request. Please try again or contact us directly.')
       }
-    } catch {
+    } catch (error) {
+      console.error('Error submitting form:', error)
       setSubmitMessage('There was an error submitting your request. Please try again or contact us directly.')
     } finally {
       setIsSubmitting(false)
     }
   }
 
+  const removeNumberSections = [
+    {
+      id: 'urgent-matters',
+      title: 'Urgent Matters',
+      description: 'If the matter is urgent, we recommend calling us directly at 866-766-2692. For immediate assistance with removing your number from our calling list, our team is available to help you right away.',
+      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
+      background: 'white',
+      imageLeft: false
+    },
+    {
+      id: 'update-contact-preference',
+      title: 'Update Your Contact Preference',
+      description: 'Please provide the following information so we can update our records accurately: your first and last name, the number we are currently calling, whether the number is incorrect or you prefer a different contact number, and any additional comments or notes.',
+      image: 'https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800',
+      background: 'grey',
+      imageLeft: true
+    },
+    {
+      id: 'what-happens-next',
+      title: 'What Happens Next?',
+      description: 'Your request will be reviewed within 24 hours, changes will be implemented within 5 business days, you\'ll receive a confirmation email once processed, and if you provided an alternative number, we\'ll begin using it immediately.',
+      image: '/Pages/Calculator_Writing_Pro.jpeg',
+      background: 'white',
+      imageLeft: false
+    },
+    {
+      id: 'important-notice',
+      title: 'Important Notice',
+      description: 'This is an attempt to collect a debt. Any information obtained will be used for that purpose. This communication is from a debt collector. We take your privacy seriously and will process your request promptly.',
+      image: '/Pages/Stamp_Doc.jpeg',
+      background: 'grey',
+      imageLeft: true
+    }
+  ]
+
   return (
     <>
-      {/* Hero */}
+      {/* Hero Banner Section */}
       <section className="subpage-hero">
-        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(/Pages/Calculator_Writing_Pro.jpeg)' }}></div>
+        <div
+          className="subpage-hero-bg"
+          style={{ backgroundImage: 'url(/Pages/Calculator_Writing_Pro.jpeg)' }}
+        ></div>
         <div className="subpage-hero-overlay"></div>
         <div className="subpage-hero-content">
           <h1>Remove My Number</h1>
-          <p>Update or Remove Your Phone Number</p>
+          <p>Need Us to Stop Calling a Number? Let Us Know.</p>
         </div>
       </section>
 
-      {/* Info Section */}
-      <section className="subpage-section subpage-section-dark">
-        <div className="subpage-container">
-          <div className="subpage-grid">
-            <div className="subpage-text-col">
-              <h2>Phone Number Requests</h2>
-              <p>If Capital Review Management has contacted a phone number that is no longer associated with you, or if you would like to provide an updated contact number, please submit the form below.</p>
-              <p>Our team will update our records within 5 business days of receiving your request. We are committed to maintaining accurate contact information and respecting your communication preferences.</p>
-            </div>
-            <div className="subpage-image-col">
-              <img src="/Pages/Calculator_Writing_Pro.jpeg" alt="Phone number management" className="subpage-image" />
-            </div>
-          </div>
+      {/* Main Content Introduction */}
+      <section className="subpage-intro">
+        <div className="subpage-intro-inner">
+          <h2>Update Your Contact Preferences</h2>
+          <p>
+            If you've received calls from Capital Review Management in error — or if you would prefer we contact you at a different number —
+            please complete the form below. Your request will be processed within 5 business days.
+          </p>
         </div>
       </section>
 
-      {/* Form */}
-      <section className="subpage-section subpage-section-dark-alt">
-        <div className="subpage-container">
-          <div className="subpage-intro-inner" style={{ marginBottom: '3rem' }}>
-            <h2>Submit Your Request</h2>
-            <p>Complete the form below to update or remove a phone number from our records.</p>
-          </div>
-
-          {submitMessage && (
-            <div className={submitMessage.includes('error') ? 'form-error' : 'form-success'}>
-              {submitMessage}
+      {/* Remove Number Sections */}
+      {removeNumberSections.map((section, index) => (
+        <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
+          <div className="subpage-container">
+            <div className="subpage-grid">
+              {section.imageLeft ? (
+                <>
+                  <div className="subpage-image-col">
+                    <img
+                      src={section.image}
+                      alt={section.title}
+                      className="subpage-image"
+                    />
+                  </div>
+                  <div className="subpage-text-col">
+                    <h2>{section.title}</h2>
+                    <p>{section.description}</p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="subpage-text-col">
+                    <h2>{section.title}</h2>
+                    <p>{section.description}</p>
+                  </div>
+                  <div className="subpage-image-col">
+                    <img
+                      src={section.image}
+                      alt={section.title}
+                      className="subpage-image"
+                    />
+                  </div>
+                </>
+              )}
             </div>
-          )}
+          </div>
+        </section>
+      ))}
 
+      {/* Form Section */}
+      <section className="subpage-section subpage-section-cream">
+        <div className="subpage-container">
+          <h2>Contact Preference Form</h2>
           <form onSubmit={handleSubmit} className="subpage-form">
-            <h3>Contact Information</h3>
-            <div className="form-grid-2">
-              <div className="form-group">
-                <label>Account Number</label>
-                <input type="text" name="accountNumber" value={formData.accountNumber} onChange={handleInputChange} placeholder="Enter account number (if known)" />
+            <div className="form-row">
+              <div>
+                <label>First Name <span>*</span></label>
+                <input
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  required
+                />
               </div>
-              <div className="form-group">
-                <label>First Name <span className="form-required">*</span></label>
-                <input type="text" name="firstName" value={formData.firstName} onChange={handleInputChange} placeholder="Enter your first name" required />
-              </div>
-              <div className="form-group">
-                <label>Last Name <span className="form-required">*</span></label>
-                <input type="text" name="lastName" value={formData.lastName} onChange={handleInputChange} placeholder="Enter your last name" required />
-              </div>
-              <div className="form-group">
-                <label>Phone Number to Remove <span className="form-required">*</span></label>
-                <input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleInputChange} placeholder="Enter the phone number" required />
-              </div>
-              <div className="form-group">
-                <label>Email Address <span className="form-required">*</span></label>
-                <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Enter your email address" required />
+              <div>
+                <label>Last Name <span>*</span></label>
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  required
+                />
               </div>
             </div>
 
-            <h3 style={{ marginTop: '3rem' }}>Request Details</h3>
-            <div className="form-group">
-              <label>Request Type <span className="form-required">*</span></label>
-              <div className="radio-group">
+            <div>
+              <label>The Number We Are Currently Calling <span>*</span></label>
+              <input
+                type="tel"
+                name="phoneNumberToRemove"
+                value={formData.phoneNumberToRemove}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+
+            <div>
+              <label>Select One: <span>*</span></label>
+              <div className="form-radio-group">
                 <label>
-                  <input type="radio" name="requestType" value="remove" checked={formData.requestType === 'remove'} onChange={handleInputChange} />
-                  Remove this number from your records
+                  <input
+                    type="radio"
+                    name="preference"
+                    value="remove"
+                    checked={formData.preference === 'remove'}
+                    onChange={handleInputChange}
+                    required
+                  />
+                  <span>The number is incorrect — please remove it</span>
                 </label>
                 <label>
-                  <input type="radio" name="requestType" value="update" checked={formData.requestType === 'update'} onChange={handleInputChange} />
-                  Replace with a different number
-                </label>
-                <label>
-                  <input type="radio" name="requestType" value="wrong-person" checked={formData.requestType === 'wrong-person'} onChange={handleInputChange} />
-                  This number does not belong to the person you are trying to reach
-                </label>
-              </div>
-            </div>
-
-            {formData.requestType === 'update' && (
-              <div className="form-group">
-                <label>New Phone Number <span className="form-required">*</span></label>
-                <input type="tel" name="alternateNumber" value={formData.alternateNumber} onChange={handleInputChange} placeholder="Enter your new phone number" required />
-              </div>
-            )}
-
-            <div className="form-group">
-              <label>Additional Comments</label>
-              <textarea name="comments" value={formData.comments} onChange={handleInputChange} rows={4} placeholder="Any additional information..." />
-            </div>
-
-            <div className="form-group" style={{ marginTop: '2rem' }}>
-              <div className="checkbox-group">
-                <label className="consent-label">
-                  <input type="checkbox" name="consent" checked={formData.consent} onChange={handleInputChange} required />
-                  I confirm that the information provided is accurate and I authorize Capital Review Management to update their records accordingly.
+                  <input
+                    type="radio"
+                    name="preference"
+                    value="different"
+                    checked={formData.preference === 'different'}
+                    onChange={handleInputChange}
+                    required
+                  />
+                  <span>The number is correct, but I prefer to be reached at a different number</span>
                 </label>
               </div>
             </div>
 
-            <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
-              <button type="submit" disabled={isSubmitting} className="form-submit">
-                {isSubmitting ? 'Submitting...' : 'Submit Request'}
+            <div>
+              <label>Preferred Contact Number (if different)</label>
+              <input
+                type="tel"
+                name="preferredContactNumber"
+                value={formData.preferredContactNumber}
+                onChange={handleInputChange}
+              />
+            </div>
+
+            <div>
+              <label>Comments or Additional Notes (optional)</label>
+              <textarea
+                rows={4}
+                name="comments"
+                value={formData.comments}
+                onChange={handleInputChange}
+              ></textarea>
+            </div>
+
+            <div className="form-checkbox">
+              <input
+                type="checkbox"
+                name="consent"
+                checked={formData.consent}
+                onChange={handleInputChange}
+                required
+              />
+              <label>
+                I confirm that the information provided above is accurate and complete. I understand that this request will be processed within 5 business days.
+              </label>
+            </div>
+
+            <div className="form-submit-wrap">
+              <button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? 'Submitting...' : 'SUBMIT REQUEST'}
               </button>
             </div>
+
+            {submitMessage && (
+              <div className={submitMessage.includes('error') ? 'form-error' : 'form-success'}>
+                {submitMessage}
+              </div>
+            )}
           </form>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="subpage-cta">
+      {/* Contact Information Section */}
+      <section className="subpage-section subpage-section-white">
         <div className="subpage-container">
-          <h3>Questions About Your Phone Number?</h3>
-          <p>Call us at 866-766-2692 for immediate assistance.</p>
+          <h2>Contact Information</h2>
+          <div className="text-center">
+            <p className="font-semibold">Capital Review Management</p>
+            <p>2200 North Frazier Suite 120 Box 142, Conroe, TX 77301</p>
+            <p className="text-xl font-semibold">866-766-2692</p>
+            <p className="mt-4">
+              <strong>Compliance Email:</strong> compliance@capitalreviewmgt.com
+            </p>
+          </div>
         </div>
       </section>
+
+      {/* CTA Section */}
+      <section className="subpage-cta">
+        <div className="subpage-container">
+          <h3>Need immediate assistance with removing your number?</h3>
+          <Link href="/contact" className="subpage-btn">
+            Contact Us Today!
+          </Link>
+        </div>
+      </section>
+
+      {/* Pop-up Modal */}
+      {showModal && (
+        <div className="disclosure-overlay" onClick={closeModal}>
+          <div className="disclosure-modal" onClick={(e) => e.stopPropagation()}>
+            <h2>IMPORTANT</h2>
+            <p>
+              This is an attempt to collect a debt. Any information will be used for that purpose. This communication is from a debt collector.
+            </p>
+            <p>
+              Calls to and from this company may be monitored and/or recorded.
+            </p>
+            <button className="disclosure-modal-btn" onClick={closeModal}>
+              I Accept
+            </button>
+          </div>
+        </div>
+      )}
     </>
   )
-}
+} 

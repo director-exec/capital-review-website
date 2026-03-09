@@ -8,13 +8,13 @@ import { Analytics } from '@vercel/analytics/react'
 const sourceSans = Source_Sans_3({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-source-sans',
+  variable: '--font-body',
 })
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-cormorant',
+  variable: '--font-heading',
 })
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default function RootLayout({
         <link rel="alternate icon" href="/logo.avif" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </head>
-      <body className={`${sourceSans.variable} ${cormorant.variable}`}>
+      <body className={`${sourceSans.variable} ${cormorant.variable} ${sourceSans.className}`}>
         <Header />
         <main>
           {children}

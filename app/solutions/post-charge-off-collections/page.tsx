@@ -1,37 +1,35 @@
-import Link from 'next/link'
-
 export default function PostChargeOffCollectionsPage() {
   const serviceSections = [
     {
       id: 'advanced-recovery',
       title: 'Advanced Recovery Solutions',
-      description: 'When accounts remain unresolved and surpass internal capabilities, Capital Review Management delivers the expertise, systems, and compliance framework necessary to recover revenue — while protecting your brand throughout the process. Our post charge-off collection efforts leverage predictive analytics, multi-channel outreach, and fully compliant procedures.',
-      image: '/Pages/Writing_Signing_Doc_Meeting.jpeg',
-      background: 'dark',
+      description: 'When accounts go unpaid and age beyond internal efforts, Capital Review Management delivers the experience, systems, and compliance infrastructure needed to convert them into revenue — while protecting your brand reputation every step of the way. Our post charge-off collections are powered by advanced analytics, multichannel communication, and fully compliant protocols.',
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'omnichannel-outreach',
-      title: 'Omnichannel Engagement',
-      description: 'Voice, SMS, email, and mail — calibrated to consumer behavior and communication preferences. Every action is data-driven: segmentation, scoring, and behavioral tracking guide our processes to maximize recovery. We train all staff to engage post-charge-off consumers with empathy, clarity, and professionalism.',
-      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
-      background: 'panel',
+      title: 'Omnichannel Contact Tools',
+      description: 'Voice, SMS, email, and mail — tailored to consumer behavior and channel preference. Every decision is backed by data: segmentation, scoring, and behavioral tracking guide our workflows to optimize recovery. We train all agents to handle post-charge-off consumers with empathy, clarity, and professionalism.',
+      image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800',
+      background: 'cream',
       imageLeft: true
     },
     {
       id: 'compliance-first',
-      title: 'Compliance-First Approach',
-      description: 'FDCPA, FCRA, TCPA, GLBA, HIPAA — our in-house legal team ensures complete regulatory adherence at every stage. Whether you are a financial institution, healthcare provider, utility company, or commercial business, our methodology is designed to reduce friction and accelerate resolution.',
-      image: '/Pages/Stamp_Doc.jpeg',
-      background: 'dark',
+      title: 'Compliance-First Process',
+      description: 'FDCPA, FCRA, TCPA, GLBA, HIPAA — our internal legal oversight ensures full regulatory alignment at every stage. Whether you\'re a financial institution, healthcare provider, utility, or commercial business, our approach is designed to reduce friction and increase resolution — fast.',
+      image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'proven-results',
-      title: 'Proven Track Record',
-      description: 'Our post charge-off collection programs consistently deliver superior recovery rates while maintaining the highest standards of regulatory compliance and consumer service. We understand that each account represents a relationship with recovery potential. With extensive success in regulated industries, we have perfected an efficient methodology.',
-      image: '/Pages/Calculator_Writing_Stats_Graph.jpeg',
-      background: 'panel',
+      title: 'Proven Results',
+      description: 'Our post charge-off collection programs consistently deliver superior recovery rates while maintaining the highest standards of compliance and customer service. We understand that every account represents a relationship that can be restored. With decades of results in regulated industries, we\'ve developed a refined, effective approach.',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+      background: 'cream',
       imageLeft: true
     }
   ]
@@ -40,23 +38,24 @@ export default function PostChargeOffCollectionsPage() {
     <>
       {/* Hero Banner Section */}
       <section className="subpage-hero">
-        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(/Pages/Writing_Signing_Doc_Meeting.jpeg)' }}></div>
+        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800)' }}></div>
         <div className="subpage-hero-overlay"></div>
         <div className="subpage-hero-content">
           <h1>Post Charge-Off Collections</h1>
-          <p>Proven Recovery Strategies for Written-Off Accounts</p>
+          <p>A Proven Model for Maximizing Recovery</p>
         </div>
       </section>
 
       {/* Main Content Introduction */}
-      <section className="content-section info-panel">
+      <section className="subpage-section subpage-section-white">
         <div className="subpage-container">
           <div className="subpage-intro">
             <div className="subpage-intro-inner">
-              <h2>Advanced Recovery for Charged-Off Accounts</h2>
+              <h2>Advanced Recovery Solutions for Charged-Off Accounts</h2>
               <p>
-                When accounts remain unresolved and surpass internal capabilities, Capital Review Management delivers the expertise,
-                systems, and compliance framework necessary to recover revenue — while protecting your brand reputation throughout the process.
+                When accounts go unpaid and age beyond internal efforts, Capital Review Management delivers the experience,
+                systems, and compliance infrastructure needed to convert them into revenue — while protecting your brand
+                reputation every step of the way.
               </p>
             </div>
           </div>
@@ -65,7 +64,7 @@ export default function PostChargeOffCollectionsPage() {
 
       {/* Service Sections */}
       {serviceSections.map((section, index) => (
-        <section key={section.id} className={`content-section ${section.background === 'panel' ? 'info-panel' : ''}`}>
+        <section key={section.id} className={`subpage-section ${section.background === 'cream' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
           <div className="subpage-container">
             <div className="subpage-grid">
               {section.imageLeft ? (
@@ -107,15 +106,15 @@ export default function PostChargeOffCollectionsPage() {
       ))}
 
       {/* Summary Section */}
-      <section className="content-section info-panel">
+      <section className="subpage-section subpage-section-cream">
         <div className="subpage-container">
           <div className="subpage-intro">
             <div className="subpage-intro-inner">
               <h2>High-Impact Recovery for Delinquent Accounts</h2>
               <p>
                 Our post charge-off collection programs consistently deliver superior recovery rates while maintaining
-                the highest standards of regulatory compliance and consumer service. We understand that every account represents
-                a relationship with recovery potential.
+                the highest standards of compliance and customer service. We understand that every account represents
+                a relationship that can be restored.
               </p>
             </div>
           </div>
@@ -123,12 +122,12 @@ export default function PostChargeOffCollectionsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="cta-section">
+      <section className="subpage-cta">
         <div className="subpage-container">
-          <h3>Ready to maximize your recovery performance?</h3>
-          <Link href="/contact" className="subpage-btn">
-            Get In Touch Now
-          </Link>
+          <h3>Ready to maximize your recovery rates?</h3>
+          <a href="/contact" className="subpage-btn">
+            Contact Us Today
+          </a>
         </div>
       </section>
     </>

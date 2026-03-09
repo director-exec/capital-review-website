@@ -4,50 +4,50 @@ export default function TermsAndConditionsPage() {
   const termsSections = [
     {
       id: 'acceptance-of-terms',
-      title: 'Agreement to These Terms',
-      description: 'By visiting and utilizing this Website, you confirm and consent to follow these Terms and Conditions along with all relevant laws and regulations. If you disagree with any portion of these terms, please refrain from using the Website.',
+      title: 'Acceptance of Terms',
+      description: 'By accessing and using the Website, you acknowledge and agree to abide by these Terms and Conditions and all applicable laws and regulations. If you do not agree to any of these terms, please do not use the Website.',
       image: 'https://images.pexels.com/photos/6077587/pexels-photo-6077587.jpeg?_gl=1*1votr6i*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTUwODU0NDYkbzUkZzEkdDE3NTUwODU0NDckajU5JGwwJGgw',
-      background: 'dark',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'modifications-to-terms',
-      title: 'Amendments to These Terms',
-      description: 'We retain the authority to revise or alter these Terms and Conditions at any point without advance notification. Your ongoing use of the Website signifies your acceptance of any modifications.',
+      title: 'Modifications to Terms',
+      description: 'We reserve the right to update or modify these Terms and Conditions at any time without prior notice. Your continued use of the Website constitutes acceptance of any changes.',
       image: '/Pages/Writing_Signing_Doc_Meeting.jpeg',
-      background: 'darker',
+      background: 'grey',
       imageLeft: true
     },
     {
       id: 'privacy-policy',
       title: 'Privacy Policy',
-      description: 'Your activity on the Website is additionally governed by our Privacy Policy, which is incorporated into these Terms and Conditions by reference. We encourage you to examine our Privacy Policy to understand the ways in which we gather, utilize, and safeguard your data.',
+      description: 'Your use of the Website is also governed by our Privacy Policy, which is incorporated into these Terms and Conditions by reference. We encourage you to review our Privacy Policy to understand how we collect, use, and protect your information.',
       image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800',
-      background: 'dark',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'intellectual-property',
-      title: 'Proprietary Content',
-      description: 'All materials on the Website, including written content, images, brand marks, and software, are owned by Capital Review Management LLC and are protected under intellectual property law. You may not utilize, copy, or redistribute any content without our explicit written authorization.',
+      title: 'Intellectual Property',
+      description: 'All content on the Website, including text, graphics, logos, and software, is the property of Capital Review Management LLC and is protected by copyright laws. You may not use, reproduce, or distribute any content without our express written permission.',
       image: 'https://images.pexels.com/photos/6077587/pexels-photo-6077587.jpeg?_gl=1*1votr6i*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTUwODU0NDYkbzUkZzEkdDE3NTUwODU0NDckajU5JGwwJGgw',
-      background: 'darker',
+      background: 'grey',
       imageLeft: true
     },
     {
       id: 'limitation-of-liability',
-      title: 'Liability Restrictions',
-      description: 'We bear no responsibility for any damages arising from your use of, or inability to access, the Website or any services offered. This encompasses, without limitation, damages caused by errors, service interruptions, or loss of data.',
+      title: 'Limitation of Liability',
+      description: 'We are not liable for any damages resulting from your use of, or inability to use, the Website or any services provided. This includes, without limitation, damages due to errors, interruptions, or data loss.',
       image: 'https://images.pexels.com/photos/8112172/pexels-photo-8112172.jpeg?auto=compress&cs=tinysrgb&w=800',
-      background: 'dark',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'text-messaging-terms',
-      title: 'SMS Communication Terms and Conditions',
-      description: 'By agreeing to receive text messages from Capital Review Management LLC, you consent to electronic authorization, acknowledge that standard message and data charges may be incurred, accept variable message frequency, can access help information, may follow opt-out procedures, understand MMS versus SMS delivery methods, and accept wireless carrier liability limitations.',
+      title: 'Text Messaging Terms and Conditions',
+      description: 'By consenting to receive text messages from Capital Review Management LLC, you agree to electronic consent, message and data rates may apply, variable message frequency, help information availability, opt-out procedures, MMS vs. SMS delivery, and service provider liability limitations.',
       image: '/Pages/Signing_Doc_Laptop_Air.png',
-      background: 'darker',
+      background: 'grey',
       imageLeft: true
     }
   ]
@@ -56,24 +56,26 @@ export default function TermsAndConditionsPage() {
     <>
       {/* Hero Banner Section */}
       <section className="subpage-hero">
-        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=1200)' }}></div>
+        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800)' }}></div>
         <div className="subpage-hero-overlay"></div>
         <div className="subpage-hero-content">
           <h1>Terms and Conditions of Use</h1>
-          <p>Kindly review these terms thoroughly prior to using our website</p>
+          <p>Please read these terms carefully before using our website</p>
         </div>
       </section>
 
       {/* Main Content Introduction */}
-      <section className="content-section">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="section-header">Familiarize Yourself with Our Terms</h2>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
-              Welcome to the website of Capital Review Management LLC. By visiting and using capitalreviewmgt.com,
-              you consent to adhere to and be governed by these Terms and Conditions. Please review them thoroughly to understand
-              your entitlements and responsibilities.
-            </p>
+      <section className="subpage-section subpage-section-cream">
+        <div className="subpage-container">
+          <div className="subpage-intro">
+            <div className="subpage-intro-inner">
+              <h2>Understanding Our Terms</h2>
+              <p>
+                Welcome to the website of Capital Review Management LLC. By accessing and using capitalreviewmgt.com,
+                you agree to comply with and be bound by these Terms and Conditions. Please read them carefully to understand
+                your rights and obligations.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -81,44 +83,42 @@ export default function TermsAndConditionsPage() {
       {/* Terms Sections */}
       <div className="legal-page">
         {termsSections.map((section, index) => (
-          <section key={section.id} className="content-section">
-            <div className="container mx-auto px-4">
-              <div className="max-w-6xl mx-auto">
-                <div style={{ maxWidth: '72rem', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', alignItems: 'center' }}>
-                  {section.imageLeft ? (
-                    <>
-                      <div>
-                        <img
-                          src={section.image}
-                          alt={section.title}
-                          style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
-                        />
-                      </div>
-                      <div>
-                        <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem', color: 'white' }}>{section.title}</h2>
-                        <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
-                          {section.description}
-                        </p>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <div>
-                        <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem', color: 'white' }}>{section.title}</h2>
-                        <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
-                          {section.description}
-                        </p>
-                      </div>
-                      <div>
-                        <img
-                          src={section.image}
-                          alt={section.title}
-                          style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
-                        />
-                      </div>
-                    </>
-                  )}
-                </div>
+          <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
+            <div className="subpage-container">
+              <div style={{ maxWidth: '72rem', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+                {section.imageLeft ? (
+                  <>
+                    <div>
+                      <img
+                        src={section.image}
+                        alt={section.title}
+                        style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
+                      />
+                    </div>
+                    <div>
+                      <h2>{section.title}</h2>
+                      <p style={{ fontSize: '1.125rem', lineHeight: '1.75' }}>
+                        {section.description}
+                      </p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div>
+                      <h2>{section.title}</h2>
+                      <p style={{ fontSize: '1.125rem', lineHeight: '1.75' }}>
+                        {section.description}
+                      </p>
+                    </div>
+                    <div>
+                      <img
+                        src={section.image}
+                        alt={section.title}
+                        style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
+                      />
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </section>
@@ -126,24 +126,22 @@ export default function TermsAndConditionsPage() {
       </div>
 
       {/* Additional Terms Section */}
-      <section className="content-section">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="section-header" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>Supplementary Terms</h2>
-            <div className="info-panel">
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', fontSize: '1.125rem' }}>
-                <div>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem', color: 'white' }}>External Links</h3>
-                  <p style={{ color: '#b0b8c8' }}>Our Website may include links to external websites operated by third parties. We are not accountable for the content, accuracy, or practices of any third-party websites.</p>
-                </div>
-                <div>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem', color: 'white' }}>Applicable Law</h3>
-                  <p style={{ color: '#b0b8c8' }}>These Terms and Conditions are interpreted and enforced under the laws of the state of Texas, without consideration of its conflict of law provisions.</p>
-                </div>
-                <div>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem', color: 'white' }}>Suspension of Access</h3>
-                  <p style={{ color: '#b0b8c8' }}>We retain the authority to suspend or revoke your access to the Website at any point for breach of these Terms and Conditions or for any other justification.</p>
-                </div>
+      <section className="subpage-section subpage-section-cream">
+        <div className="subpage-container">
+          <div style={{ maxWidth: '56rem', margin: '0 auto' }}>
+            <h2 style={{ textAlign: 'center', marginBottom: '1.5rem' }}>Additional Terms</h2>
+            <div style={{ backgroundColor: 'white', borderRadius: '0px', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)', padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem', fontSize: '1.125rem' }}>
+              <div>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem' }}>Third-Party Links</h3>
+                <p>Our Website may contain links to third-party websites. We are not responsible for the content, accuracy, or practices of any third-party websites.</p>
+              </div>
+              <div>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem' }}>Governing Law</h3>
+                <p>These Terms and Conditions are governed by and construed in accordance with the laws of the state of Texas, without regard to its conflict of law principles.</p>
+              </div>
+              <div>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem' }}>Termination of Use</h3>
+                <p>We reserve the right to suspend or terminate your access to the Website at any time for violation of these Terms and Conditions or for any other reason.</p>
               </div>
             </div>
           </div>
@@ -151,19 +149,19 @@ export default function TermsAndConditionsPage() {
       </section>
 
       {/* Contact Information Section */}
-      <section className="content-section">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="section-header">Get in Touch</h2>
-            <div className="info-panel">
-              <p style={{ fontSize: '1.125rem', marginBottom: '1.5rem', color: '#b0b8c8' }}>
-                For any questions about these Terms and Conditions, please reach out to us at:
+      <section className="subpage-section subpage-section-white">
+        <div className="subpage-container">
+          <div style={{ maxWidth: '56rem', margin: '0 auto', textAlign: 'center' }}>
+            <h2>Contact Us</h2>
+            <div style={{ backgroundColor: '#f8f6f2', borderRadius: '0px', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)', padding: '2rem' }}>
+              <p style={{ fontSize: '1.125rem', marginBottom: '1.5rem' }}>
+                For any questions regarding these Terms and Conditions, please contact us at:
               </p>
-              <div style={{ fontSize: '1.125rem', display: 'flex', flexDirection: 'column', gap: '1rem', color: '#b0b8c8' }}>
-                <p style={{ fontWeight: '600', color: 'white' }}>Capital Review Management LLC</p>
-                <p style={{ fontSize: '1.25rem', fontWeight: '600', color: '#4a7fb5' }}>866-766-2692</p>
+              <div style={{ fontSize: '1.125rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <p style={{ fontWeight: '600' }}>Capital Review Management LLC</p>
+                <p style={{ fontSize: '1.25rem', fontWeight: '600', color: '#1c2a3f' }}>866-766-2692</p>
                 <p>
-                  <strong style={{ color: 'white' }}>Email:</strong> info@capitalreviewmgt.com
+                  <strong>Email:</strong> info@capitalreviewmgt.com
                 </p>
               </div>
             </div>

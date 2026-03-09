@@ -1,29 +1,27 @@
-import Link from 'next/link'
-
 export default function SecondaryTertiaryCollectionsPage() {
   const serviceSections = [
     {
       id: 'specialized-recovery',
-      title: 'Specialized Recovery Expertise',
-      description: 'When accounts have cycled through multiple collection attempts without resolution, they require a specialized approach. Capital Review Management\'s Secondary & Tertiary Collections services are designed for these challenging situations demanding advanced methods and seasoned professionals. Our team has extensive experience navigating complex collection scenarios.',
-      image: '/Pages/Stamp_Doc.jpeg',
-      background: 'dark',
+      title: 'Specialized Recovery for Difficult Accounts',
+      description: 'When accounts have been through multiple collection attempts without resolution, they require a specialized approach. Capital Review Management\'s Secondary & Tertiary Collections services are designed specifically for these challenging cases that demand advanced strategies and experienced handling. Our team brings decades of experience in handling complex collection scenarios.',
+      image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'specialized-communication',
-      title: 'Strategic Communication Methods',
-      description: 'Custom approaches informed by account history and consumer behavior patterns. We provide access to dedicated legal counsel for regulatory and compliance matters, plus innovative repayment solutions tailored to each consumer\'s financial circumstances.',
-      image: '/Pages/Calculator_Writing_Pro.jpeg',
-      background: 'panel',
+      title: 'Specialized Communication Strategies',
+      description: 'Customized approaches based on account history and consumer behavior patterns. We provide access to specialized legal resources for complex regulatory and compliance matters, and creative payment arrangements tailored to individual consumer circumstances.',
+      image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800',
+      background: 'cream',
       imageLeft: true
     },
     {
       id: 'flexible-solutions',
-      title: 'Customizable Payment Solutions',
-      description: 'Creative repayment arrangements designed for each consumer\'s situation. Our specialized services unlock recovery on previously challenging accounts, manage complex cases, employ advanced location and contact methods, provide legal and compliance expertise, and craft individual payment programs.',
-      image: '/Pages/Writing_Signing_Doc_Meeting.jpeg',
-      background: 'dark',
+      title: 'Flexible Payment Solutions',
+      description: 'Creative payment arrangements tailored to individual consumer circumstances. Our specialized services provide recovery of previously uncollectible accounts, specialized handling of complex cases, advanced location and contact services, expert legal and compliance support, and customized payment arrangements.',
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800',
+      background: 'white',
       imageLeft: false
     }
   ]
@@ -32,24 +30,24 @@ export default function SecondaryTertiaryCollectionsPage() {
     <>
       {/* Hero Banner Section */}
       <section className="subpage-hero">
-        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(/Pages/Stamp_Doc.jpeg)' }}></div>
+        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800)' }}></div>
         <div className="subpage-hero-overlay"></div>
         <div className="subpage-hero-content">
           <h1>Secondary & Tertiary Collections</h1>
-          <p>Advanced Strategies for Challenging Accounts</p>
+          <p>Specialized Recovery for Difficult Accounts</p>
         </div>
       </section>
 
       {/* Main Content Introduction */}
-      <section className="content-section info-panel">
+      <section className="subpage-section subpage-section-white">
         <div className="subpage-container">
           <div className="subpage-intro">
             <div className="subpage-intro-inner">
-              <h2>Expert Solutions for Resistant Accounts</h2>
+              <h2>Advanced Solutions for Accounts That Require Specialized Handling</h2>
               <p>
-                When accounts have cycled through multiple collection attempts without resolution, they require specialized expertise.
-                Capital Review Management\'s Secondary & Tertiary Collections services are designed for these challenging situations
-                demanding advanced methods and experienced professionals.
+                When accounts have been through multiple collection attempts without resolution, they require a
+                specialized approach. Capital Review Management's Secondary & Tertiary Collections services are
+                designed specifically for these challenging cases that demand advanced strategies and experienced handling.
               </p>
             </div>
           </div>
@@ -58,7 +56,7 @@ export default function SecondaryTertiaryCollectionsPage() {
 
       {/* Service Sections */}
       {serviceSections.map((section, index) => (
-        <section key={section.id} className={`content-section ${section.background === 'panel' ? 'info-panel' : ''}`}>
+        <section key={section.id} className={`subpage-section ${section.background === 'cream' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
           <div className="subpage-container">
             <div className="subpage-grid">
               {section.imageLeft ? (
@@ -100,14 +98,15 @@ export default function SecondaryTertiaryCollectionsPage() {
       ))}
 
       {/* Summary Section */}
-      <section className="content-section info-panel">
+      <section className="subpage-section subpage-section-cream">
         <div className="subpage-container">
           <div className="subpage-intro">
             <div className="subpage-intro-inner">
-              <h2>When Standard Collection Methods Prove Insufficient</h2>
+              <h2>When Standard Collections Aren't Enough</h2>
               <p>
-                Some accounts demand more than routine collection tactics. Our Secondary & Tertiary Collections services
-                deliver specialized expertise and sophisticated strategies to recover accounts that have resisted conventional efforts.
+                Some accounts require more than standard collection approaches. Our Secondary & Tertiary Collections
+                services provide the specialized expertise and advanced strategies needed to recover accounts that
+                have resisted traditional collection efforts.
               </p>
             </div>
           </div>
@@ -115,12 +114,12 @@ export default function SecondaryTertiaryCollectionsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="cta-section">
+      <section className="subpage-cta">
         <div className="subpage-container">
-          <h3>Need specialized collection expertise for your challenging accounts?</h3>
-          <Link href="/contact" className="subpage-btn">
-            Get In Touch Now
-          </Link>
+          <h3>Ready for specialized collection solutions?</h3>
+          <a href="/contact" className="subpage-btn">
+            Contact Us Today
+          </a>
         </div>
       </section>
     </>

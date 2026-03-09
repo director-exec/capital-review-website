@@ -4,50 +4,50 @@ export default function PrivacyPolicyPage() {
   const privacySections = [
     {
       id: 'information-collection',
-      title: 'Data We Gather',
-      description: 'We may collect a range of personal data including contact details (name, mailing address, email, telephone number), financial data (payment records, banking information), debt-related data (account identifiers, outstanding amounts), identification documents (government-issued IDs), and communication logs (phone conversations, emails, written correspondence).',
-      image: 'https://images.pexels.com/photos/4792288/pexels-photo-4792288.jpeg?_gl=1*17w92mj*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MzA3MjckbzIkZzEkdDE3NTQ5MzA3NTQkajMzJGwwJGgw',
-      background: 'dark',
+      title: 'Information We Collect',
+      description: 'We may collect various types of personal information including contact information (name, address, email, phone), financial information (payment history, bank details), debt information (account numbers, balances), identification information (government IDs), and communications records (phone calls, emails, correspondence).',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'information-usage',
-      title: 'How We Use and Share Data',
-      description: 'We never sell personal data to outside parties. That said, we may disclose information for operational needs with affiliated entities and service vendors, in the course of corporate transactions such as acquisitions or divestitures, and for regulatory compliance as mandated by statute, regulation, or judicial proceedings.',
+      title: 'Information Usage and Disclosure',
+      description: 'We do not sell personal information to third parties. However, we may share information for business operations with affiliates and service providers, during business transfers such as mergers or sales, and for legal compliance as required by law, regulation, or legal process.',
       image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      background: 'darker',
+      background: 'grey',
       imageLeft: true
     },
     {
       id: 'data-security',
-      title: 'Information Protection',
-      description: 'We implement technical and procedural safeguards to maintain the confidentiality, accuracy, and security of personal data. Nevertheless, no transmission or storage method is completely impervious, and we cannot provide an absolute guarantee of data protection.',
+      title: 'Data Security',
+      description: 'We employ technical and organizational measures to safeguard the confidentiality, integrity, and security of personal information. However, no method of transmission or storage is entirely secure, and we cannot guarantee absolute data security.',
       image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800',
-      background: 'dark',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'text-messaging',
-      title: 'SMS Communication Privacy',
-      description: 'We do not distribute, transfer, or commercialize mobile phone numbers, text messaging enrollment data, or authorization details to outside parties. For additional information regarding text-based communications, please consult our Terms and Conditions page.',
+      title: 'Text Messaging Privacy',
+      description: 'We do not share, transfer, or sell mobile numbers, text messaging opt-in data, or consent information to third parties. For more details on text communications, please refer to our Terms and Conditions page.',
       image: 'https://images.pexels.com/photos/2312369/pexels-photo-2312369.jpeg?_gl=1*kss10t*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5NDQ2NDckbzQkZzEkdDE3NTQ5NDQ2NTYkajUxJGwwJGgw',
-      background: 'darker',
+      background: 'grey',
       imageLeft: true
     },
     {
       id: 'your-rights',
-      title: 'Your Entitlements',
-      description: 'You have the right to view, correct, or request removal of your personal data. To exercise these entitlements or for any questions about this Privacy Policy, please reach out to us through the contact details provided below.',
+      title: 'Your Rights',
+      description: 'Individuals have the right to access, update, or request the deletion of their personal information. To exercise these rights or for any questions regarding this Privacy Policy, please contact us using the information provided.',
       image: 'https://images.pexels.com/photos/6077587/pexels-photo-6077587.jpeg?_gl=1*1votr6i*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTUwODU0NDYkbzUkZzEkdDE3NTUwODU0NDckajU5JGwwJGgw',
-      background: 'dark',
+      background: 'white',
       imageLeft: false
     },
     {
       id: 'california-privacy-rights',
-      title: 'California Consumer Privacy Protections (CCPA)',
-      description: 'If you reside in California, you are granted supplementary rights under the California Consumer Privacy Act (CCPA). These include the right to: (1) Be informed about what personal data we gather, utilize, share, and sell; (2) Ask for the erasure of your personal data; (3) Decline the sale of your personal data (we do not engage in selling personal data); (4) Be free from retaliation for exercising your privacy entitlements; and (5) Obtain your personal data in a transferable format. To invoke any of these California privacy protections, please reach out using the contact details listed in the Contact Us section below. We will address your inquiry within the deadlines prescribed by California statute.',
+      title: 'California Privacy Rights (CCPA)',
+      description: 'If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA). You have the right to: (1) Know what personal information we collect, use, disclose, and sell; (2) Request deletion of your personal information; (3) Opt-out of the sale of your personal information (we do not sell personal information); (4) Non-discrimination for exercising your privacy rights; and (5) Access your personal information in a portable format. To exercise any of these California privacy rights, please contact us using the information provided in the Contact Us section. We will respond to your request within the timeframes required by California law.',
       image: '/Pages/Legal_Doc_Med.jpeg',
-      background: 'darker',
+      background: 'grey',
       imageLeft: true
     }
   ]
@@ -56,24 +56,26 @@ export default function PrivacyPolicyPage() {
     <>
       {/* Hero Banner Section */}
       <section className="subpage-hero">
-        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.pexels.com/photos/4792288/pexels-photo-4792288.jpeg?_gl=1*17w92mj*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MzA3MjckbzIkZzEkdDE3NTQ5MzA3NTQkajMzJGwwJGgw)' }}></div>
+        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800)' }}></div>
         <div className="subpage-hero-overlay"></div>
         <div className="subpage-hero-content">
           <h1>Privacy Policy</h1>
-          <p>Safeguarding Your Personal Data</p>
+          <p>Protecting Your Personal Information</p>
         </div>
       </section>
 
       {/* Main Content Introduction */}
-      <section className="content-section">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="section-header">We Take Your Privacy Seriously</h2>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
-              Capital Review Management LLC is dedicated to protecting the privacy and confidentiality of personal data.
-              This Privacy Policy describes how we gather, utilize, share, and secure individuals' personal information
-              in relation to our account recovery operations.
-            </p>
+      <section className="subpage-section subpage-section-cream">
+        <div className="subpage-container">
+          <div className="subpage-intro">
+            <div className="subpage-intro-inner">
+              <h2>Your Privacy Matters to Us</h2>
+              <p>
+                Capital Review Management LLC is committed to safeguarding the privacy and confidentiality of personal information.
+                This Privacy Policy outlines how we collect, use, disclose, and protect individuals' personal information
+                in connection with our account recovery services.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -81,44 +83,42 @@ export default function PrivacyPolicyPage() {
       {/* Privacy Sections */}
       <div className="legal-page">
         {privacySections.map((section, index) => (
-          <section key={section.id} className="content-section">
-            <div className="container mx-auto px-4">
-              <div className="max-w-6xl mx-auto">
-                <div style={{ maxWidth: '72rem', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', alignItems: 'center' }}>
-                  {section.imageLeft ? (
-                    <>
-                      <div>
-                        <img
-                          src={section.image}
-                          alt={section.title}
-                          style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
-                        />
-                      </div>
-                      <div>
-                        <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem', color: 'white' }}>{section.title}</h2>
-                        <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
-                          {section.description}
-                        </p>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <div>
-                        <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem', color: 'white' }}>{section.title}</h2>
-                        <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
-                          {section.description}
-                        </p>
-                      </div>
-                      <div>
-                        <img
-                          src={section.image}
-                          alt={section.title}
-                          style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
-                        />
-                      </div>
-                    </>
-                  )}
-                </div>
+          <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
+            <div className="subpage-container">
+              <div style={{ maxWidth: '72rem', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+                {section.imageLeft ? (
+                  <>
+                    <div>
+                      <img
+                        src={section.image}
+                        alt={section.title}
+                        style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
+                      />
+                    </div>
+                    <div>
+                      <h2>{section.title}</h2>
+                      <p style={{ fontSize: '1.125rem', lineHeight: '1.75' }}>
+                        {section.description}
+                      </p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div>
+                      <h2>{section.title}</h2>
+                      <p style={{ fontSize: '1.125rem', lineHeight: '1.75' }}>
+                        {section.description}
+                      </p>
+                    </div>
+                    <div>
+                      <img
+                        src={section.image}
+                        alt={section.title}
+                        style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
+                      />
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </section>
@@ -126,33 +126,33 @@ export default function PrivacyPolicyPage() {
       </div>
 
       {/* Changes to Policy Section */}
-      <section className="content-section">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="section-header">Revisions to This Policy</h2>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
-              We may revise this Privacy Policy at any point. Significant modifications will be communicated via our website
-              or through other suitable channels. We recommend reviewing this policy on a regular basis to remain informed about
-              how we safeguard your data.
+      <section className="subpage-section subpage-section-cream">
+        <div className="subpage-container">
+          <div style={{ maxWidth: '56rem', margin: '0 auto', textAlign: 'center' }}>
+            <h2>Changes to This Policy</h2>
+            <p style={{ fontSize: '1.125rem', lineHeight: '1.75' }}>
+              We may update this Privacy Policy at any time. Any material changes will be communicated through our website
+              or other appropriate channels. We encourage you to review this policy periodically to stay informed about
+              how we protect your information.
             </p>
           </div>
         </div>
       </section>
 
       {/* Contact Information Section */}
-      <section className="content-section">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="section-header">Get in Touch</h2>
-            <div className="info-panel">
-              <p style={{ fontSize: '1.125rem', marginBottom: '1.5rem', color: '#b0b8c8' }}>
-                For any inquiries or concerns about this Privacy Policy, please contact us at:
+      <section className="subpage-section subpage-section-white">
+        <div className="subpage-container">
+          <div style={{ maxWidth: '56rem', margin: '0 auto', textAlign: 'center' }}>
+            <h2>Contact Us</h2>
+            <div style={{ backgroundColor: '#f8f6f2', borderRadius: '0px', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)', padding: '2rem' }}>
+              <p style={{ fontSize: '1.125rem', marginBottom: '1.5rem' }}>
+                For any questions or concerns regarding this Privacy Policy, please contact us at:
               </p>
-              <div style={{ fontSize: '1.125rem', display: 'flex', flexDirection: 'column', gap: '1rem', color: '#b0b8c8' }}>
-                <p style={{ fontWeight: '600', color: 'white' }}>Capital Review Management LLC</p>
-                <p style={{ fontSize: '1.25rem', fontWeight: '600', color: '#c9a84c' }}>866-766-2692</p>
+              <div style={{ fontSize: '1.125rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <p style={{ fontWeight: '600' }}>Capital Review Management LLC</p>
+                <p style={{ fontSize: '1.25rem', fontWeight: '600', color: '#1c2a3f' }}>866-766-2692</p>
                 <p>
-                  <strong style={{ color: 'white' }}>Email:</strong> info@capitalreviewmgt.com
+                  <strong>Email:</strong> info@capitalreviewmgt.com
                 </p>
               </div>
             </div>
@@ -161,11 +161,11 @@ export default function PrivacyPolicyPage() {
       </section>
 
       {/* Copyright Section */}
-      <section className="content-section">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="legal-effective-date">
-              Copyright &copy; 2026 Capital Review Management – All Rights Reserved.
+      <section className="subpage-section subpage-section-cream">
+        <div className="subpage-container">
+          <div style={{ maxWidth: '56rem', margin: '0 auto', textAlign: 'center' }}>
+            <p style={{ color: '#6b7280' }}>
+              Copyright © 2026 Capital Review Management – All Rights Reserved.
             </p>
           </div>
         </div>

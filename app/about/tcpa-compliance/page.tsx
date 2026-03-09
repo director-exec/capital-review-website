@@ -19,7 +19,7 @@ export default function TCPACompliancePage() {
     {
       id: 'caller-transparency',
       title: 'Caller ID & Transparency',
-      description: 'Every number we use to communicate with is valid, active, callback-capable, and directly linked to our company. We never spoof or falsify caller identity. We register numbers with carrier-level caller ID systems when available and comply with FCC 47 CFR § 64.1601(e). Due to limitations from carriers and mobile data networks, our company name may not always appear—but the number will always trace directly to us.',
+      description: 'Every number we use to communicate with is valid, active, callback-capable, and directly linked to our company. We never spoof or falsify caller identity. We register numbers with carrier-level caller ID systems when available and comply with FCC 47 CFR § 64.1601(e). Due to limitations from carriers and mobile data networks, our company name may not always appear — but the number will always trace directly to us.',
       image: 'https://images.pexels.com/photos/2312369/pexels-photo-2312369.jpeg',
       background: 'grey',
       imageLeft: true
@@ -43,7 +43,7 @@ export default function TCPACompliancePage() {
     {
       id: 'zero-tolerance',
       title: 'Zero Tolerance for TCPA Abuse',
-      description: 'We do not tolerate violations—internal or external. All calls are regulated, consent is validated, and audit logs are maintained. If you received a call or message from us and believe it was in error, contact us immediately. Our compliance team is available to address any concerns and ensure proper handling of your request.',
+      description: 'We do not tolerate violations — internal or external. All calls are regulated, consent is validated, and audit logs are maintained. If you received a call or message from us and believe it was in error, contact us immediately. Our compliance team is available to address any concerns and ensure proper handling of your request.',
       image: '/Pages/Writing_Signing_Doc_Meeting.jpeg',
       background: 'white',
       imageLeft: false
@@ -52,6 +52,7 @@ export default function TCPACompliancePage() {
 
   return (
     <>
+      {/* Hero Banner Section */}
       <section className="subpage-hero">
         <div
           className="subpage-hero-bg"
@@ -64,6 +65,7 @@ export default function TCPACompliancePage() {
         </div>
       </section>
 
+      {/* Main Content Introduction */}
       <section className="subpage-section subpage-section-cream">
         <div className="subpage-container">
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
@@ -77,6 +79,7 @@ export default function TCPACompliancePage() {
         </div>
       </section>
 
+      {/* TCPA Sections */}
       {tcpaSections.map((section, index) => (
         <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
           <div className="subpage-container">
@@ -119,6 +122,7 @@ export default function TCPACompliancePage() {
         </section>
       ))}
 
+      {/* Contact Information Section */}
       <section className="subpage-section subpage-section-cream">
         <div className="subpage-container">
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
@@ -145,6 +149,7 @@ export default function TCPACompliancePage() {
         </div>
       </section>
 
+      {/* CTA Section */}
       <section className="subpage-cta">
         <div className="subpage-container">
           <h3>
