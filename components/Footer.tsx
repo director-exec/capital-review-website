@@ -16,9 +16,10 @@ export default function Footer() {
           {/* Left: CR Logo */}
           <div className="footer-cr-logo" style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
             <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 55 V8 H92 V92 H8" stroke="currentColor" strokeWidth="8" strokeLinejoin="miter" strokeLinecap="square" fill="none"/>
-              <path d="M50 50 L70 92" stroke="currentColor" strokeWidth="8" strokeLinecap="butt"/>
-              <path d="M28 20 V80" stroke="currentColor" strokeWidth="7" strokeLinecap="square"/>
+              <path d="M8 8 V62" stroke="currentColor" strokeWidth="8" strokeLinecap="square" fill="none"/>
+              <path d="M8 8 H92 V92 H20" stroke="currentColor" strokeWidth="8" strokeLinejoin="miter" strokeLinecap="square" fill="none"/>
+              <path d="M50 50 L72 92" stroke="currentColor" strokeWidth="8" strokeLinecap="butt"/>
+              <path d="M28 20 V78" stroke="currentColor" strokeWidth="7" strokeLinecap="square"/>
               <path d="M28 20 H54 Q70 20 70 36 Q70 50 54 50 H28" stroke="currentColor" strokeWidth="7" strokeLinejoin="round" fill="none"/>
             </svg>
             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.05' }}>
