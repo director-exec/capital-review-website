@@ -13,15 +13,6 @@ export default function Footer() {
 
         {/* Compact Footer Content — logo left, everything else center/right */}
         <div className="footer-compact" style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap' }}>
-          {/* Left: CR Logo — actual PNG with transparent background */}
-          <div className="footer-cr-logo" style={{ flexShrink: 0 }}>
-            <img
-              src="/LOGO/capital-review-logo.png"
-              alt="Capital Review Management — Assess. Review. Advise."
-              style={{ height: '55px', width: 'auto', opacity: 0.9 }}
-            />
-          </div>
-
           {/* Center block: Address, Links, Social stacked */}
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', flex: 1 }}>
             <div className="footer-info">
