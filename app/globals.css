@@ -1043,18 +1043,18 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Footer full logo block */
+/* Footer full logo block — small, tucked in */
 .footer-logo-block {
   display: flex;
-  justify-content: center;
-  padding: 2rem 0 1.5rem;
+  justify-content: flex-start;
+  padding: 0.5rem 0 0.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer-cr-logo {
-  color: rgba(255, 255, 255, 0.85);
-  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.75);
+  opacity: 0.85;
 }
 
 /* Legal disclosure banner — full width, small */
