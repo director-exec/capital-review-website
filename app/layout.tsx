@@ -1,15 +1,25 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Source_Sans_3, Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Analytics } from '@vercel/analytics/react'
 
-const inter = Inter({ subsets: ['latin'] })
+const sourceSans = Source_Sans_3({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-source-sans',
+})
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-cormorant',
+})
 
 export const metadata: Metadata = {
-  title: 'Capital Review Management | Strategy Meets Resolution',
-  description: 'Capital Review Management delivers strategic account resolution services with a focus on compliance, professionalism, and measured communication.',
+  title: 'Capital Review Management | Strategy Without Compromise',
+  description: 'Capital Review Management delivers disciplined account resolution with a focus on compliance, professionalism, and measurable outcomes.',
 }
 
 export default function RootLayout({
@@ -24,7 +34,7 @@ export default function RootLayout({
         <link rel="alternate icon" href="/logo.avif" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </head>
-      <body className={inter.className}>
+      <body className={`${sourceSans.variable} ${cormorant.variable}`}>
         <Header />
         <main>
           {children}

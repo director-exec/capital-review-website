@@ -3,11 +3,12 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <>
+      {/* Hero Section */}
       <section className="hero">
         <div className="container text-center">
-          <h1>STRATEGY MEETS RESOLUTION.</h1>
+          <h1>Strategy Without Compromise</h1>
           <p className="description">
-            <strong>A Strategic Approach to Account Resolution</strong>
+            <strong>Built on Compliance, Driven by Results</strong>
           </p>
           <p className="description-secondary">
             Capital Review Management combines disciplined review processes with professional communication to deliver measurable recovery outcomes. Our approach prioritizes compliance, consumer dignity, and client confidence at every stage.
@@ -15,6 +16,9 @@ export default function Home() {
           <p className="description-secondary">
             We leverage modern platforms, secure infrastructure, and thoroughly trained professionals to ensure each interaction upholds the highest standards — while maximizing returns and minimizing reputational exposure for our clients.
           </p>
+          <div className="tagline-row">
+            <span className="tagline-item">Performance Driven Account Management</span>
+          </div>
           <div className="cta-buttons">
             <Link href="/consumer-tools" className="btn btn-hero">For Consumers</Link>
             <Link href="/solutions" className="btn btn-hero">For Businesses</Link>
@@ -22,6 +26,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services Section */}
       <section className="services">
         <div className="container">
           <div className="services-grid">
@@ -30,7 +35,7 @@ export default function Home() {
               <h3>Make a Payment</h3>
               <p>Resolve your account through our convenient and secure payment options.</p>
               <a href="#" className="btn btn-primary">Make a Payment</a>
-              <p style={{ fontSize: '0.75rem', color: '#8892a4', marginTop: '0.5rem' }}>Payment portal coming soon</p>
+              <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>Payment portal coming soon</p>
             </div>
 
             <div className="service-card">
@@ -50,27 +55,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="about">
-        <div className="container">
-          <div className="about-container">
-            <div className="about-image"></div>
-            <div className="about-content">
-              <h2>About Capital Review Management</h2>
-              <p>
-                We operate with a compliance-first philosophy, treating every consumer interaction with professionalism and every client engagement as a lasting partnership. Our standards, technology, and track record distinguish us in the industry.
-              </p>
-              <Link href="/about" className="btn btn-primary">
-                <i className="fas fa-arrow-right"></i> Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      {/* Compliance Section */}
       <section className="compliance">
         <div className="container">
           <div className="compliance-content">
-            <h2>Compliance & Regulatory Standards</h2>
+            <h2>Compliance &amp; Regulatory Standards</h2>
             <p>
               Capital Review Management upholds all required state licenses and industry certifications. Our dedicated compliance team ensures complete alignment with applicable federal and state regulations.
             </p>
@@ -90,7 +79,7 @@ export default function Home() {
                 <h3>Industry Standards</h3>
                 <ul className="standards-list">
                   <li>FDCPA and TCPA oversight and documentation protocols</li>
-                  <li>State licensing, COAs, and bonding requirements across all 50 states</li>
+                  <li>State licensing, COAs, and bonding requirements across every jurisdiction we operate</li>
                   <li>Ongoing compliance audits and professional development</li>
                 </ul>
               </div>
@@ -99,6 +88,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Section */}
+      <section className="about">
+        <div className="container">
+          <div className="about-container">
+            <div className="about-image"></div>
+            <div className="about-content">
+              <h2>About Capital Review Management</h2>
+              <p>
+                We operate with a compliance-first philosophy, treating every consumer interaction with professionalism and every client engagement as a lasting partnership. Our standards, technology, and track record distinguish us in the industry.
+              </p>
+              <Link href="/about" className="btn btn-primary">
+                <i className="fas fa-arrow-right"></i> Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
       <section className="contact">
         <div className="container">
           <div className="contact-content">

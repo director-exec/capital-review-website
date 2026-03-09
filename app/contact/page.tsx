@@ -1,3 +1,7 @@
+'use client'
+
+import Link from 'next/link'
+
 export default function ContactPage() {
   const contactCards = [
     {
@@ -33,37 +37,36 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Banner Section */}
-      <section className="hero-banner relative h-96 flex items-center justify-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200)' }}
-        ></div>
-        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
-        <div className="relative z-10 text-center text-white">
-          <h1 className="text-5xl font-bold mb-4">Reach Out to Us</h1>
-          <p className="text-xl">We Will Direct You to the Appropriate Department</p>
+      <section className="subpage-hero">
+        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200)' }}></div>
+        <div className="subpage-hero-overlay"></div>
+        <div className="subpage-hero-content">
+          <h1>Reach Out to Us</h1>
+          <p>We Will Direct You to the Appropriate Department</p>
         </div>
       </section>
 
       {/* Main Content Introduction */}
-      <section className="main-intro py-16 bg-[#111827]">
+      <section className="content-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-white">Got a Question or Require Support?</h2>
-            <p className="text-lg text-[#b0b8c8] leading-relaxed mb-8">
+            <h2 className="section-header">Got a Question or Require Support?</h2>
+            <p style={{ fontSize: '1.125rem', lineHeight: '1.75', marginBottom: '2rem', color: '#b0b8c8' }}>
               Choose the option below that most closely matches your needs — our team stands ready to assist.
               We are here to address any inquiries or issues you might have.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '2rem' }}>
               <a
                 href="tel:866-766-2692"
-                className="bg-[#4a7fb5] text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-colors inline-block"
+                className="content-block"
+                style={{ display: 'inline-block', textDecoration: 'none' }}
               >
                 Call Us: 866-766-2692
               </a>
               <a
                 href="mailto:info@capitalreviewmgt.com"
-                className="bg-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-700 transition-colors inline-block"
+                className="content-block"
+                style={{ display: 'inline-block', textDecoration: 'none', backgroundColor: '#5a6b7c' }}
               >
                 Email Us: info@capitalreviewmgt.com
               </a>
@@ -73,46 +76,52 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Cards Section */}
-      <section className="py-16 bg-[#0a0f1c]">
+      <section className="content-section">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="contact-cards">
               {contactCards.map((card) => {
                 const isAccountResolution = card.id === 'account-resolution';
                 const isReceivablesHelp = card.id === 'receivables-help';
                 const isClickable = isAccountResolution || isReceivablesHelp;
                 const CardContent = (
-                  <div className={`bg-[#0a0f1c] rounded-lg shadow-lg border border-[#1e293b] hover:shadow-xl transition-shadow duration-300 overflow-hidden ${isClickable ? 'cursor-pointer hover:scale-105 transition-transform duration-300' : ''}`}>
-                    <div className="relative h-48">
+                  <div className="contact-card">
+                    <div style={{ position: 'relative', height: '12rem' }}>
                       <div
-                        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                        style={{ backgroundImage: `url(${card.image})` }}
+                        style={{
+                          position: 'absolute',
+                          inset: 0,
+                          backgroundImage: `url(${card.image})`,
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center',
+                          backgroundRepeat: 'no-repeat'
+                        }}
                       ></div>
-                      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <h3 className="text-xl font-bold text-white text-center px-4">{card.title}</h3>
+                      <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0, 0, 0, 0.4)' }}></div>
+                      <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: 'white', textAlign: 'center', padding: '1rem' }}>{card.title}</h3>
                       </div>
                     </div>
-                    <div className="p-6">
-                      <div className="text-[#b0b8c8] leading-relaxed mb-4">
+                    <div style={{ padding: '1.5rem' }}>
+                      <div style={{ color: '#b0b8c8', lineHeight: '1.6', marginBottom: '1rem' }}>
                         {card.description}
                       </div>
-                      <div className="mt-4">
-                        <p className="text-sm font-semibold text-[#c9a84c]">Email: {card.email}</p>
-                        <p className="text-sm text-[#8892a4]">Phone: 866-766-2692</p>
+                      <div style={{ marginTop: '1rem' }}>
+                        <p style={{ fontSize: '0.875rem', fontWeight: '600', color: '#c9a84c', margin: '0.5rem 0' }}>Email: {card.email}</p>
+                        <p style={{ fontSize: '0.875rem', color: '#8892a4', margin: '0.5rem 0' }}>Phone: 866-766-2692</p>
                       </div>
                     </div>
                   </div>
                 );
 
                 return isClickable ? (
-                  <a
+                  <Link
                     key={card.id}
                     href={isAccountResolution ? "/consumer-tools/request-account-validation" : "/solutions"}
-                    className="block no-underline"
+                    style={{ textDecoration: 'none', display: 'block' }}
                   >
                     {CardContent}
-                  </a>
+                  </Link>
                 ) : (
                   <div key={card.id}>
                     {CardContent}
@@ -124,19 +133,17 @@ export default function ContactPage() {
         </div>
       </section>
 
-
-
       {/* CTA Section */}
-      <section className="cta text-center py-12" style={{ backgroundColor: '#1a1f2e' }}>
+      <section className="cta-section">
         <div className="container mx-auto px-4">
-          <h3 className="text-2xl font-bold mb-6 text-white">
+          <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', textAlign: 'center', color: 'white' }}>
             Prepared to take the next step?
           </h3>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:866-766-2692" className="btn bg-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1a1f2e] transition-colors inline-block" style={{ color: '#1a1f2e' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="tel:866-766-2692" className="content-block" style={{ backgroundColor: 'white', color: '#0a0f1c', display: 'inline-block', textDecoration: 'none', textAlign: 'center' }}>
               Call Us Now!
             </a>
-            <a href="mailto:info@capitalreviewmgt.com" className="btn bg-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1a1f2e] transition-colors inline-block" style={{ color: '#1a1f2e' }}>
+            <a href="mailto:info@capitalreviewmgt.com" className="content-block" style={{ backgroundColor: 'white', color: '#0a0f1c', display: 'inline-block', textDecoration: 'none', textAlign: 'center' }}>
               Send Us an Email
             </a>
           </div>

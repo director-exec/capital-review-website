@@ -1,37 +1,36 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 
 export default function RequestAccountValidationPage() {
   const [showModal, setShowModal] = useState(true)
 
   const closeModal = () => {
-    console.log('closeModal called')
     setShowModal(false)
-    console.log('showModal set to false')
   }
 
   const validationSections = [
     {
       id: 'account-details',
-      title: 'Get Account Details Delivered to Your Inbox',
-      description: 'If you would like account validation for your account with Capital Review Management, please complete the form below. By submitting your request, you confirm that you are the authorized account holder and that the information you\'ve provided is complete and accurate. A member of our team will reach out within 24 hours to follow up with your request.',
+      title: 'Obtain Your Account Summary by Email',
+      description: 'Submit a validation request to receive comprehensive account details sent directly to your email address. When you submit this form, you verify that you are the authorized account holder and that all information you provide is truthful and complete. We will review your request and respond within 24 hours.',
       image: '/Pages/Calculator_Writing_Pro.jpeg',
       background: 'white',
       imageLeft: false
     },
     {
       id: 'email-delivery',
-      title: 'Important Notice Regarding Email Delivery',
-      description: 'Your account validation or account details will be sent via standard (unencrypted) email. While convenient, this method may not offer the same level of security as postal mail. By submitting this form, you acknowledge and accept delivery in this format. To avoid delivery issues, we recommend adding our email address — support@capitalreviewmgt.com — to your safe sender list.',
+      title: 'Electronic Delivery Explanation',
+      description: 'Account details will be delivered to your email using standard email transmission. Email communications lack encryption. When you complete and submit this request form, you expressly consent to receive account information via this delivery method. Please ensure to add support@capitalreviewmgt.com to your safe sender list for guaranteed delivery.',
       image: 'https://images.pexels.com/photos/9068372/pexels-photo-9068372.jpeg?_gl=1*269x10*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MjU3MjAkbzEkZzEkdDE3NTQ5MjYwNzckajUxJGwwJGgw',
       background: 'grey',
       imageLeft: true
     },
     {
       id: 'required-information',
-      title: 'What You\'ll Need to Provide',
-      description: 'You\'ll need to provide your Elite Account Number, Creditor Name, Your Full Legal Name, Mailing Address, Valid Phone Number, and Valid Email Address. You must also acknowledge that you may receive communications via phone, text, or email, confirm ownership of the contact details you\'ve submitted, request electronic delivery of this document, and understand you may revoke consent at any time through reasonable means.',
+      title: 'What Information to Provide',
+      description: 'You will need to supply your account number, the name of your creditor, your full legal name, complete mailing address, current phone number, and valid email address. You must also confirm your consent to receive communications via phone, text message, or email, verify that you own the contact information provided, and authorize electronic delivery of account documents. You may revoke this authorization at any time through written means.',
       image: 'https://images.pexels.com/photos/7974/pexels-photo.jpg',
       background: 'white',
       imageLeft: false
@@ -86,7 +85,7 @@ export default function RequestAccountValidationPage() {
       const result = await response.json()
 
       if (response.ok) {
-        setSubmitMessage('Thank you for your request. A member of our team will reach out within 24 hours.')
+        setSubmitMessage('We value your submission. Our team will review your request and contact you within 24 hours.')
         // Reset form
         setFormData({
           accountNumber: '',
@@ -103,11 +102,11 @@ export default function RequestAccountValidationPage() {
           electronicDelivery: false
         })
       } else {
-        setSubmitMessage('There was an error submitting your request. Please try again or contact us directly.')
+        setSubmitMessage('An issue occurred while processing your request. Please try again or reach out to us directly.')
       }
     } catch (error) {
       console.error('Error submitting form:', error)
-      setSubmitMessage('There was an error submitting your request. Please try again or contact us directly.')
+      setSubmitMessage('An issue occurred while processing your request. Please try again or reach out to us directly.')
     } finally {
       setIsSubmitting(false)
     }
@@ -116,53 +115,53 @@ export default function RequestAccountValidationPage() {
   return (
     <>
       {/* Hero Banner Section */}
-      <section className="hero-banner relative h-96 flex items-center justify-center">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      <section className="subpage-hero">
+        <div
+          className="subpage-hero-bg"
           style={{ backgroundImage: 'url(/Pages/Calculator_Writing_Pro.jpeg)' }}
         ></div>
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="relative z-10 text-center text-white">
-          <h1 className="text-5xl font-bold mb-4">Request Account Validation</h1>
-          <p className="text-xl">Get Account Details Delivered to Your Inbox</p>
+        <div className="subpage-hero-overlay"></div>
+        <div className="subpage-hero-content">
+          <h1>Request Account Validation</h1>
+          <p>Obtain Your Account Summary by Email</p>
         </div>
       </section>
 
       {/* Validation Sections */}
       {validationSections.map((section, index) => (
-        <section key={section.id} className={`py-16 ${section.background === 'grey' ? 'bg-gray-50' : 'bg-white'}`}>
+        <section key={section.id} className={`content-section py-16 ${section.background === 'grey' ? 'bg-[#111827]' : 'bg-[#0a0f1c]'}`}>
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {section.imageLeft ? (
                   <>
                     <div className="order-1">
-                      <img 
-                        src={section.image} 
+                      <img
+                        src={section.image}
                         alt={section.title}
-                        className="w-full h-80 object-cover rounded-lg shadow-lg"
+                        className="w-full h-80 object-cover shadow-lg"
                       />
                     </div>
-                    <div className="order-2">
-                      <h2 className="text-3xl font-bold mb-6 text-gray-900">{section.title}</h2>
-                      <div className="text-lg text-gray-700 leading-relaxed">
+                    <div className="order-2 content-block">
+                      <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
+                      <div className="text-lg text-[#b0b8c8] leading-relaxed">
                         {section.description}
                       </div>
                     </div>
                   </>
                 ) : (
                   <>
-                    <div className="order-2 lg:order-1">
-                      <h2 className="text-3xl font-bold mb-6 text-gray-900">{section.title}</h2>
-                      <div className="text-lg text-gray-700 leading-relaxed">
+                    <div className="order-2 lg:order-1 content-block">
+                      <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
+                      <div className="text-lg text-[#b0b8c8] leading-relaxed">
                         {section.description}
                       </div>
                     </div>
                     <div className="order-1 lg:order-2">
-                      <img 
-                        src={section.image} 
+                      <img
+                        src={section.image}
                         alt={section.title}
-                        className="w-full h-80 object-cover rounded-lg shadow-lg"
+                        className="w-full h-80 object-cover shadow-lg"
                       />
                     </div>
                   </>
@@ -174,77 +173,77 @@ export default function RequestAccountValidationPage() {
       ))}
 
       {/* Account Validation Form Section */}
-      <section className="py-16 bg-white">
+      <section className="content-section py-16 bg-[#111827]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-blue-900 mb-2">
-                Request Account Validation
+              <h2 className="section-header text-white mb-2">
+                Account Validation Request Form
               </h2>
-              <p className="text-lg text-gray-700">
-                Please include Elite's eight-digit account number on your statement.
+              <p className="text-lg text-[#b0b8c8]">
+                Supply the account details exactly as they appear on your statement.
               </p>
             </div>
-            
-            <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <form onSubmit={handleSubmit} className="form-container bg-[#0a0f1c] shadow-lg p-8">
+              <div className="form-grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Left Column */}
                 <div className="space-y-6">
-                  <div>
-                                          <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Account Number <span className="text-blue-900">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        name="accountNumber"
-                        value={formData.accountNumber}
-                        onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+                  <div className="form-group">
+                    <label className="block text-sm font-medium text-[#b0b8c8] mb-2">
+                      Account Number <span className="text-[#4a7fb5]">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      name="accountNumber"
+                      value={formData.accountNumber}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="Enter account number"
                         required
                       />
                   </div>
                   
                   <div>
-                                          <label className="block text-sm font-medium text-gray-700 mb-2">
-                        First Name <span className="text-blue-900">*</span>
+                                          <label className="block text-sm font-medium text-[#b0b8c8] mb-2">
+                        First Name <span className="text-[#4a7fb5]">*</span>
                       </label>
                       <input
                         type="text"
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+                        className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] focus:outline-none focus:ring-2 focus:ring-[#4a7fb5]"
                         placeholder="Enter your first name"
                         required
                       />
                   </div>
                   
                   <div>
-                                          <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Address <span className="text-blue-900">*</span>
+                                          <label className="block text-sm font-medium text-[#b0b8c8] mb-2">
+                        Address <span className="text-[#4a7fb5]">*</span>
                       </label>
                       <input
                         type="text"
                         name="address"
                         value={formData.address}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+                        className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] focus:outline-none focus:ring-2 focus:ring-[#4a7fb5]"
                         placeholder="Enter your mailing address"
                         required
                       />
                   </div>
                   
                   <div>
-                                          <label className="block text-sm font-medium text-gray-700 mb-2">
-                        City <span className="text-blue-900">*</span>
+                                          <label className="block text-sm font-medium text-[#b0b8c8] mb-2">
+                        City <span className="text-[#4a7fb5]">*</span>
                       </label>
                       <input
                         type="text"
                         name="city"
                         value={formData.city}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+                        className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] focus:outline-none focus:ring-2 focus:ring-[#4a7fb5]"
                         placeholder="Enter your city"
                         required
                       />
@@ -252,14 +251,14 @@ export default function RequestAccountValidationPage() {
                   
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        State <span className="text-blue-900">*</span>
+                      <label className="block text-sm font-medium text-[#b0b8c8] mb-2">
+                        State <span className="text-[#4a7fb5]">*</span>
                       </label>
                       <select
                         name="state"
                         value={formData.state}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+                        className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] focus:outline-none focus:ring-2 focus:ring-[#4a7fb5]"
                         required
                       >
                         <option value="">Select State</option>
@@ -317,15 +316,15 @@ export default function RequestAccountValidationPage() {
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        ZIP Code <span className="text-blue-900">*</span>
+                      <label className="block text-sm font-medium text-[#b0b8c8] mb-2">
+                        ZIP Code <span className="text-[#4a7fb5]">*</span>
                       </label>
                       <input
                         type="text"
                         name="zipCode"
                         value={formData.zipCode}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+                        className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] focus:outline-none focus:ring-2 focus:ring-[#4a7fb5]"
                         placeholder="Enter ZIP code"
                         required
                       />
@@ -336,60 +335,60 @@ export default function RequestAccountValidationPage() {
                 {/* Right Column */}
                 <div className="space-y-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Creditor <span className="text-blue-900">*</span>
+                    <label className="block text-sm font-medium text-[#b0b8c8] mb-2">
+                      Creditor <span className="text-[#4a7fb5]">*</span>
                     </label>
                     <input
                       type="text"
                       name="creditor"
                       value={formData.creditor}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+                      className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] focus:outline-none focus:ring-2 focus:ring-[#4a7fb5]"
                       placeholder="Enter creditor name"
                       required
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Last Name <span className="text-blue-900">*</span>
+                    <label className="block text-sm font-medium text-[#b0b8c8] mb-2">
+                      Last Name <span className="text-[#4a7fb5]">*</span>
                     </label>
                     <input
                       type="text"
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+                      className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] focus:outline-none focus:ring-2 focus:ring-[#4a7fb5]"
                       placeholder="Enter your last name"
                       required
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number <span className="text-blue-900">*</span>
+                    <label className="block text-sm font-medium text-[#b0b8c8] mb-2">
+                      Phone Number <span className="text-[#4a7fb5]">*</span>
                     </label>
                     <input
                       type="tel"
                       name="phoneNumber"
                       value={formData.phoneNumber}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+                      className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] focus:outline-none focus:ring-2 focus:ring-[#4a7fb5]"
                       placeholder="Enter your phone number"
                       required
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address <span className="text-blue-900">*</span>
+                    <label className="block text-sm font-medium text-[#b0b8c8] mb-2">
+                      Email Address <span className="text-[#4a7fb5]">*</span>
                     </label>
                     <input
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+                      className="w-full px-3 py-2 bg-[#111827] text-white border border-[#1e293b] focus:outline-none focus:ring-2 focus:ring-[#4a7fb5]"
                       placeholder="Enter your email address"
                       required
                     />
@@ -405,11 +404,11 @@ export default function RequestAccountValidationPage() {
                     name="consent"
                     checked={formData.consent}
                     onChange={handleInputChange}
-                    className="mt-1 h-4 w-4 text-blue-900 focus:ring-blue-500 border-gray-300 rounded"
+                    className="mt-1 h-4 w-4 text-[#4a7fb5] focus:ring-[#4a7fb5] border-[#1e293b]"
                     required
                   />
-                  <label className="text-sm text-gray-700">
-                    I acknowledge that I may receive communications via phone, text, or email, and I confirm ownership of the contact details I've submitted.
+                  <label className="text-sm text-[#b0b8c8]">
+                    I acknowledge that I may receive communications via phone, text message, or email, and I confirm that I own the contact details supplied above.
                   </label>
                 </div>
                 
@@ -419,11 +418,11 @@ export default function RequestAccountValidationPage() {
                     name="electronicDelivery"
                     checked={formData.electronicDelivery}
                     onChange={handleInputChange}
-                    className="mt-1 h-4 w-4 text-blue-900 focus:ring-blue-500 border-gray-300 rounded"
+                    className="mt-1 h-4 w-4 text-[#4a7fb5] focus:ring-[#4a7fb5] border-[#1e293b]"
                     required
                   />
-                  <label className="text-sm text-gray-700">
-                    I request electronic delivery of this document and understand I may revoke consent at any time through reasonable means.
+                  <label className="text-sm text-[#b0b8c8]">
+                    I authorize electronic delivery of account documents and understand that I can withdraw this authorization at any time by written request.
                   </label>
                 </div>
               </div>
@@ -433,16 +432,16 @@ export default function RequestAccountValidationPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-blue-900 text-white py-3 px-8 rounded-md hover:bg-blue-800 transition-colors duration-200 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bg-[#4a7fb5] text-white py-3 px-8 hover:bg-[#3a6fa5] transition-colors duration-200 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Request'}
                 </button>
                 
                 {submitMessage && (
-                  <div className={`mt-4 p-4 rounded-md ${
-                    submitMessage.includes('error') 
-                      ? 'bg-red-100 text-red-700 border border-red-300' 
-                      : 'bg-blue-900 text-white border border-blue-800'
+                  <div className={`mt-4 p-4 ${
+                    submitMessage.includes('issue')
+                      ? 'bg-red-900 text-red-200 border border-red-700'
+                      : 'bg-[#4a7fb5] text-white border border-[#3a6fa5]'
                   }`}>
                     {submitMessage}
                   </div>
@@ -454,12 +453,12 @@ export default function RequestAccountValidationPage() {
       </section>
 
       {/* Legal Disclosure Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#111827]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900 text-center">Legal Disclosure</h2>
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <p className="text-lg text-gray-700 leading-relaxed text-center">
+            <h2 className="text-3xl font-bold mb-6 text-white text-center">Legal Disclosure</h2>
+            <div className="bg-[#0a0f1c] shadow-lg p-8">
+              <p className="text-lg text-[#b0b8c8] leading-relaxed text-center">
                 This is an attempt to collect a debt. Any information obtained will be used for that purpose. This communication is from a debt collector.
               </p>
             </div>
@@ -468,12 +467,12 @@ export default function RequestAccountValidationPage() {
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#0a0f1c]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">Contact Information</h2>
-            <div className="bg-gray-50 rounded-lg shadow-lg p-8">
-              <div className="text-lg text-gray-700">
+            <h2 className="text-3xl font-bold mb-6 text-white">Contact Information</h2>
+            <div className="bg-[#111827] rounded-lg shadow-lg p-8">
+              <div className="text-lg text-[#b0b8c8]">
                 <p className="font-semibold">Capital Review Management</p>
                 <p>2200 N Frazier St. STE 120 Box 142 Conroe TX, 77301</p>
                 <p>Phone: 866-766-2692</p>
@@ -489,25 +488,25 @@ export default function RequestAccountValidationPage() {
       {/* Pop-up Modal */}
       {showModal && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center" 
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center" 
           style={{ zIndex: 9999 }}
           onClick={closeModal}
         >
           <div 
-            className="bg-white rounded-lg shadow-xl max-w-lg w-full mx-4 p-8"
+            className="bg-[#1a1f2e] shadow-xl max-w-md w-full mx-4 p-6"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="text-center">
-              <h3 className="text-3xl font-bold text-blue-900 mb-6">IMPORTANT</h3>
-              <p className="text-lg text-gray-700 mb-6">
-                This is an attempt to collect a debt. Any information will be used for that purpose. This communication is from a debt collector.
+              <h3 className="text-xl font-bold text-[#4a7fb5] mb-4">NOTICE</h3>
+              <p className="text-sm text-[#b0b8c8] mb-4">
+                This correspondence constitutes an effort to recover a debt. All details gathered will serve that objective. This message originates from a debt collection agency.
               </p>
-              <p className="text-lg text-gray-700 mb-8">
-                Calls to and from this company may be monitored and/or recorded.
+              <p className="text-sm text-[#b0b8c8] mb-6">
+                Phone conversations with this organization may be monitored and/or recorded.
               </p>
               <button
                 onClick={closeModal}
-                className="w-full bg-blue-900 text-white py-3 px-6 rounded-md hover:bg-blue-800 transition-colors duration-200 text-lg font-semibold"
+                className="w-full bg-[#4a7fb5] text-white py-2 px-4 hover:bg-[#3a6fa5] transition-colors duration-200"
               >
                 I Accept
               </button>

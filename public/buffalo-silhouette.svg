@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <!-- Stoic Buffalo Silhouette - Head down, weathering the storm -->
+  <defs>
+    <!-- Snow/storm particles -->
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+  
+  <!-- Buffalo body - powerful, head lowered into wind -->
+  <path d="
+    M 520 340
+    C 520 330 530 310 540 300
+    C 545 295 550 285 555 280
+    C 558 276 560 270 558 265
+    C 555 258 548 255 545 250
+    C 540 243 538 235 540 228
+    C 542 222 548 218 552 215
+    C 555 213 558 210 560 205
+    L 565 195
+    C 568 188 575 182 580 178
+    C 585 174 590 168 588 162
+    C 586 157 580 155 575 152
+    C 568 148 560 142 555 135
+    C 552 130 548 125 545 118
+    C 543 112 540 108 535 105
+    C 530 102 522 100 515 100
+    C 508 100 500 105 495 110
+    C 490 115 485 122 478 128
+    C 470 135 460 140 452 148
+    C 445 155 438 165 430 172
+    C 422 180 415 188 410 195
+    C 405 200 398 208 395 215
+    C 392 220 388 228 385 235
+    C 382 242 378 250 375 258
+    C 372 265 370 272 368 278
+    C 365 288 362 295 360 305
+    C 358 312 355 318 354 325
+    C 352 332 350 338 348 342
+    C 346 348 342 355 340 360
+    L 335 370
+    C 330 378 325 385 322 390
+    C 318 396 315 400 312 405
+    C 310 408 308 410 305 412
+    L 300 415
+    C 295 418 290 420 288 422
+    C 285 425 282 428 280 432
+    C 278 438 275 442 272 445
+    C 270 448 268 450 268 452
+    L 268 458
+    C 268 462 270 465 272 468
+    L 275 470
+    C 278 472 282 474 288 475
+    L 298 478
+    C 305 480 308 482 312 485
+    
+    M 520 340
+    C 518 348 515 355 512 360
+    C 508 368 505 375 500 380
+    C 495 386 490 390 485 395
+    C 480 400 478 405 475 410
+    C 472 415 470 420 468 425
+    C 466 432 465 438 464 442
+    L 462 450
+    C 460 458 460 462 462 468
+    L 465 472
+    C 468 475 472 478 478 480
+    L 488 482
+    
+    M 395 235
+    C 400 238 408 240 415 242
+    C 425 245 435 248 445 252
+    C 458 258 468 262 478 268
+    C 490 275 498 280 508 288
+    C 515 295 520 302 525 310
+    C 528 318 530 325 530 332
+    C 530 338 528 342 525 345
+    C 522 348 518 350 515 355
+    
+    M 368 278
+    C 375 280 385 282 395 285
+    C 408 290 418 295 428 300
+    C 440 308 448 312 455 318
+    C 462 325 468 330 472 335
+    C 478 342 482 348 485 355
+    C 488 362 490 368 490 375
+    C 490 380 488 385 485 390
+  " 
+  stroke="rgba(255,255,255,0.06)" 
+  stroke-width="2" 
+  fill="rgba(255,255,255,0.03)"
+  stroke-linejoin="round"
+  />
+  
+  <!-- Horn detail - right -->
+  <path d="M 515 100 C 520 92 528 85 535 80 C 540 76 545 72 548 70 C 550 68 552 65 550 63 C 548 62 545 62 542 63" 
+    stroke="rgba(255,255,255,0.05)" stroke-width="1.5" fill="none"/>
+  
+  <!-- Horn detail - left -->
+  <path d="M 515 100 C 510 92 505 86 498 82 C 494 78 490 75 486 73 C 483 71 480 69 478 68 C 476 67 474 68 475 70" 
+    stroke="rgba(255,255,255,0.05)" stroke-width="1.5" fill="none"/>
+  
+  <!-- Beard/chin fur -->
+  <path d="M 452 148 C 448 158 445 168 442 175 C 440 180 438 185 435 188" 
+    stroke="rgba(255,255,255,0.04)" stroke-width="1.5" fill="none"/>
+  
+  <!-- Hump detail -->
+  <path d="M 540 228 C 545 220 555 212 565 208 C 572 205 578 200 582 195" 
+    stroke="rgba(255,255,255,0.04)" stroke-width="1" fill="none"/>
+  
+  <!-- Snow particles - subtle dots scattered around -->
+  <circle cx="200" cy="120" r="1.2" fill="rgba(255,255,255,0.04)" filter="url(#blur)"/>
+  <circle cx="350" cy="80" r="1" fill="rgba(255,255,255,0.035)" filter="url(#blur)"/>
+  <circle cx="480" cy="60" r="1.3" fill="rgba(255,255,255,0.04)" filter="url(#blur)"/>
+  <circle cx="620" cy="90" r="1" fill="rgba(255,255,255,0.03)" filter="url(#blur)"/>
+  <circle cx="700" cy="140" r="1.2" fill="rgba(255,255,255,0.035)" filter="url(#blur)"/>
+  <circle cx="150" cy="200" r="1.1" fill="rgba(255,255,255,0.03)" filter="url(#blur)"/>
+  <circle cx="280" cy="160" r="0.9" fill="rgba(255,255,255,0.04)" filter="url(#blur)"/>
+  <circle cx="420" cy="130" r="1.4" fill="rgba(255,255,255,0.035)" filter="url(#blur)"/>
+  <circle cx="560" cy="150" r="1" fill="rgba(255,255,255,0.03)" filter="url(#blur)"/>
+  <circle cx="660" cy="200" r="1.2" fill="rgba(255,255,255,0.04)" filter="url(#blur)"/>
+  <circle cx="240" cy="280" r="1" fill="rgba(255,255,255,0.03)" filter="url(#blur)"/>
+  <circle cx="380" cy="320" r="1.1" fill="rgba(255,255,255,0.035)" filter="url(#blur)"/>
+  <circle cx="600" cy="280" r="0.9" fill="rgba(255,255,255,0.03)" filter="url(#blur)"/>
+  <circle cx="720" cy="320" r="1.3" fill="rgba(255,255,255,0.04)" filter="url(#blur)"/>
+  <circle cx="100" cy="350" r="1" fill="rgba(255,255,255,0.03)" filter="url(#blur)"/>
+  <circle cx="320" cy="400" r="1.2" fill="rgba(255,255,255,0.035)" filter="url(#blur)"/>
+  <circle cx="500" cy="380" r="1" fill="rgba(255,255,255,0.03)" filter="url(#blur)"/>
+  <circle cx="680" cy="420" r="1.1" fill="rgba(255,255,255,0.04)" filter="url(#blur)"/>
+  <circle cx="180" cy="440" r="0.9" fill="rgba(255,255,255,0.035)" filter="url(#blur)"/>
+  <circle cx="440" cy="450" r="1.2" fill="rgba(255,255,255,0.03)" filter="url(#blur)"/>
+  
+  <!-- Wind streaks - very subtle diagonal lines suggesting storm -->
+  <line x1="100" y1="100" x2="180" y2="130" stroke="rgba(255,255,255,0.02)" stroke-width="0.5"/>
+  <line x1="200" y1="80" x2="280" y2="110" stroke="rgba(255,255,255,0.018)" stroke-width="0.5"/>
+  <line x1="350" y1="60" x2="430" y2="90" stroke="rgba(255,255,255,0.02)" stroke-width="0.5"/>
+  <line x1="500" y1="50" x2="580" y2="80" stroke="rgba(255,255,255,0.015)" stroke-width="0.5"/>
+  <line x1="620" y1="70" x2="700" y2="100" stroke="rgba(255,255,255,0.02)" stroke-width="0.5"/>
+  <line x1="150" y1="180" x2="230" y2="210" stroke="rgba(255,255,255,0.015)" stroke-width="0.5"/>
+  <line x1="650" y1="170" x2="730" y2="200" stroke="rgba(255,255,255,0.018)" stroke-width="0.5"/>
+</svg>

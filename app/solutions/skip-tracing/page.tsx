@@ -1,46 +1,45 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Link from 'next/link'
 
 export default function SkipTracingPage() {
   const serviceSections = [
     {
       id: 'advanced-location-services',
-      title: 'Next-Generation Location Services',
-      description: 'Our skip tracing capabilities harness state-of-the-art technology and extensive data repositories to pinpoint hard-to-locate consumers. We deploy advanced algorithms, public records research, and proprietary databases to track down individuals who have relocated, updated their contact details, or are otherwise challenging to reach.',
+      title: 'Advanced Location Capabilities',
+      description: 'Our skip tracing uses cutting-edge technology and comprehensive data repositories to locate hard-to-find consumers. We employ advanced algorithms, public records analysis, and proprietary databases to track individuals who have moved, changed contact information, or are otherwise difficult to reach.',
       image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800',
-      background: 'white',
+      background: 'dark',
       imageLeft: false
     },
     {
       id: 'comprehensive-database-access',
-      title: 'Extensive Data Repository Access',
-      description: 'We maintain connections to wide-ranging databases spanning credit bureaus, public records, utility filings, and specialized skip tracing repositories. Our team cross-references multiple data streams to assemble the most precise and current contact information for each individual.',
+      title: 'Multi-Source Data Integration',
+      description: 'We access extensive databases including credit bureaus, public records, utility filings, and specialized skip tracing resources. Our team synthesizes multiple data sources to compile the most accurate and current contact details for each individual.',
       image: 'https://images.pexels.com/photos/6077587/pexels-photo-6077587.jpeg?_gl=1*1votr6i*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTUwODU0NDYkbzUkZzEkdDE3NTUwODU0NDckajU5JGwwJGgw',
-      background: 'grey',
+      background: 'panel',
       imageLeft: true
     },
     {
       id: 'fcra-compliant-processes',
-      title: 'FCRA-Aligned Procedures',
-      description: 'Every skip tracing operation we perform adheres fully to the Fair Credit Reporting Act (FCRA) and other governing regulations. We uphold stringent protocols to protect consumer privacy and data security while maximizing our capacity to locate individuals.',
+      title: 'FCRA-Compliant Operations',
+      description: 'All skip tracing operations fully comply with the Fair Credit Reporting Act (FCRA) and applicable regulations. We maintain strict protocols protecting consumer privacy and data security while maximizing location effectiveness.',
       image: 'https://images.pexels.com/photos/6077587/pexels-photo-6077587.jpeg?_gl=1*1votr6i*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTUwODU0NDYkbzUkZzEkdDE3NTUwODU0NDckajU5JGwwJGgw',
-      background: 'white',
+      background: 'dark',
       imageLeft: false
     },
     {
       id: 'specialized-expertise',
-      title: 'Deep Domain Knowledge',
-      description: 'Our skip tracing unit comprises veteran professionals who grasp the distinct hurdles of finding individuals under varied conditions. Whether confronting name changes, address shifts, or layered family dynamics, we have the proficiency to work through these obstacles effectively.',
+      title: 'Specialized Expertise',
+      description: 'Our skip tracing team comprises experienced professionals who understand the unique challenges of locating individuals under varying circumstances. Whether handling name changes, address shifts, or complex family dynamics, we have the skill to overcome these obstacles.',
       image: 'https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&w=800',
-      background: 'grey',
+      background: 'panel',
       imageLeft: true
     },
     {
       id: 'proven-success-rates',
-      title: 'Verified Success Metrics',
-      description: 'Our skip tracing services regularly attain elevated success rates in locating individuals across diverse demographics and situations. We monitor our performance data and continuously hone our processes to sustain and improve our hit rates.',
+      title: 'Proven Track Record',
+      description: 'Our skip tracing services consistently achieve high success rates locating individuals across diverse demographics and circumstances. We track performance metrics continuously and refine our processes to maintain and improve our effectiveness.',
       image: 'https://images.pexels.com/photos/8112172/pexels-photo-8112172.jpeg?auto=compress&cs=tinysrgb&w=800',
-      background: 'white',
+      background: 'dark',
       imageLeft: false
     }
   ]
@@ -48,100 +47,95 @@ export default function SkipTracingPage() {
   return (
     <>
       {/* Hero Banner Section */}
-      <section className="hero-banner relative h-96 flex items-center justify-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1200)' }}
-        ></div>
-        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
-        <div className="relative z-10 text-center text-white">
-          <h1 className="text-5xl font-bold mb-4">Skip Tracing Services</h1>
-          <p className="text-xl">Next-Generation Location Services for Elusive Consumers</p>
+      <section className="subpage-hero">
+        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1200)' }}></div>
+        <div className="subpage-hero-overlay"></div>
+        <div className="subpage-hero-content">
+          <h1>Skip Tracing Services</h1>
+          <p>Advanced Location Services for Hard-to-Find Consumers</p>
         </div>
       </section>
 
       {/* Main Content Introduction */}
-      <section className="main-intro py-16 bg-[#111827]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-white">Find the Unfindable</h2>
-            <p className="text-lg text-[#b0b8c8] leading-relaxed">
-              When standard outreach methods come up empty, our sophisticated skip tracing services can help you
-              pinpoint elusive consumers. We harness cutting-edge technology, extensive data repositories, and
-              seasoned professionals to track down individuals who have relocated, changed their contact details,
-              or are otherwise challenging to reach.
-            </p>
+      <section className="content-section info-panel">
+        <div className="subpage-container">
+          <div className="subpage-intro">
+            <div className="subpage-intro-inner">
+              <h2>Locate the Unreachable</h2>
+              <p>
+                When standard contact methods fall short, our advanced skip tracing services help you locate elusive consumers.
+                We leverage cutting-edge technology, extensive data repositories, and skilled professionals to track down individuals
+                who have relocated, changed contact information, or are otherwise challenging to reach.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Service Sections */}
       {serviceSections.map((section, index) => (
-        <section key={section.id} className={`py-16 ${section.background === 'grey' ? 'bg-[#111827]' : 'bg-[#0a0f1c]'}`}>
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                {section.imageLeft ? (
-                  <>
-                    <div className="order-1">
-                      <img
-                        src={section.image}
-                        alt={section.title}
-                        className="w-full h-80 object-cover rounded-lg shadow-lg"
-                      />
+        <section key={section.id} className={`content-section ${section.background === 'panel' ? 'info-panel' : ''}`}>
+          <div className="subpage-container">
+            <div className="subpage-grid">
+              {section.imageLeft ? (
+                <>
+                  <div>
+                    <img
+                      src={section.image}
+                      alt={section.title}
+                      className="subpage-image"
+                    />
+                  </div>
+                  <div>
+                    <h2>{section.title}</h2>
+                    <div className="subpage-text">
+                      {section.description}
                     </div>
-                    <div className="order-2">
-                      <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
-                      <div className="text-lg text-[#b0b8c8] leading-relaxed">
-                        {section.description}
-                      </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div>
+                    <h2>{section.title}</h2>
+                    <div className="subpage-text">
+                      {section.description}
                     </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="order-2 lg:order-1">
-                      <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
-                      <div className="text-lg text-[#b0b8c8] leading-relaxed">
-                        {section.description}
-                      </div>
-                    </div>
-                    <div className="order-1 lg:order-2">
-                      <img
-                        src={section.image}
-                        alt={section.title}
-                        className="w-full h-80 object-cover rounded-lg shadow-lg"
-                      />
-                    </div>
-                  </>
-                )}
-              </div>
+                  </div>
+                  <div>
+                    <img
+                      src={section.image}
+                      alt={section.title}
+                      className="subpage-image"
+                    />
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </section>
       ))}
 
       {/* Summary Section */}
-      <section className="py-16 bg-[#111827]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-white">When Standard Outreach Comes Up Short</h2>
-            <p className="text-lg text-[#b0b8c8] leading-relaxed">
-              Skip tracing frequently proves to be the decisive factor in successful collections once conventional contact approaches
-              have been exhausted. Our sophisticated location services can help you re-establish contact with consumers and potentially
-              reclaim accounts that might otherwise be forfeited.
-            </p>
+      <section className="content-section info-panel">
+        <div className="subpage-container">
+          <div className="subpage-intro">
+            <div className="subpage-intro-inner">
+              <h2>When Conventional Contact Methods Fail</h2>
+              <p>
+                Skip tracing often proves the critical factor in successful collections once standard outreach has been exhausted.
+                Our advanced location services help you re-establish contact with consumers and recover accounts that might otherwise be lost.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="cta text-center py-24" style={{ backgroundColor: '#1a1f2e' }}>
-        <div className="container mx-auto px-4">
-          <h3 className="text-2xl font-bold mb-6 text-white">
-            Prepared to track down elusive consumers?
-          </h3>
-          <Link href="/contact" className="btn bg-[#0a0f1c] px-8 py-3 rounded-lg font-semibold hover:bg-[#1a1f2e] transition-colors inline-block" style={{ color: '#c9a84c' }}>
-            Get In Touch Now!
+      <section className="cta-section">
+        <div className="subpage-container">
+          <h3>Ready to track down elusive consumers with precision?</h3>
+          <Link href="/contact" className="subpage-btn">
+            Get In Touch Now
           </Link>
         </div>
       </section>

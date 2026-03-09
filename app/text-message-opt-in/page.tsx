@@ -1,6 +1,61 @@
+'use client'
+
 import Link from 'next/link'
+import { useState } from 'react'
 
 export default function TextMessageOptInPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState('')
+  const [formData, setFormData] = useState({
+    phone: '',
+    name: '',
+    email: '',
+    consent: false
+  })
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type, checked } = e.target
+    setFormData(prev => ({ ...prev, [name]: type === 'checkbox' ? checked : value }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitMessage('')
+
+    try {
+      const response = await fetch('/api/submit-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          formType: 'text-message-opt-in',
+          formData: formData
+        }),
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        setSubmitMessage('Thank you! You have successfully opted in to text message notifications.')
+        setFormData({
+          phone: '',
+          name: '',
+          email: '',
+          consent: false
+        })
+      } else {
+        setSubmitMessage('There was an error submitting your request. Please try again or contact us directly.')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmitMessage('There was an error submitting your request. Please try again or contact us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   const optInSections = [
     {
       id: 'timely-notifications',
@@ -39,24 +94,21 @@ export default function TextMessageOptInPage() {
   return (
     <>
       {/* Hero Banner Section */}
-      <section className="hero-banner relative h-96 flex items-center justify-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(https://images.pexels.com/photos/768474/pexels-photo-768474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)' }}
-        ></div>
-        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
-        <div className="relative z-10 text-center text-white">
-          <h1 className="text-5xl font-bold mb-4">Text Message Opt-in</h1>
-          <p className="text-xl">Keep Informed with Key Account Updates & Payment Notifications!</p>
+      <section className="subpage-hero">
+        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.pexels.com/photos/768474/pexels-photo-768474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)' }}></div>
+        <div className="subpage-hero-overlay"></div>
+        <div className="subpage-hero-content">
+          <h1>Text Message Opt-in</h1>
+          <p>Keep Informed with Key Account Updates & Payment Notifications!</p>
         </div>
       </section>
 
       {/* Main Content Introduction */}
-      <section className="main-intro py-16 bg-[#111827]">
+      <section className="content-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-white">Take Charge of Your Financial Obligations</h2>
-            <p className="text-lg text-[#b0b8c8] leading-relaxed">
+            <h2 className="section-header">Take Charge of Your Financial Obligations</h2>
+            <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
               Sign up now to receive vital updates and payment notifications, making sure you never miss a due date.
               Our straightforward text messaging service delivers effortless updates to help you oversee your account
               effectively and preserve a strong payment history.
@@ -67,39 +119,39 @@ export default function TextMessageOptInPage() {
 
       {/* Opt-in Sections */}
       {optInSections.map((section, index) => (
-        <section key={section.id} className={`py-16 ${section.background === 'darker' ? 'bg-[#111827]' : 'bg-[#0a0f1c]'}`}>
+        <section key={section.id} className="content-section">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div style={{ maxWidth: '72rem', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', alignItems: 'center' }}>
                 {section.imageLeft ? (
                   <>
-                    <div className="order-1">
+                    <div>
                       <img
                         src={section.image}
                         alt={section.title}
-                        className="w-full h-80 object-cover rounded-lg shadow-lg"
+                        style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
                       />
                     </div>
-                    <div className="order-2">
-                      <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
-                      <div className="text-lg text-[#b0b8c8] leading-relaxed">
+                    <div>
+                      <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem', color: 'white' }}>{section.title}</h2>
+                      <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
                         {section.description}
-                      </div>
+                      </p>
                     </div>
                   </>
                 ) : (
                   <>
-                    <div className="order-2 lg:order-1">
-                      <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
-                      <div className="text-lg text-[#b0b8c8] leading-relaxed">
+                    <div>
+                      <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem', color: 'white' }}>{section.title}</h2>
+                      <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
                         {section.description}
-                      </div>
+                      </p>
                     </div>
-                    <div className="order-1 lg:order-2">
+                    <div>
                       <img
                         src={section.image}
                         alt={section.title}
-                        className="w-full h-80 object-cover rounded-lg shadow-lg"
+                        style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
                       />
                     </div>
                   </>
@@ -111,78 +163,95 @@ export default function TextMessageOptInPage() {
       ))}
 
       {/* Opt-in Form Section */}
-      <section className="py-16 bg-[#111827]">
+      <section className="content-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center text-white">Prepared to Begin?</h2>
-            <div className="bg-[#0a0f1c] rounded-lg shadow-lg p-8">
-              <div className="text-center mb-8">
-                <p className="text-lg text-[#b0b8c8]">
+            <h2 className="section-header" style={{ textAlign: 'center', marginBottom: '2rem' }}>Prepared to Begin?</h2>
+            <div className="form-container">
+              <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+                <p style={{ fontSize: '1.125rem', color: '#b0b8c8' }}>
                   Provide your details below to enroll in text message notifications
                 </p>
               </div>
 
-              <form className="max-w-md mx-auto space-y-6">
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-[#b0b8c8] mb-2">
+              <form onSubmit={handleSubmit} className="form-grid" style={{ maxWidth: '28rem', margin: '0 auto' }}>
+                <div className="form-group">
+                  <label htmlFor="phone">
                     Phone Number *
                   </label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-[#111827] text-white border border-[#1e293b] rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     placeholder="(555) 123-4567"
                   />
                 </div>
 
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-[#b0b8c8] mb-2">
+                <div className="form-group">
+                  <label htmlFor="name">
                     Full Name *
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-[#111827] text-white border border-[#1e293b] rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Jane Smith"
                   />
                 </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-[#b0b8c8] mb-2">
+                <div className="form-group">
+                  <label htmlFor="email">
                     Email Address
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full px-4 py-3 bg-[#111827] text-white border border-[#1e293b] rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     placeholder="jane.smith@example.com"
                   />
                 </div>
 
-                <div className="flex items-start">
+                <div className="checkbox-group">
                   <input
                     type="checkbox"
                     id="consent"
                     name="consent"
+                    checked={formData.consent}
+                    onChange={handleInputChange}
                     required
-                    className="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-[#1e293b] rounded"
                   />
-                  <label htmlFor="consent" className="ml-2 block text-sm text-[#b0b8c8]">
+                  <label htmlFor="consent">
                     I authorize Capital Review Management LLC to send me text messages. I acknowledge that standard message and data charges may apply. I may unsubscribe at any point by responding STOP.
                   </label>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-[#c9a84c] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#b8973d] transition-colors duration-200 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                  disabled={isSubmitting}
+                  className="form-submit"
                 >
-                  ENROLL NOW
+                  {isSubmitting ? 'Submitting...' : 'ENROLL NOW'}
                 </button>
+
+                {submitMessage && (
+                  <div style={{
+                    marginTop: '1rem',
+                    padding: '1rem',
+                    backgroundColor: submitMessage.includes('error') ? '#1a0f0f' : '#0f1a1a',
+                    color: submitMessage.includes('error') ? '#ef9a9a' : '#9aefef',
+                    border: `1px solid ${submitMessage.includes('error') ? '#742323' : '#237373'}`
+                  }}>
+                    {submitMessage}
+                  </div>
+                )}
               </form>
             </div>
           </div>
@@ -190,29 +259,29 @@ export default function TextMessageOptInPage() {
       </section>
 
       {/* Important Information Section */}
-      <section className="py-16 bg-[#0a0f1c]">
+      <section className="content-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center text-white">Key Details</h2>
-            <div className="bg-[#111827] rounded-lg shadow-lg p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <h2 className="section-header" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>Important Information</h2>
+            <div className="info-panel">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Messaging Details</h3>
-                  <ul className="space-y-2 text-[#b0b8c8]">
-                    <li>&#8226; Standard message and data fees may be incurred</li>
-                    <li>&#8226; You may unsubscribe at any point by replying STOP</li>
-                    <li>&#8226; For assistance, reply HELP to any message</li>
-                    <li>&#8226; Message frequency differs depending on account activity</li>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '1rem', color: 'white' }}>Message Details</h3>
+                  <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', color: '#b0b8c8' }}>
+                    <li>• Standard message and data rates may apply</li>
+                    <li>• You can opt out at any time by replying STOP</li>
+                    <li>• For help, reply HELP to any message</li>
+                    <li>• Message frequency varies based on account activity</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Legal Details</h3>
-                  <p className="text-[#b0b8c8] mb-4">
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '1rem', color: 'white' }}>Legal Information</h3>
+                  <p style={{ marginBottom: '1rem', color: '#b0b8c8' }}>
                     By enrolling, you consent to our Terms and Conditions and Privacy Policy.
                   </p>
-                  <div className="space-y-2">
-                    <Link href="/terms" className="block text-[#c9a84c] hover:text-[#b8973d] underline">Terms and Conditions</Link>
-                    <Link href="/privacy" className="block text-[#c9a84c] hover:text-[#b8973d] underline">Privacy Policy</Link>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                    <Link href="/terms" style={{ color: '#c9a84c', textDecoration: 'underline', display: 'block' }}>Terms and Conditions</Link>
+                    <Link href="/privacy" style={{ color: '#c9a84c', textDecoration: 'underline', display: 'block' }}>Privacy Policy</Link>
                   </div>
                 </div>
               </div>

@@ -55,24 +55,21 @@ export default function TermsAndConditionsPage() {
   return (
     <>
       {/* Hero Banner Section */}
-      <section className="hero-banner relative h-96 flex items-center justify-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=1200)' }}
-        ></div>
-        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
-        <div className="relative z-10 text-center text-white">
-          <h1 className="text-5xl font-bold mb-4">Terms and Conditions of Use</h1>
-          <p className="text-xl">Kindly review these terms thoroughly prior to using our website</p>
+      <section className="subpage-hero">
+        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=1200)' }}></div>
+        <div className="subpage-hero-overlay"></div>
+        <div className="subpage-hero-content">
+          <h1>Terms and Conditions of Use</h1>
+          <p>Kindly review these terms thoroughly prior to using our website</p>
         </div>
       </section>
 
       {/* Main Content Introduction */}
-      <section className="main-intro py-16 bg-[#111827]">
+      <section className="content-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-white">Familiarize Yourself with Our Terms</h2>
-            <p className="text-lg text-[#b0b8c8] leading-relaxed">
+            <h2 className="section-header">Familiarize Yourself with Our Terms</h2>
+            <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
               Welcome to the website of Capital Review Management LLC. By visiting and using capitalreviewmgt.com,
               you consent to adhere to and be governed by these Terms and Conditions. Please review them thoroughly to understand
               your entitlements and responsibilities.
@@ -82,68 +79,70 @@ export default function TermsAndConditionsPage() {
       </section>
 
       {/* Terms Sections */}
-      {termsSections.map((section, index) => (
-        <section key={section.id} className={`py-16 ${section.background === 'darker' ? 'bg-[#111827]' : 'bg-[#0a0f1c]'}`}>
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                {section.imageLeft ? (
-                  <>
-                    <div className="order-1">
-                      <img
-                        src={section.image}
-                        alt={section.title}
-                        className="w-full h-80 object-cover rounded-lg shadow-lg"
-                      />
-                    </div>
-                    <div className="order-2">
-                      <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
-                      <div className="text-lg text-[#b0b8c8] leading-relaxed">
-                        {section.description}
+      <div className="legal-page">
+        {termsSections.map((section, index) => (
+          <section key={section.id} className="content-section">
+            <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <div style={{ maxWidth: '72rem', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+                  {section.imageLeft ? (
+                    <>
+                      <div>
+                        <img
+                          src={section.image}
+                          alt={section.title}
+                          style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
+                        />
                       </div>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="order-2 lg:order-1">
-                      <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
-                      <div className="text-lg text-[#b0b8c8] leading-relaxed">
-                        {section.description}
+                      <div>
+                        <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem', color: 'white' }}>{section.title}</h2>
+                        <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
+                          {section.description}
+                        </p>
                       </div>
-                    </div>
-                    <div className="order-1 lg:order-2">
-                      <img
-                        src={section.image}
-                        alt={section.title}
-                        className="w-full h-80 object-cover rounded-lg shadow-lg"
-                      />
-                    </div>
-                  </>
-                )}
+                    </>
+                  ) : (
+                    <>
+                      <div>
+                        <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem', color: 'white' }}>{section.title}</h2>
+                        <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
+                          {section.description}
+                        </p>
+                      </div>
+                      <div>
+                        <img
+                          src={section.image}
+                          alt={section.title}
+                          style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
+                        />
+                      </div>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        ))}
+      </div>
 
       {/* Additional Terms Section */}
-      <section className="py-16 bg-[#111827]">
+      <section className="content-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-white text-center">Supplementary Terms</h2>
-            <div className="bg-[#0a0f1c] rounded-lg shadow-lg p-8">
-              <div className="space-y-6 text-lg text-[#b0b8c8]">
+            <h2 className="section-header" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>Supplementary Terms</h2>
+            <div className="info-panel">
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', fontSize: '1.125rem' }}>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">External Links</h3>
-                  <p>Our Website may include links to external websites operated by third parties. We are not accountable for the content, accuracy, or practices of any third-party websites.</p>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem', color: 'white' }}>External Links</h3>
+                  <p style={{ color: '#b0b8c8' }}>Our Website may include links to external websites operated by third parties. We are not accountable for the content, accuracy, or practices of any third-party websites.</p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Applicable Law</h3>
-                  <p>These Terms and Conditions are interpreted and enforced under the laws of the state of Texas, without consideration of its conflict of law provisions.</p>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem', color: 'white' }}>Applicable Law</h3>
+                  <p style={{ color: '#b0b8c8' }}>These Terms and Conditions are interpreted and enforced under the laws of the state of Texas, without consideration of its conflict of law provisions.</p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Suspension of Access</h3>
-                  <p>We retain the authority to suspend or revoke your access to the Website at any point for breach of these Terms and Conditions or for any other justification.</p>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem', color: 'white' }}>Suspension of Access</h3>
+                  <p style={{ color: '#b0b8c8' }}>We retain the authority to suspend or revoke your access to the Website at any point for breach of these Terms and Conditions or for any other justification.</p>
                 </div>
               </div>
             </div>
@@ -152,19 +151,19 @@ export default function TermsAndConditionsPage() {
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-16 bg-[#0a0f1c]">
+      <section className="content-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-white">Get in Touch</h2>
-            <div className="bg-[#111827] rounded-lg shadow-lg p-8">
-              <p className="text-lg text-[#b0b8c8] mb-6">
+            <h2 className="section-header">Get in Touch</h2>
+            <div className="info-panel">
+              <p style={{ fontSize: '1.125rem', marginBottom: '1.5rem', color: '#b0b8c8' }}>
                 For any questions about these Terms and Conditions, please reach out to us at:
               </p>
-              <div className="text-lg text-[#b0b8c8] space-y-4">
-                <p className="font-semibold text-white">Capital Review Management LLC</p>
-                <p className="text-xl font-semibold text-[#4a7fb5]">866-766-2692</p>
-                <p className="mt-4">
-                  <strong className="text-white">Email:</strong> info@capitalreviewmgt.com
+              <div style={{ fontSize: '1.125rem', display: 'flex', flexDirection: 'column', gap: '1rem', color: '#b0b8c8' }}>
+                <p style={{ fontWeight: '600', color: 'white' }}>Capital Review Management LLC</p>
+                <p style={{ fontSize: '1.25rem', fontWeight: '600', color: '#4a7fb5' }}>866-766-2692</p>
+                <p>
+                  <strong style={{ color: 'white' }}>Email:</strong> info@capitalreviewmgt.com
                 </p>
               </div>
             </div>

@@ -55,24 +55,21 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       {/* Hero Banner Section */}
-      <section className="hero-banner relative h-96 flex items-center justify-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(https://images.pexels.com/photos/4792288/pexels-photo-4792288.jpeg?_gl=1*17w92mj*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MzA3MjckbzIkZzEkdDE3NTQ5MzA3NTQkajMzJGwwJGgw)' }}
-        ></div>
-        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
-        <div className="relative z-10 text-center text-white">
-          <h1 className="text-5xl font-bold mb-4">Privacy Policy</h1>
-          <p className="text-xl">Safeguarding Your Personal Data</p>
+      <section className="subpage-hero">
+        <div className="subpage-hero-bg" style={{ backgroundImage: 'url(https://images.pexels.com/photos/4792288/pexels-photo-4792288.jpeg?_gl=1*17w92mj*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MzA3MjckbzIkZzEkdDE3NTQ5MzA3NTQkajMzJGwwJGgw)' }}></div>
+        <div className="subpage-hero-overlay"></div>
+        <div className="subpage-hero-content">
+          <h1>Privacy Policy</h1>
+          <p>Safeguarding Your Personal Data</p>
         </div>
       </section>
 
       {/* Main Content Introduction */}
-      <section className="main-intro py-16 bg-[#111827]">
+      <section className="content-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-white">We Take Your Privacy Seriously</h2>
-            <p className="text-lg text-[#b0b8c8] leading-relaxed">
+            <h2 className="section-header">We Take Your Privacy Seriously</h2>
+            <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
               Capital Review Management LLC is dedicated to protecting the privacy and confidentiality of personal data.
               This Privacy Policy describes how we gather, utilize, share, and secure individuals' personal information
               in relation to our account recovery operations.
@@ -82,56 +79,58 @@ export default function PrivacyPolicyPage() {
       </section>
 
       {/* Privacy Sections */}
-      {privacySections.map((section, index) => (
-        <section key={section.id} className={`py-16 ${section.background === 'darker' ? 'bg-[#111827]' : 'bg-[#0a0f1c]'}`}>
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                {section.imageLeft ? (
-                  <>
-                    <div className="order-1">
-                      <img
-                        src={section.image}
-                        alt={section.title}
-                        className="w-full h-80 object-cover rounded-lg shadow-lg"
-                      />
-                    </div>
-                    <div className="order-2">
-                      <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
-                      <div className="text-lg text-[#b0b8c8] leading-relaxed">
-                        {section.description}
+      <div className="legal-page">
+        {privacySections.map((section, index) => (
+          <section key={section.id} className="content-section">
+            <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <div style={{ maxWidth: '72rem', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+                  {section.imageLeft ? (
+                    <>
+                      <div>
+                        <img
+                          src={section.image}
+                          alt={section.title}
+                          style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
+                        />
                       </div>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="order-2 lg:order-1">
-                      <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
-                      <div className="text-lg text-[#b0b8c8] leading-relaxed">
-                        {section.description}
+                      <div>
+                        <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem', color: 'white' }}>{section.title}</h2>
+                        <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
+                          {section.description}
+                        </p>
                       </div>
-                    </div>
-                    <div className="order-1 lg:order-2">
-                      <img
-                        src={section.image}
-                        alt={section.title}
-                        className="w-full h-80 object-cover rounded-lg shadow-lg"
-                      />
-                    </div>
-                  </>
-                )}
+                    </>
+                  ) : (
+                    <>
+                      <div>
+                        <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem', color: 'white' }}>{section.title}</h2>
+                        <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
+                          {section.description}
+                        </p>
+                      </div>
+                      <div>
+                        <img
+                          src={section.image}
+                          alt={section.title}
+                          style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
+                        />
+                      </div>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        ))}
+      </div>
 
       {/* Changes to Policy Section */}
-      <section className="py-16 bg-[#111827]">
+      <section className="content-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-white">Revisions to This Policy</h2>
-            <p className="text-lg text-[#b0b8c8] leading-relaxed">
+            <h2 className="section-header">Revisions to This Policy</h2>
+            <p style={{ fontSize: '1.125rem', lineHeight: '1.75', color: '#b0b8c8' }}>
               We may revise this Privacy Policy at any point. Significant modifications will be communicated via our website
               or through other suitable channels. We recommend reviewing this policy on a regular basis to remain informed about
               how we safeguard your data.
@@ -141,19 +140,19 @@ export default function PrivacyPolicyPage() {
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-16 bg-[#0a0f1c]">
+      <section className="content-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-white">Get in Touch</h2>
-            <div className="bg-[#111827] rounded-lg shadow-lg p-8">
-              <p className="text-lg text-[#b0b8c8] mb-6">
+            <h2 className="section-header">Get in Touch</h2>
+            <div className="info-panel">
+              <p style={{ fontSize: '1.125rem', marginBottom: '1.5rem', color: '#b0b8c8' }}>
                 For any inquiries or concerns about this Privacy Policy, please contact us at:
               </p>
-              <div className="text-lg text-[#b0b8c8] space-y-4">
-                <p className="font-semibold text-white">Capital Review Management LLC</p>
-                <p className="text-xl font-semibold text-[#c9a84c]">866-766-2692</p>
-                <p className="mt-4">
-                  <strong className="text-white">Email:</strong> info@capitalreviewmgt.com
+              <div style={{ fontSize: '1.125rem', display: 'flex', flexDirection: 'column', gap: '1rem', color: '#b0b8c8' }}>
+                <p style={{ fontWeight: '600', color: 'white' }}>Capital Review Management LLC</p>
+                <p style={{ fontSize: '1.25rem', fontWeight: '600', color: '#c9a84c' }}>866-766-2692</p>
+                <p>
+                  <strong style={{ color: 'white' }}>Email:</strong> info@capitalreviewmgt.com
                 </p>
               </div>
             </div>
@@ -162,10 +161,10 @@ export default function PrivacyPolicyPage() {
       </section>
 
       {/* Copyright Section */}
-      <section className="py-8 bg-[#111827]">
+      <section className="content-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-[#8892a4]">
+            <p className="legal-effective-date">
               Copyright &copy; 2026 Capital Review Management – All Rights Reserved.
             </p>
           </div>

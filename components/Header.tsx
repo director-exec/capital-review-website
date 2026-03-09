@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,6 +34,7 @@ export default function Header() {
 
   return (
     <>
+      {/* Normal Header */}
       <header className="normal-header">
         <div className="container">
           <div className="header-content">
@@ -94,6 +94,7 @@ export default function Header() {
         </div>
       </header>
 
+      {/* Compact Sticky Header */}
       <header className={`compact-header ${isScrolled ? 'show' : ''}`}>
         <div className="container">
           <div className="header-content">
@@ -147,6 +148,7 @@ export default function Header() {
         </div>
       </header>
 
+      {/* Mobile Menu */}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'show' : ''}`} id="mobileMenu">
         <div className="mobile-menu-section mobile-contact-info">
           <a href="tel:866-766-2692" className="mobile-call-btn">Call Us</a>
