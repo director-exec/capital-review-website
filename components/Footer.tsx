@@ -11,48 +11,43 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Full CR Logo — bottom-left, small and subtle */}
-        <div className="footer-logo-block">
-          <div className="footer-cr-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Compact Footer Content — logo left, everything else center/right */}
+        <div className="footer-compact" style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+          {/* Left: CR Logo */}
+          <div className="footer-cr-logo" style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
+            <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M8 55 V8 H92 V92 H8" stroke="currentColor" strokeWidth="8" strokeLinejoin="miter" strokeLinecap="square" fill="none"/>
               <path d="M50 50 L70 92" stroke="currentColor" strokeWidth="8" strokeLinecap="butt"/>
               <path d="M28 20 V80" stroke="currentColor" strokeWidth="7" strokeLinecap="square"/>
               <path d="M28 20 H54 Q70 20 70 36 Q70 50 54 50 H28" stroke="currentColor" strokeWidth="7" strokeLinejoin="round" fill="none"/>
             </svg>
-            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
-              <span style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '0.6rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.85)' }}>Capital</span>
-              <span style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '0.6rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.85)' }}>Review</span>
-              <span style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '0.6rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.85)' }}>Management</span>
-              <span style={{ fontFamily: 'var(--font-body)', fontWeight: 400, fontSize: '0.42rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginTop: '2px' }}>Assess. Review. Advise.</span>
+            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.05' }}>
+              <span style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '0.52rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.8)' }}>Capital Review</span>
+              <span style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '0.52rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.8)' }}>Management</span>
+              <span style={{ fontFamily: 'var(--font-body)', fontWeight: 400, fontSize: '0.38rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginTop: '1px' }}>Assess. Review. Advise.</span>
             </div>
           </div>
-        </div>
 
-        {/* Compact Footer Content — single row layout */}
-        <div className="footer-compact">
-          {/* Left: Address + Contact */}
-          <div className="footer-info">
-            <p>
-              Capital Review Management &nbsp;|&nbsp; 2200 N Frazier St. STE 120 Box 142, Conroe TX 77301
-              &nbsp;|&nbsp; <a href="tel:866-766-2692">866-766-2692</a>
-              &nbsp;|&nbsp; <a href="mailto:info@capitalreviewmgt.com">info@capitalreviewmgt.com</a>
-            </p>
-          </div>
+          {/* Center block: Address, Links, Social stacked */}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', flex: 1 }}>
+            <div className="footer-info">
+              <p>
+                Capital Review Management &nbsp;|&nbsp; 2200 N Frazier St. STE 120 Box 142, Conroe TX 77301
+                &nbsp;|&nbsp; <a href="tel:866-766-2692">866-766-2692</a>
+                &nbsp;|&nbsp; <a href="mailto:info@capitalreviewmgt.com">info@capitalreviewmgt.com</a>
+              </p>
+            </div>
 
-          {/* Center: Quick Links */}
-          <div className="footer-links">
-            <a href="/consumer-tools/make-a-payment">Make a Payment</a>
-            <Link href="/consumer-tools">Consumer Tools</Link>
-            <Link href="/solutions">Solutions</Link>
-            <Link href="/about">About</Link>
-            <Link href="/contact">Contact</Link>
-            <Link href="/privacy">Privacy</Link>
-            <Link href="/terms">Terms</Link>
-          </div>
+            <div className="footer-links">
+              <a href="/consumer-tools/make-a-payment">Make a Payment</a>
+              <Link href="/consumer-tools">Consumer Tools</Link>
+              <Link href="/solutions">Solutions</Link>
+              <Link href="/about">About</Link>
+              <Link href="/contact">Contact</Link>
+              <Link href="/privacy">Privacy</Link>
+              <Link href="/terms">Terms</Link>
+            </div>
 
-          {/* Social Links */}
-          <div className="footer-badges-social">
             <div className="social-links">
               <a href="#linkedin" aria-label="LinkedIn">
                 <i className="fab fa-linkedin"></i>

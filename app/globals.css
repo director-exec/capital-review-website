@@ -1043,15 +1043,7 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Footer full logo block — small, tucked in */
-.footer-logo-block {
-  display: flex;
-  justify-content: flex-start;
-  padding: 0.5rem 0 0.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  margin-bottom: 0.5rem;
-}
-
+/* Footer CR logo — inline left */
 .footer-cr-logo {
   color: rgba(255, 255, 255, 0.75);
   opacity: 0.85;
