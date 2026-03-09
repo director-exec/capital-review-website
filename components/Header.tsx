@@ -51,7 +51,7 @@ export default function Header() {
             {/* Logo with CR Mark */}
             <div className="logo">
               <Link href="/" className="logo-link">
-                <svg className="logo-shield" width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="logo-shield" width="38" height="38" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                   {/* Left wall: from top-left down, stops partway (gap at bottom-left) */}
                   <path d="M8 8 V62" stroke="currentColor" strokeWidth="8" strokeLinecap="square" fill="none"/>
                   {/* Top + right + bottom: wraps from top-left across, down, and along bottom — stops before left wall */}
@@ -138,7 +138,7 @@ export default function Header() {
             {/* Logo with CR Mark */}
             <div className="logo">
               <Link href="/" className="logo-link">
-                <svg className="logo-shield" width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="logo-shield" width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8 8 V62" stroke="currentColor" strokeWidth="8" strokeLinecap="square" fill="none"/>
                   <path d="M8 8 H92 V92 H20" stroke="currentColor" strokeWidth="8" strokeLinejoin="miter" strokeLinecap="square" fill="none"/>
                   <path d="M50 50 L72 92" stroke="currentColor" strokeWidth="8" strokeLinecap="butt"/>
