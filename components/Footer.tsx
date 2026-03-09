@@ -4,6 +4,26 @@ export default function Footer() {
   return (
     <footer>
       <div className="container">
+        {/* Full Logo Mark */}
+        <div className="footer-logo-block">
+          <svg className="footer-cr-logo" width="180" height="60" viewBox="0 0 360 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* CR Mark — square with open bottom-left corner + R */}
+            <path d="M6 6 H94 V94 H44" stroke="currentColor" strokeWidth="8" strokeLinejoin="miter" strokeLinecap="square" fill="none"/>
+            <path d="M6 6 V56" stroke="currentColor" strokeWidth="8" strokeLinecap="square" fill="none"/>
+            <path d="M32 24 V74" stroke="currentColor" strokeWidth="7" strokeLinecap="square"/>
+            <path d="M32 24 H54 Q68 24 68 37 Q68 48 54 48 H32" stroke="currentColor" strokeWidth="7" strokeLinejoin="round" fill="none"/>
+            <path d="M50 48 L68 74" stroke="currentColor" strokeWidth="7" strokeLinecap="square"/>
+            {/* CAPITAL */}
+            <text x="115" y="34" fontFamily="var(--font-heading), Cormorant Garamond, serif" fontSize="26" fontWeight="600" letterSpacing="4" fill="currentColor">CAPITAL</text>
+            {/* REVIEW */}
+            <text x="115" y="62" fontFamily="var(--font-heading), Cormorant Garamond, serif" fontSize="26" fontWeight="600" letterSpacing="4" fill="currentColor">REVIEW</text>
+            {/* MANAGEMENT */}
+            <text x="115" y="90" fontFamily="var(--font-body), Source Sans 3, sans-serif" fontSize="18" fontWeight="400" letterSpacing="5" fill="currentColor">MANAGEMENT</text>
+            {/* ASSESS. REVIEW. ADVISE. */}
+            <text x="115" y="112" fontFamily="var(--font-body), Source Sans 3, sans-serif" fontSize="11" fontWeight="300" letterSpacing="3.5" fill="currentColor" opacity="0.6">ASSESS.  REVIEW.  ADVISE.</text>
+          </svg>
+        </div>
+
         {/* Legal Disclosure — single line, small */}
         <div className="footer-legal-banner">
           <p>

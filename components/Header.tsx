@@ -48,12 +48,17 @@ export default function Header() {
       <header className="normal-header">
         <div className="container">
           <div className="header-content">
-            {/* Logo with Shield */}
+            {/* Logo with CR Mark */}
             <div className="logo">
               <Link href="/" className="logo-link">
-                <svg className="logo-shield" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L4 5.5v5.5c0 5.5 3.4 10.6 8 12 4.6-1.4 8-6.5 8-12V5.5L12 2z" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                  <path d="M9 12.5l2.5 2.5L15.5 10" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                <svg className="logo-shield" width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Square frame — bottom-left corner open to form the "C" */}
+                  <path d="M6 6 H94 V94 H44" stroke="currentColor" strokeWidth="9" strokeLinejoin="miter" strokeLinecap="square" fill="none"/>
+                  <path d="M6 6 V56" stroke="currentColor" strokeWidth="9" strokeLinecap="square" fill="none"/>
+                  {/* R letterform */}
+                  <path d="M34 26 V74" stroke="currentColor" strokeWidth="8" strokeLinecap="square"/>
+                  <path d="M34 26 H56 Q72 26 72 39 Q72 50 56 50 H34" stroke="currentColor" strokeWidth="8" strokeLinejoin="round" fill="none"/>
+                  <path d="M52 50 L72 74" stroke="currentColor" strokeWidth="8" strokeLinecap="square"/>
                 </svg>
                 <div className="logo-text">
                   <span className="logo-wordmark">Capital Review Management</span>
@@ -127,12 +132,15 @@ export default function Header() {
       <header className={`compact-header ${isScrolled ? 'show' : ''}`}>
         <div className="container">
           <div className="header-content">
-            {/* Logo with Shield */}
+            {/* Logo with CR Mark */}
             <div className="logo">
               <Link href="/" className="logo-link">
-                <svg className="logo-shield" width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L4 5.5v5.5c0 5.5 3.4 10.6 8 12 4.6-1.4 8-6.5 8-12V5.5L12 2z" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                  <path d="M9 12.5l2.5 2.5L15.5 10" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                <svg className="logo-shield" width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 6 H94 V94 H44" stroke="currentColor" strokeWidth="9" strokeLinejoin="miter" strokeLinecap="square" fill="none"/>
+                  <path d="M6 6 V56" stroke="currentColor" strokeWidth="9" strokeLinecap="square" fill="none"/>
+                  <path d="M34 26 V74" stroke="currentColor" strokeWidth="8" strokeLinecap="square"/>
+                  <path d="M34 26 H56 Q72 26 72 39 Q72 50 56 50 H34" stroke="currentColor" strokeWidth="8" strokeLinejoin="round" fill="none"/>
+                  <path d="M52 50 L72 74" stroke="currentColor" strokeWidth="8" strokeLinecap="square"/>
                 </svg>
                 <span className="logo-wordmark">Capital Review Management</span>
               </Link>
