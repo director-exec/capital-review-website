@@ -13,20 +13,13 @@ export default function Footer() {
 
         {/* Compact Footer Content — logo left, everything else center/right */}
         <div className="footer-compact" style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap' }}>
-          {/* Left: CR Logo */}
-          <div className="footer-cr-logo" style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
-            <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 8 V62" stroke="currentColor" strokeWidth="8" strokeLinecap="square" fill="none"/>
-              <path d="M8 8 H92 V92 H20" stroke="currentColor" strokeWidth="8" strokeLinejoin="miter" strokeLinecap="square" fill="none"/>
-              <path d="M50 50 L72 92" stroke="currentColor" strokeWidth="8" strokeLinecap="butt"/>
-              <path d="M28 20 V78" stroke="currentColor" strokeWidth="7" strokeLinecap="square"/>
-              <path d="M28 20 H54 Q70 20 70 36 Q70 50 54 50 H28" stroke="currentColor" strokeWidth="7" strokeLinejoin="round" fill="none"/>
-            </svg>
-            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.05' }}>
-              <span style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '0.52rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.8)' }}>Capital Review</span>
-              <span style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '0.52rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.8)' }}>Management</span>
-              <span style={{ fontFamily: 'var(--font-body)', fontWeight: 400, fontSize: '0.38rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginTop: '1px' }}>Assess. Review. Advise.</span>
-            </div>
+          {/* Left: CR Logo — actual PNG with transparent background */}
+          <div className="footer-cr-logo" style={{ flexShrink: 0 }}>
+            <img
+              src="/LOGO/capital-review-logo.png"
+              alt="Capital Review Management — Assess. Review. Advise."
+              style={{ height: '55px', width: 'auto', opacity: 0.9 }}
+            />
           </div>
 
           {/* Center block: Address, Links, Social stacked */}
