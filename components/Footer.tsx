@@ -11,6 +11,22 @@ export default function Footer() {
           </p>
         </div>
 
+        {/* Full CR Logo — bottom-left, crisp */}
+        <div className="footer-logo-block" style={{ justifyContent: 'flex-start' }}>
+          <div className="footer-cr-logo" style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+            <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 6 H94 V94 H6 V60" stroke="currentColor" strokeWidth="7" strokeLinejoin="miter" strokeLinecap="square" fill="none"/>
+              <path d="M32 24 V76" stroke="currentColor" strokeWidth="6" strokeLinecap="square"/>
+              <path d="M32 24 H56 Q72 24 72 38 Q72 50 56 50 H32" stroke="currentColor" strokeWidth="6" strokeLinejoin="round" fill="none"/>
+              <path d="M52 50 L74 80" stroke="currentColor" strokeWidth="6" strokeLinecap="square"/>
+            </svg>
+            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.2' }}>
+              <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 600, fontSize: '1.05rem', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.9)' }}>Capital Review Management</span>
+              <span style={{ fontFamily: 'var(--font-body)', fontWeight: 400, fontSize: '0.65rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)', marginTop: '2px' }}>Assess &middot; Review &middot; Advise</span>
+            </div>
+          </div>
+        </div>
+
         {/* Compact Footer Content — single row layout */}
         <div className="footer-compact">
           {/* Left: Address + Contact */}
@@ -24,7 +40,7 @@ export default function Footer() {
 
           {/* Center: Quick Links */}
           <div className="footer-links">
-            <a href="/consumer-tools/make-a-payment" >Make a Payment</a>
+            <a href="/consumer-tools/make-a-payment">Make a Payment</a>
             <Link href="/consumer-tools">Consumer Tools</Link>
             <Link href="/solutions">Solutions</Link>
             <Link href="/about">About</Link>
@@ -33,20 +49,8 @@ export default function Footer() {
             <Link href="/terms">Terms</Link>
           </div>
 
-          {/* Right: Badges + Social — prominent */}
+          {/* Social Links */}
           <div className="footer-badges-social">
-            <div className="footer-badges">
-              <img
-                src="/LOGO/BBBLogo.png"
-                alt="Better Business Bureau"
-                className="badge-bbb"
-              />
-              <img
-                src="/LOGO/EC_BADGE.png"
-                alt="EverChain Certified Network Member"
-                className="badge-ec"
-              />
-            </div>
             <div className="social-links">
               <a href="#linkedin" aria-label="LinkedIn">
                 <i className="fab fa-linkedin"></i>
