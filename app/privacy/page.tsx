@@ -4,51 +4,51 @@ import SectionCard from '../components/SectionCard'
 export default function PrivacyPolicyPage() {
   const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
     'information-collection': {
-      subject: 'Personal Data Categories',
+      subject: 'Personal Data Categories (CRM-4.1)',
       bullets: [
-        { text: 'Contact information including your name, mailing address, email address, and phone number for account communication.' },
-        { text: 'Financial details such as payment history, bank information, account numbers, and outstanding balance records.' },
-        { text: 'Identification data and communications records including government-issued IDs, phone calls, emails, and correspondence.' },
+        { text: 'Contact information including name, mailing address, email, and phone number — all protected with AES-256 encryption (CRM-4.1) within Maxify CRM (CRM-2.1).' },
+        { text: 'Financial details such as payment history, bank information, and account balances secured with PCI DSS-certified tokenization (CRM-3.8) and role-based access controls (CRM-4.4).' },
+        { text: 'Identification data and communications records including government-issued IDs, call recordings with 3-year retention (CRM-2.6), and all correspondence maintained with full audit trails.' },
       ],
     },
     'information-usage': {
-      subject: 'Data Sharing Standards',
+      subject: 'Data Sharing Standards (CRM-1.6)',
       bullets: [
-        { text: 'We do not sell your personal information to third parties — your data is used solely for legitimate business operations.' },
-        { text: 'Information may be shared with affiliates, service providers, or during business transfers such as mergers or acquisitions.' },
-        { text: 'Disclosure may occur when required by law, regulation, legal process, or to protect the rights and safety of all parties.' },
+        { text: 'We do not sell your personal information — all data handled per PHI/privacy safeguards (CRM-1.6) and used solely for legitimate debt collection operations under FDCPA compliance (CRM-1.1).' },
+        { text: 'Information shared only with vetted affiliates and service providers per CRM-5.1 standards — all transfers encrypted with TLS 1.2+ in transit (CRM-4.1).' },
+        { text: 'Disclosure occurs only when required by law, regulation, or legal process — all disclosures documented with full audit trails and state-specific compliance matrices (CRM-9.x).' },
       ],
     },
     'data-security': {
-      subject: 'Security Safeguards',
+      subject: 'Security Safeguards (CRM-4.3)',
       bullets: [
-        { text: 'Technical and organizational security measures protect the confidentiality, integrity, and availability of your data.' },
-        { text: 'Industry-standard encryption, access controls, and monitoring systems safeguard personal information at all times.' },
-        { text: 'While no system is completely secure, we continuously improve our security practices to protect your information.' },
+        { text: 'AES-256 encryption at rest and TLS 1.2+ in transit (CRM-4.1) with MFA-protected access, 12-character passwords, and 90-day rotation per CRM-4.4 standards.' },
+        { text: 'Disaster recovery per CRM-4.3: 4-hour CRM RTO, 8-hour portal RTO, 24-hour full operations — quarterly backup tests and 5-minute automatic screen lock on all terminals.' },
+        { text: 'Role-based access controls (CRM-4.4) with 24-hour access revocation for terminated employees and 15-minute session timeouts across all Maxify CRM systems.' },
       ],
     },
     'text-messaging': {
-      subject: 'SMS Privacy Protection',
+      subject: 'SMS Privacy Protection (CRM-2.4)',
       bullets: [
-        { text: 'Mobile numbers, text messaging opt-in data, and consent information are never shared, transferred, or sold to third parties.' },
-        { text: 'Text communications are governed by strict privacy controls and applicable telecommunications regulations.' },
-        { text: 'For complete details on text message communications, please refer to our Terms and Conditions page.' },
+        { text: 'Mobile numbers, text messaging opt-in data, and consent information are never shared, transferred, or sold — protected under TCPA consent framework (CRM-1.5) with 4-year retention.' },
+        { text: 'Text communications governed by CRM-2.4 protocols with 1-hour opt-out processing and all SMS records maintained in Maxify CRM (CRM-2.1) with full audit trails.' },
+        { text: 'AI-assisted text interactions comply with CRM-8.3 disclosure requirements — 10 random AI communications reviewed weekly for quality assurance.' },
       ],
     },
     'your-rights': {
-      subject: 'Consumer Data Rights',
+      subject: 'Consumer Data Rights (CRM-1.1)',
       bullets: [
-        { text: 'You have the right to access, review, and request copies of the personal information we hold about you.' },
-        { text: 'You may request updates or corrections to inaccurate personal information in our records at any time.' },
-        { text: 'You may request deletion of your personal information — contact us using the information provided below.' },
+        { text: 'You have the right to access, review, and request copies of personal information per FDCPA compliance (CRM-1.1) — requests processed through Maxify CRM (CRM-2.1) with full documentation.' },
+        { text: 'You may request updates or corrections to inaccurate information at any time — all changes tracked with role-based access controls (CRM-4.4) and complete audit trails.' },
+        { text: 'Deletion requests processed per applicable law with PHI/privacy safeguards (CRM-1.6) — contact us at compliance@capitalreviewmgt.com or 866-766-2692.' },
       ],
     },
     'california-privacy-rights': {
-      subject: 'CCPA Consumer Rights',
+      subject: 'CCPA Consumer Rights (CRM-1.1)',
       bullets: [
-        { text: 'California residents have the right to know what personal information is collected, used, disclosed, and sold.' },
-        { text: 'You may request deletion of your data, opt out of data sales (we do not sell data), and access data in portable format.' },
-        { text: 'We respond to all California privacy rights requests within the timeframes required by California law.' },
+        { text: 'California residents have the right to know what personal information is collected, used, and disclosed — Capital Review does not sell consumer data per CRM-1.6 privacy safeguards.' },
+        { text: 'Request deletion, opt out of data sales (we do not sell data), and access data in portable format — all requests logged in Maxify CRM (CRM-2.1) with 3-year retention (CRM-2.6).' },
+        { text: 'All California privacy rights requests responded to within statutory timeframes per CRM-1.1 regulatory standards with state-specific compliance matrices (CRM-9.x) applied.' },
       ],
     },
   }

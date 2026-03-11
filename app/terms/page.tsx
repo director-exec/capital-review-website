@@ -3,51 +3,51 @@ import SectionCard from '../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'acceptance-of-terms': {
-    subject: 'User Agreement',
+    subject: 'User Agreement (CRM-2.2)',
     bullets: [
-      { text: 'By accessing and using capitalreviewmgt.com, you agree to comply with and be bound by these Terms and Conditions.' },
-      { text: 'You acknowledge that all applicable laws and regulations govern your use of this website and its services.' },
-      { text: 'If you do not agree to any of these terms, you are advised to discontinue use of the website immediately.' },
+      { text: 'By accessing capitalreviewmgt.com, you agree to these Terms — all website interactions subject to Mini-Miranda disclosure requirements (CRM-2.2) and FDCPA compliance (CRM-1.1).' },
+      { text: 'You acknowledge that applicable federal and state laws govern your use — Capital Review operates under state-specific compliance matrices (CRM-9.x) across all jurisdictions.' },
+      { text: 'If you do not agree to these terms, discontinue use immediately — this website is operated by Capital Review Management, a debt collector under CRM-1.1 regulatory standards.' },
     ],
   },
   'modifications-to-terms': {
-    subject: 'Terms Updates',
+    subject: 'Terms Updates (CRM-1.1)',
     bullets: [
-      { text: 'Capital Review Management reserves the right to update or modify these Terms and Conditions at any time.' },
-      { text: 'Changes are effective immediately upon posting — no prior notice is required for updates to take effect.' },
-      { text: 'Your continued use of the website after any changes constitutes your acceptance of the revised terms.' },
+      { text: 'Capital Review Management reserves the right to update these Terms at any time per CRM-1.1 regulatory compliance — all changes documented with full audit trails.' },
+      { text: 'Changes effective immediately upon posting — updates tracked in Maxify CRM (CRM-2.1) with 3-year document retention per CRM-2.6 standards.' },
+      { text: 'Continued website use after changes constitutes acceptance — all terms aligned with FDCPA, TCPA, and state-specific compliance requirements (CRM-9.x).' },
     ],
   },
   'privacy-policy': {
-    subject: 'Privacy Integration',
+    subject: 'Privacy Integration (CRM-1.6)',
     bullets: [
-      { text: 'Your use of the website is governed by our Privacy Policy, incorporated into these Terms and Conditions by reference.' },
-      { text: 'The Privacy Policy outlines how we collect, use, disclose, and protect your personal information.' },
-      { text: 'We encourage you to review our Privacy Policy regularly to stay informed about your data protection rights.' },
+      { text: 'Website use governed by our Privacy Policy per PHI/privacy safeguards (CRM-1.6) — all data protected with AES-256 encryption (CRM-4.1) and role-based access controls (CRM-4.4).' },
+      { text: 'Privacy Policy details how we collect, use, and protect personal information through Maxify CRM (CRM-2.1) with PCI DSS-certified tokenization (CRM-3.8) on financial data.' },
+      { text: 'Review our Privacy Policy regularly — Capital Review maintains full compliance with FDCPA (CRM-1.1), TCPA (CRM-1.5), and all applicable consumer protection regulations.' },
     ],
   },
   'intellectual-property': {
-    subject: 'Content Protection',
+    subject: 'Content Protection (CRM-4.4)',
     bullets: [
-      { text: 'All website content — text, graphics, logos, and software — is the property of Capital Review Management LLC.' },
-      { text: 'Content is protected by applicable copyright, trademark, and intellectual property laws.' },
-      { text: 'Reproduction, distribution, or use of any content requires our express written permission.' },
+      { text: 'All website content — text, graphics, logos, and software — is the property of Capital Review Management LLC, protected under applicable intellectual property laws.' },
+      { text: 'Content protected by copyright and trademark laws — unauthorized access monitored through CRM-4.4 access controls with 15-minute session timeouts and MFA protection.' },
+      { text: 'Reproduction, distribution, or use of any content requires express written permission from Capital Review Management LLC.' },
     ],
   },
   'limitation-of-liability': {
-    subject: 'Liability Boundaries',
+    subject: 'Liability Boundaries (CRM-4.3)',
     bullets: [
-      { text: 'Capital Review Management is not liable for any damages resulting from your use of or inability to use the website.' },
-      { text: 'This includes, without limitation, damages due to errors, service interruptions, or data loss.' },
-      { text: 'The website and its services are provided on an "as is" basis without warranties of any kind.' },
+      { text: 'Capital Review Management is not liable for damages from website use — disaster recovery protocols (CRM-4.3) maintain 4-hour CRM RTO and 8-hour portal RTO for service continuity.' },
+      { text: 'This includes damages due to errors, service interruptions, or data loss — quarterly backup tests per CRM-4.3 ensure data integrity and rapid recovery capabilities.' },
+      { text: 'Website and services provided "as is" — Capital Review maintains comprehensive security per CRM-4.1 but cannot guarantee uninterrupted service availability.' },
     ],
   },
   'text-messaging-terms': {
-    subject: 'SMS Service Terms',
+    subject: 'SMS Service Terms (CRM-2.4)',
     bullets: [
-      { text: 'By consenting to text messages, you agree to electronic consent and acknowledge that message and data rates may apply.' },
-      { text: 'Message frequency varies based on account activity — reply STOP at any time to opt out of text communications.' },
-      { text: 'For help or assistance with text messaging, reply HELP to any message or contact us directly at 866-766-2692.' },
+      { text: 'Text message consent governed by TCPA framework (CRM-1.5) with electronic consent documentation — message and data rates may apply per your carrier agreement.' },
+      { text: 'Message frequency varies by account activity — reply STOP for 1-hour opt-out processing (CRM-2.4) with 4-year TCPA consent retention per CRM-1.5 standards.' },
+      { text: 'Reply HELP for assistance or contact 866-766-2692 — all SMS interactions recorded in Maxify CRM (CRM-2.1) with AI disclosure compliance per CRM-8.3.' },
     ],
   },
 }

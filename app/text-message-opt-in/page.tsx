@@ -6,35 +6,35 @@ import SectionCard from '../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'timely-notifications': {
-    subject: 'Payment Alert System',
+    subject: 'Payment Alert System (CRM-2.4)',
     bullets: [
-      { text: 'Receive important updates about billing and upcoming payments directly to your mobile phone.' },
-      { text: 'Stay informed about your account status and never miss a payment deadline with convenient text alerts.' },
-      { text: 'Proactive notifications help you maintain good payment history and avoid unnecessary late fees.' },
+      { text: 'Receive billing and payment updates via Maxify CRM omnichannel system (CRM-2.1) — all SMS communications comply with TCPA consent framework (CRM-1.5).' },
+      { text: 'Stay informed about account status with convenient text alerts — 7-in-7 call frequency rules (CRM-1.3) ensure responsible contact practices across all channels.' },
+      { text: 'Proactive notifications help maintain payment history — all alert preferences tracked with full audit trails and 4-year TCPA consent retention (CRM-1.5).' },
     ],
   },
   'real-time-updates': {
-    subject: 'Instant Account Updates',
+    subject: 'Instant Account Updates (CRM-2.1)',
     bullets: [
-      { text: 'Get instant notifications about account status changes, payment confirmations, and important updates.' },
-      { text: 'Our text messaging service ensures you are always informed about your financial obligations in real time.' },
-      { text: 'Receive confirmations immediately when payments are processed and applied to your account balance.' },
+      { text: 'Instant notifications on account status changes and payment confirmations through Maxify CRM (CRM-2.1) with AES-256 encryption (CRM-4.1) on all transmissions.' },
+      { text: 'Text messaging service per CRM-2.4 protocols ensures real-time awareness — Mini-Miranda disclosure (CRM-2.2) included on all applicable communications.' },
+      { text: 'Payment confirmations sent immediately upon processing with PCI DSS-certified tokenization (CRM-3.8) protecting all financial transaction data.' },
     ],
   },
   'avoid-late-payments': {
-    subject: 'Due Date Reminders',
+    subject: 'Due Date Reminders (CRM-1.3)',
     bullets: [
-      { text: 'Receive helpful due-date alerts and payment reminders to stay on top of your financial obligations.' },
-      { text: 'Our proactive messaging system helps you maintain good payment history and avoid late fees.' },
-      { text: 'Customized reminder schedules ensure you have enough time to arrange payment before each deadline.' },
+      { text: 'Due-date alerts and payment reminders per responsible contact practices (CRM-1.3) — all reminders scheduled through Maxify CRM (CRM-2.1) omnichannel system.' },
+      { text: 'Proactive messaging helps maintain payment history — Blue Money (PPA) schedules tracked with standing settlement parameters (CRM-3.5) for flexible arrangements.' },
+      { text: 'Customized reminder schedules respect your contact preferences per TCPA framework (CRM-1.5) with 1-hour opt-out processing (CRM-2.4) available at any time.' },
     ],
   },
   'exclusive-offers': {
-    subject: 'Special Payment Programs',
+    subject: 'Special Payment Programs (CRM-3.5)',
     bullets: [
-      { text: 'Receive notifications about exclusive offers and flexible payment options to better manage your account.' },
-      { text: 'Take advantage of special programs and payment arrangements designed to help you succeed financially.' },
-      { text: 'Be the first to know about new payment plan options and settlement opportunities available to you.' },
+      { text: 'Notifications about flexible payment options managed through standing settlement parameters (CRM-3.5) — all offers documented in Maxify CRM (CRM-2.1).' },
+      { text: 'Special programs and payment arrangements per CRM-3.1 recovery strategies — Green Money and Blue Money (PPA) options designed for financial success.' },
+      { text: 'First to know about payment plan options and settlement opportunities — all communications per FDCPA compliance (CRM-1.1) with state-specific matrices (CRM-9.x).' },
     ],
   },
 }
