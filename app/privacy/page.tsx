@@ -1,12 +1,63 @@
 import Link from 'next/link'
+import SectionCard from '../components/SectionCard'
 
 export default function PrivacyPolicyPage() {
+  const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
+    'information-collection': {
+      subject: 'Personal Data Categories',
+      bullets: [
+        { text: 'Contact information including your name, mailing address, email address, and phone number for account communication.' },
+        { text: 'Financial details such as payment history, bank information, account numbers, and outstanding balance records.' },
+        { text: 'Identification data and communications records including government-issued IDs, phone calls, emails, and correspondence.' },
+      ],
+    },
+    'information-usage': {
+      subject: 'Data Sharing Standards',
+      bullets: [
+        { text: 'We do not sell your personal information to third parties — your data is used solely for legitimate business operations.' },
+        { text: 'Information may be shared with affiliates, service providers, or during business transfers such as mergers or acquisitions.' },
+        { text: 'Disclosure may occur when required by law, regulation, legal process, or to protect the rights and safety of all parties.' },
+      ],
+    },
+    'data-security': {
+      subject: 'Security Safeguards',
+      bullets: [
+        { text: 'Technical and organizational security measures protect the confidentiality, integrity, and availability of your data.' },
+        { text: 'Industry-standard encryption, access controls, and monitoring systems safeguard personal information at all times.' },
+        { text: 'While no system is completely secure, we continuously improve our security practices to protect your information.' },
+      ],
+    },
+    'text-messaging': {
+      subject: 'SMS Privacy Protection',
+      bullets: [
+        { text: 'Mobile numbers, text messaging opt-in data, and consent information are never shared, transferred, or sold to third parties.' },
+        { text: 'Text communications are governed by strict privacy controls and applicable telecommunications regulations.' },
+        { text: 'For complete details on text message communications, please refer to our Terms and Conditions page.' },
+      ],
+    },
+    'your-rights': {
+      subject: 'Consumer Data Rights',
+      bullets: [
+        { text: 'You have the right to access, review, and request copies of the personal information we hold about you.' },
+        { text: 'You may request updates or corrections to inaccurate personal information in our records at any time.' },
+        { text: 'You may request deletion of your personal information — contact us using the information provided below.' },
+      ],
+    },
+    'california-privacy-rights': {
+      subject: 'CCPA Consumer Rights',
+      bullets: [
+        { text: 'California residents have the right to know what personal information is collected, used, disclosed, and sold.' },
+        { text: 'You may request deletion of your data, opt out of data sales (we do not sell data), and access data in portable format.' },
+        { text: 'We respond to all California privacy rights requests within the timeframes required by California law.' },
+      ],
+    },
+  }
+
   const privacySections = [
     {
       id: 'information-collection',
       title: 'Information We Collect',
       description: 'We may collect various types of personal information including contact information (name, address, email, phone), financial information (payment history, bank details), debt information (account numbers, balances), identification information (government IDs), and communications records (phone calls, emails, correspondence).',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800',
       background: 'white',
       imageLeft: false
     },
@@ -14,7 +65,6 @@ export default function PrivacyPolicyPage() {
       id: 'information-usage',
       title: 'Information Usage and Disclosure',
       description: 'We do not sell personal information to third parties. However, we may share information for business operations with affiliates and service providers, during business transfers such as mergers or sales, and for legal compliance as required by law, regulation, or legal process.',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       background: 'grey',
       imageLeft: true
     },
@@ -22,7 +72,6 @@ export default function PrivacyPolicyPage() {
       id: 'data-security',
       title: 'Data Security',
       description: 'We employ technical and organizational measures to safeguard the confidentiality, integrity, and security of personal information. However, no method of transmission or storage is entirely secure, and we cannot guarantee absolute data security.',
-      image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800',
       background: 'white',
       imageLeft: false
     },
@@ -30,7 +79,6 @@ export default function PrivacyPolicyPage() {
       id: 'text-messaging',
       title: 'Text Messaging Privacy',
       description: 'We do not share, transfer, or sell mobile numbers, text messaging opt-in data, or consent information to third parties. For more details on text communications, please refer to our Terms and Conditions page.',
-      image: 'https://images.pexels.com/photos/2312369/pexels-photo-2312369.jpeg?_gl=1*kss10t*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5NDQ2NDckbzQkZzEkdDE3NTQ5NDQ2NTYkajUxJGwwJGgw',
       background: 'grey',
       imageLeft: true
     },
@@ -38,7 +86,6 @@ export default function PrivacyPolicyPage() {
       id: 'your-rights',
       title: 'Your Rights',
       description: 'Individuals have the right to access, update, or request the deletion of their personal information. To exercise these rights or for any questions regarding this Privacy Policy, please contact us using the information provided.',
-      image: 'https://images.pexels.com/photos/6077587/pexels-photo-6077587.jpeg?_gl=1*1votr6i*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTUwODU0NDYkbzUkZzEkdDE3NTUwODU0NDckajU5JGwwJGgw',
       background: 'white',
       imageLeft: false
     },
@@ -46,7 +93,6 @@ export default function PrivacyPolicyPage() {
       id: 'california-privacy-rights',
       title: 'California Privacy Rights (CCPA)',
       description: 'If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA). You have the right to: (1) Know what personal information we collect, use, disclose, and sell; (2) Request deletion of your personal information; (3) Opt-out of the sale of your personal information (we do not sell personal information); (4) Non-discrimination for exercising your privacy rights; and (5) Access your personal information in a portable format. To exercise any of these California privacy rights, please contact us using the information provided in the Contact Us section. We will respond to your request within the timeframes required by California law.',
-      image: '/Pages/Legal_Doc_Med.jpeg',
       background: 'grey',
       imageLeft: true
     }
@@ -89,11 +135,7 @@ export default function PrivacyPolicyPage() {
                 {section.imageLeft ? (
                   <>
                     <div>
-                      <img
-                        src={section.image}
-                        alt={section.title}
-                        style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
-                      />
+                      <SectionCard subject={sectionCards[section.id].subject} bullets={sectionCards[section.id].bullets} />
                     </div>
                     <div>
                       <h2>{section.title}</h2>
@@ -111,11 +153,7 @@ export default function PrivacyPolicyPage() {
                       </p>
                     </div>
                     <div>
-                      <img
-                        src={section.image}
-                        alt={section.title}
-                        style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
-                      />
+                      <SectionCard subject={sectionCards[section.id].subject} bullets={sectionCards[section.id].bullets} />
                     </div>
                   </>
                 )}

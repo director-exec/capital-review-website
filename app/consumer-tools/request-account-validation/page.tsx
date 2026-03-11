@@ -1,6 +1,34 @@
 'use client'
 
 import { useState } from 'react'
+import SectionCard from '../../components/SectionCard'
+
+const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
+  'account-details': {
+    subject: 'Validation Request Process',
+    bullets: [
+      { text: 'Complete the form below to request account validation for your account with Capital Review Management.' },
+      { text: 'By submitting, you confirm that you are the authorized account holder and that your information is accurate.' },
+      { text: 'A member of our team will reach out within 24 hours to follow up with your request.' },
+    ],
+  },
+  'email-delivery': {
+    subject: 'Email Delivery Notice',
+    bullets: [
+      { text: 'Your account validation or details will be sent via standard (unencrypted) email for your convenience.' },
+      { text: 'By submitting this form, you acknowledge and accept delivery in this electronic format.' },
+      { text: 'Add support@capitalreviewmgt.com to your safe sender list to avoid delivery issues.' },
+    ],
+  },
+  'required-information': {
+    subject: 'Required Information Checklist',
+    bullets: [
+      { text: 'Provide your Capital Review Account Number, Creditor Name, Full Legal Name, and Complete Mailing Address.' },
+      { text: 'Include a Valid Phone Number and Email Address for communication and delivery purposes.' },
+      { text: 'Acknowledge consent for electronic delivery — you may revoke consent at any time through reasonable means.' },
+    ],
+  },
+}
 
 export default function RequestAccountValidationPage() {
   const [showModal, setShowModal] = useState(true)
@@ -129,47 +157,42 @@ export default function RequestAccountValidationPage() {
       </section>
 
       {/* Validation Sections */}
-      {validationSections.map((section, index) => (
-        <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
-          <div className="subpage-container">
-            <div className="subpage-grid">
-              {section.imageLeft ? (
-                <>
-                  <div className="order-1">
-                    <img
-                      src={section.image}
-                      alt={section.title}
-                      className="subpage-image"
-                    />
-                  </div>
-                  <div className="order-2">
-                    <h2>{section.title}</h2>
-                    <div>
-                      {section.description}
+      {validationSections.map((section, index) => {
+        const card = sectionCards[section.id]
+        return (
+          <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
+            <div className="subpage-container">
+              <div className="subpage-grid">
+                {section.imageLeft ? (
+                  <>
+                    <div className="order-1">
+                      <SectionCard subject={card.subject} bullets={card.bullets} />
                     </div>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="order-2 lg:order-1">
-                    <h2>{section.title}</h2>
-                    <div>
-                      {section.description}
+                    <div className="order-2">
+                      <h2>{section.title}</h2>
+                      <div>
+                        {section.description}
+                      </div>
                     </div>
-                  </div>
-                  <div className="order-1 lg:order-2">
-                    <img
-                      src={section.image}
-                      alt={section.title}
-                      className="subpage-image"
-                    />
-                  </div>
-                </>
-              )}
+                  </>
+                ) : (
+                  <>
+                    <div className="order-2 lg:order-1">
+                      <h2>{section.title}</h2>
+                      <div>
+                        {section.description}
+                      </div>
+                    </div>
+                    <div className="order-1 lg:order-2">
+                      <SectionCard subject={card.subject} bullets={card.bullets} />
+                    </div>
+                  </>
+                )}
+              </div>
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        )
+      })}
 
       {/* Account Validation Form Section */}
       <section className="subpage-section subpage-section-white">

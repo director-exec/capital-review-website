@@ -2,6 +2,42 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import SectionCard from '../../components/SectionCard'
+
+const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
+  'urgent-matters': {
+    subject: 'Immediate Assistance',
+    bullets: [
+      { text: 'If the matter is urgent, we recommend calling us directly at 866-766-2692 for immediate help.' },
+      { text: 'Our team is available to assist you right away with removing your number from our calling list.' },
+      { text: 'Phone requests are processed faster than online submissions for time-sensitive situations.' },
+    ],
+  },
+  'update-contact-preference': {
+    subject: 'Information We Need',
+    bullets: [
+      { text: 'Provide your first and last name along with the phone number we are currently calling.' },
+      { text: 'Indicate whether the number is incorrect or if you prefer a different contact number.' },
+      { text: 'Include any additional comments or notes to help us update our records accurately.' },
+    ],
+  },
+  'what-happens-next': {
+    subject: 'Processing Timeline',
+    bullets: [
+      { text: 'Your request will be reviewed within 24 hours of submission by our compliance team.' },
+      { text: 'Changes will be fully implemented within 5 business days with confirmation sent to you.' },
+      { text: 'If you provided an alternative number, we will begin using it immediately upon processing.' },
+    ],
+  },
+  'important-notice': {
+    subject: 'Legal & Privacy Notice',
+    bullets: [
+      { text: 'This is an attempt to collect a debt. Any information obtained will be used for that purpose.' },
+      { text: 'This communication is from a debt collector — we take your privacy seriously.' },
+      { text: 'Your contact preference request will be processed promptly in accordance with all applicable regulations.' },
+    ],
+  },
+}
 
 export default function RemoveMyNumberPage() {
   const [showModal, setShowModal] = useState(true)
@@ -82,7 +118,6 @@ export default function RemoveMyNumberPage() {
       id: 'urgent-matters',
       title: 'Urgent Matters',
       description: 'If the matter is urgent, we recommend calling us directly at 866-766-2692. For immediate assistance with removing your number from our calling list, our team is available to help you right away.',
-      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
       background: 'white',
       imageLeft: false
     },
@@ -90,7 +125,6 @@ export default function RemoveMyNumberPage() {
       id: 'update-contact-preference',
       title: 'Update Your Contact Preference',
       description: 'Please provide the following information so we can update our records accurately: your first and last name, the number we are currently calling, whether the number is incorrect or you prefer a different contact number, and any additional comments or notes.',
-      image: 'https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800',
       background: 'grey',
       imageLeft: true
     },
@@ -98,7 +132,6 @@ export default function RemoveMyNumberPage() {
       id: 'what-happens-next',
       title: 'What Happens Next?',
       description: 'Your request will be reviewed within 24 hours, changes will be implemented within 5 business days, you\'ll receive a confirmation email once processed, and if you provided an alternative number, we\'ll begin using it immediately.',
-      image: '/Pages/Calculator_Writing_Pro.jpeg',
       background: 'white',
       imageLeft: false
     },
@@ -106,7 +139,6 @@ export default function RemoveMyNumberPage() {
       id: 'important-notice',
       title: 'Important Notice',
       description: 'This is an attempt to collect a debt. Any information obtained will be used for that purpose. This communication is from a debt collector. We take your privacy seriously and will process your request promptly.',
-      image: '/Pages/Stamp_Doc.jpeg',
       background: 'grey',
       imageLeft: true
     }
@@ -118,8 +150,8 @@ export default function RemoveMyNumberPage() {
       <section className="subpage-hero">
         <div
           className="subpage-hero-bg"
-          style={{ backgroundImage: 'url(/Pages/Calculator_Writing_Pro.jpeg)' }}
-        ></div>
+          style={{ backgroundImage: 'url(/Pages/remove_number_hero_bg.png)' }}>
+        </div>
         <div className="subpage-hero-overlay"></div>
         <div className="subpage-hero-content">
           <h1>Remove My Number</h1>
@@ -139,43 +171,38 @@ export default function RemoveMyNumberPage() {
       </section>
 
       {/* Remove Number Sections */}
-      {removeNumberSections.map((section, index) => (
-        <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
-          <div className="subpage-container">
-            <div className="subpage-grid">
-              {section.imageLeft ? (
-                <>
-                  <div className="subpage-image-col">
-                    <img
-                      src={section.image}
-                      alt={section.title}
-                      className="subpage-image"
-                    />
-                  </div>
-                  <div className="subpage-text-col">
-                    <h2>{section.title}</h2>
-                    <p>{section.description}</p>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="subpage-text-col">
-                    <h2>{section.title}</h2>
-                    <p>{section.description}</p>
-                  </div>
-                  <div className="subpage-image-col">
-                    <img
-                      src={section.image}
-                      alt={section.title}
-                      className="subpage-image"
-                    />
-                  </div>
-                </>
-              )}
+      {removeNumberSections.map((section) => {
+        const card = sectionCards[section.id]
+        return (
+          <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
+            <div className="subpage-container">
+              <div className="subpage-grid">
+                {section.imageLeft ? (
+                  <>
+                    <div>
+                      <SectionCard subject={card.subject} bullets={card.bullets} />
+                    </div>
+                    <div>
+                      <h2>{section.title}</h2>
+                      <p>{section.description}</p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div>
+                      <h2>{section.title}</h2>
+                      <p>{section.description}</p>
+                    </div>
+                    <div>
+                      <SectionCard subject={card.subject} bullets={card.bullets} />
+                    </div>
+                  </>
+                )}
+              </div>
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        )
+      })}
 
       {/* Form Section */}
       <section className="subpage-section subpage-section-cream">
@@ -336,4 +363,4 @@ export default function RemoveMyNumberPage() {
       )}
     </>
   )
-} 
+}

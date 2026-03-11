@@ -1,10 +1,38 @@
+import SectionCard from '../../components/SectionCard'
+
+const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
+  'bureau-integration': {
+    subject: 'Three-Bureau Integration',
+    bullets: [
+      { text: 'Fully integrated with Experian, Equifax, and TransUnion — the nation\'s three major credit bureaus.' },
+      { text: 'Secure systems and reporting protocols ensure authorized accounts are updated accurately and tracked in real time.' },
+      { text: 'All reporting conducted only with your explicit authorization — you maintain full control over what gets reported.' },
+    ],
+  },
+  'compliance-benefits': {
+    subject: 'FCRA-Compliant Reporting',
+    bullets: [
+      { text: 'All bureau submissions handled on your behalf — no extra systems, software costs, or staffing required.' },
+      { text: 'Every report is accurate, up to date, and reflects current account status including disputes, in full FCRA accordance.' },
+      { text: 'Zero integration burden — we manage the complete reporting process from submission to resolution.' },
+    ],
+  },
+  'recovery-enhancement': {
+    subject: 'Recovery Enhancement',
+    bullets: [
+      { text: 'Strategic credit reporting increases repayment motivation without compromising consumer rights or protections.' },
+      { text: 'Disputed accounts are flagged appropriately with all consumer data transmitted securely and responsibly.' },
+      { text: 'Your team focuses on core business operations while we handle the credit reporting logistics and compliance protocols.' },
+    ],
+  },
+}
+
 export default function CreditBureauReportingPage() {
   const serviceSections = [
     {
       id: 'bureau-integration',
       title: 'Your Gateway to the Bureaus',
       description: 'Capital Review Management\'s network is fully integrated with the nation\'s three major credit bureaus, Experian, Equifax, and TransUnion. Our secure systems and reporting protocols ensure that authorized accounts are updated accurately, flagged appropriately, and tracked in real time.',
-      image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800',
       background: 'cream',
       imageLeft: true
     },
@@ -12,7 +40,6 @@ export default function CreditBureauReportingPage() {
       id: 'compliance-benefits',
       title: 'Stay Compliant & Save Time',
       description: 'We handle all bureau submissions on your behalf — no extra systems or staffing required. We ensure all reporting is accurate, up to date, and reflects the current account status (including disputes), in accordance with FCRA. No software costs, no integration burdens — we manage the full reporting process.',
-      image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800',
       background: 'white',
       imageLeft: false
     },
@@ -20,7 +47,6 @@ export default function CreditBureauReportingPage() {
       id: 'recovery-enhancement',
       title: 'Improve Recovery Rates',
       description: 'Credit reporting, when used strategically, can increase repayment motivation without compromising consumer rights. Your team focuses on core business while we handle the credit reporting logistics and compliance protocols. Disputed accounts are flagged appropriately, and all consumer data is transmitted securely and responsibly.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800',
       background: 'cream',
       imageLeft: true
     }
@@ -54,47 +80,42 @@ export default function CreditBureauReportingPage() {
       </section>
 
       {/* Service Sections */}
-      {serviceSections.map((section, index) => (
-        <section key={section.id} className={`subpage-section ${section.background === 'cream' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
-          <div className="subpage-container">
-            <div className="subpage-grid">
-              {section.imageLeft ? (
-                <>
-                  <div>
-                    <img
-                      src={section.image}
-                      alt={section.title}
-                      className="subpage-image"
-                    />
-                  </div>
-                  <div>
-                    <h2>{section.title}</h2>
-                    <div className="subpage-text">
-                      {section.description}
+      {serviceSections.map((section) => {
+        const card = sectionCards[section.id]
+        return (
+          <section key={section.id} className={`subpage-section ${section.background === 'cream' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
+            <div className="subpage-container">
+              <div className="subpage-grid">
+                {section.imageLeft ? (
+                  <>
+                    <div>
+                      <SectionCard subject={card.subject} bullets={card.bullets} />
                     </div>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div>
-                    <h2>{section.title}</h2>
-                    <div className="subpage-text">
-                      {section.description}
+                    <div>
+                      <h2>{section.title}</h2>
+                      <div className="subpage-text">
+                        {section.description}
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <img
-                      src={section.image}
-                      alt={section.title}
-                      className="subpage-image"
-                    />
-                  </div>
-                </>
-              )}
+                  </>
+                ) : (
+                  <>
+                    <div>
+                      <h2>{section.title}</h2>
+                      <div className="subpage-text">
+                        {section.description}
+                      </div>
+                    </div>
+                    <div>
+                      <SectionCard subject={card.subject} bullets={card.bullets} />
+                    </div>
+                  </>
+                )}
+              </div>
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        )
+      })}
 
       {/* Summary Section */}
       <section className="subpage-section subpage-section-cream">

@@ -1,9 +1,53 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
+import SectionCard from '../../components/SectionCard'
 
 export const metadata: Metadata = {
   title: 'TCPA Compliance | Capital Review Management',
   description: 'Learn about our commitment to TCPA compliance and consumer protection. We operate with structured, auditable, and aggressively compliant communication frameworks.',
+}
+
+const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
+  'consent-protocol': {
+    subject: 'Consent-First Framework',
+    bullets: [
+      { text: 'Only contact consumers whose phone numbers are provided with valid, documented consent status.' },
+      { text: 'Aggressively honor STOP messages via SMS, verbal opt-outs during calls, and wrong-number notifications.' },
+      { text: 'Monthly-reviewed internal archives ensure every consent record is current, documented, and suppressed as needed.' },
+    ],
+  },
+  'caller-transparency': {
+    subject: 'Full Caller Transparency',
+    bullets: [
+      { text: 'Every number we use is valid, active, callback-capable, and directly linked to our company — never spoofed.' },
+      { text: 'Registered with carrier-level caller ID systems and fully compliant with FCC 47 CFR § 64.1601(e).' },
+      { text: 'Our number always traces directly to us, even when carrier limitations prevent company name display.' },
+    ],
+  },
+  'internal-documentation': {
+    subject: 'Auditable Documentation',
+    bullets: [
+      { text: 'Monthly TCPA Consent Packets compiled with number verification, oversight validation, and policy documentation.' },
+      { text: 'All records securely stored and available for audit or review — full transparency at every level.' },
+      { text: 'No prerecorded messages on phone numbers without documented consent — this is non-negotiable.' },
+    ],
+  },
+  'why-contacted': {
+    subject: 'Consumer Inquiry Support',
+    bullets: [
+      { text: 'Multiple contact options including phone, email, and website forms for removal, source, and wrong-number requests.' },
+      { text: 'Preset form options for "Why was I contacted?", "Where did you get my number?", and "Please remove my number."' },
+      { text: 'All inquiries routed directly to our compliance team for immediate attention and resolution.' },
+    ],
+  },
+  'zero-tolerance': {
+    subject: 'Zero Tolerance Policy',
+    bullets: [
+      { text: 'We do not tolerate TCPA violations — internal or external. All calls are regulated and consent is validated.' },
+      { text: 'Comprehensive audit logs maintained for every communication to ensure full accountability and traceability.' },
+      { text: 'Compliance team available immediately to address any concerns about calls or messages received in error.' },
+    ],
+  },
 }
 
 export default function TCPACompliancePage() {
@@ -12,7 +56,7 @@ export default function TCPACompliancePage() {
       id: 'consent-protocol',
       title: 'Consent-First Communication Protocol',
       description: 'We only contact consumers whose phone numbers are provided with valid consent. All numbers used are tied to documented consent status and monthly-reviewed internal archives. We aggressively honor consumer requests for removal, including STOP messages via SMS, verbal opt-outs during calls, and wrong-number notifications. Each request is documented, acted upon, and suppressed across future campaigns.',
-      image: '/Pages/Stamp_Doc.jpeg',
+      image: '/Pages/tcpa_sec_consent.png',
       background: 'white',
       imageLeft: false
     },
@@ -20,7 +64,7 @@ export default function TCPACompliancePage() {
       id: 'caller-transparency',
       title: 'Caller ID & Transparency',
       description: 'Every number we use to communicate with is valid, active, callback-capable, and directly linked to our company. We never spoof or falsify caller identity. We register numbers with carrier-level caller ID systems when available and comply with FCC 47 CFR § 64.1601(e). Due to limitations from carriers and mobile data networks, our company name may not always appear — but the number will always trace directly to us.',
-      image: 'https://images.pexels.com/photos/2312369/pexels-photo-2312369.jpeg',
+      image: '/Pages/tcpa_sec_caller_id.png',
       background: 'grey',
       imageLeft: true
     },
@@ -28,7 +72,7 @@ export default function TCPACompliancePage() {
       id: 'internal-documentation',
       title: 'Internal Documentation & Oversight',
       description: 'Each month, our team compiles an internal TCPA Consent Packet that includes number verification, oversight validation, and compliance policies and procedures. These records are securely stored and can be audited or reviewed if necessary. We do not use prerecorded messages on phone numbers without documented consent. Our internal controls and policy enforcement procedures make this non-negotiable.',
-      image: '/Pages/Calculator_Writing_Pro.jpeg',
+      image: '/Pages/tcpa_sec_documentation.png',
       background: 'white',
       imageLeft: false
     },
@@ -36,7 +80,7 @@ export default function TCPACompliancePage() {
       id: 'why-contacted',
       title: 'Why Was I Contacted?',
       description: 'Consumers can contact us directly to request removal, ask where we received their number, or flag a wrong number or inquiry. We provide multiple contact options including phone, email, and website forms with preset options for "Why was I contacted?", "Where did you get my number?", and "Please remove my number." All inquiries are routed to our compliance team for immediate attention.',
-      image: 'https://cdn.pixabay.com/photo/2019/07/14/16/27/pen-4337521_1280.jpg',
+      image: '/Pages/tcpa_sec_why_contacted.png',
       background: 'grey',
       imageLeft: true
     },
@@ -44,7 +88,7 @@ export default function TCPACompliancePage() {
       id: 'zero-tolerance',
       title: 'Zero Tolerance for TCPA Abuse',
       description: 'We do not tolerate violations — internal or external. All calls are regulated, consent is validated, and audit logs are maintained. If you received a call or message from us and believe it was in error, contact us immediately. Our compliance team is available to address any concerns and ensure proper handling of your request.',
-      image: '/Pages/Writing_Signing_Doc_Meeting.jpeg',
+      image: '/Pages/tcpa_sec_zero_tolerance.png',
       background: 'white',
       imageLeft: false
     }
@@ -56,8 +100,7 @@ export default function TCPACompliancePage() {
       <section className="subpage-hero">
         <div
           className="subpage-hero-bg"
-          style={{ backgroundImage: 'url(/Pages/Stamp_Doc.jpeg)' }}
-        ></div>
+          style={{ backgroundImage: 'url(/Pages/tcpa_hero_bg.png)' }}>        </div>
         <div className="subpage-hero-overlay"></div>
         <div className="subpage-hero-content">
           <h1>TCPA Compliance</h1>
@@ -80,47 +123,42 @@ export default function TCPACompliancePage() {
       </section>
 
       {/* TCPA Sections */}
-      {tcpaSections.map((section, index) => (
-        <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
-          <div className="subpage-container">
-            <div className="subpage-grid">
-              {section.imageLeft ? (
-                <>
-                  <div>
-                    <img
-                      src={section.image}
-                      alt={section.title}
-                      className="subpage-image"
-                    />
-                  </div>
-                  <div>
-                    <h2>{section.title}</h2>
+      {tcpaSections.map((section, index) => {
+        const card = sectionCards[section.id]
+        return (
+          <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
+            <div className="subpage-container">
+              <div className="subpage-grid">
+                {section.imageLeft ? (
+                  <>
                     <div>
-                      {section.description}
+                      <SectionCard subject={card.subject} bullets={card.bullets} />
                     </div>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div>
-                    <h2>{section.title}</h2>
                     <div>
-                      {section.description}
+                      <h2>{section.title}</h2>
+                      <div>
+                        {section.description}
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <img
-                      src={section.image}
-                      alt={section.title}
-                      className="subpage-image"
-                    />
-                  </div>
-                </>
-              )}
+                  </>
+                ) : (
+                  <>
+                    <div>
+                      <h2>{section.title}</h2>
+                      <div>
+                        {section.description}
+                      </div>
+                    </div>
+                    <div>
+                      <SectionCard subject={card.subject} bullets={card.bullets} />
+                    </div>
+                  </>
+                )}
+              </div>
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        )
+      })}
 
       {/* Contact Information Section */}
       <section className="subpage-section subpage-section-cream">
@@ -133,11 +171,11 @@ export default function TCPACompliancePage() {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
                   <div>
                     <p style={{ fontWeight: '600', color: '#1c2a3f', marginBottom: '0.5rem' }}>Phone</p>
-                    <p>866-766-2692</p>
+                    <p>833-381-4416</p>
                   </div>
                   <div>
                     <p style={{ fontWeight: '600', color: '#1c2a3f', marginBottom: '0.5rem' }}>Email</p>
-                    <p>compliance@capitalreviewmgt.com</p>
+                    <p>compliance@capitalreview.com</p>
                   </div>
                 </div>
                 <p style={{ fontSize: '0.875rem', color: '#666', marginTop: '1.5rem' }}>

@@ -1,6 +1,42 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import SectionCard from '../../components/SectionCard'
+
+const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
+  'bankruptcy-notification': {
+    subject: 'Filing Notification Process',
+    bullets: [
+      { text: 'If you\'ve filed for bankruptcy and received a notice from Capital Review Management, please let us know as soon as possible.' },
+      { text: 'Submit the form below or upload your bankruptcy documentation directly through our secure portal.' },
+      { text: 'This information ensures your account is handled appropriately and in accordance with all applicable laws.' },
+    ],
+  },
+  'account-information': {
+    subject: 'Required Account Details',
+    bullets: [
+      { text: 'Provide your Capital Review Account Number and Creditor Name as shown on your statement.' },
+      { text: 'Include your First and Last Name exactly as they appear on your account records.' },
+      { text: 'Enter your Full Mailing Address including Street, City, State, and ZIP Code for proper identification.' },
+    ],
+  },
+  'case-details': {
+    subject: 'Bankruptcy Case Information',
+    bullets: [
+      { text: 'Provide your Bankruptcy Case Number and Chapter type (e.g., Chapter 7, 11, or 13).' },
+      { text: 'Include the Filing Court or Jurisdiction where your bankruptcy case was filed.' },
+      { text: 'Enter the Date of Bankruptcy Filing to help us ensure full compliance with bankruptcy laws.' },
+    ],
+  },
+  'documentation': {
+    subject: 'Supporting Documentation',
+    bullets: [
+      { text: 'Attach any relevant bankruptcy documents — PDF, DOC, and image files are accepted.' },
+      { text: 'Include any notes or messages related to your filing for faster processing.' },
+      { text: 'Uploaded documentation helps us process your notification more efficiently and thoroughly.' },
+    ],
+  },
+}
 
 export default function BankruptcyNotificationPage() {
   const [showModal, setShowModal] = useState(true)
@@ -214,47 +250,42 @@ export default function BankruptcyNotificationPage() {
       </section>
 
       {/* Bankruptcy Sections */}
-      {bankruptcySections.map((section, index) => (
-        <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
-          <div className="subpage-container">
-            <div className="subpage-grid">
-              {section.imageLeft ? (
-                <>
-                  <div className="order-1">
-                    <img
-                      src={section.image}
-                      alt={section.title}
-                      className="subpage-image"
-                    />
-                  </div>
-                  <div className="order-2">
-                    <h2>{section.title}</h2>
-                    <div>
-                      {section.description}
+      {bankruptcySections.map((section, index) => {
+        const card = sectionCards[section.id]
+        return (
+          <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
+            <div className="subpage-container">
+              <div className="subpage-grid">
+                {section.imageLeft ? (
+                  <>
+                    <div className="order-1">
+                      <SectionCard subject={card.subject} bullets={card.bullets} />
                     </div>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="order-2 lg:order-1">
-                    <h2>{section.title}</h2>
-                    <div>
-                      {section.description}
+                    <div className="order-2">
+                      <h2>{section.title}</h2>
+                      <div>
+                        {section.description}
+                      </div>
                     </div>
-                  </div>
-                  <div className="order-1 lg:order-2">
-                    <img
-                      src={section.image}
-                      alt={section.title}
-                      className="subpage-image"
-                    />
-                  </div>
-                </>
-              )}
+                  </>
+                ) : (
+                  <>
+                    <div className="order-2 lg:order-1">
+                      <h2>{section.title}</h2>
+                      <div>
+                        {section.description}
+                      </div>
+                    </div>
+                    <div className="order-1 lg:order-2">
+                      <SectionCard subject={card.subject} bullets={card.bullets} />
+                    </div>
+                  </>
+                )}
+              </div>
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        )
+      })}
 
       {/* Bankruptcy Notification Form Section */}
       <section className="subpage-section subpage-section-white">

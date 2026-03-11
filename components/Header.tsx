@@ -28,7 +28,7 @@ export default function Header() {
   const toggleMobileMenu = () => {
     const newState = !isMobileMenuOpen;
     setIsMobileMenuOpen(newState);
-    
+
     // Prevent body scroll when mobile menu is open
     if (newState) {
       document.body.classList.add('mobile-menu-open');
@@ -51,7 +51,7 @@ export default function Header() {
             {/* Logo with CR Mark */}
             <div className="logo">
               <Link href="/" className="logo-link">
-                <svg className="logo-shield" width="38" height="38" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="logo-shield" width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                   {/* Left wall: from top-left down, stops partway (gap at bottom-left) */}
                   <path d="M8 8 V62" stroke="currentColor" strokeWidth="8" strokeLinecap="square" fill="none"/>
                   {/* Top + right + bottom: wraps from top-left across, down, and along bottom — stops before left wall */}
@@ -77,11 +77,11 @@ export default function Header() {
                 <div className="contact-info">
                   Need Help? Call us at 866-766-2692
                 </div>
-                <a href="/consumer-tools/make-a-payment" className="payment-button" >
+                <a href="/consumer-tools/make-a-payment" className="payment-button">
                   Make A Payment
                 </a>
               </div>
-              
+
               {/* Bottom Right: Navigation */}
               <div className="header-bottom-right">
                 <nav>
@@ -109,8 +109,8 @@ export default function Header() {
                     <li className="nav-item">
                       <Link href="/solutions">Solutions</Link>
                       <div className="dropdown-menu">
-                                              <Link href="/solutions/pre-charge-off-collections">Pre Charge-Off Collections</Link>
-                      <Link href="/solutions/post-charge-off-collections">Post Charge-Off Collections</Link>
+                        <Link href="/solutions/pre-charge-off-collections">Pre Charge-Off Collections</Link>
+                        <Link href="/solutions/post-charge-off-collections">Post Charge-Off Collections</Link>
                         <Link href="/solutions/secondary-tertiary-collections">Secondary & Tertiary Collections</Link>
                         <Link href="/solutions/credit-bureau-reporting">Credit Bureau Reporting</Link>
                         <Link href="/solutions/network-of-attorneys">Network of Attorneys</Link>
@@ -138,7 +138,7 @@ export default function Header() {
             {/* Logo with CR Mark */}
             <div className="logo">
               <Link href="/" className="logo-link">
-                <svg className="logo-shield" width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="logo-shield" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8 8 V62" stroke="currentColor" strokeWidth="8" strokeLinecap="square" fill="none"/>
                   <path d="M8 8 H92 V92 H20" stroke="currentColor" strokeWidth="8" strokeLinejoin="miter" strokeLinecap="square" fill="none"/>
                   <path d="M50 50 L72 92" stroke="currentColor" strokeWidth="8" strokeLinecap="butt"/>
@@ -148,7 +148,7 @@ export default function Header() {
                 <span className="logo-wordmark">Capital Review Management</span>
               </Link>
             </div>
-            
+
             {/* Desktop Navigation - Hidden on mobile */}
             <div className="header-right hidden mobile:flex">
               {/* Navigation Only */}
@@ -205,11 +205,11 @@ export default function Header() {
           <a href="tel:866-766-2692" className="mobile-call-btn">
             Call Us
           </a>
-          <a href="/consumer-tools/make-a-payment" className="mobile-payment-btn"  onClick={closeMobileMenu}>
+          <a href="/consumer-tools/make-a-payment" className="mobile-payment-btn" onClick={closeMobileMenu}>
             Make A Payment
           </a>
         </div>
-        
+
         <div className="mobile-menu-section">
           <Link href="/about" onClick={closeMobileMenu}>
             <h4>About</h4>
@@ -255,4 +255,4 @@ export default function Header() {
       </div>
     </>
   );
-} 
+}

@@ -2,6 +2,58 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import SectionCard from '../../components/SectionCard'
+
+const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
+  'important-note': {
+    subject: 'Before You Begin',
+    bullets: [
+      { text: 'Complete the form below to tell us what went well — or where we can improve.' },
+      { text: 'If you\'re looking to dispute an account, please use our Dispute My Account form instead.' },
+      { text: 'We value your feedback and use it to continuously improve our services and standards.' },
+    ],
+  },
+  'account-information': {
+    subject: 'Account Identification',
+    bullets: [
+      { text: 'Provide your Capital Review Account Number and creditor name as shown on your statement.' },
+      { text: 'Include your first and last name along with your complete mailing address.' },
+      { text: 'This information helps us locate your account quickly and address your feedback effectively.' },
+    ],
+  },
+  'contact-method': {
+    subject: 'How to Reach You',
+    bullets: [
+      { text: 'Let us know the best way to reach you if we need to follow up on your feedback.' },
+      { text: 'Provide a phone number (mobile, home, or work) and/or email address for contact.' },
+      { text: 'This ensures we can respond to your feedback promptly and through your preferred channel.' },
+    ],
+  },
+  'experience-details': {
+    subject: 'Describe Your Experience',
+    bullets: [
+      { text: 'Please describe your compliment or complaint in detail so we can fully understand the situation.' },
+      { text: 'You may upload relevant documents or screenshots if applicable to support your feedback.' },
+      { text: 'The more specific you can be, the better we can address your feedback and take appropriate action.' },
+    ],
+  },
+  'take-feedback-seriously': {
+    subject: 'Our Commitment to Quality',
+    bullets: [
+      { text: 'Every compliment and complaint is reviewed by our internal compliance and service quality teams.' },
+      { text: 'We ensure all feedback is evaluated against our professional standards and your expectations.' },
+      { text: 'Thank you for helping us serve you better — your input directly shapes our improvement efforts.' },
+    ],
+  },
+  'what-happens-next': {
+    subject: 'Next Steps After Submission',
+    bullets: [
+      { text: 'Your feedback will be reviewed within 2 business days of submission.' },
+      { text: 'If you provided contact information, we may reach out for additional details as needed.' },
+      { text: 'Complaints are escalated to our compliance team for thorough investigation with a response within 10 business days.' },
+    ],
+  },
+}
 
 export default function SubmitComplimentComplaintPage() {
   const [showModal, setShowModal] = useState(true)
@@ -96,7 +148,6 @@ export default function SubmitComplimentComplaintPage() {
       id: 'important-note',
       title: 'Important Note',
       description: 'Please complete the form below to tell us what went well — or where we can improve. If you\'re looking to dispute an account, please use our Dispute My Account form instead. We value your feedback and use it to improve our services.',
-      image: 'https://images.unsplash.com/photo-1554224154-26032cdc0d14?q=80&w=800&auto=format&fit=crop',
       background: 'white',
       imageLeft: false
     },
@@ -104,7 +155,6 @@ export default function SubmitComplimentComplaintPage() {
       id: 'account-information',
       title: 'Account Information',
       description: 'Please provide your Capital Review Account Number, creditor name, first and last name, and complete mailing address including street, city, state, and zip code. This helps us locate your account quickly.',
-      image: 'https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800',
       background: 'grey',
       imageLeft: true
     },
@@ -112,7 +162,6 @@ export default function SubmitComplimentComplaintPage() {
       id: 'contact-method',
       title: 'Preferred Contact Method',
       description: 'Let us know the best way to reach you if we need to follow up. You can provide a phone number (mobile, home, or work) and/or email address. This ensures we can respond to your feedback promptly.',
-      image: '/Pages/Calculator_Writing_Pro.jpeg',
       background: 'white',
       imageLeft: false
     },
@@ -120,7 +169,6 @@ export default function SubmitComplimentComplaintPage() {
       id: 'experience-details',
       title: 'Tell Us About Your Experience',
       description: 'Please describe your compliment or complaint in detail. You may also upload relevant documents or screenshots if applicable. The more specific you can be, the better we can address your feedback.',
-      image: '/Pages/Writing_Signing_Doc_Meeting.jpeg',
       background: 'grey',
       imageLeft: true
     },
@@ -128,7 +176,6 @@ export default function SubmitComplimentComplaintPage() {
       id: 'take-feedback-seriously',
       title: 'We Take Feedback Seriously',
       description: 'Every compliment and complaint is reviewed by our internal compliance and service quality teams to ensure we\'re meeting our professional standards and your expectations. Thank you for helping us serve you better.',
-      image: '/Pages/Stamp_Doc.jpeg',
       background: 'white',
       imageLeft: false
     },
@@ -136,7 +183,6 @@ export default function SubmitComplimentComplaintPage() {
       id: 'what-happens-next',
       title: 'What Happens Next?',
       description: 'Your feedback will be reviewed within 2 business days. If you provided contact information, we may reach out for additional details. Complaints are escalated to our compliance team for thorough investigation, and you\'ll receive a response within 10 business days.',
-      image: 'https://images.unsplash.com/photo-1565728744382-61accd4aa148?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       background: 'grey',
       imageLeft: true
     }
@@ -148,8 +194,8 @@ export default function SubmitComplimentComplaintPage() {
       <section className="subpage-hero">
         <div
           className="subpage-hero-bg"
-          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1565728744382-61accd4aa148?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}
-        ></div>
+          style={{ backgroundImage: 'url(/Pages/feedback_hero_bg.png)' }}>
+        </div>
         <div className="subpage-hero-overlay"></div>
         <div className="subpage-hero-content">
           <h1>Submit a Compliment or Complaint</h1>
@@ -169,43 +215,38 @@ export default function SubmitComplimentComplaintPage() {
       </section>
 
       {/* Feedback Sections */}
-      {feedbackSections.map((section, index) => (
-        <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
-          <div className="subpage-container">
-            <div className="subpage-grid">
-              {section.imageLeft ? (
-                <>
-                  <div className="subpage-image-col">
-                    <img
-                      src={section.image}
-                      alt={section.title}
-                      className="subpage-image"
-                    />
-                  </div>
-                  <div className="subpage-text-col">
-                    <h2>{section.title}</h2>
-                    <p>{section.description}</p>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="subpage-text-col">
-                    <h2>{section.title}</h2>
-                    <p>{section.description}</p>
-                  </div>
-                  <div className="subpage-image-col">
-                    <img
-                      src={section.image}
-                      alt={section.title}
-                      className="subpage-image"
-                    />
-                  </div>
-                </>
-              )}
+      {feedbackSections.map((section, index) => {
+        const card = sectionCards[section.id]
+        return (
+          <section key={section.id} className={`subpage-section ${section.background === 'grey' ? 'subpage-section-cream' : 'subpage-section-white'}`}>
+            <div className="subpage-container">
+              <div className="subpage-grid">
+                {section.imageLeft ? (
+                  <>
+                    <div>
+                      <SectionCard subject={card.subject} bullets={card.bullets} />
+                    </div>
+                    <div className="subpage-text-col">
+                      <h2>{section.title}</h2>
+                      <p>{section.description}</p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="subpage-text-col">
+                      <h2>{section.title}</h2>
+                      <p>{section.description}</p>
+                    </div>
+                    <div>
+                      <SectionCard subject={card.subject} bullets={card.bullets} />
+                    </div>
+                  </>
+                )}
+              </div>
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        )
+      })}
 
       {/* Form Section */}
       <section className="subpage-section subpage-section-cream">
@@ -448,4 +489,4 @@ export default function SubmitComplimentComplaintPage() {
       )}
     </>
   )
-} 
+}

@@ -220,13 +220,13 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .logo-wordmark {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   color: var(--text-on-dark);
   letter-spacing: 0.12em;
   white-space: nowrap;
@@ -237,7 +237,7 @@ h1, h2, h3 {
 .logo-subtitle {
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   color: var(--text-on-dark-muted);
   letter-spacing: 0.12em;
   font-variant: small-caps;
@@ -550,16 +550,16 @@ body.mobile-menu-open {
   opacity: 0.25;
 }
 
-/* Subtle R mark watermark in hero background */
+/* Faint watermark shield in background for visual depth */
 .hero::after {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 520px;
-  height: 520px;
-  background-image: url("data:image/svg+xml,%3Csvg width='520' height='520' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 8 V62' stroke='%23102670' stroke-width='6' stroke-linecap='square' fill='none'/%3E%3Cpath d='M8 8 H92 V92 H20' stroke='%23102670' stroke-width='6' stroke-linejoin='miter' stroke-linecap='square' fill='none'/%3E%3Cpath d='M50 50 L72 92' stroke='%23102670' stroke-width='6' stroke-linecap='butt'/%3E%3Cpath d='M28 20 V78' stroke='%23102670' stroke-width='5' stroke-linecap='square'/%3E%3Cpath d='M28 20 H54 Q70 20 70 36 Q70 50 54 50 H28' stroke='%23102670' stroke-width='5' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+  width: 720px;
+  height: 720px;
+  background-image: url("data:image/svg+xml,%3Csvg width='520' height='520' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2L4 5.5v5.5c0 5.5 3.4 10.6 8 12 4.6-1.4 8-6.5 8-12V5.5L12 2z' stroke='%231c2a3f' stroke-width='0.3' fill='none'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -572,13 +572,20 @@ body.mobile-menu-open {
   position: relative;
   z-index: 2;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  min-height: calc(100vh - 160px);
 }
 
 .hero h1 {
   font-family: var(--font-heading);
-  font-size: 3.25rem;
+  font-size: 4.25rem;
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom: 2rem;
   line-height: 1.1;
   letter-spacing: 0.02em;
   color: var(--navy-primary);
@@ -586,9 +593,9 @@ body.mobile-menu-open {
 
 .hero .description {
   font-family: var(--font-body);
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   max-width: 42rem;
-  margin: 0 auto 1.25rem auto;
+  margin: 0 auto 2.5rem auto;
   color: var(--navy-primary);
   line-height: 1.6;
   font-weight: 500;
@@ -598,9 +605,9 @@ body.mobile-menu-open {
 
 .hero .description-secondary {
   font-family: var(--font-body);
-  font-size: 1.05rem;
+  font-size: 1.4rem;
   max-width: 48rem;
-  margin: 0 auto 0.75rem auto;
+  margin: 0 auto 2rem auto;
   color: var(--text-secondary);
   line-height: 1.7;
   font-weight: 400;
@@ -608,10 +615,11 @@ body.mobile-menu-open {
 
 .cta-buttons {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  padding-top: 0;
 }
 
 /* Thin line separators above and below services */
@@ -646,6 +654,9 @@ body.mobile-menu-open {
   background: var(--navy-primary);
   color: var(--text-on-dark);
   border: 1px solid var(--navy-primary);
+  padding: 1.5rem 4rem;
+  font-size: 1.05rem;
+  letter-spacing: 3px;
 }
 
 .btn-hero:hover {
@@ -765,22 +776,6 @@ body.mobile-menu-open {
   position: relative;
 }
 
-/* Subtle buffalo watermark — bottom-right of about section */
-.about::after {
-  content: '';
-  position: absolute;
-  bottom: 1rem;
-  right: 2rem;
-  width: 200px;
-  height: 160px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 160' fill='none'%3E%3Cpath d='M40 120 Q30 115 25 105 Q20 95 22 85 Q18 80 15 72 Q12 60 18 50 Q22 42 30 38 Q35 30 45 26 Q50 22 58 22 Q62 18 70 16 Q80 14 90 15 Q95 12 105 12 Q115 12 122 15 Q130 14 138 16 Q146 18 150 22 Q158 22 165 26 Q172 30 176 38 Q182 42 186 50 Q192 60 188 72 Q185 80 182 85 Q184 95 180 105 Q176 115 166 120 Q158 126 148 128 Q140 132 130 135 L126 140 Q120 130 115 128 Q108 126 100 126 Q92 126 86 128 Q80 130 76 140 L72 135 Q62 132 56 128 Q48 126 40 120Z' stroke='%23102670' stroke-width='1.5' fill='none'/%3E%3Cpath d='M70 55 Q72 48 80 46 Q85 44 88 48' stroke='%23102670' stroke-width='1.5' fill='none'/%3E%3Cpath d='M130 55 Q128 48 120 46 Q115 44 112 48' stroke='%23102670' stroke-width='1.5' fill='none'/%3E%3Ccircle cx='78' cy='58' r='3' fill='%23102670'/%3E%3Ccircle cx='122' cy='58' r='3' fill='%23102670'/%3E%3Cpath d='M90 75 Q95 80 100 80 Q105 80 110 75' stroke='%23102670' stroke-width='1.5' fill='none'/%3E%3Ccircle cx='95' cy='72' r='1.5' fill='%23102670'/%3E%3Ccircle cx='105' cy='72' r='1.5' fill='%23102670'/%3E%3Cpath d='M60 90 Q80 100 100 100 Q120 100 140 90' stroke='%23102670' stroke-width='1' fill='none'/%3E%3C/svg%3E");
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.04;
-  pointer-events: none;
-  z-index: 0;
-}
-
 /* Thin navy accent line at left edge of about section */
 .about::before {
   content: '';
@@ -807,6 +802,12 @@ body.mobile-menu-open {
   height: 380px;
   border-radius: 0;
   box-shadow: var(--shadow-lg);
+}
+
+.about-card-wrapper {
+  display: flex;
+  align-items: stretch;
+  min-height: 380px;
 }
 
 .about-content h2 {
@@ -1043,12 +1044,6 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Footer CR logo — inline left */
-.footer-cr-logo {
-  color: rgba(255, 255, 255, 0.75);
-  opacity: 0.85;
-}
-
 /* Legal disclosure banner — full width, small */
 .footer-legal-banner {
   padding-bottom: 0.75rem;
@@ -1150,6 +1145,12 @@ footer {
   opacity: 0.95;
 }
 
+.footer-badges .badge-aca,
+.footer-badges .badge-rmai {
+  opacity: 0.95;
+  height: 48px;
+}
+
 .social-links {
   display: flex;
   gap: 0.75rem;
@@ -1230,7 +1231,7 @@ footer {
     flex: 1;
     display: flex;
     justify-content: center;
-    margin-left: 5px;
+    margin-left: 0;
   }
 
   .logo-wordmark { font-size: 0.9rem; }
@@ -1306,6 +1307,7 @@ footer {
   }
 
   .about-image { height: 300px; }
+  .about-card-wrapper { min-height: auto; }
 
   .footer-compact {
     gap: 0.75rem;

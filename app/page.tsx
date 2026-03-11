@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import SectionCard from './components/SectionCard'
 
 export default function Home() {
   return (
@@ -75,9 +76,12 @@ export default function Home() {
             <p>
               Capital Review Management upholds all required state licenses and industry certifications. Our dedicated compliance team ensures complete alignment with applicable federal and state regulations.
             </p>
+
             <div className="compliance-grid">
               <div className="compliance-card">
-                <div className="compliance-icon"><i className="fas fa-shield-alt"></i></div>
+                <div className="compliance-icon">
+                  <i className="fas fa-shield-alt"></i>
+                </div>
                 <h3>Federal Regulations</h3>
                 <div className="cert-badges">
                   <span className="cert-badge">FDCPA</span>
@@ -86,14 +90,20 @@ export default function Home() {
                   <span className="cert-badge">TCPA</span>
                 </div>
               </div>
+
               <div className="compliance-card">
-                <div className="compliance-icon"><i className="fas fa-check-circle"></i></div>
+                <div className="compliance-icon">
+                  <i className="fas fa-check-circle"></i>
+                </div>
                 <h3>Industry Standards</h3>
-                <ul className="standards-list">
-                  <li>FDCPA and TCPA oversight and documentation protocols</li>
-                  <li>State licensing, COAs, and bonding requirements across every jurisdiction we operate</li>
-                  <li>Ongoing compliance audits and professional development</li>
-                </ul>
+                <div className="cert-badges">
+                  <span className="cert-badge">ACA Member</span>
+                  <span className="cert-badge">RMAI Member</span>
+                  <span className="cert-badge">Everchain Certified</span>
+                  <span className="cert-badge">BBB Accredited</span>
+                  <span className="cert-badge">Multi-State Licensed</span>
+                  <span className="cert-badge">Insured & Bonded</span>
+                </div>
               </div>
             </div>
           </div>
@@ -104,14 +114,25 @@ export default function Home() {
       <section className="about">
         <div className="container">
           <div className="about-container">
-            <div className="about-image"></div>
+            <div className="about-card-wrapper">
+              <SectionCard
+                subject="About Capital Review"
+                bullets={[
+                  { text: 'Disciplined review processes and professional communication delivering measurable recovery outcomes for creditors nationwide.' },
+                  { text: 'Compliance-first philosophy — every consumer interaction reflects the highest standards of professionalism, respect, and regulatory adherence.' },
+                  { text: 'Modern technology platform with secure infrastructure, real-time reporting, and data-driven strategies that maximize ROI.' },
+                  { text: 'Long-term client partnerships built on transparency, ethical practices, and consistent performance that protects your brand reputation.' },
+                ]}
+              />
+            </div>
             <div className="about-content">
               <h2>About Capital Review</h2>
               <p>
                 We operate with a compliance-first philosophy, treating every consumer interaction with professionalism and every client engagement as a lasting partnership. Our standards, technology, and track record distinguish us in the industry.
               </p>
               <Link href="/about" className="btn btn-primary">
-                <i className="fas fa-arrow-right"></i> Learn More
+                <i className="fas fa-arrow-right"></i>
+                Learn More
               </Link>
             </div>
           </div>
@@ -126,14 +147,18 @@ export default function Home() {
             <p>
               Reach out at 866-766-2692 to learn how Capital Review Management can support your receivables, protect your reputation, and drive results.
             </p>
+
             <div className="contact-buttons">
               <a href="tel:866-766-2692" className="btn btn-contact">
-                <i className="fas fa-phone"></i> 866-766-2692
+                <i className="fas fa-phone"></i>
+                866-766-2692
               </a>
               <a href="mailto:info@capitalreviewmgt.com" className="btn btn-outline">
-                <i className="fas fa-envelope"></i> info@capitalreviewmgt.com
+                <i className="fas fa-envelope"></i>
+                info@capitalreviewmgt.com
               </a>
             </div>
+
             <div className="contact-address">
               <i className="fas fa-map-marker-alt"></i>
               <span>Capital Review Management, 2200 North Frazier Suite 120 Box 142, Conroe, TX 77301</span>
