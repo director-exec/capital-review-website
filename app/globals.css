@@ -200,7 +200,7 @@ h1, h2, h3 {
   background: rgba(255, 255, 255, 0.1);
   color: var(--text-on-dark);
   padding: 0.4rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid #8b1a1a;
   border-radius: 0;
   font-family: var(--font-body);
   font-weight: 700;
@@ -216,7 +216,7 @@ h1, h2, h3 {
 
 .payment-button:hover {
   background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: #6b1414;
 }
 
 .logo {
@@ -452,7 +452,7 @@ body.mobile-menu-open {
   transition: all 0.3s ease;
   width: 100%;
   margin-bottom: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid #8b1a1a;
 }
 
 .mobile-call-btn:hover {
@@ -476,7 +476,7 @@ body.mobile-menu-open {
   letter-spacing: 2px;
   transition: all 0.3s ease;
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid #8b1a1a;
 }
 
 .mobile-payment-btn:hover {
@@ -616,15 +616,15 @@ body.mobile-menu-open {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.06;
+  opacity: 0.10;
   z-index: 0;
   pointer-events: none;
   animation: watermark-shimmer 8s ease-in-out infinite;
 }
 
 @keyframes watermark-shimmer {
-  0%, 100% { opacity: 0.05; }
-  50% { opacity: 0.08; }
+  0%, 100% { opacity: 0.08; }
+  50% { opacity: 0.14; }
 }
 
 .hero .container {
@@ -689,7 +689,7 @@ body.mobile-menu-open {
 
 .btn {
   padding: 1rem 2.5rem;
-  border: none;
+  border: 1px solid #8b1a1a;
   border-radius: 0;
   font-family: var(--font-body);
   font-weight: 700;
@@ -712,7 +712,7 @@ body.mobile-menu-open {
 .btn-hero {
   background: var(--accent-metallic);
   color: #0a0a0a;
-  border: 1px solid var(--accent-metallic);
+  border: 1px solid #8b1a1a;
   padding: 1.5rem 4rem;
   font-size: 1.05rem;
   letter-spacing: 3px;
@@ -720,7 +720,7 @@ body.mobile-menu-open {
 
 .btn-hero:hover {
   background: #e0e0e0;
-  border-color: #e0e0e0;
+  border-color: #6b1414;
 }
 
 .btn-primary:hover {
@@ -730,12 +730,12 @@ body.mobile-menu-open {
 .btn-secondary {
   background: transparent;
   color: var(--text-primary);
-  border: 1px solid var(--border-light);
+  border: 1px solid #8b1a1a;
 }
 
 .btn-secondary:hover {
   background: var(--bg-cream-dark);
-  border-color: var(--text-muted);
+  border-color: #6b1414;
 }
 
 /* ============================================
@@ -1072,18 +1072,18 @@ body.mobile-menu-open {
 .btn-contact {
   background: var(--accent-metallic);
   color: #0a0a0a;
-  border: 1px solid var(--accent-metallic);
+  border: 1px solid #8b1a1a;
 }
 
 .btn-contact:hover {
   background: #e0e0e0;
-  border-color: #e0e0e0;
+  border-color: #6b1414;
 }
 
 .btn-outline {
   background: transparent;
   color: var(--text-primary);
-  border: 1px solid var(--border-light);
+  border: 1px solid #8b1a1a;
 }
 
 .btn-outline:hover {
@@ -1819,7 +1819,7 @@ footer {
   padding: 1rem 2rem;
   background: rgba(255, 255, 255, 0.06);
   border-radius: 0;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid #8b1a1a;
   color: var(--text-on-dark);
 }
 
@@ -2010,13 +2010,13 @@ footer {
 .subpage-cta .btn {
   background: rgba(255, 255, 255, 0.1);
   color: var(--text-on-dark);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid #8b1a1a;
   padding: 0.875rem 2.25rem;
 }
 
 .subpage-cta .btn:hover {
   background: rgba(255, 255, 255, 0.18);
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: #6b1414;
 }
 
 /* Subpage cards grid */
@@ -2072,14 +2072,14 @@ footer {
   text-transform: uppercase;
   letter-spacing: 2px;
   border-radius: 0;
-  border: 1px solid var(--accent-metallic);
+  border: 1px solid #8b1a1a;
   transition: all 0.3s ease;
   margin-top: 1.25rem;
 }
 
 .subpage-btn:hover {
   background: #e0e0e0;
-  border-color: #e0e0e0;
+  border-color: #6b1414;
 }
 
 /* Form styling for subpages */
@@ -2138,7 +2138,7 @@ footer {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border: 1px solid var(--accent-metallic);
+  border: 1px solid #8b1a1a;
   border-radius: 0;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -2146,7 +2146,7 @@ footer {
 
 .subpage-form button[type="submit"]:hover {
   background: #e0e0e0;
-  border-color: #e0e0e0;
+  border-color: #6b1414;
 }
 
 .subpage-form button[type="submit"]:disabled {

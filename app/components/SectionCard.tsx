@@ -11,7 +11,7 @@ interface SectionCardProps {
 export default function SectionCard({ subject, bullets }: SectionCardProps) {
   return (
     <div style={{
-      border: '1.5px solid #c9a96e',
+      border: '1.5px solid #8b1a1a',
       borderRadius: '2px',
       overflow: 'hidden',
       background: '#f5f2ed',
@@ -23,9 +23,9 @@ export default function SectionCard({ subject, bullets }: SectionCardProps) {
     }}>
       {/* Subject Header Bar */}
       <div style={{
-        background: '#102670',
+        background: '#242424',
         padding: '18px 24px',
-        borderBottom: '2px solid #c9a96e',
+        borderBottom: '2px solid #8b1a1a',
       }}>
         <h3 style={{
           color: '#ece8e3',
@@ -58,7 +58,7 @@ export default function SectionCard({ subject, bullets }: SectionCardProps) {
               padding: '16px 16px',
               background: index % 2 === 0 ? '#e8e4de' : 'transparent',
               borderRadius: '2px',
-              borderLeft: '3px solid #c9a96e',
+              borderLeft: '3px solid #8b1a1a',
               marginBottom: index < bullets.length - 1 ? '8px' : '0',
             }}
           >
@@ -67,8 +67,8 @@ export default function SectionCard({ subject, bullets }: SectionCardProps) {
               width: '28px',
               height: '28px',
               borderRadius: '50%',
-              background: '#102670',
-              color: '#c9a96e',
+              background: '#242424',
+              color: '#8b1a1a',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -87,7 +87,7 @@ export default function SectionCard({ subject, bullets }: SectionCardProps) {
               fontFamily: "'Source Sans 3', system-ui, sans-serif",
               fontSize: '0.95rem',
               lineHeight: 1.6,
-              color: '#102670',
+              color: '#1a1a1a',
             }}>
               {bullet.text}
             </p>
