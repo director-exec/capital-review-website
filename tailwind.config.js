@@ -51,11 +51,12 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         capital: {
-          primary: "#0a0f1c",
-          secondary: "#4a7fb5",
+          primary: "#0a0a0a",
+          secondary: "#1a1a1a",
           accent: "#c9a84c",
-          dark: "#111827",
-          light: "#b0b8c8",
+          dark: "#060606",
+          light: "#e0e0e0",
+          chrome: "#8a9bb0",
         },
       },
       borderRadius: {
@@ -90,7 +91,7 @@ module.exports = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'finance-pattern': "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.05\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
+        'finance-pattern': "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.03\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
       },
     },
   },
