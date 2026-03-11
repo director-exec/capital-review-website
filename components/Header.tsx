@@ -52,8 +52,8 @@ export default function Header() {
             <div className="logo">
               <Link href="/" className="logo-link">
                 <svg className="logo-shield" width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="6" y="6" width="88" height="88" rx="1" ry="1" fill="none" stroke="currentColor" strokeWidth="3.5"/>
-                  <path fill="currentColor" d="M32 22 L32 78 L38.5 78 L38.5 51 L52 51 L64 78 L72 78 L59 50 C66 47.5 71 41 71 33 C71 24 64.5 22 53 22 Z M38.5 28 L52 28 C58 28 62 30.5 62 34.5 C62 39 58 43 52 43 L38.5 43 Z"/>
+                  <rect x="3" y="3" width="94" height="94" fill="none" stroke="currentColor" strokeWidth="6"/>
+                  <path fill="currentColor" d="M24 17 L24 83 L35 83 L35 53 C42 53 47 53 50 55 L67 87 L80 87 L61 53 C72 51 81 42 81 31 C81 21 72 17 58 17 Z M35 25 L56 25 C66 25 72 28 72 33 C72 39 66 43 56 43 L35 43 Z"/>
                 </svg>
                 <div className="logo-text">
                   <span className="logo-wordmark">Capital Review Management</span>
@@ -131,8 +131,8 @@ export default function Header() {
             <div className="logo">
               <Link href="/" className="logo-link">
                 <svg className="logo-shield" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="6" y="6" width="88" height="88" rx="1" ry="1" fill="none" stroke="currentColor" strokeWidth="3.5"/>
-                  <path fill="currentColor" d="M32 22 L32 78 L38.5 78 L38.5 51 L52 51 L64 78 L72 78 L59 50 C66 47.5 71 41 71 33 C71 24 64.5 22 53 22 Z M38.5 28 L52 28 C58 28 62 30.5 62 34.5 C62 39 58 43 52 43 L38.5 43 Z"/>
+                  <rect x="3" y="3" width="94" height="94" fill="none" stroke="currentColor" strokeWidth="6"/>
+                  <path fill="currentColor" d="M24 17 L24 83 L35 83 L35 53 C42 53 47 53 50 55 L67 87 L80 87 L61 53 C72 51 81 42 81 31 C81 21 72 17 58 17 Z M35 25 L56 25 C66 25 72 28 72 33 C72 39 66 43 56 43 L35 43 Z"/>
                 </svg>
                 <span className="logo-wordmark">Capital Review Management</span>
               </Link>
