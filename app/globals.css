@@ -67,6 +67,24 @@ body {
   line-height: 1.6;
   color: var(--text-primary);
   background-color: var(--bg-cream);
+  background-image:
+    /* Brushed metal grain — fine diagonal streaks */
+    repeating-linear-gradient(
+      105deg,
+      transparent,
+      transparent 1px,
+      rgba(255, 255, 255, 0.008) 1px,
+      rgba(255, 255, 255, 0.008) 2px
+    ),
+    /* Broad metallic sheen bands */
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.015) 25%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0.012) 75%,
+      rgba(255, 255, 255, 0) 100%
+    );
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -538,7 +556,20 @@ body.mobile-menu-open {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-cream);
+  background:
+    /* Angled metallic sheen — top-right highlight */
+    radial-gradient(ellipse 80% 50% at 75% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 60%),
+    /* Subtle vignette for depth */
+    radial-gradient(ellipse 120% 80% at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.3) 100%),
+    /* Fine brushed steel grain */
+    repeating-linear-gradient(
+      100deg,
+      transparent,
+      transparent 1px,
+      rgba(160, 170, 185, 0.012) 1px,
+      rgba(160, 170, 185, 0.012) 2px
+    ),
+    var(--bg-cream);
   overflow: hidden;
 }
 
@@ -553,24 +584,26 @@ body.mobile-menu-open {
   background: conic-gradient(
     from 200deg at 50% 50%,
     transparent 0deg,
-    transparent 140deg,
-    rgba(138, 155, 176, 0.06) 160deg,
-    rgba(255, 255, 255, 0.05) 180deg,
-    rgba(138, 155, 176, 0.06) 200deg,
-    transparent 220deg,
+    transparent 130deg,
+    rgba(180, 190, 205, 0.04) 150deg,
+    rgba(220, 225, 235, 0.07) 170deg,
+    rgba(255, 255, 255, 0.09) 180deg,
+    rgba(220, 225, 235, 0.07) 190deg,
+    rgba(180, 190, 205, 0.04) 210deg,
+    transparent 230deg,
     transparent 360deg
   );
   z-index: 1;
   pointer-events: none;
-  animation: chrome-sweep 12s ease-in-out infinite;
+  animation: chrome-sweep 14s ease-in-out infinite;
 }
 
 @keyframes chrome-sweep {
-  0%, 100% { transform: rotate(0deg); opacity: 0.6; }
-  50% { transform: rotate(15deg); opacity: 1; }
+  0%, 100% { transform: rotate(-5deg); opacity: 0.5; }
+  50% { transform: rotate(20deg); opacity: 1; }
 }
 
-/* Faint watermark shield in background for visual depth */
+/* Faint watermark shield in background — metallic chrome R */
 .hero::after {
   content: '';
   position: absolute;
@@ -579,13 +612,19 @@ body.mobile-menu-open {
   transform: translate(-50%, -50%);
   width: 720px;
   height: 720px;
-  background-image: url("data:image/svg+xml,%3Csvg width='520' height='520' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 8 V62' stroke='%23ffffff' stroke-width='8' stroke-linecap='square' fill='none'/%3E%3Cpath d='M8 8 H92 V92 H20' stroke='%23ffffff' stroke-width='8' stroke-linejoin='miter' stroke-linecap='square' fill='none'/%3E%3Cpath d='M50 50 L72 92' stroke='%23ffffff' stroke-width='8' stroke-linecap='butt'/%3E%3Cpath d='M28 20 V78' stroke='%23ffffff' stroke-width='7' stroke-linecap='square'/%3E%3Cpath d='M28 20 H54 Q70 20 70 36 Q70 50 54 50 H28' stroke='%23ffffff' stroke-width='7' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='520' height='520' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='chrome' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23888888'/%3E%3Cstop offset='20%25' stop-color='%23cccccc'/%3E%3Cstop offset='40%25' stop-color='%23999999'/%3E%3Cstop offset='55%25' stop-color='%23e8e8e8'/%3E%3Cstop offset='70%25' stop-color='%23aaaaaa'/%3E%3Cstop offset='85%25' stop-color='%23dddddd'/%3E%3Cstop offset='100%25' stop-color='%23999999'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M8 8 V62' stroke='url(%23chrome)' stroke-width='8' stroke-linecap='square' fill='none'/%3E%3Cpath d='M8 8 H92 V92 H20' stroke='url(%23chrome)' stroke-width='8' stroke-linejoin='miter' stroke-linecap='square' fill='none'/%3E%3Cpath d='M50 50 L72 92' stroke='url(%23chrome)' stroke-width='8' stroke-linecap='butt'/%3E%3Cpath d='M28 20 V78' stroke='url(%23chrome)' stroke-width='7' stroke-linecap='square'/%3E%3Cpath d='M28 20 H54 Q70 20 70 36 Q70 50 54 50 H28' stroke='url(%23chrome)' stroke-width='7' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.04;
+  opacity: 0.06;
   z-index: 0;
   pointer-events: none;
+  animation: watermark-shimmer 8s ease-in-out infinite;
+}
+
+@keyframes watermark-shimmer {
+  0%, 100% { opacity: 0.05; }
+  50% { opacity: 0.08; }
 }
 
 .hero .container {
@@ -706,8 +745,8 @@ body.mobile-menu-open {
 .services {
   padding: var(--section-padding) 0;
   background: var(--bg-cream);
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(139, 26, 26, 0.2);
+  border-bottom: 1px solid rgba(139, 26, 26, 0.2);
 }
 
 .services-grid {
@@ -790,11 +829,21 @@ body.mobile-menu-open {
 
 .about {
   padding: var(--section-padding) 0;
-  background: var(--bg-white);
+  background:
+    /* Subtle diagonal metallic sheen on darker sections */
+    linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.018) 30%,
+      rgba(255, 255, 255, 0) 55%,
+      rgba(255, 255, 255, 0.01) 80%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    var(--bg-white);
   position: relative;
 }
 
-/* Thin navy accent line at left edge of about section */
+/* Thin accent line at left edge of about section */
 .about::before {
   content: '';
   position: absolute;
@@ -802,8 +851,8 @@ body.mobile-menu-open {
   top: 15%;
   bottom: 15%;
   width: 3px;
-  background: linear-gradient(to bottom, transparent, var(--navy-primary), transparent);
-  opacity: 0.1;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.15), transparent);
+  opacity: 1;
 }
 
 .about-container {
@@ -1060,7 +1109,7 @@ footer {
   background: var(--navy-header);
   color: var(--text-on-dark);
   padding: 1.25rem 0 0.75rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 2px solid rgba(139, 26, 26, 0.4);
 }
 
 /* Legal disclosure banner — full width, small */
