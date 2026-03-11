@@ -11,7 +11,7 @@ interface SectionCardProps {
 export default function SectionCard({ subject, bullets }: SectionCardProps) {
   return (
     <div style={{
-      border: '1.5px solid #8b1a1a',
+      border: '1.5px solid #c0392b',
       borderRadius: '2px',
       overflow: 'hidden',
       background: '#f5f2ed',
@@ -23,12 +23,12 @@ export default function SectionCard({ subject, bullets }: SectionCardProps) {
     }}>
       {/* Subject Header Bar */}
       <div style={{
-        background: '#242424',
+        background: '#4a4a4a',
         padding: '18px 24px',
-        borderBottom: '2px solid #8b1a1a',
+        borderBottom: '2px solid #c0392b',
       }}>
         <h3 style={{
-          color: '#ece8e3',
+          color: '#ffffff',
           fontFamily: "'Cormorant Garamond', Georgia, serif",
           fontSize: '1.35rem',
           fontWeight: 600,
@@ -58,7 +58,7 @@ export default function SectionCard({ subject, bullets }: SectionCardProps) {
               padding: '16px 16px',
               background: index % 2 === 0 ? '#e8e4de' : 'transparent',
               borderRadius: '2px',
-              borderLeft: '3px solid #8b1a1a',
+              borderLeft: '3px solid #c0392b',
               marginBottom: index < bullets.length - 1 ? '8px' : '0',
             }}
           >
@@ -67,8 +67,8 @@ export default function SectionCard({ subject, bullets }: SectionCardProps) {
               width: '28px',
               height: '28px',
               borderRadius: '50%',
-              background: '#242424',
-              color: '#8b1a1a',
+              background: '#4a4a4a',
+              color: '#c0392b',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
