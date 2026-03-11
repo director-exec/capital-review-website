@@ -29,8 +29,9 @@
   --text-on-dark-muted: rgba(255, 255, 255, 0.7);
   --text-on-dark-faint: rgba(255, 255, 255, 0.5);
 
-  /* Accent — Metallic Gold/Chrome */
-  --accent-metallic: #c9a84c;
+  /* Accent — Deep Red & Chrome */
+  --accent-metallic: #ffffff;
+  --accent-red: #8b1a1a;
   --accent-chrome: #8a9bb0;
 
   /* Borders & Shadows */
@@ -554,7 +555,7 @@ body.mobile-menu-open {
     transparent 0deg,
     transparent 140deg,
     rgba(138, 155, 176, 0.06) 160deg,
-    rgba(201, 168, 76, 0.08) 180deg,
+    rgba(255, 255, 255, 0.05) 180deg,
     rgba(138, 155, 176, 0.06) 200deg,
     transparent 220deg,
     transparent 360deg
@@ -679,12 +680,12 @@ body.mobile-menu-open {
 }
 
 .btn-hero:hover {
-  background: #d4b65e;
-  border-color: #d4b65e;
+  background: #e0e0e0;
+  border-color: #e0e0e0;
 }
 
 .btn-primary:hover {
-  background: #d4b65e;
+  background: #e0e0e0;
 }
 
 .btn-secondary {
@@ -725,8 +726,7 @@ body.mobile-menu-open {
   border-radius: 0;
   box-shadow: none;
   transition: all 0.3s ease;
-  border: 1px solid var(--border-light);
-  border-top: 2px solid var(--navy-primary);
+  border: 1px solid rgba(139, 26, 26, 0.35);
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -737,8 +737,7 @@ body.mobile-menu-open {
 
 .service-card:hover {
   box-shadow: var(--shadow-sm);
-  border-color: var(--border-medium);
-  border-top-color: var(--navy-deep);
+  border-color: rgba(139, 26, 26, 0.55);
 }
 
 .service-icon {
@@ -939,8 +938,8 @@ body.mobile-menu-open {
 }
 
 .cert-badge {
-  background: rgba(201, 168, 76, 0.15);
-  color: var(--accent-metallic);
+  background: rgba(139, 26, 26, 0.1);
+  color: var(--text-primary);
   padding: 0.75rem 1rem;
   border-radius: 0;
   font-family: var(--font-body);
@@ -954,11 +953,11 @@ body.mobile-menu-open {
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border: 1px solid rgba(201, 168, 76, 0.3);
+  border: 1px solid rgba(139, 26, 26, 0.5);
 }
 
 .cert-badge:hover {
-  background: rgba(201, 168, 76, 0.25);
+  background: rgba(139, 26, 26, 0.2);
 }
 
 .standards-list {
@@ -1028,8 +1027,8 @@ body.mobile-menu-open {
 }
 
 .btn-contact:hover {
-  background: #d4b65e;
-  border-color: #d4b65e;
+  background: #e0e0e0;
+  border-color: #e0e0e0;
 }
 
 .btn-outline {
@@ -1431,7 +1430,7 @@ footer {
   border-radius: 0;
   box-shadow: var(--shadow-sm);
   margin-bottom: 2rem;
-  border: 1px solid var(--border-light);
+  border: 1px solid rgba(139, 26, 26, 0.35);
 }
 
 .content-card h2 {
@@ -1984,16 +1983,14 @@ footer {
   background: var(--bg-white);
   padding: 2rem;
   border-radius: 0;
-  border: 1px solid var(--border-light);
-  border-top: 2px solid var(--navy-primary);
+  border: 1px solid rgba(139, 26, 26, 0.35);
   box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
 }
 
 .subpage-card:hover {
   box-shadow: var(--shadow-md);
-  border-color: var(--border-medium);
-  border-top-color: var(--navy-deep);
+  border-color: rgba(139, 26, 26, 0.55);
 }
 
 .subpage-card h3 {
@@ -2032,8 +2029,8 @@ footer {
 }
 
 .subpage-btn:hover {
-  background: #d4b65e;
-  border-color: #d4b65e;
+  background: #e0e0e0;
+  border-color: #e0e0e0;
 }
 
 /* Form styling for subpages */
@@ -2072,7 +2069,7 @@ footer {
 .subpage-form select:focus {
   outline: none;
   border-color: var(--navy-primary);
-  box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.3);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
 }
 
 .subpage-form textarea {
@@ -2099,8 +2096,8 @@ footer {
 }
 
 .subpage-form button[type="submit"]:hover {
-  background: #d4b65e;
-  border-color: #d4b65e;
+  background: #e0e0e0;
+  border-color: #e0e0e0;
 }
 
 .subpage-form button[type="submit"]:disabled {
@@ -2292,13 +2289,13 @@ footer {
 }
 
 .disclosure-modal-btn:hover {
-  background: #d4b65e;
+  background: #e0e0e0;
 }
 
 /* Contact-specific card with image header */
 .contact-card {
   background: var(--bg-white);
-  border: 1px solid var(--border-light);
+  border: 1px solid rgba(139, 26, 26, 0.35);
   border-radius: 0;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -2307,6 +2304,7 @@ footer {
 
 .contact-card:hover {
   box-shadow: var(--shadow-md);
+  border-color: rgba(139, 26, 26, 0.55);
 }
 
 .contact-card-image {

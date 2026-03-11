@@ -53,7 +53,7 @@ module.exports = {
         capital: {
           primary: "#0a0a0a",
           secondary: "#1a1a1a",
-          accent: "#c9a84c",
+          accent: "#8b1a1a",
           dark: "#060606",
           light: "#e0e0e0",
           chrome: "#8a9bb0",
