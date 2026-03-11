@@ -5,35 +5,35 @@ import SectionCard from '../../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'bankruptcy-notification': {
-    subject: 'Filing Notification Process',
+    subject: 'Filing Notification Process (CRM-7.3)',
     bullets: [
-      { text: 'If you\'ve filed for bankruptcy and received a notice from Capital Review Management, please let us know as soon as possible.' },
-      { text: 'Submit the form below or upload your bankruptcy documentation directly through our secure portal.' },
-      { text: 'This information ensures your account is handled appropriately and in accordance with all applicable laws.' },
+      { text: 'Immediate litigation hold per CRM-7.3 activated upon bankruptcy filing notification — all collection activity ceases per FDCPA compliance (CRM-1.1).' },
+      { text: 'Submit via secure portal with AES-256 encryption at rest and TLS 1.2+ in transit (CRM-4.1) — or upload documentation directly through Maxify CRM.' },
+      { text: 'Full evidence preservation protocols (CRM-7.3) ensure your account is handled in accordance with all applicable bankruptcy laws and regulations.' },
     ],
   },
   'account-information': {
-    subject: 'Required Account Details',
+    subject: 'Required Account Details (CRM-2.1)',
     bullets: [
-      { text: 'Provide your Capital Review Account Number and Creditor Name as shown on your statement.' },
-      { text: 'Include your First and Last Name exactly as they appear on your account records.' },
-      { text: 'Enter your Full Mailing Address including Street, City, State, and ZIP Code for proper identification.' },
+      { text: 'Provide your Capital Review Account Number and Creditor Name — verified through Maxify CRM (CRM-2.1) with role-based access controls (CRM-4.4).' },
+      { text: 'Include First and Last Name exactly as they appear on your account — all data protected with PHI/privacy safeguards per CRM-1.6.' },
+      { text: 'Full Mailing Address including Street, City, State, and ZIP Code — state-specific compliance matrices (CRM-9.x) applied to your jurisdiction.' },
     ],
   },
   'case-details': {
-    subject: 'Bankruptcy Case Information',
+    subject: 'Bankruptcy Case Information (CRM-7.3)',
     bullets: [
-      { text: 'Provide your Bankruptcy Case Number and Chapter type (e.g., Chapter 7, 11, or 13).' },
-      { text: 'Include the Filing Court or Jurisdiction where your bankruptcy case was filed.' },
-      { text: 'Enter the Date of Bankruptcy Filing to help us ensure full compliance with bankruptcy laws.' },
+      { text: 'Provide Bankruptcy Case Number and Chapter type (7, 11, or 13) — Maxify CRM tracks all case details with 3-year documentation retention (CRM-2.6).' },
+      { text: 'Include Filing Court or Jurisdiction — our compliance team applies state-specific requirements per CRM-9.x compliance matrices.' },
+      { text: 'Date of Bankruptcy Filing ensures immediate regulatory alignment — litigation holds (CRM-7.3) and all communications recorded per CRM-2.6 standards.' },
     ],
   },
   'documentation': {
-    subject: 'Supporting Documentation',
+    subject: 'Supporting Documentation (CRM-4.1)',
     bullets: [
-      { text: 'Attach any relevant bankruptcy documents — PDF, DOC, and image files are accepted.' },
-      { text: 'Include any notes or messages related to your filing for faster processing.' },
-      { text: 'Uploaded documentation helps us process your notification more efficiently and thoroughly.' },
+      { text: 'Attach bankruptcy documents securely — PDF, DOC, and image files accepted with AES-256 encryption (CRM-4.1) and PCI DSS-level data protection.' },
+      { text: 'Include related notes or messages — all uploads processed by trained specialists (CRM-6.4) with 85% minimum competency and monthly QA reviews.' },
+      { text: 'Documentation stored with full audit trails and 3-year retention (CRM-2.6) ensuring complete legal defensibility and regulatory compliance.' },
     ],
   },
 }
@@ -688,7 +688,7 @@ export default function BankruptcyNotificationPage() {
               We&apos;re here to help ensure your legal rights are fully respected.
             </p>
             <p>
-              Call us at 866-766-2692 to speak with an account representative.
+              Call us at 888-681-0360 to speak with an account representative.
             </p>
           </div>
         </div>
@@ -713,9 +713,9 @@ export default function BankruptcyNotificationPage() {
           <div>
             <p>Capital Review Management</p>
             <p>2200 North Frazier Suite 120 Box 142, Conroe, TX 77301</p>
-            <p>866-766-2692</p>
+            <p>888-681-0360</p>
             <p>
-              <strong>Compliance Email:</strong> compliance@capitalreviewmgt.com
+              <strong>Compliance Email:</strong> info@capitalreviewmanagement.com
             </p>
           </div>
         </div>

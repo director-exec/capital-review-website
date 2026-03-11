@@ -6,35 +6,35 @@ import SectionCard from '../../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'urgent-matters': {
-    subject: 'Immediate Assistance',
+    subject: 'Immediate Assistance (CRM-1.5)',
     bullets: [
-      { text: 'If the matter is urgent, we recommend calling us directly at 866-766-2692 for immediate help.' },
-      { text: 'Our team is available to assist you right away with removing your number from our calling list.' },
-      { text: 'Phone requests are processed faster than online submissions for time-sensitive situations.' },
+      { text: 'Call 888-681-0360 for immediate help — TCPA consent framework (CRM-1.5) ensures 24-hour opt-out processing for all phone number removal requests.' },
+      { text: 'Agents trained per CRM-6.4 with 85% minimum competency handle urgent requests with 7-in-7 call frequency compliance (CRM-1.3).' },
+      { text: 'Phone requests processed immediately through Maxify CRM (CRM-2.1) — faster than online submissions for time-sensitive situations.' },
     ],
   },
   'update-contact-preference': {
-    subject: 'Information We Need',
+    subject: 'Information We Need (CRM-2.1)',
     bullets: [
-      { text: 'Provide your first and last name along with the phone number we are currently calling.' },
-      { text: 'Indicate whether the number is incorrect or if you prefer a different contact number.' },
-      { text: 'Include any additional comments or notes to help us update our records accurately.' },
+      { text: 'Provide first and last name with the phone number currently on file — all data protected with AES-256 encryption (CRM-4.1) in Maxify CRM.' },
+      { text: 'Indicate whether the number is incorrect or if you prefer a different contact — 1-hour text opt-out processing (CRM-2.4) for SMS preferences.' },
+      { text: 'Additional comments help our compliance team update records accurately per TCPA consent requirements (CRM-1.5) with full audit trail documentation.' },
     ],
   },
   'what-happens-next': {
-    subject: 'Processing Timeline',
+    subject: 'Processing Timeline (CRM-1.3)',
     bullets: [
-      { text: 'Your request will be reviewed within 24 hours of submission by our compliance team.' },
-      { text: 'Changes will be fully implemented within 5 business days with confirmation sent to you.' },
-      { text: 'If you provided an alternative number, we will begin using it immediately upon processing.' },
+      { text: 'Request reviewed within 24 hours by compliance team per CRM-1.5 — 7-in-7 call frequency rules (CRM-1.3) immediately adjusted in Maxify CRM.' },
+      { text: 'Changes fully implemented within 5 business days — all updates tracked with role-based access controls (CRM-4.4) and full audit trails.' },
+      { text: 'Alternative numbers activated immediately upon processing with TCPA-compliant consent documentation (CRM-1.5) maintained for 4-year retention.' },
     ],
   },
   'important-notice': {
-    subject: 'Legal & Privacy Notice',
+    subject: 'Legal & Privacy Notice (CRM-2.2)',
     bullets: [
-      { text: 'This is an attempt to collect a debt. Any information obtained will be used for that purpose.' },
-      { text: 'This communication is from a debt collector — we take your privacy seriously.' },
-      { text: 'Your contact preference request will be processed promptly in accordance with all applicable regulations.' },
+      { text: 'Mini-Miranda disclosure per CRM-2.2: This is an attempt to collect a debt. Any information obtained will be used for that purpose.' },
+      { text: 'Capital Review Management is a debt collector — PHI/privacy safeguards (CRM-1.6) and PCI DSS tokenization (CRM-3.8) protect all consumer data.' },
+      { text: 'Contact preference requests processed per FDCPA compliance (CRM-1.1) with state-specific regulatory alignment through CRM-9.x compliance matrices.' },
     ],
   },
 }
@@ -117,7 +117,7 @@ export default function RemoveMyNumberPage() {
     {
       id: 'urgent-matters',
       title: 'Urgent Matters',
-      description: 'If the matter is urgent, we recommend calling us directly at 866-766-2692. For immediate assistance with removing your number from our calling list, our team is available to help you right away.',
+      description: 'If the matter is urgent, we recommend calling us directly at 888-681-0360. For immediate assistance with removing your number from our calling list, our team is available to help you right away.',
       background: 'white',
       imageLeft: false
     },
@@ -326,9 +326,9 @@ export default function RemoveMyNumberPage() {
           <div className="text-center">
             <p className="font-semibold">Capital Review Management</p>
             <p>2200 North Frazier Suite 120 Box 142, Conroe, TX 77301</p>
-            <p className="text-xl font-semibold">866-766-2692</p>
+            <p className="text-xl font-semibold">888-681-0360</p>
             <p className="mt-4">
-              <strong>Compliance Email:</strong> compliance@capitalreviewmgt.com
+              <strong>Compliance Email:</strong> info@capitalreviewmanagement.com
             </p>
           </div>
         </div>

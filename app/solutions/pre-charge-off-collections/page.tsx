@@ -2,35 +2,35 @@ import SectionCard from '../../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'early-intervention': {
-    subject: 'Proactive Early Outreach',
+    subject: 'Proactive Early Outreach (CRM-2.1)',
     bullets: [
-      { text: 'Strategic early-stage contact for accounts slightly past due — respectful outreach long before charge-off becomes necessary.' },
-      { text: 'Sophisticated analytics and behavioral data power every decision, ensuring the right message reaches the right consumer at the right time.' },
-      { text: 'Brand-protective approach that prioritizes your company\'s image through clarity, professionalism, and empathy in every interaction.' },
+      { text: 'Strategic early-stage contact via Maxify CRM omnichannel workflows (CRM-2.1) — respectful outreach long before charge-off becomes necessary.' },
+      { text: 'Real-time analytics and behavioral data power every decision with 7-in-7 call frequency rules (CRM-1.3) ensuring compliant, targeted contact.' },
+      { text: 'Brand-protective approach per CRM-2.2 Mini-Miranda standards — clarity, professionalism, and empathy in every consumer interaction.' },
     ],
   },
   'customized-outreach': {
-    subject: 'Tailored Contact Plans',
+    subject: 'Tailored Contact Plans (CRM-3.5)',
     bullets: [
-      { text: 'Outreach plans customized to your business model, risk tolerance, and account timelines for optimal results.' },
-      { text: 'Every message and method is FDCPA-compliant and aligned with industry-specific requirements and best practices.' },
-      { text: 'Contact methods focus on preserving consumer relationships while motivating timely resolution of past-due balances.' },
+      { text: 'Outreach plans customized to your business model with standing settlement parameters (CRM-3.5) and client-specific KPIs for optimal results.' },
+      { text: 'Every message FDCPA-compliant per CRM-1.1 with TCPA consent validation (CRM-1.5) and 1-hour SMS STOP processing (CRM-2.4).' },
+      { text: 'Contact methods preserve consumer relationships while motivating resolution — agents trained per CRM-6.4 with "resolution over collection" mindset.' },
     ],
   },
   'analytics-driven': {
-    subject: 'Data-Driven Prioritization',
+    subject: 'Data-Driven Prioritization (CRM-2.1)',
     bullets: [
-      { text: 'Early-stage scoring models and behavioral data determine the best contact methods and prioritize accounts by recovery potential.' },
-      { text: 'Systems integrate directly with your KPIs, enabling custom performance tracking and real-time operational insight.' },
-      { text: 'Full FDCPA/FCRA compliance with strict consumer data safeguards across high-volume and niche portfolios alike.' },
+      { text: 'Maxify CRM scoring models and behavioral data determine optimal contact methods and prioritize accounts by recovery potential.' },
+      { text: 'Systems integrate directly with your KPIs — real-time portfolio dashboards and custom performance tracking per CRM-2.1 analytics.' },
+      { text: 'Full FDCPA/FCRA compliance (CRM-1.1) with AES-256 encryption (CRM-4.1) and PCI DSS-certified payment tokenization (CRM-3.8).' },
     ],
   },
   'business-benefits': {
-    subject: 'Measurable Business Impact',
+    subject: 'Measurable Business Impact (CRM-3.1)',
     bullets: [
-      { text: 'Prevent escalation to full collections, preserve customer relationships, and improve recovery rates on early-stage delinquencies.' },
-      { text: 'Lower long-term collection costs by up to 80% through timely intervention and strategic payment arrangements.' },
-      { text: 'Restore account standing quickly — before costly charge-offs, disputes, or legal action take hold.' },
+      { text: 'Prevent escalation to full collections with 30-day pre-reporting verification (CRM-1.4) — preserve relationships and improve early-stage recovery rates.' },
+      { text: 'Lower long-term collection costs through timely intervention with standing settlement parameters (CRM-3.5) and strategic payment arrangements.' },
+      { text: 'Restore account standing quickly — all calls recorded with 3-year retention (CRM-2.6) and QA-scored to ensure consistent quality.' },
     ],
   },
 }

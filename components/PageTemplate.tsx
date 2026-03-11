@@ -96,7 +96,7 @@ export default function PageTemplate({
           <div className="company-info">
             <p><strong>Capital Review Management</strong></p>
             <p>2200 North Frazier Suite 120 Box 142, Conroe, TX 77301</p>
-            <p>866-766-2692</p>
+            <p>888-681-0360</p>
           </div>
         </div>
       </div>

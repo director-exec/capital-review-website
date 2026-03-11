@@ -75,7 +75,7 @@ export default function Header() {
               {/* Top Right: Contact Info + Payment Button */}
               <div className="header-top-right">
                 <div className="contact-info">
-                  Need Help? Call us at 866-766-2692
+                  Need Help? Call us at 888-681-0360
                 </div>
                 <a href="/consumer-tools/make-a-payment" className="payment-button">
                   Make A Payment
@@ -202,7 +202,7 @@ export default function Header() {
       <div className={`mobile-menu ${isMobileMenuOpen ? 'show' : ''}`} id="mobileMenu">
         {/* Mobile Contact Info */}
         <div className="mobile-menu-section mobile-contact-info">
-          <a href="tel:866-766-2692" className="mobile-call-btn">
+          <a href="tel:888-681-0360" className="mobile-call-btn">
             Call Us
           </a>
           <a href="/consumer-tools/make-a-payment" className="mobile-payment-btn" onClick={closeMobileMenu}>

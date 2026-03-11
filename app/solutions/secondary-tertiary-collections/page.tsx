@@ -2,27 +2,27 @@ import SectionCard from '../../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'specialized-recovery': {
-    subject: 'Multi-Attempt Account Recovery',
+    subject: 'Multi-Attempt Recovery (CRM-3.1)',
     bullets: [
-      { text: 'Specialized approach for accounts that have been through multiple collection attempts without resolution.' },
-      { text: 'Advanced strategies and experienced handling from a team with decades of complex collection expertise.' },
-      { text: 'Innovative location and engagement techniques to reconnect with consumers who have resisted prior efforts.' },
+      { text: 'Specialized Maxify CRM workflows (CRM-2.1) for accounts that have been through multiple collection attempts without resolution.' },
+      { text: 'Agents trained per CRM-6.4 with "resolution over collection" mindset — 85% minimum pass scores and monthly QA reviews of 5+ calls per specialist.' },
+      { text: 'Innovative skip tracing and re-engagement techniques with 60-day unverified account return policies (CRM-3.3) for transparent partnerships.' },
     ],
   },
   'specialized-communication': {
-    subject: 'Behavioral Communication',
+    subject: 'Behavioral Communication (CRM-2.1)',
     bullets: [
-      { text: 'Customized outreach strategies based on detailed account history and consumer behavior pattern analysis.' },
-      { text: 'Access to specialized legal resources for complex regulatory and compliance matters across jurisdictions.' },
-      { text: 'Every communication is designed to motivate resolution while maintaining full regulatory compliance.' },
+      { text: 'Customized omnichannel outreach (CRM-2.1) based on detailed account history and consumer behavior analysis through Maxify CRM analytics.' },
+      { text: 'Network of attorneys (CRM-5.1) for complex matters with immediate litigation holds and evidence preservation per CRM-7.3.' },
+      { text: 'Every communication follows CRM-2.2 Mini-Miranda standards with 7-in-7 call frequency rules (CRM-1.3) and full FDCPA compliance (CRM-1.1).' },
     ],
   },
   'flexible-solutions': {
-    subject: 'Creative Resolution Options',
+    subject: 'Creative Resolution Options (CRM-3.5)',
     bullets: [
-      { text: 'Payment arrangements tailored to individual consumer circumstances for maximum resolution potential.' },
-      { text: 'Advanced location and contact services to reach consumers who have changed addresses or phone numbers.' },
-      { text: 'Expert legal and compliance support throughout the entire recovery process for complex cases.' },
+      { text: 'Standing settlement parameters (CRM-3.5) with payment arrangements tailored to individual consumer circumstances via PCI DSS tokenization (CRM-3.8).' },
+      { text: 'Advanced skip tracing and location services integrated with Maxify CRM — FCRA-compliant per CRM-1.1 with AES-256 encryption (CRM-4.1).' },
+      { text: 'State-specific compliance matrices (CRM-9.x) maintained with 60-day renewal lead times to ensure jurisdictional alignment on complex cases.' },
     ],
   },
 }

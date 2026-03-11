@@ -40,7 +40,7 @@ export default function PrivacyPolicyPage() {
       bullets: [
         { text: 'You have the right to access, review, and request copies of personal information per FDCPA compliance (CRM-1.1) — requests processed through Maxify CRM (CRM-2.1) with full documentation.' },
         { text: 'You may request updates or corrections to inaccurate information at any time — all changes tracked with role-based access controls (CRM-4.4) and complete audit trails.' },
-        { text: 'Deletion requests processed per applicable law with PHI/privacy safeguards (CRM-1.6) — contact us at compliance@capitalreviewmgt.com or 866-766-2692.' },
+        { text: 'Deletion requests processed per applicable law with PHI/privacy safeguards (CRM-1.6) — contact us at info@capitalreviewmanagement.com or 888-681-0360.' },
       ],
     },
     'california-privacy-rights': {
@@ -188,9 +188,9 @@ export default function PrivacyPolicyPage() {
               </p>
               <div style={{ fontSize: '1.125rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <p style={{ fontWeight: '600' }}>Capital Review Management LLC</p>
-                <p style={{ fontSize: '1.25rem', fontWeight: '600', color: '#1c2a3f' }}>866-766-2692</p>
+                <p style={{ fontSize: '1.25rem', fontWeight: '600', color: '#1c2a3f' }}>888-681-0360</p>
                 <p>
-                  <strong>Email:</strong> info@capitalreviewmgt.com
+                  <strong>Email:</strong> info@capitalreviewmanagement.com
                 </p>
               </div>
             </div>

@@ -1134,21 +1134,9 @@ footer {
   width: auto;
 }
 
-/* White-out BBB logo for dark background */
-.footer-badges .badge-bbb {
-  filter: brightness(0) invert(1);
-  opacity: 0.95;
-}
-
 .footer-badges .badge-ec {
   filter: brightness(0) invert(1);
   opacity: 0.95;
-}
-
-.footer-badges .badge-aca,
-.footer-badges .badge-rmai {
-  opacity: 0.95;
-  height: 48px;
 }
 
 .social-links {

@@ -4,25 +4,25 @@ const sectionCards: Record<string, { subject: string; bullets: { text: string }[
   'mission-beyond': {
     subject: 'Community-First Mission',
     bullets: [
-      { text: 'Our mission extends beyond financial recovery — creating lasting, positive impact in every community we serve.' },
-      { text: 'Active volunteerism, charitable partnerships, and community-driven initiatives define our corporate responsibility.' },
-      { text: 'True leadership means giving back — and we proudly uphold that responsibility at every level of our organization.' },
+      { text: 'Our mission extends beyond financial recovery — Capital Review Management creates lasting, positive impact in every community we serve.' },
+      { text: 'Active volunteerism, charitable partnerships, and community-driven initiatives reflect the same integrity embedded in our CRM compliance framework.' },
+      { text: 'The same "resolution over collection" mindset (CRM-6.4) that guides consumer interactions drives our commitment to community leadership.' },
     ],
   },
   'charitable-partnerships': {
     subject: 'Charitable Impact',
     bullets: [
-      { text: 'Monthly contributions to local and national nonprofits through employee-led fundraising and direct involvement.' },
-      { text: 'Supporting children\'s health organizations and addressing urgent community issues with measurable results.' },
-      { text: 'Driving real change — not just in business, but in people\'s lives through sustained charitable engagement.' },
+      { text: 'Monthly contributions to local and national nonprofits through employee-led fundraising, team volunteering, and direct organizational involvement.' },
+      { text: 'Supporting children\'s health organizations, veteran services, and urgent community issues with the same measurable results we deliver for clients.' },
+      { text: 'Our charitable standards match our professional standards — every initiative reflects the same integrity and compliance that defines our business operations.' },
     ],
   },
   'elite-standard': {
     subject: 'The Capital Review Standard',
     bullets: [
-      { text: 'Capital Review isn\'t just a name — it\'s a standard upheld in everything we do, including community service.' },
-      { text: 'True success is measured not just by business performance, but by the positive impact on the world around us.' },
-      { text: 'Through community involvement, we build stronger, more resilient communities and create lasting change.' },
+      { text: 'Capital Review isn\'t just a name — it\'s a standard upheld in everything we do, from CRM-1.1 regulatory compliance to community service.' },
+      { text: 'We hold ourselves to the highest ethical standards in both receivables management and social responsibility — driven by CRM-1.1 regulatory compliance.' },
+      { text: 'Through community involvement, we build stronger, more resilient communities — because the trust we earn in business must be earned in life.' },
     ],
   },
 }

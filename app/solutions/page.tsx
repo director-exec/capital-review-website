@@ -3,51 +3,51 @@ import SectionCard from '../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'pre-collection': {
-    subject: 'Early-Stage Recovery',
+    subject: 'Early-Stage Recovery (CRM-3.1)',
     bullets: [
-      { text: 'Proactive outreach for accounts slightly past due — before charge-off or full collection becomes necessary.' },
-      { text: 'Brand-protective contact strategies that maintain account relationships while maximizing recovery rates.' },
-      { text: 'Strategic payment arrangements and communication plans tailored to each client\'s risk tolerance.' },
+      { text: 'Proactive outreach via Maxify CRM (CRM-2.1) for accounts slightly past due — omnichannel contact with real-time analytics before charge-off becomes necessary.' },
+      { text: 'Brand-protective strategies per CRM-2.2 Mini-Miranda standards with 7-in-7 call frequency rules (CRM-1.3) and 1-hour SMS STOP processing (CRM-2.4).' },
+      { text: 'Strategic payment arrangements with standing settlement parameters (CRM-3.5) and PCI DSS-certified tokenization (CRM-3.8) for secure transactions.' },
     ],
   },
   'post-charge-off': {
-    subject: 'Charged-Off Account Recovery',
+    subject: 'Charged-Off Recovery (CRM-3.1)',
     bullets: [
-      { text: 'Advanced strategic collection techniques designed to recover balances from accounts that have been written off.' },
-      { text: 'Multichannel engagement powered by analytics, segmentation, and behavioral tracking for optimized recovery.' },
-      { text: 'Full FDCPA, FCRA, and TCPA compliance with internal legal oversight at every stage of the process.' },
+      { text: 'Advanced recovery powered by Maxify CRM analytics (CRM-2.1) with segmentation, behavioral tracking, and omnichannel workflows for optimized results.' },
+      { text: 'All agents trained per CRM-6.4 with 85% minimum pass scores — "resolution over collection" mindset in every consumer engagement.' },
+      { text: 'Full FDCPA/FCRA/TCPA compliance (CRM-1.1) with all calls recorded and retained for 3 years (CRM-2.6) and QA-scored monthly.' },
     ],
   },
   'secondary-tertiary': {
-    subject: 'Advanced-Stage Collections',
+    subject: 'Advanced-Stage Collections (CRM-3.1)',
     bullets: [
-      { text: 'Specialized handling for accounts that have been through multiple collection attempts without resolution.' },
-      { text: 'Innovative skip tracing and location strategies to re-engage hard-to-reach consumers.' },
-      { text: 'Experienced team with decades of success in recovering complex, multi-attempt accounts.' },
+      { text: 'Specialized handling for multi-attempt accounts with innovative skip tracing and re-engagement through Maxify CRM workflows (CRM-2.1).' },
+      { text: '60-day unverified account return policies (CRM-3.3) and standing settlement parameters (CRM-3.5) ensure transparent client partnerships.' },
+      { text: 'Network of attorneys (CRM-5.1) available for complex recovery with litigation holds and evidence preservation per CRM-7.3.' },
     ],
   },
   'warehousing': {
-    subject: 'Portfolio Optimization',
+    subject: 'Portfolio Optimization (CRM-3.1)',
     bullets: [
-      { text: 'Comprehensive portfolio analysis, segmentation, and strategic management to maximize recovery potential.' },
-      { text: 'Proprietary scoring and analytics re-prioritize accounts based on updated financial behavior and payment capacity.' },
-      { text: 'Reduced servicing rates for warehoused accounts — recovery efforts reinitiated only when true potential exists.' },
+      { text: 'Proprietary scoring and Maxify CRM analytics (CRM-2.1) re-prioritize warehoused accounts based on updated financial behavior and payment capacity.' },
+      { text: 'AES-256 encryption at rest and TLS 1.2+ in transit (CRM-4.1) with role-based access controls (CRM-4.4) protect all retained portfolio data.' },
+      { text: 'Reduced servicing rates with recovery reinitiated only when true potential exists — 30-day pre-reporting verification (CRM-1.4) before any bureau action.' },
     ],
   },
   'network-attorneys': {
-    subject: 'Nationwide Legal Network',
+    subject: 'Legal Network (CRM-5.1)',
     bullets: [
-      { text: 'Vetted network of licensed, bonded collection attorneys operating across multiple U.S. jurisdictions.' },
-      { text: 'Client-directed strategy: no lawsuit initiated and no settlement accepted without your explicit approval.' },
-      { text: 'Centralized management of all claims — filing to settlement — with full visibility from one point of contact.' },
+      { text: 'Vetted network of licensed, bonded collection attorneys per CRM-5.1 operating across multiple U.S. jurisdictions with centralized claim management.' },
+      { text: 'Client-directed strategy: no lawsuit initiated and no settlement accepted without explicit approval — full audit trails through Maxify CRM.' },
+      { text: 'Immediate litigation holds and evidence preservation per CRM-7.3 with comprehensive documentation at every stage of the legal process.' },
     ],
   },
   'credit-bureau': {
-    subject: 'Bureau Reporting Services',
+    subject: 'Bureau Reporting (CRM-1.4)',
     bullets: [
-      { text: 'Fully integrated with Experian, Equifax, and TransUnion — reporting only with your authorization.' },
-      { text: 'Full adherence to the Fair Credit Reporting Act (FCRA) with accurate, up-to-date account status tracking.' },
-      { text: 'No software costs or integration burdens — we manage the full reporting process on your behalf.' },
+      { text: 'Fully integrated with Experian, Equifax, and TransUnion — 30-day pre-reporting verification window (CRM-1.4) before any credit bureau action.' },
+      { text: 'Full FCRA adherence per CRM-1.1 with accurate, real-time account status tracking and dispute handling through Maxify CRM.' },
+      { text: 'Zero integration burden — we manage the complete reporting process with AES-256 encryption (CRM-4.1) and PCI DSS tokenization (CRM-3.8).' },
     ],
   },
 }

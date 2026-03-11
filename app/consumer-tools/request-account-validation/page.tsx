@@ -5,27 +5,27 @@ import SectionCard from '../../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'account-details': {
-    subject: 'Validation Request Process',
+    subject: 'Validation Request Process (CRM-1.1)',
     bullets: [
-      { text: 'Complete the form below to request account validation for your account with Capital Review Management.' },
-      { text: 'By submitting, you confirm that you are the authorized account holder and that your information is accurate.' },
-      { text: 'A member of our team will reach out within 24 hours to follow up with your request.' },
+      { text: 'Request FDCPA-compliant account validation (CRM-1.1) through Maxify CRM — processed by trained specialists with 85% minimum competency scores (CRM-6.4).' },
+      { text: 'By submitting, you confirm authorized account holder status — all data protected with AES-256 encryption (CRM-4.1) and role-based access controls (CRM-4.4).' },
+      { text: 'A member of our QA-reviewed team will follow up within 24 hours with full documentation per Mini-Miranda disclosure standards (CRM-2.2).' },
     ],
   },
   'email-delivery': {
-    subject: 'Email Delivery Notice',
+    subject: 'Email Delivery Notice (CRM-2.1)',
     bullets: [
-      { text: 'Your account validation or details will be sent via standard (unencrypted) email for your convenience.' },
-      { text: 'By submitting this form, you acknowledge and accept delivery in this electronic format.' },
-      { text: 'Add support@capitalreviewmgt.com to your safe sender list to avoid delivery issues.' },
+      { text: 'Validation details delivered via Maxify CRM omnichannel system (CRM-2.1) — all transmissions secured with TLS 1.2+ encryption in transit (CRM-4.1).' },
+      { text: 'By submitting, you acknowledge electronic delivery format — consent revocable per TCPA consent framework (CRM-1.5) at any time through reasonable means.' },
+      { text: 'Add info@capitalreviewmanagement.com to your safe sender list — all communications maintain 3-year retention records (CRM-2.6).' },
     ],
   },
   'required-information': {
-    subject: 'Required Information Checklist',
+    subject: 'Required Information Checklist (CRM-4.4)',
     bullets: [
-      { text: 'Provide your Capital Review Account Number, Creditor Name, Full Legal Name, and Complete Mailing Address.' },
-      { text: 'Include a Valid Phone Number and Email Address for communication and delivery purposes.' },
-      { text: 'Acknowledge consent for electronic delivery — you may revoke consent at any time through reasonable means.' },
+      { text: 'Provide your Capital Review Account Number, Creditor Name, Full Legal Name, and Complete Mailing Address for Maxify CRM account verification.' },
+      { text: 'Include Valid Phone Number and Email Address — all consumer data protected with PCI DSS tokenization (CRM-3.8) and PHI safeguards (CRM-1.6).' },
+      { text: 'Electronic delivery consent per CRM-1.5 — revocable at any time with 24-hour opt-out processing and full audit trail documentation.' },
     ],
   },
 }
@@ -51,7 +51,7 @@ export default function RequestAccountValidationPage() {
     {
       id: 'email-delivery',
       title: 'Important Notice Regarding Email Delivery',
-      description: 'Your account validation or account details will be sent via standard (unencrypted) email. While convenient, this method may not offer the same level of security as postal mail. By submitting this form, you acknowledge and accept delivery in this format. To avoid delivery issues, we recommend adding our email address — support@capitalreviewmgt.com — to your safe sender list.',
+      description: 'Your account validation or account details will be sent via standard (unencrypted) email. While convenient, this method may not offer the same level of security as postal mail. By submitting this form, you acknowledge and accept delivery in this format. To avoid delivery issues, we recommend adding our email address — info@capitalreviewmanagement.com — to your safe sender list.',
       image: 'https://images.pexels.com/photos/9068372/pexels-photo-9068372.jpeg?_gl=1*269x10*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MjU3MjAkbzEkZzEkdDE3NTQ5MjYwNzckajUxJGwwJGgw',
       background: 'grey',
       imageLeft: true
@@ -472,9 +472,9 @@ export default function RequestAccountValidationPage() {
             <div>
               <p>Capital Review Management</p>
               <p>2200 North Frazier Suite 120 Box 142, Conroe, TX 77301</p>
-              <p>Phone: 866-766-2692</p>
+              <p>Phone: 888-681-0360</p>
               <p>
-                <strong>Validation Email:</strong> validation@capitalreviewmgt.com
+                <strong>Validation Email:</strong> info@capitalreviewmanagement.com
               </p>
             </div>
           </div>

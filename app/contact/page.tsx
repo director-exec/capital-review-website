@@ -5,28 +5,28 @@ export default function ContactPage() {
       title: 'Trying to Resolve an Account?',
       description: 'If you\'ve received a communication from Capital Review Management and want to discuss your account or make a payment, our team is here to assist you.',
       image: '/Pages/Calculator_Writing_Pro.jpeg',
-      email: 'validation@capitalreviewmgt.com'
+      email: 'info@capitalreviewmanagement.com'
     },
     {
       id: 'receivables-help',
       title: 'Need Help With Receivables?',
       description: 'Looking to improve collections or streamline your accounts receivable process? Contact our solutions team to learn how we help clients maximize recovery while protecting their brand.',
       image: 'https://images.pexels.com/photos/4792288/pexels-photo-4792288.jpeg?_gl=1*17w92mj*_ga*ODY5MjgwMTU0LjE3NTQ5MjU3MjE.*_ga_8JE65Q40S6*czE3NTQ5MzA3MjckbzIkZzEkdDE3NTQ5MzA3NTQkajMzJGwwJGgw',
-      email: 'info@capitalreviewmgt.com'
+      email: 'info@capitalreviewmanagement.com'
     },
     {
       id: 'client-support',
       title: 'Already a Client?',
       description: 'If you\'re a current client and need support, reporting access, or a service update, we\'re always here for you.',
       image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop',
-      email: 'client@capitalreviewmgt.com'
+      email: 'info@capitalreviewmanagement.com'
     },
     {
       id: 'hr-verification',
       title: 'Employment Verification or HR Questions?',
       description: 'Need to verify employment, check holiday hours, or inquire about benefits?',
       image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800',
-      email: 'hr@capitalreviewmgt.com'
+      email: 'info@capitalreviewmanagement.com'
     }
   ]
 
@@ -53,17 +53,17 @@ export default function ContactPage() {
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a
-                href="tel:866-766-2692"
+                href="tel:888-681-0360"
                 className="subpage-btn"
               >
-                Call Us: 866-766-2692
+                Call Us: 888-681-0360
               </a>
               <a
-                href="mailto:info@capitalreviewmgt.com"
+                href="mailto:info@capitalreviewmanagement.com"
                 className="subpage-btn"
                 style={{ backgroundColor: '#7a8a9e' }}
               >
-                Email Us: info@capitalreviewmgt.com
+                Email Us: info@capitalreviewmanagement.com
               </a>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function ContactPage() {
                     <p>{card.description}</p>
                     <div className="contact-card-info">
                       <p className="email">Email: {card.email}</p>
-                      <p className="phone">Phone: 866-766-2692</p>
+                      <p className="phone">Phone: 888-681-0360</p>
                     </div>
                   </div>
                 </div>
@@ -122,10 +122,10 @@ export default function ContactPage() {
         <div className="subpage-container">
           <h3>Ready to get started?</h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1.5rem' }}>
-            <a href="tel:866-766-2692" className="subpage-btn" style={{ backgroundColor: 'white', color: '#1c2a3f' }}>
+            <a href="tel:888-681-0360" className="subpage-btn" style={{ backgroundColor: 'white', color: '#1c2a3f' }}>
               Call Us Today!
             </a>
-            <a href="mailto:info@capitalreviewmgt.com" className="subpage-btn" style={{ backgroundColor: 'white', color: '#1c2a3f' }}>
+            <a href="mailto:info@capitalreviewmanagement.com" className="subpage-btn" style={{ backgroundColor: 'white', color: '#1c2a3f' }}>
               Email Us
             </a>
           </div>

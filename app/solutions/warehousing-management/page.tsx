@@ -2,35 +2,35 @@ import SectionCard from '../../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'keep-cash-flow': {
-    subject: 'End-of-Life Account Recovery',
+    subject: 'Portfolio Recovery Optimization (CRM-3.1)',
     bullets: [
-      { text: 'Manage your end-of-life accounts at a reduced fee — maximizing recovery on accounts where the statute of limitations has not expired.' },
-      { text: 'Proprietary scoring, analytics, and skip tracing processes identify the best opportunities for cash flow recovery.' },
-      { text: 'Around-the-clock monitoring of multiple databases detects favorable recovery opportunities in real time.' },
+      { text: 'Manage end-of-life accounts at reduced fees with Maxify CRM analytics (CRM-2.1) — maximizing recovery where the statute of limitations has not expired.' },
+      { text: 'Proprietary scoring and skip tracing integrated with Maxify CRM workflows identify the best cash flow recovery opportunities in real time.' },
+      { text: 'Around-the-clock database monitoring with 30-day pre-reporting verification (CRM-1.4) before any credit bureau action on warehoused accounts.' },
     ],
   },
   'secure-data-holding': {
-    subject: 'Compliant Data Retention',
+    subject: 'Secure Data Retention (CRM-4.1)',
     bullets: [
-      { text: 'Accounts retained and monitored past standard collection efforts with full compliance with data retention laws.' },
-      { text: 'Continuous scanning of national databases for credit activity, employment updates, and asset shifts.' },
-      { text: 'Signs of renewed collectability trigger targeted re-engagement — maximizing recovery timing and potential.' },
+      { text: 'Accounts retained with AES-256 encryption at rest and TLS 1.2+ in transit (CRM-4.1) — full compliance with data retention laws and CRM-1.1 standards.' },
+      { text: 'Continuous scanning of national databases with role-based access controls (CRM-4.4) for credit activity, employment updates, and asset shifts.' },
+      { text: 'Signs of renewed collectability trigger targeted re-engagement through Maxify CRM omnichannel workflows (CRM-2.1) — maximizing recovery timing.' },
     ],
   },
   'proprietary-scoring': {
-    subject: 'Intelligent Account Scoring',
+    subject: 'Maxify CRM Scoring Engine (CRM-2.1)',
     bullets: [
-      { text: 'Accounts re-scored and prioritized based on updated financial behavior, payment capacity, and risk indicators.' },
-      { text: 'Lower servicing rates for warehoused accounts — full recovery efforts reinitiated only when true potential exists.' },
-      { text: 'Data-driven approach ensures resources are allocated to accounts with the highest probability of successful recovery.' },
+      { text: 'Accounts re-scored and prioritized through Maxify CRM analytics (CRM-2.1) based on updated financial behavior, payment capacity, and risk indicators.' },
+      { text: 'Lower servicing rates with recovery reinitiated only when true potential exists — standing settlement parameters (CRM-3.5) applied when appropriate.' },
+      { text: 'Data-driven allocation ensures resources target highest-probability accounts with PCI DSS tokenization (CRM-3.8) for any payment processing.' },
     ],
   },
   'cost-effective-strategy': {
-    subject: 'Maximize Lifetime ROI',
+    subject: 'Lifetime Portfolio ROI (CRM-3.1)',
     bullets: [
-      { text: 'Extend recovery timelines without legal risk and increase total lifetime ROI on each account in your portfolio.' },
-      { text: 'Avoid premature closures or write-offs by keeping accounts actively monitored at minimal cost.' },
-      { text: 'Free up internal resources while we manage the monitoring, scoring, and re-engagement of warehoused accounts.' },
+      { text: 'Extend recovery timelines with full FDCPA compliance (CRM-1.1) — increase total lifetime ROI on each account without legal risk.' },
+      { text: 'Avoid premature closures with continuous monitoring through Maxify CRM — all activity documented with full audit trails and 3-year retention (CRM-2.6).' },
+      { text: 'Free up internal resources while we manage monitoring, scoring, and re-engagement with state-specific compliance matrices (CRM-9.x) across all jurisdictions.' },
     ],
   },
 }

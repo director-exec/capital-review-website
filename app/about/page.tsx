@@ -6,49 +6,49 @@ const sectionCards: Record<string, { subject: string; bullets: { text: string }[
   'who-we-are': {
     subject: 'Digital Recovery Excellence',
     bullets: [
-      { text: 'Advanced technology platforms streamline operations, enhance communication, and deliver measurable outcomes for partners and consumers alike.' },
-      { text: 'Every engagement is built on transparency, discretion, and professionalism — from first contact to final resolution.' },
-      { text: 'Licensed, bonded, and insured with full regulatory compliance in every jurisdiction we serve.' },
+      { text: 'Maxify CRM platform powers omnichannel communication (CRM-2.1), real-time analytics, and compliance-integrated workflows across all operations.' },
+      { text: 'Every engagement is built on transparency, discretion, and professionalism — from first contact to final resolution per CRM-2.2 Mini-Miranda standards.' },
+      { text: 'Licensed, bonded, and insured with full regulatory compliance maintained across all jurisdictions per CRM-9.x State Compliance Matrices.' },
     ],
   },
   'what-we-stand-for': {
-    subject: 'BBB Accredited — A-Rated',
+    subject: 'Brand Stewardship & Reputation',
     bullets: [
-      { text: 'Capital Review Management has been BBB Accredited since September 2025, maintaining an A rating for ethical business practices and consumer satisfaction.' },
-      { text: 'Verified 5-star consumer reviews: "Outstanding service and professionalism." — Sarah Allen, January 2026' },
-      { text: 'Verified 5-star consumer reviews: "Handled my account with respect and dignity." — Danny Meister, October 2025' },
+      { text: 'Every consumer touchpoint reflects our clients\' brand values — empathetic communication and professional handling per CRM-2.2 Mini-Miranda standards.' },
+      { text: 'Complaint resolution protocols per CRM-7.1 with zero-tolerance standards and 15-day CFPB response windows protect your public image.' },
+      { text: 'Monthly QA reviews of 5+ calls per specialist (CRM-6.4) ensure tone, timing, and approach consistently uphold your reputation.' },
     ],
   },
   'how-we-operate': {
-    subject: 'FDCPA & Reg F Compliance',
+    subject: 'FDCPA & Reg F Compliance (CRM-1.1)',
     bullets: [
-      { text: 'Every consumer interaction follows FDCPA §1692 guidelines — no harassment, no misrepresentation, full validation rights disclosed.' },
-      { text: 'Agents are trained on tone, timing, and approach from the Capital Review Training Manual: "Resolution over collection."' },
-      { text: 'All calls are recorded, scored, and audited monthly for quality assurance and regulatory alignment.' },
+      { text: 'Every consumer interaction follows FDCPA §1692 and CRM-1.1 Regulatory Compliance — no harassment, no misrepresentation, full validation rights disclosed.' },
+      { text: 'Agents trained per CRM-6.4 with 85% minimum pass score on tone, timing, and approach: "Resolution over collection."' },
+      { text: 'All calls recorded with 3-year retention (CRM-2.6), scored by QA with minimum 5 calls per specialist reviewed monthly (CRM-6.4).' },
     ],
   },
   'our-people': {
-    subject: 'ACA International Member',
+    subject: 'Professional Standards & Training',
     bullets: [
-      { text: 'Proud member of ACA International (Member #A-30001629), the world\'s largest association of credit and collection professionals.' },
-      { text: 'Every team member completes rigorous onboarding and ongoing performance auditing — exceeding ACA\'s Code of Conduct standards.' },
-      { text: 'Our commitment to ACA\'s ethical guidelines ensures professionalism, integrity, and continuous improvement across all operations.' },
+      { text: 'Every team member undergoes CRM-6.2 background screening and CRM-6.4 training with 85% minimum competency scores on compliance, tone, and approach.' },
+      { text: '4-step corrective action process (CRM-6.6) and 24-hour access revocation upon termination ensure continuous compliance excellence.' },
+      { text: 'Role-based access controls (CRM-4.4), MFA protection, and ongoing performance auditing maintain the highest operational integrity.' },
     ],
   },
   'how-we-deliver': {
-    subject: 'RMAI Certified Member',
+    subject: 'Results-Driven Recovery (CRM-3.5)',
     bullets: [
-      { text: 'Certified member of the Receivables Management Association International, upholding the highest standards for responsible receivables management.' },
-      { text: 'Every client engagement is tailored to unique KPIs, operational nuances, and brand sensitivities — delivering clear, measurable recovery results.' },
-      { text: 'RMAI membership ensures adherence to industry best practices for data integrity, consumer protection, and ethical portfolio management.' },
+      { text: 'Client engagements tailored to unique KPIs with standing settlement parameters (CRM-3.5) and 60-day unverified account return policies (CRM-3.3).' },
+      { text: 'PCI DSS-certified payment tokenization (CRM-3.8) with AES-256 encryption (CRM-4.1) secures every transaction across all channels.' },
+      { text: 'Real-time analytics, automated reporting, and data-driven strategies maximize recovery while minimizing reputational risk for clients.' },
     ],
   },
   'where-we-work': {
     subject: 'Nationwide Licensing & Compliance',
     bullets: [
-      { text: 'Certificates of Authority, statutory bonds, trust accounts, and resident office requirements maintained in every jurisdiction where applicable law demands it.' },
-      { text: 'NMLS Pending — fully registered and compliant with state licensing requirements including California License #11645-99.' },
-      { text: 'As our footprint grows, our compliance infrastructure scales with it — wherever you operate, we are ready to support you.' },
+      { text: 'Certificates of Authority, statutory bonds, trust accounts, and resident office requirements maintained per CRM-9.x in every required jurisdiction.' },
+      { text: 'NMLS Pending — fully registered with state licensing requirements and 60-day renewal lead times to ensure zero lapses.' },
+      { text: 'As our footprint grows, our compliance infrastructure scales with it — wherever you operate, Capital Review Management is ready.' },
     ],
   },
 }

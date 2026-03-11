@@ -2,51 +2,51 @@ import SectionCard from '../../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'financial-services': {
-    subject: 'Financial Services Recovery',
+    subject: 'Financial Services Recovery (CRM-3.1)',
     bullets: [
-      { text: 'Intelligent, analytics-driven recovery strategies for national banks, credit unions, and fintech lenders.' },
-      { text: 'Direct integration with your KPIs enabling custom performance tracking and real-time portfolio insight.' },
-      { text: 'Full FDCPA/FCRA compliance with strict consumer data safeguards for high-volume and niche accounts alike.' },
+      { text: 'Analytics-driven recovery via Maxify CRM (CRM-2.1) with omnichannel communication, real-time portfolio dashboards, and custom KPI tracking for banks, credit unions, and fintech lenders.' },
+      { text: 'Standing settlement parameters per CRM-3.5 and 30-day pre-reporting verification windows (CRM-1.4) ensure every account is handled with precision before credit bureau action.' },
+      { text: 'Full FDCPA/FCRA compliance (CRM-1.1), AES-256 encryption at rest, TLS 1.2+ in transit (CRM-4.1), and PCI DSS-certified payment tokenization (CRM-3.8) for maximum data protection.' },
     ],
   },
   'telecommunications': {
-    subject: 'Telecom Collections Excellence',
+    subject: 'Telecom Collections Excellence (CRM-3.1)',
     bullets: [
-      { text: 'Decades of experience supporting wireless, broadband, landline, satellite, and cable providers nationwide.' },
-      { text: 'Digital-first collections model with real-time analytics and compliance-forward workflows at every stage.' },
-      { text: 'Tailored solutions that optimize recovery without compromising brand equity or consumer relationships.' },
+      { text: 'Decades of experience supporting wireless, broadband, landline, satellite, and cable providers with Maxify CRM-powered omnichannel workflows (CRM-2.1).' },
+      { text: 'TCPA-compliant dialing systems (CRM-1.5) with 7-in-7 call frequency rules (CRM-1.3) and 1-hour SMS STOP processing (CRM-2.4) protect brand equity at scale.' },
+      { text: 'Tailored recovery strategies with standing settlement parameters (CRM-3.5) and 60-day unverified account return policies (CRM-3.3) for measurable results.' },
     ],
   },
   'healthcare': {
-    subject: 'Patient-Centered Recovery',
+    subject: 'Patient-Centered Recovery (CRM-1.6)',
     bullets: [
-      { text: 'Compassionate recovery model for hospitals, physician groups, specialty centers, insurers, and pharmacy networks.' },
-      { text: 'Full HIPAA compliance is non-negotiable — we prioritize patient rights and data security at every touchpoint.' },
-      { text: 'Dignity and professionalism in every engagement while accelerating receivables and protecting patient privacy.' },
+      { text: 'Compassionate recovery for hospitals, physician groups, specialty centers, insurers, and pharmacy networks — built on CRM-6.4 agent training with 85% minimum pass scores.' },
+      { text: 'Full HIPAA compliance is non-negotiable — PHI safeguards per CRM-1.6, AES-256 encryption (CRM-4.1), and role-based access controls (CRM-4.4) protect patient data at every touchpoint.' },
+      { text: 'All calls recorded with 3-year retention (CRM-2.6) and Mini-Miranda disclosure (CRM-2.2) on every contact — dignity and professionalism in every patient engagement.' },
     ],
   },
   'utilities': {
-    subject: 'Utility Sector Specialists',
+    subject: 'Utility Sector Specialists (CRM-3.1)',
     bullets: [
-      { text: 'Supporting gas, water, electric, and broadband providers across regulated and deregulated markets.' },
-      { text: 'Life-cycle-based collections approach ensuring early intervention, regulatory alignment, and minimal reputational risk.' },
-      { text: 'Specialized handling of equipment loss and property damage accounts with care, accuracy, and compliance.' },
+      { text: 'Supporting gas, water, electric, and broadband providers with life-cycle-based collections powered by Maxify CRM real-time analytics (CRM-2.1).' },
+      { text: 'State-specific compliance matrices (CRM-9.x) maintained with 60-day renewal lead times ensure regulatory alignment across regulated and deregulated markets.' },
+      { text: 'Specialized equipment loss and property damage handling with standing settlement parameters (CRM-3.5) and 30-day pre-reporting verification (CRM-1.4).' },
     ],
   },
   'commercial-b2b': {
-    subject: 'Business-to-Business Recovery',
+    subject: 'Business-to-Business Recovery (CRM-3.1)',
     bullets: [
-      { text: 'Professionalism and discretion in commercial receivables management that protects long-term business relationships.' },
-      { text: 'Customized strategies designed to fit your operations without disrupting your reputation or client partnerships.' },
-      { text: 'Deep understanding of corporate debt recovery nuances across multiple industries and account types.' },
+      { text: 'Professionalism and discretion in commercial receivables — every engagement follows CRM-2.2 Mini-Miranda standards with full audit trails through Maxify CRM.' },
+      { text: 'Customized strategies with client-specific KPIs, standing settlement parameters (CRM-3.5), and 60-day unverified account return policies (CRM-3.3).' },
+      { text: 'Network of attorneys (CRM-5.1) available for complex commercial recovery with litigation holds and evidence preservation per CRM-7.3 when required.' },
     ],
   },
   'education': {
-    subject: 'Higher Education Solutions',
+    subject: 'Higher Education Solutions (CRM-3.1)',
     bullets: [
-      { text: 'FERPA-aware solutions for public and private colleges, universities, and vocational institutions nationwide.' },
-      { text: 'Compassionate, compliant approach that maintains institutional image while resolving student account balances.' },
-      { text: 'Empowering students to resolve their obligations through respectful engagement and flexible resolution options.' },
+      { text: 'FERPA-aware solutions with PHI/PII safeguards per CRM-1.6, role-based access controls (CRM-4.4), and AES-256 encryption (CRM-4.1) for student data protection.' },
+      { text: 'Compassionate agent training per CRM-6.4 with "resolution over collection" mindset — minimum 5 calls per specialist reviewed monthly by QA.' },
+      { text: 'Omnichannel communication (CRM-2.1) empowering students to resolve obligations through phone, email, text, and secure payment portal with PCI DSS tokenization (CRM-3.8).' },
     ],
   },
 }

@@ -47,7 +47,7 @@ const sectionCards: Record<string, { subject: string; bullets: { text: string }[
     bullets: [
       { text: 'Text message consent governed by TCPA framework (CRM-1.5) with electronic consent documentation — message and data rates may apply per your carrier agreement.' },
       { text: 'Message frequency varies by account activity — reply STOP for 1-hour opt-out processing (CRM-2.4) with 4-year TCPA consent retention per CRM-1.5 standards.' },
-      { text: 'Reply HELP for assistance or contact 866-766-2692 — all SMS interactions recorded in Maxify CRM (CRM-2.1) with AI disclosure compliance per CRM-8.3.' },
+      { text: 'Reply HELP for assistance or contact 888-681-0360 — all SMS interactions recorded in Maxify CRM (CRM-2.1) with AI disclosure compliance per CRM-8.3.' },
     ],
   },
 }
@@ -200,9 +200,9 @@ export default function TermsAndConditionsPage() {
               </p>
               <div style={{ fontSize: '1.125rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <p style={{ fontWeight: '600' }}>Capital Review Management LLC</p>
-                <p style={{ fontSize: '1.25rem', fontWeight: '600', color: '#1c2a3f' }}>866-766-2692</p>
+                <p style={{ fontSize: '1.25rem', fontWeight: '600', color: '#1c2a3f' }}>888-681-0360</p>
                 <p>
-                  <strong>Email:</strong> info@capitalreviewmgt.com
+                  <strong>Email:</strong> info@capitalreviewmanagement.com
                 </p>
               </div>
             </div>

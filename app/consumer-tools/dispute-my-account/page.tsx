@@ -324,7 +324,7 @@ export default function DisputeMyAccountPage() {
         <div className="subpage-container">
           <h2>Need to Speak with Someone?</h2>
           <p>You can contact us directly to speak with an account representative:</p>
-          <p className="text-xl font-semibold">866-766-2692</p>
+          <p className="text-xl font-semibold">888-681-0360</p>
         </div>
       </section>
 
@@ -343,9 +343,9 @@ export default function DisputeMyAccountPage() {
         <div className="subpage-container">
           <h2>Capital Review Management</h2>
           <p>2200 North Frazier Suite 120 Box 142, Conroe, TX 77301</p>
-          <p>866-766-2692</p>
+          <p>888-681-0360</p>
           <p className="mt-4">
-            <strong>Validation Email:</strong> validation@capitalreviewmgt.com
+            <strong>Validation Email:</strong> info@capitalreviewmanagement.com
           </p>
         </div>
       </section>

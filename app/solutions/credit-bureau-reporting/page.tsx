@@ -2,27 +2,27 @@ import SectionCard from '../../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'bureau-integration': {
-    subject: 'Three-Bureau Integration',
+    subject: 'Three-Bureau Integration (CRM-1.4)',
     bullets: [
-      { text: 'Fully integrated with Experian, Equifax, and TransUnion — the nation\'s three major credit bureaus.' },
-      { text: 'Secure systems and reporting protocols ensure authorized accounts are updated accurately and tracked in real time.' },
-      { text: 'All reporting conducted only with your explicit authorization — you maintain full control over what gets reported.' },
+      { text: 'Fully integrated with Experian, Equifax, and TransUnion — 30-day pre-reporting verification window (CRM-1.4) before any credit bureau action.' },
+      { text: 'Maxify CRM (CRM-2.1) reporting protocols with AES-256 encryption (CRM-4.1) ensure authorized accounts are updated accurately and tracked in real time.' },
+      { text: 'All reporting conducted only with your explicit authorization — full audit trails and compliance documentation maintained per CRM-1.1.' },
     ],
   },
   'compliance-benefits': {
-    subject: 'FCRA-Compliant Reporting',
+    subject: 'FCRA-Compliant Reporting (CRM-1.1)',
     bullets: [
-      { text: 'All bureau submissions handled on your behalf — no extra systems, software costs, or staffing required.' },
-      { text: 'Every report is accurate, up to date, and reflects current account status including disputes, in full FCRA accordance.' },
-      { text: 'Zero integration burden — we manage the complete reporting process from submission to resolution.' },
+      { text: 'All bureau submissions handled per CRM-1.1 regulatory standards — no extra systems, software costs, or staffing required on your end.' },
+      { text: 'Every report reflects current account status including disputes — 15-day CFPB response window (CRM-7.1) for any formal consumer complaints.' },
+      { text: 'Zero integration burden — we manage the complete reporting process with PCI DSS-certified tokenization (CRM-3.8) and role-based access controls (CRM-4.4).' },
     ],
   },
   'recovery-enhancement': {
-    subject: 'Recovery Enhancement',
+    subject: 'Recovery Enhancement (CRM-3.1)',
     bullets: [
-      { text: 'Strategic credit reporting increases repayment motivation without compromising consumer rights or protections.' },
-      { text: 'Disputed accounts are flagged appropriately with all consumer data transmitted securely and responsibly.' },
-      { text: 'Your team focuses on core business operations while we handle the credit reporting logistics and compliance protocols.' },
+      { text: 'Strategic credit reporting per CRM-1.4 increases repayment motivation without compromising consumer rights or protections.' },
+      { text: 'Disputed accounts flagged appropriately with all data transmitted via TLS 1.2+ (CRM-4.1) and consumer privacy safeguards per CRM-1.6.' },
+      { text: 'Your team focuses on core operations while we manage reporting logistics with state-specific compliance matrices (CRM-9.x) across all jurisdictions.' },
     ],
   },
 }
@@ -124,7 +124,7 @@ export default function CreditBureauReportingPage() {
             <div className="subpage-intro-inner">
               <h2>Have questions about how credit reporting fits your strategy?</h2>
               <p>
-                Call 866-766-2692 to speak with our compliance and recovery team. We ensure all reporting is accurate,
+                Call 888-681-0360 to speak with our compliance and recovery team. We ensure all reporting is accurate,
                 up to date, and reflects the current account status (including disputes), in accordance with FCRA.
               </p>
             </div>

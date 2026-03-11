@@ -97,10 +97,7 @@ export default function Home() {
                 </div>
                 <h3>Industry Standards</h3>
                 <div className="cert-badges">
-                  <span className="cert-badge">ACA Member</span>
-                  <span className="cert-badge">RMAI Member</span>
                   <span className="cert-badge">Everchain Certified</span>
-                  <span className="cert-badge">BBB Accredited</span>
                   <span className="cert-badge">Multi-State Licensed</span>
                   <span className="cert-badge">Insured & Bonded</span>
                 </div>
@@ -145,17 +142,17 @@ export default function Home() {
           <div className="contact-content">
             <h2>Ready to Get Started?</h2>
             <p>
-              Reach out at 866-766-2692 to learn how Capital Review Management can support your receivables, protect your reputation, and drive results.
+              Reach out at 888-681-0360 to learn how Capital Review Management can support your receivables, protect your reputation, and drive results.
             </p>
 
             <div className="contact-buttons">
-              <a href="tel:866-766-2692" className="btn btn-contact">
+              <a href="tel:888-681-0360" className="btn btn-contact">
                 <i className="fas fa-phone"></i>
-                866-766-2692
+                888-681-0360
               </a>
-              <a href="mailto:info@capitalreviewmgt.com" className="btn btn-outline">
+              <a href="mailto:info@capitalreviewmanagement.com" className="btn btn-outline">
                 <i className="fas fa-envelope"></i>
-                info@capitalreviewmgt.com
+                info@capitalreviewmanagement.com
               </a>
             </div>
 

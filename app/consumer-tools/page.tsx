@@ -3,51 +3,51 @@ import SectionCard from '../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'make-payment': {
-    subject: 'Flexible Payment Options',
+    subject: 'Secure Payment Processing (CRM-3.8)',
     bullets: [
-      { text: 'Make secure payments by phone or mail — convenient options to fit your schedule.' },
-      { text: 'Multiple payment methods accepted including checks, money orders, and phone payments.' },
-      { text: 'Our team is available to help you set up a payment arrangement tailored to your budget.' },
+      { text: 'PCI DSS-certified tokenization (CRM-3.8) secures every transaction — phone, mail, and portal payments processed with AES-256 encryption (CRM-4.1).' },
+      { text: 'Standing settlement parameters (CRM-3.5) enable flexible payment arrangements through Maxify CRM with full audit trail documentation.' },
+      { text: 'All payment processing follows FDCPA compliance standards (CRM-1.1) with role-based access controls (CRM-4.4) protecting your financial data.' },
     ],
   },
   'account-validation': {
-    subject: 'Account Verification Process',
+    subject: 'Account Verification Process (CRM-2.1)',
     bullets: [
-      { text: 'Request a detailed account validation delivered directly to your inbox for convenient review.' },
-      { text: 'Includes full balance breakdown, creditor information, and payment history for your records.' },
-      { text: 'Processed within 24 hours — our team will follow up to confirm receipt and answer questions.' },
+      { text: 'Request detailed account validation through Maxify CRM (CRM-2.1) — delivered directly to your inbox with AES-256 encrypted transmission (CRM-4.1).' },
+      { text: 'Includes full balance breakdown, creditor information, and payment history per FDCPA validation requirements (CRM-1.1).' },
+      { text: 'Processed within 24 hours by trained specialists (CRM-6.4) with 85% minimum competency scores and QA-reviewed handling.' },
     ],
   },
   'bankruptcy-notification': {
-    subject: 'Bankruptcy Filing Support',
+    subject: 'Bankruptcy Filing Support (CRM-7.3)',
     bullets: [
-      { text: 'Submit your bankruptcy filing details securely through our online notification form.' },
-      { text: 'Upload case documentation including petition, schedules, and court notices directly through the portal.' },
-      { text: 'Our compliance team ensures your account is handled in full accordance with bankruptcy law.' },
+      { text: 'Submit bankruptcy filing details securely — all uploads protected with AES-256 encryption at rest and TLS 1.2+ in transit (CRM-4.1).' },
+      { text: 'Immediate litigation holds per CRM-7.3 with evidence preservation protocols activated upon receipt of filing notification.' },
+      { text: 'Compliance team ensures full regulatory alignment (CRM-1.1) with 3-year documentation retention (CRM-2.6) for all bankruptcy communications.' },
     ],
   },
   'fraud-identity-theft': {
-    subject: 'Fraud Protection Assistance',
+    subject: 'Fraud Protection Assistance (CRM-4.1)',
     bullets: [
-      { text: 'Report suspected fraud or identity theft for immediate account review and security measures.' },
-      { text: 'Our dedicated team provides guidance on filing FTC reports, police reports, and credit bureau alerts.' },
-      { text: 'Receive step-by-step support to protect your identity and resolve fraudulent activity on your account.' },
+      { text: 'Report suspected fraud for immediate account review — security measures per CRM-4.1 with role-based access controls (CRM-4.4) and MFA protection.' },
+      { text: 'Dedicated fraud team provides guidance on FTC reports, police reports, and credit bureau alerts with PHI/privacy safeguards per CRM-1.6.' },
+      { text: 'Full investigation with 3-year record retention (CRM-2.6) and state-specific compliance matrices (CRM-9.x) applied to every fraud case.' },
     ],
   },
   'remove-number': {
-    subject: 'Contact Preference Management',
+    subject: 'Contact Preference Management (CRM-1.5)',
     bullets: [
-      { text: 'Request removal of incorrect phone numbers or update your preferred contact number on file.' },
-      { text: 'Changes are reviewed within 24 hours and fully implemented within 5 business days.' },
-      { text: 'Provide an alternative contact number and we will begin using it immediately upon processing.' },
+      { text: 'Request phone number removal or update contact preferences per TCPA consent framework (CRM-1.5) with 24-hour opt-out processing.' },
+      { text: 'Changes reviewed within 24 hours and implemented within 5 business days — all updates tracked in Maxify CRM (CRM-2.1) with full audit trails.' },
+      { text: '7-in-7 call frequency rules (CRM-1.3) and 1-hour text opt-out processing (CRM-2.4) ensure your preferences are respected immediately.' },
     ],
   },
   'feedback': {
-    subject: 'Your Feedback Matters',
+    subject: 'Your Feedback Matters (CRM-7.1)',
     bullets: [
-      { text: 'Submit compliments to recognize excellent service or file complaints for prompt resolution.' },
-      { text: 'Every submission is reviewed by our internal compliance and service quality teams.' },
-      { text: 'Complaints are escalated and investigated — you will receive a response within 10 business days.' },
+      { text: 'Submit compliments or complaints — every submission reviewed by compliance and quality teams per CRM-7.1 zero-tolerance resolution standards.' },
+      { text: 'Monthly QA reviews of 5+ calls per specialist (CRM-6.4) and 4-step corrective action process (CRM-6.6) ensure continuous improvement.' },
+      { text: 'Complaints escalated with 15-day CFPB response window (CRM-7.1) — you will receive a response within 10 business days.' },
     ],
   },
 }

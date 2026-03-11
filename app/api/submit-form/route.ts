@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
 const emailTemplates = {
   'account-validation': {
     subject: 'Account Validation Request - Capital Review Management',
-    to: 'info@capitalreviewmgt.com',
+    to: 'info@capitalreviewmanagement.com',
     template: (data: any) => `
       <h2>Account Validation Request</h2>
       <p><strong>Account Number:</strong> ${data.accountNumber}</p>
@@ -28,7 +28,7 @@ const emailTemplates = {
   },
   'bankruptcy-notification': {
     subject: 'Bankruptcy Notification - Capital Review Management',
-    to: 'info@capitalreviewmgt.com',
+    to: 'info@capitalreviewmanagement.com',
     template: (data: any) => `
       <h2>Bankruptcy Notification</h2>
       <p><strong>Account Number:</strong> ${data.accountNumber}</p>
@@ -50,7 +50,7 @@ const emailTemplates = {
   },
   'remove-number': {
     subject: 'Remove My Number Request - Capital Review Management',
-    to: 'compliance@capitalreviewmgt.com',
+    to: 'info@capitalreviewmanagement.com',
     template: (data: any) => `
       <h2>Remove My Number Request</h2>
       <p><strong>Account Number:</strong> ${data.accountNumber}</p>
@@ -66,7 +66,7 @@ const emailTemplates = {
   },
   'compliment-complaint': {
     subject: 'Feedback Submission - Capital Review Management',
-    to: 'compliance@capitalreviewmgt.com',
+    to: 'info@capitalreviewmanagement.com',
     template: (data: any) => `
       <h2>Feedback Submission</h2>
       <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
@@ -84,7 +84,7 @@ const emailTemplates = {
   },
   'dispute-account': {
     subject: 'Account Dispute - Capital Review Management',
-    to: 'compliance@capitalreviewmgt.com',
+    to: 'info@capitalreviewmanagement.com',
     template: (data: any) => `
       <h2>Account Dispute</h2>
       <p><strong>Account Number:</strong> ${data.accountNumber}</p>

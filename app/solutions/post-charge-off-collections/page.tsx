@@ -2,35 +2,35 @@ import SectionCard from '../../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'advanced-recovery': {
-    subject: 'Strategic Recovery Systems',
+    subject: 'Strategic Recovery Systems (CRM-3.1)',
     bullets: [
-      { text: 'Advanced analytics and multichannel communication power every recovery effort — converting aged accounts into revenue.' },
-      { text: 'Fully compliant protocols protect your brand reputation at every step, from first contact to final resolution.' },
-      { text: 'Experienced team with decades of results in regulated industries including financial services, healthcare, and utilities.' },
+      { text: 'Maxify CRM analytics (CRM-2.1) and omnichannel communication power every recovery effort — converting aged accounts into revenue.' },
+      { text: 'Fully compliant protocols per CRM-1.1 protect your brand reputation — Mini-Miranda disclosure (CRM-2.2) on every contact from first touch to final resolution.' },
+      { text: 'Experienced team trained per CRM-6.4 with 85% minimum pass scores across regulated industries including financial services, healthcare, and utilities.' },
     ],
   },
   'omnichannel-outreach': {
-    subject: 'Omnichannel Contact Strategy',
+    subject: 'Omnichannel Contact Strategy (CRM-2.1)',
     bullets: [
-      { text: 'Voice, SMS, email, and mail — each channel tailored to consumer behavior and preference for maximum engagement.' },
-      { text: 'Data-driven workflows: segmentation, scoring, and behavioral tracking guide every outreach decision.' },
-      { text: 'All agents trained to handle post-charge-off consumers with empathy, clarity, and professionalism.' },
+      { text: 'Voice, SMS, email, and mail via Maxify CRM (CRM-2.1) — each channel tailored to consumer behavior with 7-in-7 call rules (CRM-1.3).' },
+      { text: 'Data-driven workflows: segmentation, scoring, and behavioral tracking with real-time portfolio dashboards guide every outreach decision.' },
+      { text: 'All agents trained per CRM-6.4 "resolution over collection" mindset — minimum 5 calls per specialist QA-reviewed monthly.' },
     ],
   },
   'compliance-first': {
-    subject: 'Regulatory Compliance',
+    subject: 'Regulatory Compliance (CRM-1.1)',
     bullets: [
-      { text: 'FDCPA, FCRA, TCPA, GLBA, HIPAA — internal legal oversight ensures full regulatory alignment at every stage.' },
-      { text: 'Industry-specific compliance frameworks for financial institutions, healthcare providers, utilities, and commercial businesses.' },
-      { text: 'Approach designed to reduce friction and increase resolution speed while maintaining complete regulatory adherence.' },
+      { text: 'FDCPA, FCRA, TCPA, GLBA, HIPAA compliance per CRM-1.1 — all calls recorded with 3-year retention (CRM-2.6) and full audit trails.' },
+      { text: 'State-specific compliance matrices (CRM-9.x) maintained with 60-day renewal lead times across every required jurisdiction.' },
+      { text: 'AES-256 encryption at rest, TLS 1.2+ in transit (CRM-4.1), and PCI DSS tokenization (CRM-3.8) ensure data protection at every stage.' },
     ],
   },
   'proven-results': {
-    subject: 'Measurable Performance',
+    subject: 'Measurable Performance (CRM-3.1)',
     bullets: [
-      { text: 'Consistently delivers superior recovery rates while maintaining the highest standards of compliance and customer service.' },
-      { text: 'Every account represents a relationship that can be restored — our refined approach reflects decades of industry experience.' },
-      { text: 'Real-time reporting and performance tracking give you full visibility into recovery progress and outcomes.' },
+      { text: 'Superior recovery rates with standing settlement parameters (CRM-3.5) and 60-day unverified account return policies (CRM-3.3).' },
+      { text: 'Every account represents a relationship that can be restored — our "resolution over collection" approach (CRM-6.4) reflects industry leadership.' },
+      { text: 'Real-time Maxify CRM reporting and performance tracking give you full visibility into recovery progress and outcomes.' },
     ],
   },
 }

@@ -6,43 +6,43 @@ import SectionCard from '../../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'immediate-action': {
-    subject: 'Immediate Fraud Response',
+    subject: 'Immediate Fraud Response (CRM-4.1)',
     bullets: [
-      { text: 'Contact Capital Review Management immediately at 866-766-2692 for urgent fraud assistance and account protection.' },
-      { text: 'Your account will be flagged for immediate security review and protective measures will be implemented.' },
-      { text: 'Our dedicated fraud team prioritizes your privacy and works quickly to secure your financial information.' },
+      { text: 'Contact Capital Review Management at 888-681-0360 — immediate account security measures per CRM-4.1 with MFA protection and role-based access lockdown (CRM-4.4).' },
+      { text: 'Account flagged for priority review in Maxify CRM (CRM-2.1) with AES-256 encryption (CRM-4.1) safeguarding all fraud investigation data.' },
+      { text: 'Dedicated fraud team trained per CRM-6.4 standards with 85% minimum competency — privacy safeguards per CRM-1.6 applied to every fraud case.' },
     ],
   },
   'ftc-reporting': {
-    subject: 'Federal Trade Commission Report',
+    subject: 'Federal Trade Commission Report (CRM-7.1)',
     bullets: [
-      { text: 'File a formal identity theft report at IdentityTheft.gov to create an official FTC Identity Theft Report.' },
-      { text: 'This comprehensive report is often required by creditors, banks, and credit bureaus to resolve disputes.' },
-      { text: 'The FTC report establishes your legal rights and provides a recovery plan tailored to your situation.' },
+      { text: 'File a formal identity theft report at IdentityTheft.gov — Capital Review coordinates with 15-day CFPB response protocols (CRM-7.1) on all fraud disputes.' },
+      { text: 'FTC Identity Theft Report required by creditors and bureaus — our compliance team per CRM-1.1 guides you through every step of the filing process.' },
+      { text: 'All fraud documentation maintained with 3-year retention (CRM-2.6) and evidence preservation protocols (CRM-7.3) for full legal defensibility.' },
     ],
   },
   'police-report': {
-    subject: 'Law Enforcement Documentation',
+    subject: 'Law Enforcement Documentation (CRM-7.3)',
     bullets: [
-      { text: 'File a police report with your local law enforcement to create an official record of the identity theft crime.' },
-      { text: 'Bring your FTC report, government-issued photo ID, proof of address, and any evidence of the theft.' },
-      { text: 'A police report may be required by creditors and credit bureaus to process fraud claims and disputes.' },
+      { text: 'File a police report with local law enforcement — Capital Review maintains immediate litigation holds (CRM-7.3) pending fraud investigation outcomes.' },
+      { text: 'Bring FTC report, government-issued ID, proof of address, and evidence — our team assists with documentation per FDCPA compliance (CRM-1.1).' },
+      { text: 'Police reports processed through Maxify CRM (CRM-2.1) with full audit trails and state-specific compliance matrices (CRM-9.x) applied.' },
     ],
   },
   'what-to-expect': {
-    subject: 'Our Commitment to You',
+    subject: 'Our Commitment to You (CRM-6.4)',
     bullets: [
-      { text: 'Immediate account review with enhanced security measures applied to protect your information.' },
-      { text: 'Full assistance with documentation, reporting guidance, and coordination with relevant agencies.' },
-      { text: 'Regular status updates on your case and ongoing guidance to protect your identity going forward.' },
+      { text: 'Immediate account review with AES-256 encryption (CRM-4.1), TLS 1.2+ in transit, and enhanced security measures per CRM-4.3 disaster recovery protocols.' },
+      { text: 'Full assistance from specialists trained per CRM-6.4 with monthly QA reviews of 5+ cases per team member and 4-step corrective action process (CRM-6.6).' },
+      { text: 'Regular status updates through Maxify CRM (CRM-2.1) omnichannel communication — all interactions recorded with 3-year retention (CRM-2.6).' },
     ],
   },
   'additional-resources': {
-    subject: 'Key Resource Contacts',
+    subject: 'Key Resource Contacts (CRM-1.4)',
     bullets: [
-      { text: 'Credit bureaus (Equifax, Experian, TransUnion) can place fraud alerts and freeze your credit reports.' },
-      { text: 'Federal agencies (FTC, Social Security Administration, IRS) handle identity theft reports and tax fraud.' },
-      { text: 'These organizations work together to help you recover from identity theft and prevent future incidents.' },
+      { text: 'Credit bureaus (Equifax, Experian, TransUnion) — Capital Review\'s three-bureau integration (CRM-1.4) enables coordinated fraud alerts and credit freezes.' },
+      { text: 'Federal agencies (FTC, SSA, IRS) handle identity theft reports — our compliance team (CRM-1.1) coordinates with all relevant regulatory bodies.' },
+      { text: 'PHI/privacy safeguards (CRM-1.6) protect your data throughout the fraud recovery process with PCI DSS tokenization (CRM-3.8) on all financial records.' },
     ],
   },
 }
@@ -60,7 +60,7 @@ export default function FraudIdentityTheftPage() {
     {
       id: 'immediate-action',
       title: 'Immediate Action Required',
-      description: 'If you believe your account has been impacted by fraud or identity theft, please contact Capital Review Management immediately so we can assist you in resolving the matter with urgency and care. Your privacy and security are our priority. Call us at 866-766-2692 for immediate assistance.',
+      description: 'If you believe your account has been impacted by fraud or identity theft, please contact Capital Review Management immediately so we can assist you in resolving the matter with urgency and care. Your privacy and security are our priority. Call us at 888-681-0360 for immediate assistance.',
       background: 'white',
       imageLeft: false
     },
@@ -187,9 +187,9 @@ export default function FraudIdentityTheftPage() {
           <div className="text-center">
             <p className="font-semibold">Capital Review Management</p>
             <p>2200 North Frazier Suite 120 Box 142, Conroe, TX 77301</p>
-            <p className="text-xl font-semibold">866-766-2692</p>
+            <p className="text-xl font-semibold">888-681-0360</p>
             <p className="mt-4">
-              <strong>Compliance Email:</strong> compliance@capitalreviewmgt.com
+              <strong>Compliance Email:</strong> info@capitalreviewmanagement.com
             </p>
           </div>
         </div>

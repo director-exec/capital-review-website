@@ -2,27 +2,27 @@ import SectionCard from '../../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'trusted-representation': {
-    subject: 'Multi-Jurisdictional Coverage',
+    subject: 'Vetted Attorney Network (CRM-5.1)',
     bullets: [
-      { text: 'Licensed, bonded, and highly rated collection attorneys operating across multiple U.S. jurisdictions.' },
-      { text: 'Centralized claim management — from filing to settlement — with full visibility from one point of contact.' },
-      { text: 'No need to manage multiple firms; we oversee every claim through our unified, streamlined system.' },
+      { text: 'Licensed, bonded collection attorneys per CRM-5.1 operating across multiple U.S. jurisdictions with centralized claim management through Maxify CRM.' },
+      { text: 'Every attorney vetted for compliance alignment with CRM-1.1 regulatory standards — full audit trails from filing to settlement maintained in real time.' },
+      { text: 'One point of contact manages all claims — no need for multiple firms when our unified system provides full visibility and state-specific compliance (CRM-9.x).' },
     ],
   },
   'client-directed-strategy': {
-    subject: 'Client-Controlled Process',
+    subject: 'Client-Directed Legal Strategy (CRM-5.1)',
     bullets: [
-      { text: 'No lawsuit initiated and no settlement accepted without your explicit approval — the attorney represents you.' },
-      { text: 'Pre-litigation collectability review including asset investigation, employment verification, and compliance checklists.' },
-      { text: 'Full communication, documentation, and execution management on your behalf throughout the legal process.' },
+      { text: 'No lawsuit initiated and no settlement accepted without your explicit approval per CRM-5.1 — the attorney represents you with full documentation through Maxify CRM.' },
+      { text: 'Pre-litigation collectability review includes asset investigation, employment verification, and compliance checklists aligned with CRM-1.1 and CRM-7.3 evidence preservation.' },
+      { text: 'Immediate litigation holds per CRM-7.3 with all communications recorded and retained for 3 years (CRM-2.6) ensuring complete legal defensibility.' },
     ],
   },
   'comprehensive-services': {
-    subject: 'Full Legal Infrastructure',
+    subject: 'Full Legal Infrastructure (CRM-7.3)',
     bullets: [
-      { text: 'Lawsuit initiation and monitoring, judgment enforcement, settlement negotiation, and court cost tracking.' },
-      { text: 'Payment forwarding, accounting, and multi-jurisdictional coverage with bonded representation in every jurisdiction.' },
-      { text: 'Whether pursuing a single claim or managing a large portfolio, we execute with confidence and full compliance.' },
+      { text: 'Lawsuit initiation, judgment enforcement, settlement negotiation per standing parameters (CRM-3.5), and court cost tracking — all managed through Maxify CRM.' },
+      { text: 'Payment forwarding with PCI DSS-certified tokenization (CRM-3.8) and AES-256 encryption (CRM-4.1) across every jurisdiction we operate in.' },
+      { text: 'Whether pursuing a single claim or a national portfolio, we execute with full FDCPA compliance (CRM-1.1) and bonded representation in every jurisdiction.' },
     ],
   },
 }

@@ -9,43 +9,43 @@ export const metadata: Metadata = {
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'consent-protocol': {
-    subject: 'Consent-First Framework',
+    subject: 'Consent-First Framework (CRM-1.5)',
     bullets: [
-      { text: 'Only contact consumers whose phone numbers are provided with valid, documented consent status.' },
-      { text: 'Aggressively honor STOP messages via SMS, verbal opt-outs during calls, and wrong-number notifications.' },
-      { text: 'Monthly-reviewed internal archives ensure every consent record is current, documented, and suppressed as needed.' },
+      { text: 'Only contact consumers whose phone numbers carry valid, documented consent — with 4-year TCPA consent record retention per CRM-1.5.' },
+      { text: 'STOP messages via SMS honored within 1 hour (CRM-2.4), verbal opt-outs processed within 24 hours, and wrong-number notifications acted upon immediately.' },
+      { text: 'Monthly-reviewed internal archives and 7-in-7 call frequency rules (CRM-1.3) ensure every consent record is current and suppressed as needed.' },
     ],
   },
   'caller-transparency': {
-    subject: 'Full Caller Transparency',
+    subject: 'Full Caller Transparency (CRM-2.2)',
     bullets: [
-      { text: 'Every number we use is valid, active, callback-capable, and directly linked to our company — never spoofed.' },
-      { text: 'Registered with carrier-level caller ID systems and fully compliant with FCC 47 CFR § 64.1601(e).' },
-      { text: 'Our number always traces directly to us, even when carrier limitations prevent company name display.' },
+      { text: 'Every number we use is valid, active, callback-capable, and directly linked to Capital Review Management — never spoofed.' },
+      { text: 'Registered with carrier-level caller ID systems and fully compliant with FCC 47 CFR § 64.1601(e) per CRM-1.5 TCPA standards.' },
+      { text: 'Mini-Miranda disclosure delivered on every call per CRM-2.2 — our number always traces directly to us.' },
     ],
   },
   'internal-documentation': {
-    subject: 'Auditable Documentation',
+    subject: 'Auditable Documentation (CRM-2.6)',
     bullets: [
-      { text: 'Monthly TCPA Consent Packets compiled with number verification, oversight validation, and policy documentation.' },
-      { text: 'All records securely stored and available for audit or review — full transparency at every level.' },
-      { text: 'No prerecorded messages on phone numbers without documented consent — this is non-negotiable.' },
+      { text: 'Monthly TCPA Consent Packets compiled with number verification, oversight validation, and policy documentation per CRM-1.5.' },
+      { text: 'All call recordings retained for 3 years (CRM-2.6) and securely stored — available for audit or review at any time.' },
+      { text: 'No prerecorded messages on phone numbers without documented consent — this is non-negotiable under our CRM-1.5 protocols.' },
     ],
   },
   'why-contacted': {
-    subject: 'Consumer Inquiry Support',
+    subject: 'Consumer Inquiry Support (CRM-2.1)',
     bullets: [
-      { text: 'Multiple contact options including phone, email, and website forms for removal, source, and wrong-number requests.' },
-      { text: 'Preset form options for "Why was I contacted?", "Where did you get my number?", and "Please remove my number."' },
-      { text: 'All inquiries routed directly to our compliance team for immediate attention and resolution.' },
+      { text: 'Omnichannel consumer communication per CRM-2.1 — phone, email, text, and website forms for removal, source, and wrong-number requests.' },
+      { text: 'Preset form options for "Why was I contacted?", "Where did you get my number?", and "Please remove my number." per our consumer tools.' },
+      { text: 'All inquiries routed directly to our compliance team with a 15-day CFPB response window (CRM-7.1) for formal complaints.' },
     ],
   },
   'zero-tolerance': {
-    subject: 'Zero Tolerance Policy',
+    subject: 'Zero Tolerance Policy (CRM-7.1)',
     bullets: [
-      { text: 'We do not tolerate TCPA violations — internal or external. All calls are regulated and consent is validated.' },
-      { text: 'Comprehensive audit logs maintained for every communication to ensure full accountability and traceability.' },
-      { text: 'Compliance team available immediately to address any concerns about calls or messages received in error.' },
+      { text: 'Zero tolerance for TCPA violations — all calls regulated, consent validated, and 4-step corrective action enforced (CRM-6.6).' },
+      { text: 'Comprehensive audit logs maintained for every communication through Maxify CRM to ensure full accountability and traceability.' },
+      { text: 'Compliance team available immediately — with immediate litigation holds and evidence preservation per CRM-7.3 when required.' },
     ],
   },
 }
@@ -171,11 +171,11 @@ export default function TCPACompliancePage() {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
                   <div>
                     <p style={{ fontWeight: '600', color: '#1c2a3f', marginBottom: '0.5rem' }}>Phone</p>
-                    <p>833-381-4416</p>
+                    <p>888-681-0360</p>
                   </div>
                   <div>
                     <p style={{ fontWeight: '600', color: '#1c2a3f', marginBottom: '0.5rem' }}>Email</p>
-                    <p>compliance@capitalreview.com</p>
+                    <p>info@capitalreviewmanagement.com</p>
                   </div>
                 </div>
                 <p style={{ fontSize: '0.875rem', color: '#666', marginTop: '1.5rem' }}>

@@ -3,43 +3,43 @@ import SectionCard from '../../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'advanced-location-services': {
-    subject: 'Cutting-Edge Location Technology',
+    subject: 'Maxify CRM Location Technology (CRM-2.1)',
     bullets: [
-      { text: 'Sophisticated algorithms, public records searches, and proprietary databases to track down hard-to-find individuals.' },
-      { text: 'Multichannel data verification cross-references multiple sources for the most accurate contact information available.' },
-      { text: 'Real-time tracking capabilities locate consumers who have moved, changed numbers, or gone off-grid.' },
+      { text: 'Maxify CRM-integrated algorithms (CRM-2.1), public records searches, and proprietary databases to track down hard-to-find individuals with precision.' },
+      { text: 'Multichannel data verification cross-references multiple sources — all data transmitted via TLS 1.2+ (CRM-4.1) for secure, accurate contact information.' },
+      { text: 'Real-time tracking capabilities integrated with Maxify CRM workflows locate consumers who have moved, changed numbers, or gone off-grid.' },
     ],
   },
   'comprehensive-database-access': {
-    subject: 'Multi-Source Data Access',
+    subject: 'Multi-Source Intelligence (CRM-2.1)',
     bullets: [
-      { text: 'Extensive databases including credit bureaus, public records, utility records, and proprietary skip tracing systems.' },
-      { text: 'Multiple data sources combined to create the most accurate, up-to-date contact information for each individual.' },
-      { text: 'Continuous database updates ensure we\'re working with the freshest available information at all times.' },
+      { text: 'Extensive databases including credit bureaus, public records, utility records, and proprietary skip tracing systems — all FCRA-compliant per CRM-1.1.' },
+      { text: 'Multiple data sources combined through Maxify CRM analytics (CRM-2.1) to create the most accurate, up-to-date contact profiles for each individual.' },
+      { text: 'Continuous database updates with AES-256 encryption at rest (CRM-4.1) ensure we work with the freshest available information securely at all times.' },
     ],
   },
   'fcra-compliant-processes': {
-    subject: 'FCRA-Compliant Processes',
+    subject: 'Regulatory Compliance (CRM-1.1)',
     bullets: [
-      { text: 'All skip tracing activities conducted in full compliance with the Fair Credit Reporting Act and applicable regulations.' },
-      { text: 'Strict protocols ensure consumer privacy and data protection while maximizing location success rates.' },
-      { text: 'Regular compliance audits and training keep our processes aligned with evolving regulatory requirements.' },
+      { text: 'All skip tracing activities conducted in full FCRA compliance per CRM-1.1 with consumer privacy safeguards (CRM-1.6) and applicable state regulations.' },
+      { text: 'Role-based access controls (CRM-4.4) with MFA authentication and 15-minute session timeouts protect consumer data while maximizing location success rates.' },
+      { text: 'State-specific compliance matrices (CRM-9.x) maintained with 60-day renewal lead times keep processes aligned with evolving regulatory requirements.' },
     ],
   },
   'specialized-expertise': {
-    subject: 'Experienced Professionals',
+    subject: 'Trained Skip Trace Specialists (CRM-6.4)',
     bullets: [
-      { text: 'Seasoned skip tracing professionals who understand the unique challenges of locating individuals in various circumstances.' },
-      { text: 'Expert navigation of complex scenarios including name changes, address updates, and multi-state relocations.' },
-      { text: 'Specialized techniques for different consumer demographics and situational complexities.' },
+      { text: 'Specialists trained per CRM-6.4 with 85% minimum pass scores who understand the unique challenges of locating individuals in various circumstances.' },
+      { text: 'Expert navigation of complex scenarios including name changes, address updates, and multi-state relocations — all documented through Maxify CRM audit trails.' },
+      { text: 'Monthly QA reviews of 5+ cases per specialist with 4-step corrective action process (CRM-6.6) ensure consistent quality and compliance.' },
     ],
   },
   'proven-success-rates': {
-    subject: 'High-Performance Results',
+    subject: 'Data-Driven Results (CRM-3.1)',
     bullets: [
-      { text: 'Consistently high success rates in locating individuals across various demographics and circumstances.' },
-      { text: 'Performance metrics tracked and analyzed continuously to refine processes and improve outcomes.' },
-      { text: 'Scalable solutions handle everything from single-account searches to high-volume portfolio-wide skip tracing.' },
+      { text: 'Consistently high success rates tracked through Maxify CRM real-time portfolio dashboards across various demographics and circumstances.' },
+      { text: 'Performance metrics analyzed continuously with 60-day unverified account return policies (CRM-3.3) ensuring transparent client partnerships.' },
+      { text: 'Scalable solutions from single-account searches to high-volume portfolio-wide skip tracing — all with full audit trails and FDCPA compliance (CRM-1.1).' },
     ],
   },
 }

@@ -6,51 +6,51 @@ import SectionCard from '../../components/SectionCard'
 
 const sectionCards: Record<string, { subject: string; bullets: { text: string }[] }> = {
   'important-note': {
-    subject: 'Before You Begin',
+    subject: 'Before You Begin (CRM-7.1)',
     bullets: [
-      { text: 'Complete the form below to tell us what went well — or where we can improve.' },
-      { text: 'If you\'re looking to dispute an account, please use our Dispute My Account form instead.' },
-      { text: 'We value your feedback and use it to continuously improve our services and standards.' },
+      { text: 'Complete the form below — every submission triggers Capital Review\'s zero-tolerance complaint resolution process per CRM-7.1 standards.' },
+      { text: 'For account disputes, use our Dispute My Account form — disputes follow separate 15-day CFPB response protocols (CRM-7.1).' },
+      { text: 'Your feedback drives our 4-step corrective action process (CRM-6.6) and monthly QA review cycles to continuously improve service standards.' },
     ],
   },
   'account-information': {
-    subject: 'Account Identification',
+    subject: 'Account Identification (CRM-2.1)',
     bullets: [
-      { text: 'Provide your Capital Review Account Number and creditor name as shown on your statement.' },
-      { text: 'Include your first and last name along with your complete mailing address.' },
-      { text: 'This information helps us locate your account quickly and address your feedback effectively.' },
+      { text: 'Provide Capital Review Account Number and creditor name — verified through Maxify CRM (CRM-2.1) with role-based access controls (CRM-4.4).' },
+      { text: 'Include first and last name with complete mailing address — all data protected with AES-256 encryption (CRM-4.1) and PHI safeguards (CRM-1.6).' },
+      { text: 'Account identification enables rapid case routing through Maxify CRM with state-specific compliance matrices (CRM-9.x) applied automatically.' },
     ],
   },
   'contact-method': {
-    subject: 'How to Reach You',
+    subject: 'How to Reach You (CRM-1.5)',
     bullets: [
-      { text: 'Let us know the best way to reach you if we need to follow up on your feedback.' },
-      { text: 'Provide a phone number (mobile, home, or work) and/or email address for contact.' },
-      { text: 'This ensures we can respond to your feedback promptly and through your preferred channel.' },
+      { text: 'Indicate preferred contact method — omnichannel follow-up through Maxify CRM (CRM-2.1) via phone, email, or mail per your preference.' },
+      { text: 'Phone and email provided per TCPA consent framework (CRM-1.5) — all communications follow Mini-Miranda disclosure standards (CRM-2.2).' },
+      { text: 'Contact preferences tracked with full audit trails and 3-year retention (CRM-2.6) ensuring your channel preferences are respected.' },
     ],
   },
   'experience-details': {
-    subject: 'Describe Your Experience',
+    subject: 'Describe Your Experience (CRM-6.4)',
     bullets: [
-      { text: 'Please describe your compliment or complaint in detail so we can fully understand the situation.' },
-      { text: 'You may upload relevant documents or screenshots if applicable to support your feedback.' },
-      { text: 'The more specific you can be, the better we can address your feedback and take appropriate action.' },
+      { text: 'Describe your compliment or complaint in detail — our QA team reviews against CRM-6.4 training standards and 85% minimum competency benchmarks.' },
+      { text: 'Upload relevant documents securely — AES-256 encryption at rest and TLS 1.2+ in transit (CRM-4.1) protect all submitted materials.' },
+      { text: 'Specific details enable targeted corrective action (CRM-6.6) — all call recordings available for review with 3-year retention (CRM-2.6).' },
     ],
   },
   'take-feedback-seriously': {
-    subject: 'Our Commitment to Quality',
+    subject: 'Our Commitment to Quality (CRM-6.6)',
     bullets: [
-      { text: 'Every compliment and complaint is reviewed by our internal compliance and service quality teams.' },
-      { text: 'We ensure all feedback is evaluated against our professional standards and your expectations.' },
-      { text: 'Thank you for helping us serve you better — your input directly shapes our improvement efforts.' },
+      { text: 'Every submission reviewed by compliance and quality teams per CRM-7.1 — monthly QA reviews of 5+ calls per specialist ensure accountability.' },
+      { text: 'Feedback evaluated against CRM-6.4 professional standards with 4-step corrective action process (CRM-6.6): coaching, retraining, probation, termination.' },
+      { text: 'Your input directly shapes our improvement — all feedback documented in Maxify CRM (CRM-2.1) with full audit trails for regulatory compliance.' },
     ],
   },
   'what-happens-next': {
-    subject: 'Next Steps After Submission',
+    subject: 'Next Steps After Submission (CRM-7.1)',
     bullets: [
-      { text: 'Your feedback will be reviewed within 2 business days of submission.' },
-      { text: 'If you provided contact information, we may reach out for additional details as needed.' },
-      { text: 'Complaints are escalated to our compliance team for thorough investigation with a response within 10 business days.' },
+      { text: 'Feedback reviewed within 2 business days — complaints trigger 15-day CFPB response protocols (CRM-7.1) with escalation to compliance leadership.' },
+      { text: 'Follow-up per your preferred contact method through Maxify CRM omnichannel system (CRM-2.1) with Mini-Miranda disclosure (CRM-2.2) on all contacts.' },
+      { text: 'Complaints investigated with full documentation — 3-year record retention (CRM-2.6) and state-specific compliance matrices (CRM-9.x) applied throughout.' },
     ],
   },
 }
@@ -442,9 +442,9 @@ export default function SubmitComplimentComplaintPage() {
           <div className="text-center">
             <p className="font-semibold">Capital Review Management</p>
             <p>2200 North Frazier Suite 120 Box 142, Conroe, TX 77301</p>
-            <p className="text-xl font-semibold">866-766-2692</p>
+            <p className="text-xl font-semibold">888-681-0360</p>
             <p className="mt-4">
-              <strong>General Email:</strong> info@capitalreviewmgt.com
+              <strong>General Email:</strong> info@capitalreviewmanagement.com
             </p>
           </div>
         </div>
