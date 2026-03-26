@@ -118,6 +118,7 @@ export default function Header() {
                       </div>
                     </li>
                     <li><Link href="/contact">Contact Us</Link></li>
+                    <li><Link href="/opt-in">Opt In</Link></li>
                   </ul>
                 </nav>
               </div>
@@ -186,6 +187,7 @@ export default function Header() {
                     </div>
                   </li>
                   <li><Link href="/contact">Contact Us</Link></li>
+                  <li><Link href="/opt-in">Opt In</Link></li>
                 </ul>
               </nav>
             </div>
@@ -250,6 +252,11 @@ export default function Header() {
         <div className="mobile-menu-section">
           <Link href="/contact" onClick={closeMobileMenu}>
             <h4>Contact Us</h4>
+          </Link>
+        </div>
+        <div className="mobile-menu-section">
+          <Link href="/opt-in" onClick={closeMobileMenu}>
+            <h4>Opt In</h4>
           </Link>
         </div>
       </div>
