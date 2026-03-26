@@ -68,10 +68,10 @@ export default function OptInPage() {
       {/* SMS Opt-In Content Section */}
       <section className="subpage-section subpage-section-cream">
         <div className="subpage-container">
-          <div style={{ maxWidth: '72rem', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start' }}>
+          <div style={{ maxWidth: '72rem', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
 
             {/* Left Column: SMS Disclosure */}
-            <div style={{ paddingRight: '1rem' }}>
+            <div>
               <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem', lineHeight: '1.2' }}>Want to text?</h2>
               <p style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '2rem', lineHeight: '1.1' }}>
                 TEXT <span style={{ letterSpacing: '0.05em' }}>JOIN</span> to 79436
@@ -90,18 +90,17 @@ export default function OptInPage() {
               </p>
             </div>
 
-            {/* Right Column: Form Card */}
-            <div style={{ backgroundColor: 'white', boxShadow: '0 20px 40px -10px rgba(0, 0, 0, 0.15)', padding: '2.5rem' }}>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '0.5rem', textAlign: 'center' }}>Contact us.</h3>
-              <p style={{ fontSize: '0.95rem', color: '#666', marginBottom: '2rem', textAlign: 'center' }}>We&apos;ll get you set up with text notifications.</p>
+            {/* Right Column: Form — no card box, matches site theme */}
+            <div>
+              <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '2rem' }}>Contact us.</h3>
 
-              <form onSubmit={handleSubmit} className="subpage-form" style={{ display: 'flex', flexDirection: 'column', gap: '1.75rem' }}>
+              <form onSubmit={handleSubmit} className="subpage-form" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                 <div>
-                  <p style={{ fontWeight: '600', fontSize: '1rem', marginBottom: '1rem' }}>Name</p>
+                  <p style={{ fontWeight: '600', fontSize: '1rem', marginBottom: '1.25rem' }}>Name</p>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                     <div>
-                      <label htmlFor="firstName" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', marginBottom: '0.25rem' }}>
-                        First Name <span style={{ color: '#999', fontWeight: '400' }}>(required)</span>
+                      <label htmlFor="firstName" style={{ display: 'block', fontSize: '0.9rem', fontWeight: '500', marginBottom: '0.5rem' }}>
+                        First Name <span style={{ opacity: 0.6, fontWeight: '400' }}>(required)</span>
                       </label>
                       <input
                         type="text"
@@ -110,12 +109,11 @@ export default function OptInPage() {
                         value={formData.firstName}
                         onChange={handleInputChange}
                         required
-                        style={{ width: '100%', padding: '0.5rem 0', background: 'transparent', outline: 'none', border: 'none', borderBottom: '1px solid #aaa', fontSize: '1rem' }}
                       />
                     </div>
                     <div>
-                      <label htmlFor="lastName" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', marginBottom: '0.25rem' }}>
-                        Last Name <span style={{ color: '#999', fontWeight: '400' }}>(required)</span>
+                      <label htmlFor="lastName" style={{ display: 'block', fontSize: '0.9rem', fontWeight: '500', marginBottom: '0.5rem' }}>
+                        Last Name <span style={{ opacity: 0.6, fontWeight: '400' }}>(required)</span>
                       </label>
                       <input
                         type="text"
@@ -124,15 +122,14 @@ export default function OptInPage() {
                         value={formData.lastName}
                         onChange={handleInputChange}
                         required
-                        style={{ width: '100%', padding: '0.5rem 0', background: 'transparent', outline: 'none', border: 'none', borderBottom: '1px solid #aaa', fontSize: '1rem' }}
                       />
                     </div>
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="email" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', marginBottom: '0.25rem' }}>
-                    Email <span style={{ color: '#999', fontWeight: '400' }}>(required)</span>
+                  <label htmlFor="email" style={{ display: 'block', fontSize: '0.9rem', fontWeight: '500', marginBottom: '0.5rem' }}>
+                    Email <span style={{ opacity: 0.6, fontWeight: '400' }}>(required)</span>
                   </label>
                   <input
                     type="email"
@@ -141,26 +138,16 @@ export default function OptInPage() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    style={{ width: '100%', padding: '0.5rem 0', background: 'transparent', outline: 'none', border: 'none', borderBottom: '1px solid #aaa', fontSize: '1rem' }}
                   />
                 </div>
 
-                <div style={{ marginTop: '0.75rem' }}>
+                <div>
                   <button
                     type="submit"
                     disabled={isSubmitting}
                     style={{
-                      padding: '0.85rem 2.5rem',
-                      border: '1px solid #333',
-                      backgroundColor: 'transparent',
-                      color: '#333',
-                      cursor: isSubmitting ? 'not-allowed' : 'pointer',
                       opacity: isSubmitting ? 0.5 : 1,
-                      fontSize: '0.95rem',
-                      fontWeight: '600',
-                      letterSpacing: '0.08em',
-                      textTransform: 'uppercase' as const,
-                      transition: 'all 0.2s ease'
+                      cursor: isSubmitting ? 'not-allowed' : 'pointer'
                     }}
                   >
                     {isSubmitting ? 'Sending...' : 'Send'}
@@ -169,11 +156,10 @@ export default function OptInPage() {
 
                 {submitMessage && (
                   <div style={{
-                    marginTop: '0.5rem',
                     padding: '1rem',
-                    backgroundColor: submitMessage.includes('error') ? '#fee2e2' : '#dcfce7',
-                    color: submitMessage.includes('error') ? '#7f1d1d' : '#166534',
-                    border: `1px solid ${submitMessage.includes('error') ? '#fca5a5' : '#86efac'}`,
+                    backgroundColor: submitMessage.includes('error') ? 'rgba(220,38,38,0.15)' : 'rgba(34,197,94,0.15)',
+                    color: submitMessage.includes('error') ? '#fca5a5' : '#86efac',
+                    border: `1px solid ${submitMessage.includes('error') ? 'rgba(220,38,38,0.3)' : 'rgba(34,197,94,0.3)'}`,
                     fontSize: '0.9rem'
                   }}>
                     {submitMessage}
