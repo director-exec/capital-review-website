@@ -56,7 +56,7 @@ export default function OptInPage() {
       <section className="subpage-hero">
         <div
           className="subpage-hero-bg"
-          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800)' }}
+          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200)' }}
         ></div>
         <div className="subpage-hero-overlay"></div>
         <div className="subpage-hero-content">
@@ -65,34 +65,43 @@ export default function OptInPage() {
         </div>
       </section>
 
-      {/* SMS Opt-In Disclosure + Form Section */}
+      {/* SMS Opt-In Content Section */}
       <section className="subpage-section subpage-section-cream">
         <div className="subpage-container">
-          <div style={{ maxWidth: '72rem', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'start' }}>
+          <div style={{ maxWidth: '72rem', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start' }}>
 
             {/* Left Column: SMS Disclosure */}
-            <div>
-              <h2 style={{ marginBottom: '1.5rem' }}>Want to text? TEXT JOIN to 79436</h2>
-              <p style={{ fontSize: '1.125rem', lineHeight: '1.75' }}>
+            <div style={{ paddingRight: '1rem' }}>
+              <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem', lineHeight: '1.2' }}>Want to text?</h2>
+              <p style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '2rem', lineHeight: '1.1' }}>
+                TEXT <span style={{ letterSpacing: '0.05em' }}>JOIN</span> to 79436
+              </p>
+              <p style={{ fontSize: '1.125rem', lineHeight: '1.85', marginBottom: '2rem' }}>
                 By signing up via text, you agree to receive Recurring messages from
                 Capital Review Management regarding your account, such as payment
                 reminders, at the cell number used when signing up. Reply HELP for help
-                &amp; STOP to cancel. Msg freq may vary. Msg &amp; Data rates may apply. View{' '}
-                <Link href="/terms" style={{ color: '#4a7cad', textDecoration: 'underline', fontWeight: '500' }}>SMS Terms</Link>
+                &amp; STOP to cancel. Msg freq may vary. Msg &amp; Data rates may apply.
+              </p>
+              <p style={{ fontSize: '1.125rem', lineHeight: '1.85' }}>
+                View{' '}
+                <Link href="/terms" style={{ color: '#6b9fd4', textDecoration: 'underline', fontWeight: '600' }}>SMS Terms</Link>
                 {' '}&amp;{' '}
-                <Link href="/privacy" style={{ color: '#4a7cad', textDecoration: 'underline', fontWeight: '500' }}>Privacy Policy</Link>
+                <Link href="/privacy" style={{ color: '#6b9fd4', textDecoration: 'underline', fontWeight: '600' }}>Privacy Policy</Link>
               </p>
             </div>
 
             {/* Right Column: Form Card */}
-            <div style={{ backgroundColor: 'white', borderRadius: '0px', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)', padding: '2rem' }}>
-              <form onSubmit={handleSubmit} className="subpage-form" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            <div style={{ backgroundColor: 'white', boxShadow: '0 20px 40px -10px rgba(0, 0, 0, 0.15)', padding: '2.5rem' }}>
+              <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '0.5rem', textAlign: 'center' }}>Contact us.</h3>
+              <p style={{ fontSize: '0.95rem', color: '#666', marginBottom: '2rem', textAlign: 'center' }}>We&apos;ll get you set up with text notifications.</p>
+
+              <form onSubmit={handleSubmit} className="subpage-form" style={{ display: 'flex', flexDirection: 'column', gap: '1.75rem' }}>
                 <div>
-                  <p style={{ fontWeight: '600', marginBottom: '0.75rem', fontSize: '1rem' }}>Name</p>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                  <p style={{ fontWeight: '600', fontSize: '1rem', marginBottom: '1rem' }}>Name</p>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                     <div>
-                      <label htmlFor="firstName" style={{ fontSize: '0.875rem', fontWeight: '500' }}>
-                        First Name <span style={{ color: '#888' }}>(required)</span>
+                      <label htmlFor="firstName" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', marginBottom: '0.25rem' }}>
+                        First Name <span style={{ color: '#999', fontWeight: '400' }}>(required)</span>
                       </label>
                       <input
                         type="text"
@@ -101,12 +110,12 @@ export default function OptInPage() {
                         value={formData.firstName}
                         onChange={handleInputChange}
                         required
-                        style={{ width: '100%', borderBottom: '1px solid #999', padding: '0.5rem 0', background: 'transparent', outline: 'none', border: 'none', borderBottomStyle: 'solid', borderBottomWidth: '1px', borderBottomColor: '#999' }}
+                        style={{ width: '100%', padding: '0.5rem 0', background: 'transparent', outline: 'none', border: 'none', borderBottom: '1px solid #aaa', fontSize: '1rem' }}
                       />
                     </div>
                     <div>
-                      <label htmlFor="lastName" style={{ fontSize: '0.875rem', fontWeight: '500' }}>
-                        Last Name <span style={{ color: '#888' }}>(required)</span>
+                      <label htmlFor="lastName" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', marginBottom: '0.25rem' }}>
+                        Last Name <span style={{ color: '#999', fontWeight: '400' }}>(required)</span>
                       </label>
                       <input
                         type="text"
@@ -115,15 +124,15 @@ export default function OptInPage() {
                         value={formData.lastName}
                         onChange={handleInputChange}
                         required
-                        style={{ width: '100%', borderBottom: '1px solid #999', padding: '0.5rem 0', background: 'transparent', outline: 'none', border: 'none', borderBottomStyle: 'solid', borderBottomWidth: '1px', borderBottomColor: '#999' }}
+                        style={{ width: '100%', padding: '0.5rem 0', background: 'transparent', outline: 'none', border: 'none', borderBottom: '1px solid #aaa', fontSize: '1rem' }}
                       />
                     </div>
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="email" style={{ fontSize: '0.875rem', fontWeight: '500' }}>
-                    Email <span style={{ color: '#888' }}>(required)</span>
+                  <label htmlFor="email" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', marginBottom: '0.25rem' }}>
+                    Email <span style={{ color: '#999', fontWeight: '400' }}>(required)</span>
                   </label>
                   <input
                     type="email"
@@ -132,24 +141,26 @@ export default function OptInPage() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    style={{ width: '100%', borderBottom: '1px solid #999', padding: '0.5rem 0', background: 'transparent', outline: 'none', border: 'none', borderBottomStyle: 'solid', borderBottomWidth: '1px', borderBottomColor: '#999' }}
+                    style={{ width: '100%', padding: '0.5rem 0', background: 'transparent', outline: 'none', border: 'none', borderBottom: '1px solid #aaa', fontSize: '1rem' }}
                   />
                 </div>
 
-                <div style={{ marginTop: '0.5rem' }}>
+                <div style={{ marginTop: '0.75rem' }}>
                   <button
                     type="submit"
                     disabled={isSubmitting}
                     style={{
-                      padding: '0.75rem 2rem',
+                      padding: '0.85rem 2.5rem',
                       border: '1px solid #333',
                       backgroundColor: 'transparent',
                       color: '#333',
                       cursor: isSubmitting ? 'not-allowed' : 'pointer',
                       opacity: isSubmitting ? 0.5 : 1,
-                      fontSize: '1rem',
-                      fontWeight: '500',
-                      letterSpacing: '0.025em'
+                      fontSize: '0.95rem',
+                      fontWeight: '600',
+                      letterSpacing: '0.08em',
+                      textTransform: 'uppercase' as const,
+                      transition: 'all 0.2s ease'
                     }}
                   >
                     {isSubmitting ? 'Sending...' : 'Send'}
@@ -163,7 +174,7 @@ export default function OptInPage() {
                     backgroundColor: submitMessage.includes('error') ? '#fee2e2' : '#dcfce7',
                     color: submitMessage.includes('error') ? '#7f1d1d' : '#166534',
                     border: `1px solid ${submitMessage.includes('error') ? '#fca5a5' : '#86efac'}`,
-                    fontSize: '0.875rem'
+                    fontSize: '0.9rem'
                   }}>
                     {submitMessage}
                   </div>
@@ -177,18 +188,18 @@ export default function OptInPage() {
       {/* Contact Information Section */}
       <section className="subpage-section subpage-section-white">
         <div className="subpage-container">
-          <div style={{ maxWidth: '56rem', margin: '0 auto' }}>
-            <h2 style={{ marginBottom: '1.5rem' }}>Contact Us</h2>
-            <div style={{ fontSize: '1.125rem', lineHeight: '2' }}>
+          <div style={{ maxWidth: '56rem', margin: '0 auto', textAlign: 'center' }}>
+            <h2 style={{ marginBottom: '1.5rem' }}>Get In Touch</h2>
+            <div style={{ fontSize: '1.125rem', lineHeight: '2.25' }}>
               <p>
                 <strong>Email:</strong>{' '}
-                <a href="mailto:info@capitalreviewmanagement.com" style={{ color: '#4a7cad', textDecoration: 'underline' }}>
+                <a href="mailto:info@capitalreviewmanagement.com" style={{ color: '#6b9fd4', textDecoration: 'underline' }}>
                   info@capitalreviewmanagement.com
                 </a>
               </p>
               <p>
                 <strong>Phone:</strong>{' '}
-                <a href="tel:888-681-0360" style={{ color: '#4a7cad', textDecoration: 'underline' }}>
+                <a href="tel:888-681-0360" style={{ color: '#6b9fd4', textDecoration: 'underline' }}>
                   888-681-0360
                 </a>
               </p>
