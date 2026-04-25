@@ -31,8 +31,8 @@
 
   /* Accent — Deep Red & Chrome */
   --accent-metallic: #ffffff;
-  --accent-red: #c0392b;
-  --accent-chrome: #8a9bb0;
+  --accent-red: #0E6E47;
+  --accent-chrome: #C8A24B;
 
   /* Borders & Shadows */
   --border-light: rgba(255, 255, 255, 0.08);
@@ -200,7 +200,7 @@ h1, h2, h3 {
   background: rgba(255, 255, 255, 0.1);
   color: var(--text-on-dark);
   padding: 0.4rem 1rem;
-  border: 2px solid #c0392b;
+  border: 2px solid #0E6E47;
   border-radius: 0;
   font-family: var(--font-body);
   font-weight: 700;
@@ -216,7 +216,7 @@ h1, h2, h3 {
 
 .payment-button:hover {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #a52d23;
+  border-color: #0A5638;
 }
 
 .logo {
@@ -452,7 +452,7 @@ body.mobile-menu-open {
   transition: all 0.3s ease;
   width: 100%;
   margin-bottom: 1rem;
-  border: 2px solid #c0392b;
+  border: 2px solid #0E6E47;
 }
 
 .mobile-call-btn:hover {
@@ -476,7 +476,7 @@ body.mobile-menu-open {
   letter-spacing: 2px;
   transition: all 0.3s ease;
   width: 100%;
-  border: 2px solid #c0392b;
+  border: 2px solid #0E6E47;
 }
 
 .mobile-payment-btn:hover {
@@ -689,7 +689,7 @@ body.mobile-menu-open {
 
 .btn {
   padding: 1rem 2.5rem;
-  border: 2px solid #c0392b;
+  border: 2px solid #0E6E47;
   border-radius: 0;
   font-family: var(--font-body);
   font-weight: 700;
@@ -712,7 +712,7 @@ body.mobile-menu-open {
 .btn-hero {
   background: var(--accent-metallic);
   color: #0a0a0a;
-  border: 2px solid #c0392b;
+  border: 2px solid #0E6E47;
   padding: 1.5rem 4rem;
   font-size: 1.05rem;
   letter-spacing: 3px;
@@ -720,7 +720,7 @@ body.mobile-menu-open {
 
 .btn-hero:hover {
   background: #e0e0e0;
-  border-color: #a52d23;
+  border-color: #0A5638;
 }
 
 .btn-primary:hover {
@@ -730,12 +730,12 @@ body.mobile-menu-open {
 .btn-secondary {
   background: transparent;
   color: var(--text-primary);
-  border: 2px solid #c0392b;
+  border: 2px solid #0E6E47;
 }
 
 .btn-secondary:hover {
   background: var(--bg-cream-dark);
-  border-color: #a52d23;
+  border-color: #0A5638;
 }
 
 /* ============================================
@@ -1072,18 +1072,18 @@ body.mobile-menu-open {
 .btn-contact {
   background: var(--accent-metallic);
   color: #0a0a0a;
-  border: 2px solid #c0392b;
+  border: 2px solid #0E6E47;
 }
 
 .btn-contact:hover {
   background: #e0e0e0;
-  border-color: #a52d23;
+  border-color: #0A5638;
 }
 
 .btn-outline {
   background: transparent;
   color: var(--text-primary);
-  border: 2px solid #c0392b;
+  border: 2px solid #0E6E47;
 }
 
 .btn-outline:hover {
@@ -1819,7 +1819,7 @@ footer {
   padding: 1rem 2rem;
   background: rgba(255, 255, 255, 0.06);
   border-radius: 0;
-  border: 2px solid #c0392b;
+  border: 2px solid #0E6E47;
   color: var(--text-on-dark);
 }
 
@@ -2010,13 +2010,13 @@ footer {
 .subpage-cta .btn {
   background: rgba(255, 255, 255, 0.1);
   color: var(--text-on-dark);
-  border: 2px solid #c0392b;
+  border: 2px solid #0E6E47;
   padding: 0.875rem 2.25rem;
 }
 
 .subpage-cta .btn:hover {
   background: rgba(255, 255, 255, 0.18);
-  border-color: #a52d23;
+  border-color: #0A5638;
 }
 
 /* Subpage cards grid */
@@ -2072,14 +2072,14 @@ footer {
   text-transform: uppercase;
   letter-spacing: 2px;
   border-radius: 0;
-  border: 2px solid #c0392b;
+  border: 2px solid #0E6E47;
   transition: all 0.3s ease;
   margin-top: 1.25rem;
 }
 
 .subpage-btn:hover {
   background: #e0e0e0;
-  border-color: #a52d23;
+  border-color: #0A5638;
 }
 
 /* Form styling for subpages */
@@ -2138,7 +2138,7 @@ footer {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border: 2px solid #c0392b;
+  border: 2px solid #0E6E47;
   border-radius: 0;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -2146,7 +2146,7 @@ footer {
 
 .subpage-form button[type="submit"]:hover {
   background: #e0e0e0;
-  border-color: #a52d23;
+  border-color: #0A5638;
 }
 
 .subpage-form button[type="submit"]:disabled {
@@ -2210,7 +2210,7 @@ footer {
   margin-top: 1rem;
   padding: 1rem;
   background: rgba(185, 28, 28, 0.15);
-  color: #fca5a5;
+  color: #86C8A4;
   border: 1px solid rgba(185, 28, 28, 0.3);
   font-size: 0.95rem;
 }

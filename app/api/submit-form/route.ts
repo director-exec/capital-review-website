@@ -118,14 +118,14 @@ export async function POST(request: NextRequest) {
     if (hasFiles) {
       const fileList = formData.uploadedFiles.map((file: any) => {
         if (file.url) {
-          return `<li><a href="${file.url}" target="_blank" style="color: #4a7fb5; text-decoration: underline;">${file.name}</a> (${file.size} bytes)</li>`
+          return `<li><a href="${file.url}" target="_blank" style="color: #0A5638; text-decoration: underline;">${file.name}</a> (${file.size} bytes)</li>`
         }
         return `<li>${file.name} (${file.size} bytes)</li>`
       }).join('')
 
       htmlContent += `
-        <div style="margin-top: 20px; padding: 15px; background-color: #f8f9fa; border-left: 4px solid #4a7fb5;">
-          <h3 style="color: #4a7fb5; margin-top: 0;">Files Uploaded (${formData.uploadedFiles.length})</h3>
+        <div style="margin-top: 20px; padding: 15px; background-color: #f8f9fa; border-left: 4px solid #0A5638;">
+          <h3 style="color: #0A5638; margin-top: 0;">Files Uploaded (${formData.uploadedFiles.length})</h3>
           <ul style="margin: 10px 0;">${fileList}</ul>
           <p style="margin: 10px 0; color: #6c757d; font-size: 14px;"><strong>Note:</strong> Files are stored securely and can be downloaded using the links above.</p>
         </div>

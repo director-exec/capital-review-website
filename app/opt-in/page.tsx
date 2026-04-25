@@ -84,9 +84,9 @@ export default function OptInPage() {
               </p>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.85' }}>
                 View{' '}
-                <Link href="/terms" style={{ color: '#6b9fd4', textDecoration: 'underline', fontWeight: '600' }}>SMS Terms</Link>
+                <Link href="/terms" style={{ color: '#1E8A5E', textDecoration: 'underline', fontWeight: '600' }}>SMS Terms</Link>
                 {' '}&amp;{' '}
-                <Link href="/privacy" style={{ color: '#6b9fd4', textDecoration: 'underline', fontWeight: '600' }}>Privacy Policy</Link>
+                <Link href="/privacy" style={{ color: '#1E8A5E', textDecoration: 'underline', fontWeight: '600' }}>Privacy Policy</Link>
               </p>
             </div>
 
@@ -158,7 +158,7 @@ export default function OptInPage() {
                   <div style={{
                     padding: '1rem',
                     backgroundColor: submitMessage.includes('error') ? 'rgba(220,38,38,0.15)' : 'rgba(34,197,94,0.15)',
-                    color: submitMessage.includes('error') ? '#fca5a5' : '#86efac',
+                    color: submitMessage.includes('error') ? '#86C8A4' : '#86efac',
                     border: `1px solid ${submitMessage.includes('error') ? 'rgba(220,38,38,0.3)' : 'rgba(34,197,94,0.3)'}`,
                     fontSize: '0.9rem'
                   }}>
@@ -179,13 +179,13 @@ export default function OptInPage() {
             <div style={{ fontSize: '1.125rem', lineHeight: '2.25' }}>
               <p>
                 <strong>Email:</strong>{' '}
-                <a href="mailto:info@capitalreviewmanagement.com" style={{ color: '#6b9fd4', textDecoration: 'underline' }}>
+                <a href="mailto:info@capitalreviewmanagement.com" style={{ color: '#1E8A5E', textDecoration: 'underline' }}>
                   info@capitalreviewmanagement.com
                 </a>
               </p>
               <p>
                 <strong>Phone:</strong>{' '}
-                <a href="tel:888-681-0360" style={{ color: '#6b9fd4', textDecoration: 'underline' }}>
+                <a href="tel:888-681-0360" style={{ color: '#1E8A5E', textDecoration: 'underline' }}>
                   888-681-0360
                 </a>
               </p>

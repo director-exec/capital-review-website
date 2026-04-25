@@ -122,10 +122,10 @@ export default function ContactPage() {
         <div className="subpage-container">
           <h3>Ready to get started?</h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1.5rem' }}>
-            <a href="tel:888-681-0360" className="subpage-btn" style={{ backgroundColor: 'white', color: '#1c2a3f' }}>
+            <a href="tel:888-681-0360" className="subpage-btn" style={{ backgroundColor: 'white', color: '#0B1A14' }}>
               Call Us Today!
             </a>
-            <a href="mailto:info@capitalreviewmanagement.com" className="subpage-btn" style={{ backgroundColor: 'white', color: '#1c2a3f' }}>
+            <a href="mailto:info@capitalreviewmanagement.com" className="subpage-btn" style={{ backgroundColor: 'white', color: '#0B1A14' }}>
               Email Us
             </a>
           </div>

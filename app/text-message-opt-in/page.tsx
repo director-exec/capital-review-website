@@ -256,7 +256,7 @@ export default function TextMessageOptInPage() {
                     checked={formData.consent}
                     onChange={handleInputChange}
                     required
-                    style={{ marginTop: '0.25rem', height: '1rem', width: '1rem', color: '#1c2a3f' }}
+                    style={{ marginTop: '0.25rem', height: '1rem', width: '1rem', color: '#0B1A14' }}
                   />
                   <label htmlFor="consent" style={{ marginLeft: '0.5rem', fontSize: '0.875rem' }}>
                     I consent to receive text messages from Capital Review Management LLC. I understand that message and data rates may apply. I can opt out at any time by replying STOP.
@@ -283,7 +283,7 @@ export default function TextMessageOptInPage() {
                     padding: '1rem',
                     backgroundColor: submitMessage.includes('error') ? '#fee2e2' : '#dcfce7',
                     color: submitMessage.includes('error') ? '#7f1d1d' : '#166534',
-                    border: `1px solid ${submitMessage.includes('error') ? '#fca5a5' : '#86efac'}`
+                    border: `1px solid ${submitMessage.includes('error') ? '#86C8A4' : '#86efac'}`
                   }}>
                     {submitMessage}
                   </div>
@@ -315,8 +315,8 @@ export default function TextMessageOptInPage() {
                   By opting in, you agree to our Terms and Conditions and Privacy Policy.
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  <Link href="/terms" style={{ color: '#1c2a3f', textDecoration: 'underline', display: 'block' }}>Terms and Conditions</Link>
-                  <Link href="/privacy" style={{ color: '#1c2a3f', textDecoration: 'underline', display: 'block' }}>Privacy Policy</Link>
+                  <Link href="/terms" style={{ color: '#0B1A14', textDecoration: 'underline', display: 'block' }}>Terms and Conditions</Link>
+                  <Link href="/privacy" style={{ color: '#0B1A14', textDecoration: 'underline', display: 'block' }}>Privacy Policy</Link>
                 </div>
               </div>
             </div>

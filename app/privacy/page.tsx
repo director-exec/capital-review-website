@@ -188,7 +188,7 @@ export default function PrivacyPolicyPage() {
               </p>
               <div style={{ fontSize: '1.125rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <p style={{ fontWeight: '600' }}>Capital Review Management LLC</p>
-                <p style={{ fontSize: '1.25rem', fontWeight: '600', color: '#1c2a3f' }}>888-681-0360</p>
+                <p style={{ fontSize: '1.25rem', fontWeight: '600', color: '#0B1A14' }}>888-681-0360</p>
                 <p>
                   <strong>Email:</strong> info@capitalreviewmanagement.com
                 </p>

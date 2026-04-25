@@ -11,7 +11,7 @@ interface SectionCardProps {
 export default function SectionCard({ subject, bullets }: SectionCardProps) {
   return (
     <div style={{
-      border: '2.5px solid #c0392b',
+      border: '2.5px solid #0E6E47',
       borderRadius: '2px',
       overflow: 'hidden',
       background: '#f5f2ed',
@@ -25,7 +25,7 @@ export default function SectionCard({ subject, bullets }: SectionCardProps) {
       <div style={{
         background: '#4a4a4a',
         padding: '18px 24px',
-        borderBottom: '3px solid #c0392b',
+        borderBottom: '3px solid #0E6E47',
       }}>
         <h3 style={{
           color: '#ffffff',
@@ -58,7 +58,7 @@ export default function SectionCard({ subject, bullets }: SectionCardProps) {
               padding: '16px 16px',
               background: index % 2 === 0 ? '#e8e4de' : 'transparent',
               borderRadius: '2px',
-              borderLeft: '4px solid #c0392b',
+              borderLeft: '4px solid #0E6E47',
               marginBottom: index < bullets.length - 1 ? '8px' : '0',
             }}
           >
@@ -68,7 +68,7 @@ export default function SectionCard({ subject, bullets }: SectionCardProps) {
               height: '28px',
               borderRadius: '50%',
               background: '#4a4a4a',
-              color: '#c0392b',
+              color: '#0E6E47',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',

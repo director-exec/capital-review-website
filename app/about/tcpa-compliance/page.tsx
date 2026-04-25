@@ -170,11 +170,11 @@ export default function TCPACompliancePage() {
                 <p style={{ fontWeight: '600', marginBottom: '1rem' }}>If you received a call or message from us and believe it was in error:</p>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
                   <div>
-                    <p style={{ fontWeight: '600', color: '#1c2a3f', marginBottom: '0.5rem' }}>Phone</p>
+                    <p style={{ fontWeight: '600', color: '#0B1A14', marginBottom: '0.5rem' }}>Phone</p>
                     <p>888-681-0360</p>
                   </div>
                   <div>
-                    <p style={{ fontWeight: '600', color: '#1c2a3f', marginBottom: '0.5rem' }}>Email</p>
+                    <p style={{ fontWeight: '600', color: '#0B1A14', marginBottom: '0.5rem' }}>Email</p>
                     <p>info@capitalreviewmanagement.com</p>
                   </div>
                 </div>
